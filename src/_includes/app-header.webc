@@ -1,0 +1,6 @@
+<header>
+    <ul role="navigation">
+        <li>Home</li>
+        <li>Blog</li>
+    </ul>
+</header>
