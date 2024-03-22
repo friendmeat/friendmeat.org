@@ -1,0 +1,22 @@
+[
+    {
+        "site": "bluesky",
+        "url": "https://bsky.app/profile/itsmeat.neocities.org",
+        "icon":"{% icon 'bluesky' %}"
+    },
+    {
+        "site": "mastodon",
+        "url": "https://meow.social/@friendmeat",
+        "icon":""
+    },
+    {
+        "site": "tumblr",
+        "url": "https://friendmeat.tumblr.com/",
+        "icon":""
+    },
+    {
+        "site": "twitter",
+        "url": "https://twitter.com/_its_meat",
+        "icon":""
+    }
+]
