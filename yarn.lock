@@ -24,6 +24,13 @@
     ssri "^8.0.1"
     ws "^8.13.0"
 
+"@11ty/eleventy-navigation@^0.3.5":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-navigation/-/eleventy-navigation-0.3.5.tgz#f64e53f63020e9d378527f3a02a622bf6e4a6d86"
+  integrity sha512-4aKW5aIQDFed8xs1G1pWcEiFPcDSwZtA4IH1eERtoJ+Xy+/fsoe0pzbDmw84bHZ9ACny5jblENhfZhcCxklqQw==
+  dependencies:
+    dependency-graph "^0.11.0"
+
 "@11ty/eleventy-plugin-bundle@^1.0.4":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-bundle/-/eleventy-plugin-bundle-1.0.5.tgz#8056fef6139e5eeb0259a2b2928dda5f85e4e8f1"
@@ -666,6 +673,17 @@ ejs@^3.1.9:
   dependencies:
     jake "^10.8.5"
 
+eleventy-plugin-icons@^4.4.1:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/eleventy-plugin-icons/-/eleventy-plugin-icons-4.4.1.tgz#92c8db41121617e31ffdad09975cc2b6f05ca49e"
+  integrity sha512-HRQnHNcC4W8nAMw2BXwuPWghy57SOb49qsMCNI0I1E2uEE9JRSgCH6rMiZbI7QF8xAUEYmu8jQSuBkpdetUDzw==
+  dependencies:
+    fast-xml-parser "^4.3.2"
+    just-extend "^6.2.0"
+    just-memoize "^2.2.0"
+    just-typeof "^3.2.0"
+    kleur "^4.1.5"
+
 emoji-regex@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
@@ -757,6 +775,13 @@ fast-glob@^3.2.12, fast-glob@^3.3.0:
     glob-parent "^5.1.2"
     merge2 "^1.3.0"
     micromatch "^4.0.4"
+
+fast-xml-parser@^4.3.2:
+  version "4.3.6"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.3.6.tgz#190f9d99097f0c8f2d3a0e681a10404afca052ff"
+  integrity sha512-M2SovcRxD4+vC493Uc2GZVcZaj66CCJhWurC4viynVSTvrpErCShNcDz1lAho6n9REQKvL/ll4A4/fw6Y9z8nw==
+  dependencies:
+    strnum "^1.0.5"
 
 fastq@^1.6.0:
   version "1.17.1"
@@ -1115,6 +1140,21 @@ junk@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/junk/-/junk-1.0.3.tgz#87be63488649cbdca6f53ab39bec9ccd2347f592"
   integrity sha512-3KF80UaaSSxo8jVnRYtMKNGFOoVPBdkkVPsw+Ad0y4oxKXPduS6G6iHkrf69yJVff/VAaYXkV42rtZ7daJxU3w==
+
+just-extend@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/just-extend/-/just-extend-6.2.0.tgz#b816abfb3d67ee860482e7401564672558163947"
+  integrity sha512-cYofQu2Xpom82S6qD778jBDpwvvy39s1l/hrYij2u9AMdQcGRpaBu6kY4mVhuno5kJVi1DAz4aiphA2WI1/OAw==
+
+just-memoize@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/just-memoize/-/just-memoize-2.2.0.tgz#4e5ef1e85027b6090439317e685599ba8b025f5a"
+  integrity sha512-zriv+MY+61RXT0QsrO1ZJtL5umouqqSWmCGBkp2wJm35kniunBAA4qhUKx8Lvg/QcwrF9xuw9E6PkevKFf4boQ==
+
+just-typeof@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/just-typeof/-/just-typeof-3.2.0.tgz#2775bc17d778e509b3d1b0f1d5d29bf4476bd4c8"
+  integrity sha512-nOKazfzrQDEGNwXPfWEB64QD+ATZUnpOTJn0xMnCk41p297P9Emt3BlsRyWbu+CErMjopnFTGcYHJnvFX97ZIQ==
 
 kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.3"
@@ -1799,6 +1839,11 @@ signal-exit@^4.0.1:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-4.1.0.tgz#952188c1cbd546070e2dd20d0f41c0ae0530cb04"
   integrity sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==
 
+simple-icons@^11.9.0:
+  version "11.9.0"
+  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-11.9.0.tgz#e216efe8039b4c01bec8345b6a2d4d388b713c6e"
+  integrity sha512-l7WNzIxw0H4SBqrzpVCqXyrU7r/xlDRhcEAz+HBB47904x3N9c6bV0smG86WwAaiEpjrMYsKruZZq5ieZ1dHhQ==
+
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
@@ -1893,6 +1938,11 @@ strip-bom-string@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/strip-bom-string/-/strip-bom-string-1.0.0.tgz#e5211e9224369fbb81d633a2f00044dc8cedad92"
   integrity sha512-uCC2VHvQRYu+lMh4My/sFNmF2klFymLX1wHJeXnbEJERpV/ZsVuonzerjfrGpIGF7LBVa1O7i9kjiWvJiFck8g==
+
+strnum@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/strnum/-/strnum-1.0.5.tgz#5c4e829fe15ad4ff0d20c3db5ac97b73c9b072db"
+  integrity sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==
 
 sucrase@^3.32.0:
   version "3.35.0"

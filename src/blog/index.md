@@ -1,5 +1,9 @@
 ---
-Title: blog Index
+layout: default
+title: blog Index
+eleventyNavigation:
+    key: blog
+    title: Blog
 ---
 # blog index
 

@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Root
 ---
 # Index
-Here's the stuff
+ This is the index
+ 
