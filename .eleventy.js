@@ -3,12 +3,15 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPlugin(require('eleventy-plugin-icons'), {
         sources: [{ name: 'simple', path: 'node_modules/simple-icons/icons', default: true }]
     });
-    // eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-webc"),{
-    //     components:"src/_includes/*.webc"
-    // });
 
-    eleventyConfig.addWatchTarget('./styles/tailwindconfig.js');
-    eleventyConfig.addWatchTarget('./styles.tailwinds.css');
+    eleventyConfig.setLiquidOptions({
+        jsTruthy:true
+    })
+ 
+
+    eleventyConfig.addWatchTarget('./assets/tailwindconfig.js');
+    eleventyConfig.addWatchTarget('./assets/tailwinds.css');
+ 
     eleventyConfig.setBrowserSyncConfig({
         callbacks: {
             ready: (err, bs) => {
@@ -23,7 +26,8 @@ module.exports = (eleventyConfig) => {
     });
     return {
         dir: {
-            input: "src"
+            input: "src",
+            includes: "_includes"
         }
     }
 }
