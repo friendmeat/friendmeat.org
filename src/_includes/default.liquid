@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
     <title>{{ title }}</title>
 
-</head>
-<body id="app" class="bg-zinc-400 dark:bg-slate-900 text-zinc-300 w-screen h-screen flex flex-col">
-    {% include 'appheader' %}
-    This is the default template {% icon "mastodon" %}
-    <div id="content" class="container my-8">
-        {{ content }}
+  </head>
+  <body id="app" class="bg-slate-900 text-zinc-300 w-screen h-full min-h-screen flex flex-col lg:grid lg:grid-rows-1 lg:grid-cols-[8rem_auto]">
+    <div id="header-container" class="lg:row-span-2">
+      {% include 'app_header' %}
     </div>
-    <div class="">
-        {% include 'appfooter' %}
+    <div id="content" class="m-8 min-h-screen">
+      <div>
+        <h1 id="title" class="font-bold my-3">{{ title | upcase }}</h1>
+        <div class="font-serif">
+          {% block content %}
+          {{ content }}
+          {% endblock %}
+        </div>
+      </div>
     </div>
-</body>
+    <div id="footer-container" class="">
+      {% include 'app_footer' %}
+    </div>
+  </body>
 </html>
