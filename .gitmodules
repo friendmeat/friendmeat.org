@@ -1,0 +1,3 @@
+[submodule "src/blog/posts"]
+	path = src/blog/posts
+	url = itsmeat:itsfriendmeat/itsmeat-blog.git
