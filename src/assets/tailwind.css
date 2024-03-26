@@ -2,10 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+html,
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-svg{
-    @apply w-8 dark:fill-zinc-300;
+h1 {
+  @apply text-5xl font-sans font-black text-zinc-300 ;
+}
+
+h2 {
+  @apply text-3xl font-sans font-black text-zinc-300;
+}
+
+.icon {
+  @apply fill-zinc-300 w-4;
+}
+
+.interactable {
+  @apply transition-all ease-in hover:bg-zinc-400 hover:text-slate-900;
+}
+
+.post-content {
+  img{
+    @apply max-w-96 mx-auto my-8 text-center;
+  }
 }

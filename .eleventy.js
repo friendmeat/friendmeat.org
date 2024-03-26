@@ -4,6 +4,14 @@ module.exports = (eleventyConfig) => {
         sources: [{ name: 'simple', path: 'node_modules/simple-icons/icons', default: true }]
     });
 
+    eleventyConfig.ignores.add("src/blog/posts/README.md");
+
+    eleventyConfig.addLiquidShortcode("excerpt", (body)=>{
+        // const excerpt = body.split("<-- more -->").at(0);
+        const excerpt = body.match(/[\s\S ]+(?=<-- more -->\n)/);
+        return excerpt
+    })
+
     eleventyConfig.setLiquidOptions({
         jsTruthy:true
     })
