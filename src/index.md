@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Root
+title: Home
+eleventyNavigation:
+    - key: home
+    - title: Home
 ---
-# Index
- This is the index
- 
+Welcome to my site : ) 

@@ -10,13 +10,14 @@
           class="absolute -top-[150%] min-w-full transition-all ease-in opacity-50 group-hover:opacity-100" />
       </div>
     {% else %}
-      <div class="py-5 group">
+      <div class="group">
         <h2 class="transition-all ease-in group-hover:bg-zinc-400 group-hover:text-slate-900">{{ post.data.title }}</h2>
       </div>
     {% endif %}
   </a>
-  <div class="excerpt py-8">
-    {{ post.content | truncatewords: 15 }}
+  <div class="excerpt">
+    {% assign body = post.content | strip_html %}
+    {% excerpt body %}
   </div>
 </div>
 {% if not forloop.last %}
