@@ -1,4 +1,5 @@
 module.exports = (eleventyConfig) => {
+    eleventyConfig.ignores.add("/src/blog/posts/README.md")
     eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
     eleventyConfig.addPlugin(require('eleventy-plugin-icons'), {
         sources: [{ name: 'simple', path: 'node_modules/simple-icons/icons', default: true }]
@@ -15,7 +16,6 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.setLiquidOptions({
         jsTruthy:true
     })
- 
 
     eleventyConfig.addWatchTarget('./assets/tailwindconfig.js');
     eleventyConfig.addWatchTarget('./assets/tailwinds.css');

@@ -1,5 +1,5 @@
 {
-  "license":"MIT",
+  "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-navigation": "^0.3.5",
@@ -12,8 +12,8 @@
   },
   "scripts": {
     "tailwind:watch": "tailwind -i src/assets/tailwind.css -c tailwind.config.js -o _site/style.css --watch",
-    "tailwind:build":"tailwind -i src/assets/tailwind.css -c tailwind.config.js -o _site/style.css",
+    "tailwind:build": "tailwind -i src/assets/tailwind.css -c tailwind.config.js -o _site/style.css",
     "dev": "concurrently \"yarn run tailwind:watch\" \"eleventy --serve\"",
-    "build":"yarn run tailwind:build && npx eleventy"
+    "build": "yarn run tailwind:build && npx eleventy"
   }
 }
