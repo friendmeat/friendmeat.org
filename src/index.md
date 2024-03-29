@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Home
+title: Blog
 eleventyNavigation:
-    - key: home
-    - title: Home
+    key: blog
+    title: Blog
 ---
-Welcome to my site : ) 
+{% assign posts=collections.posts%}
+{% render 'blog_post' for posts as post %}
