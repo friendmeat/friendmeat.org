@@ -15,9 +15,8 @@
       </div>
     {% endif %}
   </a>
-  <div class="excerpt">
-    {% assign body = post.content | strip_html %}
-    {% excerpt body %}
+  <div class="excerpt py-8">
+    {% excerpt post.content %}
   </div>
 </div>
 {% if not forloop.last %}

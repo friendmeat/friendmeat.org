@@ -1,9 +1,16 @@
+
 module.exports = (eleventyConfig) => {
-    eleventyConfig.ignores.add("/src/blog/posts/README.md")
     eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
     eleventyConfig.addPlugin(require('eleventy-plugin-icons'), {
         sources: [{ name: 'simple', path: 'node_modules/simple-icons/icons', default: true }]
     });
+    
+    eleventyConfig.addWatchTarget('./tailwind.config.js');
+    eleventyConfig.addWatchTarget("./assets/*.css");
+    
+    eleventyConfig.ignores.add("/src/blog/posts/README.md")
+
+    eleventyConfig.setFrontMatterParsingOptions({excerpt:true});
 
     eleventyConfig.ignores.add("src/blog/posts/README.md");
 
@@ -16,10 +23,13 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.setLiquidOptions({
         jsTruthy:true
     })
+    eleventyConfig.addLiquidShortcode("excerpt", function(content){
+        let p1 = content.indexOf("<p>");
+        let p2 = content.indexOf("</p>");
+   
+        return content.substring(p1, p2)
+    })
 
-    eleventyConfig.addWatchTarget('./assets/tailwindconfig.js');
-    eleventyConfig.addWatchTarget('./assets/tailwinds.css');
- 
     eleventyConfig.setBrowserSyncConfig({
         callbacks: {
             ready: (err, bs) => {
