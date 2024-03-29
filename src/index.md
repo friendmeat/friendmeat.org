@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Root
+title: Blog
+eleventyNavigation:
+    key: blog
+    title: Blog
 ---
-# Index
- This is the index
- 
+{% assign posts=collections.posts%}
+{% render 'blog_post' for posts as post %}

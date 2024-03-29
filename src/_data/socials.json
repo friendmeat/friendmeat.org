@@ -1,22 +1,18 @@
 [
     {
         "site": "bluesky",
-        "url": "https://bsky.app/profile/itsmeat.neocities.org",
-        "icon":"{% icon 'bluesky' %}"
+        "url": "https://bsky.app/profile/itsmeat.neocities.org"
     },
     {
         "site": "mastodon",
-        "url": "https://meow.social/@friendmeat",
-        "icon":""
+        "url": "https://meow.social/@friendmeat"
     },
     {
         "site": "tumblr",
-        "url": "https://friendmeat.tumblr.com/",
-        "icon":""
+        "url": "https://friendmeat.tumblr.com/"
     },
     {
         "site": "twitter",
-        "url": "https://twitter.com/_its_meat",
-        "icon":""
+        "url": "https://twitter.com/_its_meat"
     }
 ]

@@ -11,10 +11,10 @@
     <div id="header-container" class="lg:row-span-2">
       {% include 'app_header' %}
     </div>
-    <div id="content" class="m-8 min-h-screen">
+    <div id="content" class="lg:mx-auto lg:max-w-120 lg:min-h-full min-h-screen mx-8">
       <div>
-        <h1 id="title" class="font-bold my-3">{{ title | upcase }}</h1>
         <div class="font-serif">
+          <h1 id="title" class="font-bold m-3">{{ title | upcase }}</h1>
           {% block content %}
           {{ content }}
           {% endblock %}
