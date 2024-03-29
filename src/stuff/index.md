@@ -1,6 +1,5 @@
 ---
 title: Stuff
-title: Stuff
 eleventyNavigation:
     key: stuff
     title: Stuff
