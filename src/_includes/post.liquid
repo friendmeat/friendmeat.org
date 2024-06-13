@@ -1,6 +1,12 @@
 {% layout "default" %}
 {% block content %}
-  <div class="post-content flex flex-col justify-center max-w-120 mx-auto">
+<small>{{date|date:"%Y-%m-%d"}}</small>
+<hr />
+<div class="post-content max-w-120">
+    <div class="w-full my-3">
+      <img src="{{ img }}" class="h-80 mx-auto py-4">
+    </div>
+    <hr />
     {{ content }}
   </div>
 {% endblock %}
