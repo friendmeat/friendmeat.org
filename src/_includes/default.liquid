@@ -3,26 +3,30 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="/style.css">
     <title>{{ title }}</title>
 
   </head>
   <body id="app" class="bg-slate-900 text-zinc-300 w-screen h-full min-h-screen flex flex-col lg:grid lg:grid-rows-1 lg:grid-cols-[8rem_auto]">
+    {% comment %} Header {% endcomment %}
     <div id="header-container" class="lg:row-span-2">
       {% include 'app_header' %}
     </div>
-    <div id="content" class="lg:mx-auto lg:max-w-120 lg:min-h-full min-h-screen mx-8">
-      <div>
-        <div class="font-serif">
-          <h1 id="title" class="font-bold m-3">{{ title | upcase }}</h1>
-          {% block content %}
-          {{ content }}
-          {% endblock %}
-        </div>
-      </div>
+    {% comment %} End Header {% endcomment %}
+    <div id="content" class="min-h-dvh mx-8 lg:min-h-full">
+      <h1 id="title" class="my-3">{{ title | upcase }}</h1>
+      {% block content %}
+      {{ content }}
+      {% endblock %}
     </div>
+    {% comment %} Footer {% endcomment %}
     <div id="footer-container" class="">
       {% include 'app_footer' %}
     </div>
+    {% comment %} End footer {% endcomment %}
   </body>
 </html>
