@@ -2,7 +2,7 @@
     {
         "site": "bluesky",
         "url": "https://bsky.app/profile/itsmeat.neocities.org",
-        "handle":"itsmeat"
+        "handle":"friendmeat.org"
     },
     {
         "site": "mastodon",
@@ -16,7 +16,7 @@
     },
     {
         "site": "twitter",
-        "url": "https://twitter.com/_its_meat",
-        "handle":"@_its_meat"
+        "url": "https://twitter.com/friend_meat",
+        "handle":"@friend_meat"
     }
 ]
