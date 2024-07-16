@@ -1,28 +1,36 @@
+
+
 module.exports = (eleventyConfig) => {
+    /* Plugins */
     eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
+    eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-vite"));
     eleventyConfig.addPlugin(require('eleventy-plugin-icons'), {
         sources: [{ name: 'simple', path: 'node_modules/simple-icons/icons', default: true }]
     });
 
+    /* Development Watch Targets */
     eleventyConfig.addWatchTarget('./tailwind.config.js');
     eleventyConfig.addWatchTarget("./assets/*.css");
 
+    /* Parse Frontmatter */
     eleventyConfig.setFrontMatterParsingOptions({ excerpt: true });
 
+    /* Ignore blog's README */
     eleventyConfig.ignores.add("src/blog/posts/README.md");
 
-
-
+    /* Resolve */
     eleventyConfig.setLiquidOptions({
         jsTruthy: true
     })
 
-    // Custom shortcodes
+    /* Custom shortcodes */
+    // Custom excerpt
     eleventyConfig.addLiquidShortcode("excerpt", (body) => {
-        // const excerpt = body.split("<-- more -->").at(0);
         const excerpt = body.match(/[\s\S ]+(?=<-- more -->\n)/);
         return excerpt
     })
+
+    // Other custom excerpt?
     eleventyConfig.addLiquidShortcode("excerpt", function (content) {
         let p1 = content.indexOf("<p>");
         let p2 = content.indexOf("</p>");
@@ -30,7 +38,7 @@ module.exports = (eleventyConfig) => {
         return content.substring(p1, p2)
     })
 
-    // Custom filter
+    /* Custom filter */
     eleventyConfig.addFilter("slugifyDate",
         /**
          * [Return a url-formatted date from a post date for use in slugs]
@@ -44,7 +52,7 @@ module.exports = (eleventyConfig) => {
             return [year, month, day].join("/")
         })
 
-    // 404
+    /* 404 Error catcher */
     eleventyConfig.setBrowserSyncConfig({
         callbacks: {
             ready: (err, bs) => {
@@ -58,6 +66,7 @@ module.exports = (eleventyConfig) => {
         }
     });
     return {
+        /* Specify custom folders for src and includes */
         dir: {
             input: "src",
             includes: "_includes"
