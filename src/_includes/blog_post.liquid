@@ -1,25 +1,20 @@
-{% assign postdate=post.date|date: "%Y-%m-%d" %}
+{% assign postdate = post.date | date: "%Y-%m-%d" %}
 <div class="blog-post container my-3" id="post-{{ forloop.i }}">
   <a href="{{ post.url }}" class="group">
     {% if post.data.img %}
-      {% comment %} <div class="max-h-64 overflow-hidden">
-        <div class="z-40 absolute h-64 w-full bg-gradient-to-b from-transparent to-slate-900"></div>
-        <img class="relative opacity-50 transition-all ease-in group-hover:opacity-100" src="{{post.data.img}}" alt="{{post.data.alt}}">
-      </div>
-        <div class="relative z-50 w-max transition-all ease-in group-hover:bg-zinc-400 group-hover:text-slate-900">
+      <div class="max-h-64 grid grid-rows-[1fr_0fr] group">
+        <div id="post-title" class="z-50 w-max h-min row-start-2 col-span-full transition-all ease-in group-hover:bg-zinc-400 group-hover:text-slate-900">
           <h2 class="p-0 font-black">{{ post.data.title }}</h2>
-          <span class="">{{ postdate}}  </span>
-        </div> {% endcomment %}
-        <div class="max-h-64 grid grid-rows-[1fr_0fr] group">
-          <div id="post-title" class="z-50 w-max h-min row-start-2 col-span-full transition-all ease-in group-hover:bg-zinc-400 group-hover:text-slate-900">
-            <h2 class="p-0 font-black">{{ post.data.title }}</h2>
-            <span class="">{{ postdate }}</span>
-          </div>  
-          <div id="bg-image" class="row-span-full col-span-full overflow-hidden">
-            <div class="z-40 absolute h-64 min-w-full bg-gradient-to-b from-transparent to-slate-900"></div>
-            <img class="relative opacity-50 transition-all ease-in group-hover:opacity-100" src="{{ post.data.img }}" alt="{{ post.data.alt }}">
-          </div>
+          <span class="">{{ postdate }}</span>
         </div>
+        <div id="bg-image" class="row-span-full col-span-full overflow-hidden">
+          <div class="z-40 absolute h-64 min-w-full bg-gradient-to-b from-transparent to-slate-900"></div>
+          <img
+            class="relative opacity-50 transition-all ease-in group-hover:opacity-100"
+            src="{{ post.data.img }}"
+            alt="{{ post.data.alt }}">
+        </div>
+      </div>
     {% else %}
       <div class="w-max transition-all ease-in group-hover:bg-zinc-400 group-hover:text-slate-900">
         <h2 class="p-0">{{ post.data.title }}</h2>
@@ -31,9 +26,7 @@
     {% excerpt post.content %}
   </div>
 </div>
-<div class="relative left-64 h-100 border-solid border-l-2 border-white">
-  
-</div>
+<div class="relative left-64 h-100 border-solid border-l-2 border-white"></div>
 {% if not forloop.last %}
   <hr/>
 {% endif %}
