@@ -1,16 +1,18 @@
 module.exports = (eleventyConfig) => {
     eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
+    // eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-vite'));
     eleventyConfig.addPlugin(require('eleventy-plugin-icons'), {
         sources: [{ name: 'simple', path: 'node_modules/simple-icons/icons', default: true }]
     });
 
     eleventyConfig.addWatchTarget('./tailwind.config.js');
-    eleventyConfig.addWatchTarget("./assets/*.css");
+    eleventyConfig.addWatchTarget("./assets/tailwind.css");
+
+    eleventyConfig.addPassthroughCopy("src/assets/js/*.js");
 
     eleventyConfig.setFrontMatterParsingOptions({ excerpt: true });
 
     eleventyConfig.ignores.add("src/blog/posts/README.md");
-
 
 
     eleventyConfig.setLiquidOptions({
