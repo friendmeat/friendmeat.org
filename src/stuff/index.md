@@ -5,6 +5,9 @@ eleventyNavigation:
     title: Stuff
 ---
 
-Stuff I've made or like.
+[Gallery](/stuff/gallery) - stuff i've made
 
-[Gallery](/stuff/gallery)
+
+[Comms](/stuff/comms) - stuff i've commissioned other people to make
+
+[Links](/stuff/links) - random stuff from the internet
