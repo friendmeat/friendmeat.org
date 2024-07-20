@@ -5,4 +5,6 @@ eleventyNavigation:
     title: Stuff
 ---
 
-This is where the stuff will go when I find it.
+Stuff I've made or like.
+
+[Gallery](/stuff/gallery)
