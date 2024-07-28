@@ -5,4 +5,9 @@ eleventyNavigation:
     title: Stuff
 ---
 
-This is where the stuff will go when I find it.
+[Gallery](/stuff/gallery) - stuff i've made
+
+
+[Comms](/stuff/comms) - stuff i've commissioned other people to make
+
+[Links](/stuff/links) - random stuff from the internet
