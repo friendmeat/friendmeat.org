@@ -39,17 +39,5 @@
         }
       ]
     }
-  ],
-  "galleries": [
-    {
-      "title": "Art",
-      "description": "meat's art",
-      "image": [
-        {
-          "src": "https://i.postimg.cc/zGBcZmz2/bafkreib3xa5ausik7oxktleexulmrbkekqibi6typwt2q7e6uxbcfmdfwu.jpg",
-          "alt": "Jamie the raccoon man with a shit-eating grin"
-        }
-      ]
-    }
   ]
 }
