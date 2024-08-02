@@ -20,13 +20,28 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime", time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
       - {label: "Tags", name: "tags", widget: "list", default: ["posts"]}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "image"
-    label: "Image"
-    folder: "src/_data/images/"
-    create: true
-    fields: 
-          - {label: "Url", name: "src", widget: "string"}
-          - {label: "Alt", name: "alt", wigdet: "string"}
-          - {label: "Type", name: "type", widget: "select", options: ["mine", "commissions", "other"], multiple: false}
-          - {label: "Artist", name: "artist", widget: "string", required: false}
-          - {label: "Artist Site", name: "site", widget: "string", required: false}
+  - name: "galleries"
+    label: "Galleries"
+    files:
+      - label: "Galleries"
+        name: "galleries"
+        label_singular: "Gallery"
+        create: true
+        file: "src/_data/galleries.json"
+        fields:
+          - label: "Galleries"
+            name: "galleries"
+            label_singular: "Gallery"
+            widget: "list"
+            fields:
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Description", name: "description", widget: "string"}
+            - label: Image
+              name: image
+              widget: "list"
+              create: true
+              fields: 
+                    - {label: "Url", name: "src", widget: "string"}
+                    - {label: "Description", name: "alt", widget: "string"}
+                    - {label: "Artist", name: "artist", widget: "string", required: false}
+                    - {label: "Artist Site", name: "site", widget: "string", required: false}
