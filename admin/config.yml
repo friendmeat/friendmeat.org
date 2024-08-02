@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: itsfriendmeat/friendmeat.org
+  branch: cms
+
+media_folder: "/static"
+
+collections: 
+  - name: "blog"
+    label: "Blog"
+    folder: "blog"
+    create: true
+    slug: ""
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
+      - {label: "Tags", name: "tags", widget: "list", default: ["posts"]}
+      - {label: "Body", name: "body", widget: "markdown"}

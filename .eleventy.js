@@ -13,8 +13,12 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addWatchTarget("/assets/css/tailwind.css");
     eleventyConfig.addWatchTarget('postcss.config.js')
 
-    eleventyConfig.addPassthroughCopy("src/assets/css");
-    eleventyConfig.addPassthroughCopy("src/assets/js")
+    eleventyConfig.addPassthroughCopy({
+        "src/assets/css":"assets/css",
+        "src/assets/js":"assets/js",
+        "admin":"admin"
+
+    })
 
     eleventyConfig.setFrontMatterParsingOptions({ excerpt: true });
 
