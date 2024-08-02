@@ -1,6 +1,0 @@
----
-src: https://i.postimg.cc/zGBcZmz2/bafkreib3xa5ausik7oxktleexulmrbkekqibi6typwt2q7e6uxbcfmdfwu.jpg
-alt: Digital sketch of Jamie the raccoon man with a big shit-eating grin that
-  shows off his fangs.
-type: mine
----
