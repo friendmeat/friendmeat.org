@@ -12,9 +12,32 @@ collections:
     create: true
     slug: ""
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog/post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
+      - {label: "Image", name: "img", widget: "string"}
+      - {label: "Image Alt Text", name: "alt", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
       - {label: "Tags", name: "tags", widget: "list", default: ["posts"]}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - name: "art"
+        label: "Art"
+        file: "src/_data/art.json"
+        create: true
+        slug: "gallery/art"
+        fields:
+          - {label: "Url", name: "src", widget: "string"}
+          - {label: "Alt", name: "alt", wigdet: "string"}
+      - name: "commissions"
+        label: "Commissions"
+        file: "src/_data/commissions.json"
+        create: true
+        slug: "gallery/commissions"
+        fields:
+          - {label: "Artist", name: "artist", widget: "string"}
+          - {label: "Artist Site", name: "site", widget: "string"}
+          - {label: "Url", name: "src", widget: "string"}
+          - {label: "Alt", name: "alt", wigdet: "string"}
