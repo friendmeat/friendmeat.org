@@ -8,7 +8,7 @@ media_folder: "/static"
 collections: 
   - name: "blog"
     label: "Blog"
-    folder: "blog"
+    folder: "src/blog"
     create: true
     slug: ""
     fields:
