@@ -1,7 +1,7 @@
 ---
-title: Comms
+title: Commissions
 eleventyNavigation:
-    - title: Comms
-    - key: comms
-    - parent: stuff
+    key: commissions
+    title: Commissions
+    parent: stuff
 ---
