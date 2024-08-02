@@ -1,14 +1,20 @@
+const eleventyNavigation = require("@11ty/eleventy-navigation");
+const EleventyVite = require("@11ty/eleventy-plugin-vite");
+const eleventyIcons = require("eleventy-plugin-icons");
+
 module.exports = (eleventyConfig) => {
-    eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
-    // eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-vite'));
-    eleventyConfig.addPlugin(require('eleventy-plugin-icons'), {
+    eleventyConfig.addPlugin(eleventyNavigation);
+    eleventyConfig.addPlugin(EleventyVite);
+    eleventyConfig.addPlugin(eleventyIcons, {
         sources: [{ name: 'simple', path: 'node_modules/simple-icons/icons', default: true }]
     });
 
-    eleventyConfig.addWatchTarget('./tailwind.config.js');
-    eleventyConfig.addWatchTarget("./assets/tailwind.css");
+    eleventyConfig.addWatchTarget('tailwind.config.js');
+    eleventyConfig.addWatchTarget("/assets/css/tailwind.css");
+    eleventyConfig.addWatchTarget('postcss.config.js')
 
-    eleventyConfig.addPassthroughCopy("src/assets/js/*.js");
+    eleventyConfig.addPassthroughCopy("src/assets/css");
+    eleventyConfig.addPassthroughCopy("src/assets/js")
 
     eleventyConfig.setFrontMatterParsingOptions({ excerpt: true });
 
