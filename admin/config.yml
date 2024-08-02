@@ -20,24 +20,13 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime", time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
       - {label: "Tags", name: "tags", widget: "list", default: ["posts"]}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "gallery"
-    label: "Gallery"
-    files:
-      - name: "art"
-        label: "Art"
-        file: "src/_data/art.json"
-        create: true
-        slug: "gallery/art"
-        fields:
+  - name: "image"
+    label: "Image"
+    folder: "src/_data/images/"
+    create: true
+    fields: 
           - {label: "Url", name: "src", widget: "string"}
           - {label: "Alt", name: "alt", wigdet: "string"}
-      - name: "commissions"
-        label: "Commissions"
-        file: "src/_data/commissions.json"
-        create: true
-        slug: "gallery/commissions"
-        fields:
-          - {label: "Artist", name: "artist", widget: "string"}
-          - {label: "Artist Site", name: "site", widget: "string"}
-          - {label: "Url", name: "src", widget: "string"}
-          - {label: "Alt", name: "alt", wigdet: "string"}
+          - {label: "Type", name: "type", widget: "select", options: ["mine", "commissions", "other"], multiple: false}
+          - {label: "Artist", name: "artist", widget: "string", required: false}
+          - {label: "Artist Site", name: "site", widget: "string", required: false}
