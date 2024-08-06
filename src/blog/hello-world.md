@@ -1,5 +1,4 @@
 ---
-layout: layouts/post
 title: Hello World
 description: First test post
 date: 2024-08-02
