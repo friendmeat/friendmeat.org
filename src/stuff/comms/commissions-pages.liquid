@@ -1,0 +1,9 @@
+---
+pagination:
+    data: galleries.galleries[1].image
+    size: 1
+    alias: image
+permalink: "/stuff/comms/{{ image.alt | slugify }}"
+---
+<a class="interactable" href="/stuff/gallery">Back to commissions</a>
+{% include "layouts/image" %}

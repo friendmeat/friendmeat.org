@@ -1,0 +1,10 @@
+---
+pagination:
+    data: galleries.galleries[0].image
+    size: 1
+    alias: image
+permalink: "/stuff/gallery/{{ image.alt | slugify }}"
+---
+<a class="interactable" href="/stuff/gallery">Back to gallery</a>
+
+{% include "layouts/image.liquid" %}
