@@ -6,7 +6,9 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPlugin(eleventyNavigation);
     eleventyConfig.addPlugin(EleventyVite);
     eleventyConfig.addPlugin(eleventyIcons, {
-        sources: [{ name: 'simple', path: 'node_modules/simple-icons/icons', default: true }]
+        sources: [{ name: 'simple', path: 'node_modules/simple-icons/icons', default: true },
+            {name:"heroicons", path:"node_modules/heroicons/20/solid"}
+        ]
     });
 
     eleventyConfig.addWatchTarget('tailwind.config.js');
