@@ -3,9 +3,13 @@ pagination:
     data: galleries.galleries[1].image
     size: 1
     alias: image
-permalink: "/stuff/gallery/{{ image.alt | slugify }}"
+permalink: "/stuff/comms/{{ image.alt | slugify }}/index.html"
 ---
-<span><a href="/stuff/gallery">Back to gallery</a></span>
+<span>
+    <a href="/stuff/comms">
+        Back to commissions
+</a>
+</span>
 <div class="flex justify-center">
     <img src="{{ image.src }}" alt="{{ image.alt }}"/>
 </div>
