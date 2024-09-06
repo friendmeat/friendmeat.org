@@ -5,15 +5,21 @@ pagination:
     alias: image
 permalink: "/stuff/comms/{{ image.alt | slugify }}/index.html"
 ---
-<span>
-    <a href="/stuff/comms">
-        Back to commissions
+<a href="/stuff/comms/" class="interactive group flex justify-center items-center max-w-max">
+    {% icon "heroicons:chevron-left", class="group-hover:fill-slate-900 transition-all ease-in" %}
+    <span>Back to commissions</span>
 </a>
 </span>
-<div class="flex justify-center">
-    <img src="{{ image.src }}" alt="{{ image.alt }}"/>
+<div class="flex justify-center w-full">
+    <figure>
+        <img src="{{ image.src }}" alt="{{ image.alt }}"/>
+        <figcaption>
+            <div>{{ image.caption }}</div>
+            <div>by <a href="{{ image.site }}" class="interactive">{{ image.artist }}</a></div>
+        </figcaption>
+    </figure>
 </div>
 <div class="flex justify-between">
-    {% if pagination.href.previous %}<a href="{{ pagination.href.previous}}">Back</a>{% endif %}
-    {% if pagination.href.next %}<a href="{{ pagination.href.next}}">Next</a>{% endif %}
+    {% if pagination.href.previous %}<a href="{{ pagination.href.previous}}" class="interactive">Back</a>{% endif %}
+    {% if pagination.href.next %}<a href="{{ pagination.href.next}}" class="interactive">Next</a>{% endif %}
 </div>
