@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: itsfriendmeat/friendmeat.org
-  branch: cms
+  branch: main
 
 media_folder: "/static"
 
@@ -43,5 +43,6 @@ collections:
               fields: 
                     - {label: "Url", name: "src", widget: "string"}
                     - {label: "Description", name: "alt", widget: "string"}
+                    - {label: "Caption", name: "caption", widget: "string"}
                     - {label: "Artist", name: "artist", widget: "string", required: false}
                     - {label: "Artist Site", name: "site", widget: "string", required: false}
