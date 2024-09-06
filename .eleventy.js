@@ -4,7 +4,7 @@ const eleventyIcons = require("eleventy-plugin-icons");
 
 module.exports = (eleventyConfig) => {
     eleventyConfig.addPlugin(eleventyNavigation);
-    eleventyConfig.addPlugin(EleventyVite);
+    // eleventyConfig.addPlugin(EleventyVite);
     eleventyConfig.addPlugin(eleventyIcons, {
         sources: [{ name: 'simple', path: 'node_modules/simple-icons/icons', default: true },
             {name:"heroicons", path:"node_modules/heroicons/20/solid"}
@@ -16,7 +16,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addWatchTarget('postcss.config.js')
 
     eleventyConfig.addPassthroughCopy({
-        "src/assets/css":"assets/css",
+        // "src/assets/css":"assets/css",
         "src/assets/js":"assets/js",
         "admin":"admin"
 
