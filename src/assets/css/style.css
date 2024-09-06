@@ -25,7 +25,7 @@ h3 {
   @apply fill-zinc-300 w-4;
 }
 
-.interactable {
+.interactive {
   @apply transition-all ease-in hover:bg-zinc-400 hover:text-slate-900;
 }
 
