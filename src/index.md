@@ -3,7 +3,8 @@ layout: default
 title: Friendmeat
 eleventyNavigation:
     key: index
-    title: Index
+    title: Home
+    order: 1
 ---
 ## Hi
 

@@ -3,6 +3,7 @@ title: About
 eleventyNavigation:
     key: about
     title: About
+    order: 4
 ---
 
 friendmeat/itsmeat/meat/matt 

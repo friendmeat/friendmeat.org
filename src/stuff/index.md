@@ -3,6 +3,7 @@ title: Stuff
 eleventyNavigation:
     key: stuff
     title: Stuff
+    order: 3
 ---
 
 [Gallery](/stuff/gallery/) - stuff i've made
