@@ -18,7 +18,8 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy({
         "src/assets/css":"assets/css",
         "src/assets/js":"assets/js",
-        "admin":"admin"
+        "admin":"admin",
+        "src/.well-known/":".well-known/"
 
     })
 
