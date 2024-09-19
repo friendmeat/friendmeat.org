@@ -14,9 +14,7 @@ You've found my site. Good for you.
 
 {% assign posts = collections.posts | reverse | takeThree %}
 {% for post in posts %}
-    <li>
-        <a class="max-w-max interactive" href="{{ post.url }}">{{post.date|slugifyDate}} - {{ post.data.title }}</a>
-    </li>
+<li><a class="max-w-max interactive" href="{{ post.url }}">{{post.date|slugifyDate}} - {{ post.data.title }}</a></li>
 {% endfor %}
 
 ## Stuff to look at
