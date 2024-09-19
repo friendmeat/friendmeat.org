@@ -16,10 +16,9 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addWatchTarget('postcss.config.js')
 
     eleventyConfig.addPassthroughCopy({
-        "src/assets/css":"assets/css",
-        "src/assets/js":"assets/js",
+        "src/assets/":"assets/",
         "admin":"admin",
-        "src/.well-known/":".well-known/"
+        "src/.well-known/":".well-known/" // https://fed.brid.gy/docs#fediverse-enhanced
 
     })
 
