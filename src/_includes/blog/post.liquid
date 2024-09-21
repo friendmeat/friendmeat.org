@@ -1,4 +1,12 @@
 {% layout "default" %}
+{% block meta %}
+<meta name="og:title" content="{{ title }}">
+<meta name="og:description" content="{% excerpt content %}">
+<meta name="og:type" content="article">
+<meta name="og:url" content="https://friendmeat/{{ date | slugifyDate }}/{{ title | slugify }}/">
+{% if img %}<meta name="og:image" content="{{img}}" > {% endif %}
+<title>{{title}} - Friendmeat</title>
+{% endblock %}
 {% block content %}
 <small>{{date|date:"%Y-%m-%d"}}</small>
 <hr />

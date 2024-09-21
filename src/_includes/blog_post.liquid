@@ -2,14 +2,6 @@
 <div class="blog-post container my-3" id="post-{{ forloop.i }}">
   <a href="{{ post.url }}" class="group">
     {% if post.data.img %}
-      {% comment %} <div class="max-h-64 overflow-hidden">
-                <div class="z-40 absolute h-64 w-full bg-gradient-to-b from-transparent to-slate-900"></div>
-                <img class="relative opacity-50 transition-all ease-in group-hover:opacity-100" src="{{post.data.img}}" alt="{{post.data.alt}}">
-              </div>
-                <div class="relative z-50 w-max transition-all ease-in group-hover:bg-zinc-400 group-hover:text-slate-900">
-                  <h2 class="p-0 font-black">{{ post.data.title }}</h2>
-                  <span class="">{{ postdate}}  </span>
-              </div> {% endcomment %}
       <div class="max-h-64 grid grid-rows-[1fr_0fr] group">
         <div id="post-title" class="z-50 w-max h-min row-start-2 col-span-full transition-all ease-in group-hover:bg-zinc-400 group-hover:text-slate-900">
           <h2 class="p-0 font-black">{{ post.data.title }}</h2>
