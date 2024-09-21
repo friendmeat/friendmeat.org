@@ -17,9 +17,7 @@ module.exports = (eleventyConfig) => {
 
     eleventyConfig.addPassthroughCopy({
         "src/assets/":"assets/",
-        "admin":"admin",
-        "src/.well-known/":".well-known/" // https://fed.brid.gy/docs#fediverse-enhanced
-
+        "admin":"admin"
     })
 
     eleventyConfig.setFrontMatterParsingOptions({ excerpt: true });
@@ -32,16 +30,10 @@ module.exports = (eleventyConfig) => {
     })
 
     // Custom shortcodes
-    eleventyConfig.addLiquidShortcode("excerpt", (body) => {
-        // const excerpt = body.split("<-- more -->").at(0);
-        const excerpt = body.match(/[\s\S ]+(?=<-- more -->\n)/);
-        return excerpt
-    })
     eleventyConfig.addLiquidShortcode("excerpt", function (content) {
-        let p1 = content.indexOf("<p>");
-        let p2 = content.indexOf("</p>");
-
-        return content.substring(p1, p2)
+            let p1 = content.indexOf("<p>");
+            let p2 = content.indexOf("</p>");
+            return content.substring(p1+3, p2);
     })
 
     // Custom filter
