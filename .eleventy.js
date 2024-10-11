@@ -1,8 +1,8 @@
-const eleventyNavigation = require("@11ty/eleventy-navigation");
-const EleventyVite = require("@11ty/eleventy-plugin-vite");
-const eleventyIcons = require("eleventy-plugin-icons");
+import eleventyNavigation from "@11ty/eleventy-navigation/.eleventy.js";
+import EleventyVite from "@11ty/eleventy-plugin-vite";
+import eleventyIcons from 'eleventy-plugin-icons';
 
-module.exports = (eleventyConfig) => {
+export default (eleventyConfig)=>{
     eleventyConfig.addPlugin(eleventyNavigation);
     eleventyConfig.addPlugin(EleventyVite);
     eleventyConfig.addPlugin(eleventyIcons, {
