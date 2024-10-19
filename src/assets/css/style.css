@@ -3,13 +3,16 @@
 @tailwind utilities;
 
 
-html,
 body {
-  font-family: "Roboto Slab", serif;
+  font-family: sans-serif
+}
+
+h1, h2, h3 {
+  @apply font-black;
 }
 
 h1 {
-  @apply text-5xl font-black;
+  @apply text-5xl;
 }
 
 h2 {
@@ -22,16 +25,16 @@ h3 {
 
 
 .icon {
-  @apply fill-zinc-300 w-4;
+  @apply fill-text w-4;
 }
 
 .interactive {
-  @apply transition-all ease-in hover:bg-zinc-400 hover:text-slate-900;
+  @apply transition-all ease-in hover:bg-accent;
 }
 
 p{
   a{
-    @apply underline transition-all ease-in hover:bg-zinc-400 hover:text-slate-900;
+    @apply underline transition-all ease-in hover:bg-accent;
   }
 }
 
@@ -50,7 +53,7 @@ p{
 .post-content {
   @apply flex flex-col justify-center lg:px-16;
 
-  h1{
+  /* h1{
     @apply text-pink-600 pt-6;
   }
 
@@ -60,13 +63,13 @@ p{
 
   h3{
     @apply text-amber-200 pt-6;
-  }
+  } */
   
   p {
     @apply py-2;
 
     a {
-      @apply underline hover:bg-zinc-400 hover:text-slate-900;
+      @apply underline transition-all ease-in hover:bg-accent;
     }
 
     img { 
@@ -75,3 +78,4 @@ p{
   }
 
 }
+
