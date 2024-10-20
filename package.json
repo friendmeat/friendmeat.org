@@ -14,7 +14,7 @@
     "slugify": "^1.6.6"
   },
   "scripts": {
-    "start": "del-cli _site && eleventy --serve --incremental",
+    "start": "eleventy --serve",
     "build": "eleventy",
     "clean": "del-cli _site"
   },
