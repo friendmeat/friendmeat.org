@@ -7,15 +7,18 @@
     <meta name="og:site_name" content="Friendmeat">
     {% block meta %}
     {{data}}
-    <title>{{title}} - {{meta.title}}</title>
+    <title>
+    {% if title == meta.title %}
+        {{ title }}
+        {% else %}
+        {{title}} - {{meta.title}}
+    {% endif %}
+    </title>
     {% endblock %}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
     <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
-  <body id="app" class="bg-slate-900 text-zinc-300 w-screen h-full min-h-screen flex flex-col lg:grid lg:grid-rows-1 lg:grid-cols-[8rem_auto]">
+  <body id="app" class="bg-background text-text w-screen h-full min-h-screen flex flex-col lg:grid lg:grid-rows-1 lg:grid-cols-[8rem_auto]">
   {% comment %} Header {% endcomment %}
     <div id="header-container" class="lg:row-span-2">
       {% include 'app/header' %}

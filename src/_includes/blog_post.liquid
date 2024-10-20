@@ -3,12 +3,12 @@
   <a href="{{ post.url }}" class="group">
     {% if post.data.img %}
       <div class="max-h-64 grid grid-rows-[1fr_0fr] group">
-        <div id="post-title" class="z-50 w-max h-min row-start-2 col-span-full transition-all ease-in group-hover:bg-zinc-400 group-hover:text-slate-900">
+        <div id="post-title" class="z-50 w-max h-min row-start-2 col-span-full transition-all ease-in group-hover:bg-accent group-hover:text-text">
           <h2 class="p-0 font-black">{{ post.data.title }}</h2>
           <span class="">{{ postdate }}</span>
         </div>
         <div id="bg-image" class="row-span-full col-span-full overflow-hidden">
-          <div class="z-40 absolute h-64 min-w-full bg-gradient-to-b from-transparent to-slate-900"></div>
+          <div class="z-40 absolute h-64 min-w-full bg-gradient-to-b from-transparent to-background"></div>
           <img
             class="relative opacity-50 transition-all ease-in group-hover:opacity-100"
             src="{{ post.data.img }}"
@@ -16,7 +16,7 @@
         </div>
       </div>
     {% else %}
-      <div class="w-max transition-all ease-in group-hover:bg-zinc-400 group-hover:text-slate-900">
+      <div class="w-max transition-all ease-in group-hover:bg-accent group-hover:text-text">
         <h2 class="p-0">{{ post.data.title }}</h2>
         <span class="">{{ postdate }}</span>
       </div>
