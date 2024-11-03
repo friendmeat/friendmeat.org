@@ -1,22 +1,24 @@
+{% layout "layouts/default" %}
 {% block content %}
-<div class="">
-    <figure class="mx-8 flex flex-col justify-end">
-        <img class="" src="{{ image.src }}" alt="{{ image.alt }}"/>
+<div class="flex flex-col p-4 justify-center px-auto">
+    <img src="{{ image.src }}" alt="{{ image.alt }}" />
+    <figcaption>
+        <div>{{ image.caption }}</div>
         {% if image.artist %}
-            <div>
-                <figcaption class="text-right">
-                    by <a class="underline interactable" href="{{ image.site }}" target="_blank">{{ image.artist }}</a>
-                </figcaption>
-            </div>
-        {% endif %}
-    </figure>
+        <div>by <a href="{{ image.site }}" class="interactive">{{ image.artist }}</a></div>
+    {% endif  %}
+    </figcaption>
 </div>
-<div class="grid grid-cols-2">
+<div class="w-full grid grid-cols-2">
     <div class="min-w-full">
-        {% if pagination.href.previous %}<a class="interactable" href="{{ pagination.href.previous}}">Back</a>{% endif %}
+        {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous}}" class="interactive">Back</a>
+        {% endif %}
     </div>
-    <div class="min-w-full text-right">
-        {% if pagination.href.next %}<a class="interactable" href="{{ pagination.href.next}}">Next</a>{% endif %}
+    <div class="min-w-full flex justify-end">
+        {% if pagination.href.next %}
+        <a href="{{ pagination.href.next}}" class="interactive text-right">Next</a>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
