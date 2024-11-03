@@ -1,12 +1,12 @@
-<footer class="flex flex-row-reverse justify-between w-full border-t-2 border-zinc-400">
+<footer class="flex flex-row-reverse justify-between w-full border-t-2 border-text">
   <ul class="m-8 flex flex-row">
     {% for soc in socials %}
       <a
         href="{{ soc.url }}"
         target="_blank"
-        class="self-center  hover:bg-zinc-300 group transition-all ease-in">
+        class="self-center  hover:bg-accent group transition-all ease-in">
         <li class="p-2">
-          {% icon soc.site '{"class":"w-4 group-hover:fill-slate-900 transition-all ease-in"}' %}
+          {% icon soc.site '{"class":"w-4 group-hover:fill-bg transition-all ease-in"}' %}
         </li>
       </a>
     {% endfor %}
