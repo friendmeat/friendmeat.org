@@ -6,13 +6,21 @@ pagination:
 permalink: "/stuff/gallery/{{ image.alt | slugify }}/index.html"
 ---
 <a href="/stuff/gallery/" class="interactive group flex justify-center items-center max-w-max">
-    {% icon "heroicons:chevron-left", class="group-hover:fill-slate-900 transition-all ease-in" %}
+    {% icon "heroicons:chevron-left", class="group-hover:fill-text transition-all ease-in" %}
     <span>Back to gallery</span>
 </a>
 <div class="flex p-4 justify-center">
     <img src="{{ image.src }}" alt="{{ image.alt }}"/>
 </div>
-<div class="w-full">
-    {% if pagination.href.previous %}<a href="{{ pagination.href.previous}}" class="interactive">Back</a>{% endif %}
-    {% if pagination.href.next %}<a href="{{ pagination.href.next}}" class="interactive text-right">Next</a>{% endif %}
+<div class="w-full grid grid-cols-2">
+    <div class="min-w-full">
+    {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous}}" class="interactive">Back</a>
+    {% endif %}
+    </div>
+    <div class="min-w-full flex justify-end">
+    {% if pagination.href.next %}
+        <a href="{{ pagination.href.next}}" class="interactive text-right">Next</a>
+    {% endif %}
+    </div>
 </div>

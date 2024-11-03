@@ -16,7 +16,7 @@
     </title>
     {% endblock %}
     <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body id="app" class="bg-background text-text w-screen h-full min-h-screen flex flex-col lg:grid lg:grid-rows-1 lg:grid-cols-[8rem_auto]">
   {% comment %} Header {% endcomment %}
@@ -25,7 +25,7 @@
     </div>
     {% comment %} End Header {% endcomment %}
     <div id="content" class="min-h-dvh mx-8 lg:min-h-full">
-      <h1 id="title" class="my-3">{{ title | upcase }}</h1>
+      <h1 id="title" class="my-3 no-underline!">{{ title | upcase }}</h1>
       {% block content %}
       {{ content }}
       {% endblock %}
