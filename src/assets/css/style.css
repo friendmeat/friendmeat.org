@@ -29,53 +29,26 @@ h3 {
 }
 
 .interactive {
-  @apply transition-all ease-in hover:bg-accent;
+  @apply transition-all ease-in hover:bg-accent hover:text-text;
 }
 
 p{
   a{
-    @apply underline transition-all ease-in hover:bg-accent;
+    @apply underline transition-all ease-in hover:bg-accent hover:text-text;
   }
 }
-
-/* Post Listing */
-
-/* .excerpt{
-  @apply py-2;
-} */
-
-/* .post-date{
-  @apply text-slate-400 text-right font-sans;
-} */
 
 /* Blog Post Page */
 
 .post-content {
   @apply flex flex-col justify-center lg:px-16;
 
-  /* h1{
-    @apply text-pink-600 pt-6;
+  img { 
+    @apply max-w-xl mx-auto;
   }
 
-  h2{
-    @apply text-cyan-300 pt-6;
+  h1, h2, h3 {
+    @apply underline underline-offset-auto
   }
-
-  h3{
-    @apply text-amber-200 pt-6;
-  } */
-  
-  p {
-    @apply py-2;
-
-    a {
-      @apply underline transition-all ease-in hover:bg-accent;
-    }
-
-    img { 
-      @apply max-w-xl mx-auto;
-    }
-  }
-
 }
 
