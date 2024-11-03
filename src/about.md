@@ -14,7 +14,7 @@ friendmeat/itsmeat/meat/matt
 
 IT worker / hobbyist programmer / sometimes I like to doodle 
 
-contact me directly at [friendmeat@proton.me](mailto:friendmeat@proton.me)
+contact me directly at [itsmeat@duck.com](mailto:itsmeat@duck.com)
 
 other places to find me:
 
