@@ -5,15 +5,12 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-vite": "^5.0.0",
-    "decap-cms": "3.3.3",
-    "decap-cms-app": "^3.1.11",
     "eleventy-plugin-icons": "^4.4.1",
     "heroicons": "^2.1.5",
     "simple-icons": "^11.9.0",
     "slugify": "^1.6.6"
   },
   "scripts": {
-    "start": "del-cli _site && eleventy --serve --incremental",
     "dev":"concurrently 'npm run dev:tailwind' 'npm run dev:eleventy'",
     "dev:tailwind":"tailwind -i src/public/css/style.css -o _site/css/style.css -w",
     "dev:eleventy":"eleventy --serve",

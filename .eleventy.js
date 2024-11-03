@@ -13,7 +13,7 @@ export default (eleventyConfig)=>{
     eleventyConfig.addWatchTarget('postcss.config.js')
 
     eleventyConfig.addPassthroughCopy({
-        "admin":"admin"
+        "src/public/*.{jpg,png}":"/",
     })
 
     eleventyConfig.setFrontMatterParsingOptions({ excerpt: true });
