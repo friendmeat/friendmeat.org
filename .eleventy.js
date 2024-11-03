@@ -1,10 +1,8 @@
 import eleventyNavigation from "@11ty/eleventy-navigation/.eleventy.js";
-import EleventyVite from "@11ty/eleventy-plugin-vite";
 import eleventyIcons from 'eleventy-plugin-icons';
 
 export default (eleventyConfig)=>{
     eleventyConfig.addPlugin(eleventyNavigation);
-    eleventyConfig.addPlugin(EleventyVite);
     eleventyConfig.addPlugin(eleventyIcons, {
         sources: [{ name: 'simple', path: 'node_modules/simple-icons/icons', default: true },
             {name:"heroicons", path:"node_modules/heroicons/20/solid"}
