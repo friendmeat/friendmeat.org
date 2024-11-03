@@ -14,9 +14,9 @@
   },
   "scripts": {
     "start": "del-cli _site && eleventy --serve --incremental",
-    "dev":"concurrently 'yarn dev:tailwind' 'yarn dev:eleventy'",
+    "dev":"concurrently 'npm run dev:tailwind' 'npm run dev:eleventy'",
     "dev:tailwind":"tailwind -i src/public/css/style.css -o _site/css/style.css",
-    "dev:eleventy":"eleventy --server",
+    "dev:eleventy":"eleventy --serve",
     "build": "eleventy",
     "clean": "del-cli _site"
   },
@@ -26,7 +26,6 @@
     "autoprefixer": "^10.4.19",
     "del-cli": "^5.1.0",
     "postcss": "^8.4.47",
-    "tailwind": "^4.0.0",
     "tailwindcss": "^3.4.13"
   }
 }

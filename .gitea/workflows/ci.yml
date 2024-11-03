@@ -24,8 +24,8 @@ jobs:
         node-version: latest
     - name: Install deps and build
       run: |
-        yarn
-        yarn run build
+        npm install
+        npm run build
     # When the dist_dir is ready, deploy it to neocities
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v1
