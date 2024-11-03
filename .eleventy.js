@@ -10,17 +10,16 @@ export default (eleventyConfig)=>{
     });
 
     eleventyConfig.addWatchTarget('tailwind.config.js');
-    eleventyConfig.addWatchTarget("/assets/css/tailwind.css");
     eleventyConfig.addWatchTarget('postcss.config.js')
 
     eleventyConfig.addPassthroughCopy({
-        "src/assets/":"assets/",
         "admin":"admin"
     })
 
     eleventyConfig.setFrontMatterParsingOptions({ excerpt: true });
 
     eleventyConfig.ignores.add("src/blog/posts/README.md");
+    eleventyConfig.ignores.add("src/assets/css/style.css");
 
 
     eleventyConfig.setLiquidOptions({

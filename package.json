@@ -15,9 +15,10 @@
   "scripts": {
     "start": "del-cli _site && eleventy --serve --incremental",
     "dev":"concurrently 'npm run dev:tailwind' 'npm run dev:eleventy'",
-    "dev:tailwind":"tailwind -i src/public/css/style.css -o _site/css/style.css",
+    "dev:tailwind":"tailwind -i src/public/css/style.css -o _site/css/style.css -w",
     "dev:eleventy":"eleventy --serve",
-    "build": "eleventy",
+    "build": "eleventy && npm run build:tailwind",
+    "build:tailwind":"tailwind -i src/public/css/style.css -o _site/css/style.css ",
     "clean": "del-cli _site"
   },
   "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
