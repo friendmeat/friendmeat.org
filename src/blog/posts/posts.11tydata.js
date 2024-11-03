@@ -1,5 +1,5 @@
 export default {
     tags:["posts"],
-    layout:"blog/post",
+    layout:"layouts/post",
     permalink:"{{ date | slugifyDate }}/{{ title | slugify }}/"
 }
