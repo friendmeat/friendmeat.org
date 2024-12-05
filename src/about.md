@@ -21,3 +21,5 @@ other places to find me:
 {% include 'app/socials' %}
 
 made with [11ty](https://11ty.dev)
+
+view the code on my [gitea instance](https://git.friendmeat.org/friendmeat/friendmeat.org)
