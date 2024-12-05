@@ -10,3 +10,17 @@ layout: layouts/image
     {% icon "heroicons:chevron-left", class="group-hover:fill-slate-900 transition-all ease-in" %}
     <span>Back to commissions</span>
 </a>
+</span>
+<div class="flex justify-center w-full">
+    <figure>
+        <img src="{{ image.src }}" alt="{{ image.alt }}"/>
+        <figcaption>
+            <div>{{ image.caption }}</div>
+            <div>by <a href="{{ image.site }}" class="interactive">{{ image.artist }}</a></div>
+        </figcaption>
+    </figure>
+</div>
+<div class="flex justify-between">
+    {% if pagination.href.previous %}<a href="{{ pagination.href.previous}}" class="interactive">Back</a>{% endif %}
+    {% if pagination.href.next %}<a href="{{ pagination.href.next}}" class="interactive">Next</a>{% endif %}
+</div>
