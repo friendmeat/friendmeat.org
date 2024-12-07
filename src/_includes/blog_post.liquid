@@ -23,7 +23,11 @@
     {% endif %}
   </a>
   <div class="excerpt py-8">
+  {% if post.description %} 
+    {{post.description}}
+    {% else %}
     {% excerpt post.content %}
+  {% endif  %}
   </div>
 </div>
 <div class="relative left-64 h-100 border-solid border-l-2 border-white"></div>
