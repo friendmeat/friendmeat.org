@@ -7,6 +7,8 @@ tags:
   - posts
   - likes
 ---
+it's what you've all been waiting for
+
 ## Zoloft
 Everything is just kind of okay now. I still have all my bitterness and nihilism, but it's more fun and less myopic angst. I will say being medicated makes me daydream about writing, since the characters I think about are all just depression tulpas.  
 ## Sucking Dick
