@@ -22,4 +22,4 @@ other places to find me:
 
 made with [11ty](https://11ty.dev)
 
-view the code on my [gitea instance](https://git.friendmeat.org/friendmeat/friendmeat.org)
+view the code for this site on [github](https://github.com/friendmeat/friendmeat.org)
