@@ -18,7 +18,6 @@
     "build:tailwind":"tailwind -i src/public/css/style.css -o _site/css/style.css ",
     "clean": "del-cli _site"
   },
-  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
   "devDependencies": {
     "concurrently": "^8.2.2",
     "autoprefixer": "^10.4.19",
