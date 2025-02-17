@@ -1,0 +1,35 @@
+[
+    {
+        "title":"Jamie (flat)",
+        "img":"/assets/img/joldfish-jamie-lined-flat.png",
+        "alt":"An anthro raccoon man crossing his arms and looking grumpy",
+        "description":"Jamie joldfish (flat)",
+        "artist":{
+            "name":"joldfish",
+            "handle":"@joldfish",
+            "site":"https://joldfish.carrd.co/"
+        }
+    },
+    {
+        "title":"Jamie (lined/monochrome)",
+        "img":"/assets/img/joldfish-jamie-lined-monochrome.png",
+        "alt":"An anthro raccoon man crossing his arms and looking grumpy",
+        "description":"Jamie (lined/monochrome)",
+        "artist":{
+            "name":"joldfish",
+            "handle":"@joldfish",
+            "site":"https://joldfish.carrd.co/"
+        }
+    },
+    {
+        "title":"Jamie (lineless)",
+        "img":"/assets/img/joldfish-jamie-lineless.png",
+        "alt":"An anthro raccoon man crossing his arms and looking grumpy",
+        "description":"Jamie joldfish (lineless)",
+        "artist":{
+            "name":"joldfish",
+            "handle":"@joldfish",
+            "site":"https://joldfish.carrd.co/"
+        }
+    }
+]

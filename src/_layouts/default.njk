@@ -1,0 +1,17 @@
+{% extends "src/_layouts/base.njk" %}
+{% block head %}
+{{ super() }}
+<title>{{ title | siteTitle }}</title>
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:url" content="{{ meta.base }}{{ page.url }}" />
+{% endblock %}
+{% block body %}
+<article class="main__article">
+    <h1 class="main__article-title">{{ title }}</h1>
+    <div class="main__article-body">
+        {% block content %}
+        {{ content | safe }}
+        {% endblock content %}
+    </div>
+<article>
+{% endblock %}

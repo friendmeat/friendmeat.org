@@ -1,0 +1,116 @@
+@use "../theme";
+@use "../media";
+@use "../size";
+
+.blog__container {
+    flex: 1 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog__post-previews-container {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}   
+
+.blog__post-list-divider {
+    width: 100%;
+    color: white;
+    border: 1px dotted white;
+}
+
+
+.blog__post-preview {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @include media.mobile {
+        margin: size.$md 0;
+        @include theme.theme("border-bottom", "txt", true, "1px dashed")
+    }
+
+    @include media.desktop {
+        padding-left: 1em;
+        @include theme.theme("border-left", "text", true, "dashed 1px");
+
+    }
+
+}
+
+
+.blog__post-preview-content {
+    position: relative;
+    @include theme.transition;
+}
+
+.blog__post-preview-body-container {
+    position: relative;    
+}
+
+.blog__blog__post-preview-fulltext {
+    
+}
+
+
+.blog__post-preview-excerpt {
+    height: 250px;
+    overflow: hidden;
+}
+
+.blog__post-preview-read-more {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: block flex;
+    justify-content: center;
+    align-items: flex-end;
+    @include theme.linearGradient(0deg, "bg", "transparent");
+}
+
+.blog__post-preview-banner-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.blog__post-preview-banner-title {
+    @include theme.transition;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.blog__post-preview-banner {
+    // opacity: 50%;
+    @include theme.transition;
+}
+
+.blog__post-preview-details {
+    width: size.$xxxl;
+    font-size: small;
+    @include media.desktop {
+        position: absolute;
+        left: calc((size.$xxxl + size.$md) * -1);
+    }
+}
+
+.blog__post-preview-tags {
+    margin: 0;
+    list-style: none;
+    @include media.mobile {
+        display: flex;
+        gap: size.$md;
+    }
+}
+.blog__post-preview-tag {
+    text-decoration: dashed;
+}
+
+
+.blog__post-preview-title {}

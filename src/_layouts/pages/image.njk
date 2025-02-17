@@ -1,0 +1,17 @@
+{% extends "src/_layouts/default.njk" %}
+{% block head %}
+{{ super() }}
+<meta property="og:image" content="{{ meta.base }}{{ image.img }}" />
+{% endblock %}
+{% block content %}
+    <figure class="image__figure">
+        <img alt="{{ image.alt }}" src="{{ image.img }}" loading="lazy" class="image__image" />
+        <figcaption class="image__caption">
+            {{ image.description }}
+            {% if image.artist %}
+                - by <a href="{{ image.artist.site }}" class="image__artist">{{ image.artist.name }}</a>
+            {% endif %}
+            </figcaption>
+    </figure>
+    {% include "pagination.njk" %}
+{% endblock %}

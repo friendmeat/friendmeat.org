@@ -1,28 +1,54 @@
 {
+  "name": "2friend2meat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "type": "module",
-  "license": "MIT",
-  "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-vite": "^5.0.0",
-    "eleventy-plugin-icons": "^4.4.1",
-    "heroicons": "^2.1.5",
-    "simple-icons": "^11.9.0",
-    "slugify": "^1.6.6"
+  "license": "AGPL-version-3.0",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
   },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/friendmeat/2friend2meat"
+  },
+  "bugs": "",
+  "keywords": [],
+  "author": {
+    "name": "friendmeat",
+    "email": "friendmeat@proton.me",
+    "url": "https://friendmeat.org"
+  },
+  "contributors": [],
   "scripts": {
-    "dev":"concurrently 'npm run dev:tailwind' 'npm run dev:eleventy'",
-    "dev:tailwind":"tailwind -i src/public/css/style.css -o _site/css/style.css -w",
-    "dev:eleventy":"eleventy --serve",
-    "build": "eleventy && npm run build:tailwind",
-    "build:tailwind":"tailwind -i src/public/css/style.css -o _site/css/style.css ",
-    "clean": "del-cli _site"
+    "dev": "npx --node-options='--experimental-require-module' @11ty/eleventy --serve",
+    "dev:incr": "npx --node-options='--experimental-require-module' @11ty/eleventy --serve --incremental",
+    "build": "npx --node-options='--experimental-require-module' @11ty/eleventy",
+    "test": ""
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
-    "autoprefixer": "^10.4.19",
-    "del-cli": "^5.1.0",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13"
+    "@11ty/eleventy": "^3.0.1-alpha.4",
+    "@11ty/eleventy-img": "^6.0.1",
+    "@11ty/eleventy-plugin-rss": "^2.0.3",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "del": "^8.0.0",
+    "eleventy-plugin-abbr": "^0.0.1",
+    "eleventy-plugin-github-repos": "^0.0.2",
+    "eleventy-plugin-icons": "^4.5.1",
+    "eleventy-plugin-rev": "^2.0.0",
+    "eleventy-sass": "^3.0.0-beta.0",
+    "heroicons": "^2.2.0",
+    "html-minifier-terser": "^7.2.0",
+    "install": "^0.13.0",
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-attrs": "^4.3.1",
+    "markdown-it-callouts": "^1.0.3",
+    "npm": "^11.1.0",
+    "nunjucks-date-filter": "^0.1.1",
+    "scss-reset": "^1.4.6",
+    "simple-icons": "^14.4.0"
   }
 }

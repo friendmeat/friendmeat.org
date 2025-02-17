@@ -1,0 +1,125 @@
+@use "sass:string";
+@use "sass:map";
+@use "sass:list";
+
+$constants: (
+  "transparent": rgba(0, 0, 0, 0),
+);
+
+$base: (
+  "dark": (
+    "bg": #000,
+    "bg50": rgba(0, 0, 0, 50%),
+    "text": #fff,
+    "text50": rgba(255, 255, 255, 50%),
+    "gray-100": #202020,
+    "gray-200": #858585,
+    "primary": #64a097,
+    "secondary": #75705d,
+    "trinary": #755d75,
+    "darkred": #57031f,
+    "red": #460000,
+  ),
+  "light": (
+    "bg": #e4e4e4,
+    "bg50": rgba(255, 255, 255, 50%),
+    "text": #000,
+    "text50": rgba(0, 0, 0, 50%),
+    "gray-100": #d4d4d4,
+    "gray-200": #adadad,
+    "primary": #47f5db,
+    "secondary": #f5cf47,
+    "trinary": #f538f4,
+    "darkred": #aa3343,
+    "red": #e06969,
+  ),
+);
+
+$themes: map.merge(map.merge($base, "dark", $constants), "light", $constants);
+
+// https://www.fabrizioduroni.it/blog/post/2020/05/20/dark-mode-css-sass-scss
+@mixin themeProperty(
+  $theme,
+  $property,
+  $color,
+  $additionalPropertiesPositionIsFront,
+  $additionalProperties
+) {
+  @if $additionalPropertiesPositionIsFront {
+    #{$property}: string.unquote(
+      $additionalProperties + " " + map.get($theme, $color)
+    );
+  } @else {
+    #{$property}: string.unquote(
+      map.get($theme, $color) + " " + $additionalProperties
+    );
+  }
+}
+
+@mixin theme(
+  $property,
+  $color,
+  $additionalPropertiesPositionIsFront: false,
+  $additionalProperties: ""
+) {
+  $light: map.get($themes, "light");
+  $dark: map.get($themes, "dark");
+
+  & {
+    @include themeProperty(
+      $light,
+      $property,
+      $color,
+      $additionalPropertiesPositionIsFront,
+      $additionalProperties
+    );
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include themeProperty(
+      $dark,
+      $property,
+      $color,
+      $additionalPropertiesPositionIsFront,
+      $additionalProperties
+    );
+  }
+}
+
+@mixin linearGradient($angle, $colors...) {
+  $light: map.get($themes, "light");
+  $dark: map.get($themes, "dark");
+
+  $stops-light: ();
+  $stops-dark: ();
+  @each $color in $colors {
+    $stops-light: list.append($stops-light, map.get($light, $color), comma);
+    $stops-dark: list.append($stops-dark, map.get($dark, $color), comma);
+  }
+
+  // @debug $stops-light;
+  // @debug $stops-dark;
+
+  & {
+    background-image: linear-gradient($angle, $stops-light);
+  }
+  @media (prefers-color-scheme: dark) {
+    background-image: linear-gradient($angle, $stops-dark);
+  }
+}
+
+@mixin transition($property:all){
+  transition: $property 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@mixin light {
+  @media (prefers-color-scheme: light){
+    @content;
+  }
+}
+
+@mixin dark {
+  @media (prefers-color-scheme: dark){
+    @content;
+  }
+}
