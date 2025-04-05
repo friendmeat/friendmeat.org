@@ -1,7 +1,7 @@
-import { getStem } from "../../../filters.js";
+import slugify from "@sindresorhus/slugify";
 
 class CommissionPages {
-    data(){
+    data() {
         return {
             layout: "pages/image.njk",
             pagination: {
@@ -10,7 +10,7 @@ class CommissionPages {
                 alias: "image"
             },
             permalink({ image }) {
-                return `/stuff/commissions/${getStem(image.img)}/index.html`
+                return `/stuff/commissions/${slugify(image.title)}/index.html`
             },
             eleventyComputed: {
                 title({ image }) {

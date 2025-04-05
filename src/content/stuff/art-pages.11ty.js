@@ -1,4 +1,5 @@
-import { getStem } from "../../../filters.js";
+import slugify from "@sindresorhus/slugify"
+
 
 class ArtPages {
     data() {
@@ -10,7 +11,7 @@ class ArtPages {
                 alias: "image"
             },
             permalink({ image }) {
-                return `/stuff/art/${getStem(image.img)}/index.html`
+                return `/stuff/art/${slugify(image.title)}/index.html`
             },
             eleventyComputed: {
                 title({ image }) {
