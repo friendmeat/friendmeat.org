@@ -13,7 +13,7 @@
   "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/friendmeat/2friend2meat"
+    "url": "https://github.com/friendmeat/friendmeat.org"
   },
   "bugs": "",
   "keywords": [],
@@ -30,25 +30,29 @@
     "test": ""
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.1-alpha.4",
+    "@11ty/eleventy": "3.0.1-alpha.5",
     "@11ty/eleventy-img": "^6.0.1",
     "@11ty/eleventy-plugin-rss": "^2.0.3",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "del": "^8.0.0",
     "eleventy-plugin-abbr": "^0.0.1",
     "eleventy-plugin-github-repos": "^0.0.2",
-    "eleventy-plugin-icons": "^4.5.1",
+    "eleventy-plugin-icons": "^4.5.3",
     "eleventy-plugin-rev": "^2.0.0",
-    "eleventy-sass": "^3.0.0-beta.0",
+    "eleventy-sass": "3.0.0-beta.0",
     "heroicons": "^2.2.0",
     "html-minifier-terser": "^7.2.0",
     "install": "^0.13.0",
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-attrs": "^4.3.1",
     "markdown-it-callouts": "^1.0.3",
-    "npm": "^11.1.0",
+    "npm": "^11.2.0",
     "nunjucks-date-filter": "^0.1.1",
     "scss-reset": "^1.4.6",
-    "simple-icons": "^14.4.0"
+    "simple-icons": "^14.12.0"
+  },
+  "packageManager": "pnpm@10.7.1+sha1.11ea2eb2e09f608614c62db024375b462aa3d861",
+  "dependencies": {
+    "markdown-it": "^14.1.0"
   }
 }
