@@ -1,50 +1,62 @@
 [
     {
-        "title":"Hip Thrust",
-        "img":"/assets/img/a_hip-thrust.png",
-        "alt":"An anthro deer man doing a hip thrust",
-        "description":"Amani the deer doing hip thrusts"
+        "title": "Hip Thrust",
+        "img": "https://i.postimg.cc/59S7X9jk/F1-SHPtd-Xg-AA5-Gmr.png",
+        "alt": "An anthro deer man doing a hip thrust",
+        "description": "Amani the deer doing hip thrusts"
     },
     {
-        "title":"Choke",
-        "img":"/assets/img/j_choke.jpg",
-        "alt":"An anthro raccoon man being choked",
-        "description":"Jamie the raccoon being choked"
+        "title": "Choke",
+        "img": "https://i.postimg.cc/63dHLtcq/bafkreifd2qqmax3e4nullgpaqogdp535mt7x72ro4pp2symc7aqraj2cpe.jpg",
+        "alt": "An anthro raccoon man being choked",
+        "description": "Jamie the raccoon being choked"
     },
     {
-        "title":"Dance 1",
-        "img":"/assets/img/j_dance-1.jpeg",
-        "alt":"An anthro racoon man dancing with static in the background",
-        "description":"Jamie the racoon dancing (part 1)"
+        "title": "Dance 1",
+        "img": "https://i.postimg.cc/2yG2MGPf/Faue-LRw-X0-AEf-GMJ.jpg",
+        "alt": "An anthro racoon man dancing with static in the background",
+        "description": "Jamie the racoon dancing (part 1)"
     },
     {
-        "title":"Dance 2",
-        "img":"/assets/img/j_dance-2.jpeg",
-        "alt":"An anthro racoon man dancing with static in the background",
-        "description":"Jamie the racoon dancing (part 2)"
+        "title": "Dance 2",
+        "img": "https://i.postimg.cc/prRss4cZ/Fauf-Is-DWYAIK8sg.jpg",
+        "alt": "An anthro racoon man dancing with static in the background",
+        "description": "Jamie the racoon dancing (part 2)"
     },
     {
-        "title":"Knob Twiddler",
-        "img":"/assets/img/j_knob-twiddler.jpg",
-        "alt":"An anthro raccoon man kneeling over a midi keyboard and laptop",
-        "description":"Jamie twiddling knobs, presumably to make horrible noises"
+        "title": "Knob Twiddler",
+        "img": "https://i.postimg.cc/j5Vg7LzB/bafkreieedjpuhpt6ei53d2ewh7lf6j5jzpzsyh34xiejnboiuq52adfkd4.jpg",
+        "alt": "An anthro raccoon man kneeling over a midi keyboard and laptop",
+        "description": "Jamie twiddling knobs, presumably to make horrible noises"
     },
     {
-        "title":"Sneer",
-        "img":"/assets/img/j_sneer.jpg",
-        "alt":"An anthro raccoon man smiling",
-        "description":"Jamie smiling"
+        "title": "Sneer",
+        "img": "https://i.postimg.cc/zGBcZmz2/bafkreib3xa5ausik7oxktleexulmrbkekqibi6typwt2q7e6uxbcfmdfwu.jpg",
+        "alt": "An anthro raccoon man smiling",
+        "description": "Jamie smiling"
     },
     {
-        "title":"Train",
-        "img":"/assets/img/t_harness.jpg",
-        "alt":"An anthro dog wearing a torso hardness",
-        "description":"Train the dog man in his hardness"
+        "title": "Train",
+        "img": "https://i.postimg.cc/VkVHz75f/bafkreicpwf3nutih2rraccn33oocaoeknaee2nmkshdzww64qrusrnsntq.jpg",
+        "alt": "An anthro dog wearing a torso hardness",
+        "description": "Train the dog man in his hardness"
     },
     {
-        "title":"X-Ray",
-        "img":"/assets/img/xray.jpg",
-        "alt":"Digital painting of an x-ray of a indistinct anthro person's skull",
-        "description":"painting of an x-ray of a indistinct anthro person's skull"
+        "title": "X-Ray",
+        "img": "https://i.postimg.cc/HL8vnQ7Q/bafkreif3glg64vbkdih3tdqhmab2xkojv2mpvpwl3fffhpavfx6f4i4yz4.jpg",
+        "alt": "Digital painting of an x-ray of an indistinct anthro person's skull",
+        "description": "painting of an x-ray of an indistinct anthro person's skull"
+    },
+    {
+        "title": "Train 2",
+        "img": "https://i.postimg.cc/v8kYQkpw/bafkreiffktq42pg6snpcayxbgepjdpidiyok6763vraszd7b7rrjpuerim.jpg",
+        "alt": "a sketch of Train, a lithe dog man, nude, seen in profile",
+        "description": "a sketch of Train, a lithe dog man, nude, seen in profile"
+    },
+    {
+        "title": "Coyote",
+        "img": "https://i.postimg.cc/mrm4K5Qq/bafkreigvdh7q26bc33gnw7tcucirbec66nurazmyjz7visrychvdnac4sa.jpg",
+        "alt": "a paper taped to a wall with two pencil sketches of a coyote running",
+        "description": "a paper taped to a wall with two pencil sketches of a coyote running"
     }
 ]

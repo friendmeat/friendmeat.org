@@ -1,7 +1,7 @@
 [
     {
         "title":"Jamie (flat)",
-        "img":"/assets/img/joldfish-jamie-lined-flat.png",
+        "img":"https://i.postimg.cc/BZNf7rsH/joldfish-jamie-lined-flat.png",
         "alt":"An anthro raccoon man crossing his arms and looking grumpy",
         "description":"Jamie joldfish (flat)",
         "artist":{
@@ -12,7 +12,7 @@
     },
     {
         "title":"Jamie (lined/monochrome)",
-        "img":"/assets/img/joldfish-jamie-lined-monochrome.png",
+        "img":"https://i.postimg.cc/3JR5stJ6/joldfish-jamie-lined-monochrome.png",
         "alt":"An anthro raccoon man crossing his arms and looking grumpy",
         "description":"Jamie (lined/monochrome)",
         "artist":{
@@ -23,7 +23,7 @@
     },
     {
         "title":"Jamie (lineless)",
-        "img":"/assets/img/joldfish-jamie-lineless.png",
+        "img":"https://i.postimg.cc/hvCFJdMp/joldfish-jamie-lineless.png",
         "alt":"An anthro raccoon man crossing his arms and looking grumpy",
         "description":"Jamie joldfish (lineless)",
         "artist":{
