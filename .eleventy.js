@@ -3,6 +3,7 @@ import eleventyNavigation from "@11ty/eleventy-navigation/.eleventy.js";
 import eleventyIcons from 'eleventy-plugin-icons';
 
 export default (eleventyConfig)=>{
+    //#region Plugins
     eleventyConfig.addPlugin(IdAttributePlugin);
     eleventyConfig.addPlugin(eleventyNavigation);
     eleventyConfig.addPlugin(eleventyIcons, {
@@ -10,32 +11,39 @@ export default (eleventyConfig)=>{
             {name:"heroicons", path:"node_modules/heroicons/20/solid"}
         ]
     });
+    //#endregion Plugins
 
+    //#region Watch Targets
     eleventyConfig.addWatchTarget('tailwind.config.js');
     eleventyConfig.addWatchTarget('postcss.config.js')
+    //#endregion Watch Targets
 
+    //#region Passthrough
     eleventyConfig.addPassthroughCopy({
         "src/public/*.{jpg,png,svg}":"/",
     })
+    //#endregion Passthrough
 
     eleventyConfig.setFrontMatterParsingOptions({ excerpt: true });
-
+    
+    //#region Ignores
     eleventyConfig.ignores.add("src/blog/posts/README.md");
     eleventyConfig.ignores.add("src/assets/css/style.css");
+    //#endregion Ignores
 
-
+    //#region Template Options
     eleventyConfig.setLiquidOptions({
         jsTruthy: true
     })
+    //#endregion Template Options
 
-    // Custom shortcodes
+    //#region Custom
     eleventyConfig.addLiquidShortcode("excerpt", function (content) {
             let p1 = content.indexOf("<p>");
             let p2 = content.indexOf("</p>");
             return content.substring(p1+3, p2);
     })
 
-    // Custom filter
     eleventyConfig.addFilter("slugifyDate",
         /**
          * [Return a url-formatted date from a post date for use in slugs]
@@ -69,6 +77,7 @@ export default (eleventyConfig)=>{
             }
         }
     });
+    //#endregion Custom
     return {
         dir: {
             input: "src",
