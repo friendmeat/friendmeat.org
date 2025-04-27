@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    <link rel="stylesheet" href="{{ "/assets/css/styles.css" | rev}}" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/themes/prism-okaidia.css" />
+    {% endblock %}
+</head>
+<body>
+    {% include "header.njk" %}
+    <main class="main" id="main">
+        {% block body %}
+        {% endblock %}
+    </main>
+    {% include "footer.njk" %}
+    {% block scripts %}
+        <script src="https://unpkg.com/prismjs@1.29.0/components/prism-core.min.js"></script>
+        <script src="https://unpkg.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    {% endblock %}
+</body>
+</html>

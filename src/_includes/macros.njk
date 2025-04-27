@@ -1,0 +1,9 @@
+{% macro ogBlog(post) %}
+<meta property="og:title" content="{{ post.title | siteTitle }}" />
+<meta property="og:url" content="{{ post.url }}" />
+{% endmacro %}
+
+{% macro ogImage(image) %}
+<meta property="og:title" content="{{ image.title | siteTitle }}" />
+<meta property="og:url" content="{{ page.url }}" />
+{% endmacro %}

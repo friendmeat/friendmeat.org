@@ -1,0 +1,16 @@
+{% if collections.githubRepos.length > 0 %}
+<ul class="projects__repo-list">
+    {% for repo in collections.githubRepos %}
+    <li class="projects__repo-list-item">
+            <h3 class="projects__repo-list-item-title">
+                <a href="{{ repo.html_url }}" target="_blank">
+                    {{ repo.name }}
+                </a>
+            </h3>
+        <div class="projects__repo-list-item-description">
+            {{ repo.description }}
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}

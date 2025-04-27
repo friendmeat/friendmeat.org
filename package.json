@@ -1,4 +1,8 @@
 {
+  "name": "2friend2meat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "type": "module",
   "license": "MIT",
   "scripts": {

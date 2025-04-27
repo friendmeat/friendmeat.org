@@ -1,0 +1,43 @@
+@use "../theme";
+@use "../size";
+
+.projects__repos-title {
+    display: flex;
+    align-items: center;
+    gap: size.$sm;
+}
+
+.projects__github-icon {
+    width: size.$lg;
+    filter: brightness(100) invert(100);
+}
+
+.projects__repo-list {
+    margin: size.$md 0 !important;
+}
+
+.projects__repo-list-item {
+    margin: size.$md 0 !important;
+    padding: size.$sm;
+    list-style: none !important;
+    border-radius: size.$xs;
+    @include theme.theme("background-color", "gray-100");
+    @include theme.theme("border", "gray-200", true, "1px solid");
+    
+}
+
+.projects__repo-list-item-title {
+    font-size: size.$lg !important;
+    width: max-content;
+    cursor: pointer;
+    @include theme.theme("border-bottom", "gray-200", true, "1px solid");
+    >a{
+        all: unset !important;
+    }
+
+}
+
+
+.projects__repo-list-item-description {
+    padding: size.$md 0;
+}

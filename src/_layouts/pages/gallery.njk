@@ -1,0 +1,20 @@
+{% extends "src/_layouts/base.njk" %}
+{% block head %}
+{{ super() }}
+<title>{{ title | siteTitle }}</title>
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:url" content="{{ meta.base }}{{ page.url }}" />
+{% endblock %}
+{% block body %}
+{% set images = images | getGlobalData %}
+<article class="gallery__container">
+    {% for image in images %}
+    <a href="/stuff/{{ slug }}/{{ image.title | slugify }}/" class="gallery__figure-container">
+        <figure class="gallery__figure">
+            <img alt="{{ image.alt }}" src="{{ image.img }}" loading="lazy" class="gallery__figure-image"/>
+            <figcaption class="gallery__figure-caption">{{ image.title }}</figcaption>
+        </figure>
+    </a>
+    {% endfor %}
+</article>
+{% endblock %}

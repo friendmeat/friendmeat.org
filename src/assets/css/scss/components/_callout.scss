@@ -1,0 +1,48 @@
+@use "../theme";
+@use "../size";
+
+.callout {
+  padding: size.$sm;
+  margin: size.$md 0;
+  border-width: 1px;
+  position: relative;
+  & p {
+    padding: 0 size.$sm;
+  }
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skew(10deg);
+  }
+}
+
+.callout-note {
+  &::after{
+    @include theme.theme("border", "gray-200", true, "1px solid");
+    @include theme.linearGradient(90deg, "gray-100", "bg");
+  }
+}
+
+.callout-warn {
+  &::after {
+    @include theme.theme("border", "darkred", true, "1px solid");
+    @include theme.linearGradient(90deg, "red", "bg");
+  }
+
+  & .callout-title {
+    &::before {
+      content: "!";
+      font-weight: 800;
+      padding-right: size.$sm;
+    }
+  }
+}
+
+.callout-title {
+  font-weight: 700;
+}
