@@ -1,7 +1,9 @@
+import { IdAttributePlugin } from "@11ty/eleventy";
 import eleventyNavigation from "@11ty/eleventy-navigation/.eleventy.js";
 import eleventyIcons from 'eleventy-plugin-icons';
 
 export default (eleventyConfig)=>{
+    eleventyConfig.addPlugin(IdAttributePlugin);
     eleventyConfig.addPlugin(eleventyNavigation);
     eleventyConfig.addPlugin(eleventyIcons, {
         sources: [{ name: 'simple', path: 'node_modules/simple-icons/icons', default: true },
