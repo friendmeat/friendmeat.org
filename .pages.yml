@@ -1,9 +1,9 @@
 content:
   - name: posts
     label: Posts
-    path: src/content/blog/posts
+    path: src/blog/posts
     type: collection
-    fields: 
+    fields:
       - name: published
         label: Published
         type: boolean
@@ -24,30 +24,43 @@ content:
         options:
           multiple: true
           creatable: true
-          values: [ '', links, likes ]
+          values: ["", links, likes]
       - name: content
         label: Content
         type: rich-text
         description: Post body
   - name: images
     label: Images
-    path: scr/_data/images.json
+    path: src/_data/images.json
+    type: file
+    list: true
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: src
+        label: Src
+        type: string
+      - name: alt
+        label: Alt-text
+        type: string
+      - name: description
+        label: Description
+        type: text
+  - name: metadata
+    label: Metadata
+    path: src/_data/meta.json
     type: file
     fields:
-      - name: images
-        list: true
-        type: object
-        format: json
-        fields:
-          - name: title
-            label: Title
-            type: string
-          - name: src
-            label: Src
-            type: string
-          - name: alt
-            label: Alt-text
-            type: string
-          - name: description
-            label: Description
-            type: text
+      - name: author
+        label: Author
+        type: string
+      - name: base
+        label: Base
+        type: string
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description
+        type: string
