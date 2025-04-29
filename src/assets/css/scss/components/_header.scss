@@ -42,10 +42,10 @@
 }
 
 .header__list-item {
+    position: relative;
     @include media.desktop {
         margin: size.$lg 0;
     }
-    position: relative;
     &:hover {
         &::after {
             top: 1px;
