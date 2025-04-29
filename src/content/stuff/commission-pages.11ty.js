@@ -1,4 +1,4 @@
-import slugify from "@sindresorhus/slugify";
+import slugify from "slugify"
 
 class CommissionPages {
     data() {
@@ -10,7 +10,7 @@ class CommissionPages {
                 alias: "image"
             },
             permalink({ image }) {
-                return `/stuff/commissions/${slugify(image.title)}/index.html`
+                return `/stuff/commissions/${slugify(image.title, { lower: true, trim: true, remove: new RegExp(/[()\*]/) })}/index.html`
             },
             eleventyComputed: {
                 title({ image }) {
