@@ -5,6 +5,7 @@ content:
     type: collection
     view:
       fields: [ title, date, topics, published ]
+    exclude: [ posts.11tydata.js ]
     fields:
       - name: title
         label: Title
