@@ -50,6 +50,7 @@ content:
       - name: artist
         label: Artist
         type: reference
+        required: false
         options:
           collection: artists
           search: "name"
@@ -78,9 +79,8 @@ content:
         type: string
   - name: artists
     label: Artists
-    path: src/_data/artists.json
-    type: file
-    list: true
+    path: src/_data/artists
+    type: collection
     fields:
       - name: name
         label: Name
