@@ -59,7 +59,8 @@ content:
       - name: license
         label: License
         type: select
-        options: ["CCO", "artist"]
+        options: 
+          values: ["CCO", "artist"]
   - name: metadata
     label: Metadata
     path: src/_data/meta.json
