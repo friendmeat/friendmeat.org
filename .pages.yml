@@ -26,8 +26,8 @@ content:
           multiple: true
           creatable: true
           values: [links, likes]
-      - name: content
-        label: Content
+      - name: body
+        label: Body
         type: rich-text
         description: Post body
   - name: images
