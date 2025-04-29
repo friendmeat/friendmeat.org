@@ -1,5 +1,6 @@
 {
-    "description":"Friendmeat's site",
     "author":"friendmeat",
-    "title":"Friendmeat"
+    "base":"https://friendmeat.org",
+    "title":"friendmeat",
+    "description":"The site abouts the friendmeat"
 }

@@ -24,7 +24,7 @@ jobs:
         node-version: latest
     - name: Install deps and build
       run: |
-        npm install
+        npm install --force
         npm run build
     # When the dist_dir is ready, deploy it to neocities
     - name: Deploy to neocities
@@ -32,4 +32,4 @@ jobs:
       with:
         api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: true
-        dist_dir: _site
+        dist_dir: dist

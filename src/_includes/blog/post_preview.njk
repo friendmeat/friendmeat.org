@@ -1,0 +1,35 @@
+<section class="blog__post-preview">
+    <div class="blog__post-preview-details">
+        <small class="blog__post-preview-date">{{ post.date.toLocaleDateString() }}</small>
+        <div class="blog__post-preview-tags">
+            {% for topic in post.data.topics %}
+                <a href="{{ '/blog/tag/' + topic + '/' | url }}" class="blog__post-preview-tag">#{{ topic }}</a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="blog__post-preview-link">
+        <div class="blog__post-preview-content">
+            <div class="blog__post-preview-title-container">
+                <a href="{{ post.url | url }}">
+                    <h2 class="blog__post-preview-title">{{ post.data.title }}</h2>
+                {% if post.data.img %}
+                    <div class="blog__post-preview-banner-container">
+                        <img 200 class="blog__post-preview-banner" src="{{ post.data.img }}" alt="{{ post.data.alt }}"/>
+                    </div>
+                {% endif %}
+                </a>
+            </div>
+            <div class="blog__post-preview-body-container">
+
+                {% if post.data.excerpt.hasMore %}
+                <div class="blog__post-preview-excerpt">{{ post.data.excerpt.content | markdownify | safe }}</div>
+                <div class="blog__post-preview-read-more">
+                    <a href="{{ post.url | url }}">read more</a>
+                </div>
+            {% else %}
+            <p class="blog__post-preview-fulltext">{{ post.content | safe }}</p>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,20 @@
+$breakpoint-md: 500px;
+$breakpoint-mobile: 620px;
+
+@mixin mobile {
+    @media (max-width: $breakpoint-mobile){
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: $breakpoint-md){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $breakpoint-mobile){
+        @content;
+    }
+}

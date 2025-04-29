@@ -1,0 +1,16 @@
+@use "../size";
+
+.pagination {
+    margin: size.$md 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.pagination__previous-container {
+    grid-column: 1;
+}
+
+.pagination__next-container {
+    grid-column: 2;
+    text-align: right;
+}

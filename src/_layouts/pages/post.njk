@@ -1,0 +1,16 @@
+{% import "macros.njk" as macros with context %}
+{% extends "src/_layouts/default.njk" %}
+{% block head %}
+{{ super() }}
+<meta property="og:description" content="{{ post.excerpt }}" />
+<meta property="og:image" content="{{ meta.site }}{{ img }}" />
+{% endblock %}
+{% block content %}
+    <div class="blog__post-details">
+        <small class="blog__post-details-date">{{ page.date.toLocaleDateString() }}</small>
+    </div>
+    {% if img %}
+        <img src="{{ img }}" alt="{{ alt }}" />
+    {% endif %}
+    {{ super() }}
+{% endblock content %}
