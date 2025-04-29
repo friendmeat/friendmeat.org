@@ -1,7 +1,7 @@
 content:
   - name: posts
     label: Posts
-    path: src/blog/posts
+    path: src/content/blog/posts
     type: collection
     fields:
       - name: published
@@ -38,8 +38,8 @@ content:
       - name: title
         label: Title
         type: string
-      - name: src
-        label: Src
+      - name: img
+        label: Img
         type: string
       - name: alt
         label: Alt-text
@@ -47,6 +47,22 @@ content:
       - name: description
         label: Description
         type: text
+      - name: artist
+        label: Artist
+        type: reference
+        options:
+          collection: artists
+          search: "name"
+          value: "{name}"
+          label: "{name}"
+      - name: license
+        label: License
+        type: reference
+        options: 
+          collection: license
+          search: "title"
+          value: "{title}"
+          label: "{title}"
   - name: metadata
     label: Metadata
     path: src/_data/meta.json
@@ -64,3 +80,25 @@ content:
       - name: description
         label: Description
         type: string
+  - name: artists
+    label: Artists
+    path: src/_data/artists.json
+    type: file
+    list: true
+    fields:
+      - name: name
+        label: Name
+        type: string
+      - name: handle
+        label: Handle
+        type: string
+      - name: site
+        label: Site
+        type: string
+  - name: license
+    label: License
+    path: src/_data/license.json
+    type: file
+    fields: 
+      - name: title
+        label: Title
