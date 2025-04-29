@@ -21,7 +21,7 @@ content:
         options:
           multiple: true
           creatable: true
-          values: ["", links, likes]
+          values: [links, likes]
       - name: published
         label: Published
         type: boolean
