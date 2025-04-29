@@ -2,9 +2,11 @@
 @use "./scss/theme";
 @use "./scss/media";
 @use "./scss/size";
+@use "./scss/animation";
 
 @use "./scss/components/header";
 @use "./scss/components/footer";
+@use "./scss/components/home";
 @use "./scss/components/callout";
 @use "./scss/components/repos";
 @use "./scss/components/error";
