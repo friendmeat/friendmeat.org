@@ -23,11 +23,6 @@ content:
           multiple: true
           creatable: true
           values: [links, likes]
-      - name: published
-        label: Published
-        type: boolean
-        default: true
-        description: Displays post if published
       - name: content
         label: Content
         type: rich-text
