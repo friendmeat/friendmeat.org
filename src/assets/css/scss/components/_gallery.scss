@@ -1,23 +1,61 @@
 @use "../theme";
 @use "../size";
 @use "../media";
+@use "../typography";
 
 $img-height: 500px;
 
 .gallery__container {
-    margin: size.$md auto;
-    max-width: 1000px;
+    margin: size.$md;
+
+    @include media.mobile {
+        display: flex;
+        flex-direction: column;
+    }
 
     @include media.desktop {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+        // grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
     }
 }
 
 .gallery__figure-container {
     overflow: hidden;
     aspect-ratio: 1;
+    position: relative;
+
+    @include media.desktop {
+
+        & .gallery__figure-image {
+            filter: blur(3px) grayscale(100%);
+            @include theme.transition;
+        }
+
+        &:hover,
+        &:focus {
+
+            &::before {
+                content: attr(data-title);
+                color: white;
+                z-index: 1;
+                font-size: size.$lg;
+                height: size.$lg;
+                width: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                text-align: center;
+                backdrop-filter: blur(2px) brightness(50%);
+                @include typography.roboto(Black);
+            }
+
+            .gallery__figure-image {
+                filter: blur(0);
+            }
+        }
+    }
+
 }
 
 .gallery__figure {
@@ -26,23 +64,25 @@ $img-height: 500px;
 }
 
 .gallery__figure-image {
+    position: absolute;
+    height: $img-height;
+    width: 100%;
+    object-fit: cover;
     @include media.desktop {
-        height: $img-height;
-        object-fit: cover;
-        // object-position: center calc(($img-height / 2) * -1);
+        top: -50%;
     }
 }
 
 .gallery__figure-caption {
     display: none;
     @include theme.linearGradient(-45deg, "bg", "transparent");
+
     @include media.desktop {
         top: 0;
         text-align: right;
         position: absolute;
         width: 100%;
         height: 100%;
-        // display: flex;
         justify-content: flex-end;
         align-items: flex-end;
         padding: size.$sm;
@@ -54,4 +94,8 @@ $img-height: 500px;
 
 .image__artist {
     text-decoration: dashed underline;
+}
+
+.image__cc0 {
+    margin: size.$lg 0;
 }

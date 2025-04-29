@@ -1,7 +1,7 @@
 ---
 title: Cool Links
 date: 2024-03-25
-topics:
+tags:
     - links
 ---
 Instead of doing work today here's stuff i found online

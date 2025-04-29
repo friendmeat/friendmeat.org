@@ -8,5 +8,4 @@ export default {
             hasMore: page.rawInput.length > 1000
         })
     }
-
 }

@@ -1,14 +1,15 @@
+media:
+  input: src/assets/img
+  output: /
 content:
   - name: posts
     label: Posts
     path: src/content/blog/posts
     type: collection
-    fields: 
-      - name: published
-        label: Published
-        type: boolean
-        default: true
-        description: Displays post if published
+    view:
+      fields: [ title, date, topics, published ]
+    exclude: [ posts.11tydata.js ]
+    fields:
       - name: title
         label: Title
         type: string
@@ -24,8 +25,73 @@ content:
         options:
           multiple: true
           creatable: true
-          values: [ '', links, likes ]
-      - name: content
-        label: Content
+          values: [links, likes]
+      - name: body
+        label: Body
         type: rich-text
         description: Post body
+  - name: images
+    label: Images
+    path: src/_data/images.json
+    type: file
+    list: true
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: img
+        label: Img
+        type: string
+        pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
+      - name: alt
+        label: Alt-text
+        type: string
+      - name: description
+        label: Description
+        type: text
+      - name: artist
+        label: Artist
+        type: reference
+        required: false
+        options:
+          collection: artists
+          search: "name"
+          value: "{name}"
+          label: "{name}"
+      - name: license
+        label: License
+        type: select
+        options: 
+          values: ["CCO", "artist"]
+  - name: metadata
+    label: Metadata
+    path: src/_data/meta.json
+    type: file
+    fields:
+      - name: author
+        label: Author
+        type: string
+      - name: base
+        label: Base
+        type: string
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description
+        type: string
+  - name: artists
+    label: Artists
+    path: src/_data/artists
+    type: collection
+    fields:
+      - name: name
+        label: Name
+        type: string
+      - name: handle
+        label: Handle
+        type: string
+      - name: site
+        label: Site
+        type: string
+        pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$

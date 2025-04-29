@@ -9,7 +9,7 @@
 {% set images = images | getGlobalData %}
 <article class="gallery__container">
     {% for image in images %}
-    <a href="/stuff/{{ slug }}/{{ image.title | slugify }}/" class="gallery__figure-container">
+    <a href="/stuff/{{ slug }}/{{ image.title | slugify }}/" data-title="{{ image.title }}" class="gallery__figure-container">
         <figure class="gallery__figure">
             <img alt="{{ image.alt }}" src="{{ image.img }}" loading="lazy" class="gallery__figure-image"/>
             <figcaption class="gallery__figure-caption">{{ image.title }}</figcaption>

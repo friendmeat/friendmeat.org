@@ -1,9 +1,11 @@
 {% extends "src/_layouts/default.njk" %}
 {% block head %}
 {{ super() }}
-<meta property="og:image" content="{{ meta.base }}{{ image.img }}" />
+<meta property="og:image" content="{{ image.img }}" />
 {% endblock %}
-{% block content %}
+{% block body %}
+<main class="main main__article" id="main">
+    <h2 class="text-lg font-roboto-black">{{ image.title }}</h2>
     <figure class="image__figure">
         <img alt="{{ image.alt }}" src="{{ image.img }}" loading="lazy" class="image__image" />
         <figcaption class="image__caption">
@@ -11,7 +13,13 @@
             {% if image.artist %}
                 - by <a href="{{ image.artist.site }}" class="image__artist">{{ image.artist.name }}</a>
             {% endif %}
+            {% if image.cc0 %}
+            <div class="image__cc0">
+                {% include "src/_includes/parts/cc0.njk" %}
+            </div>
+            {% endif %}
             </figcaption>
     </figure>
     {% include "pagination.njk" %}
+</main>
 {% endblock %}

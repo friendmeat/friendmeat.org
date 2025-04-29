@@ -1,0 +1,80 @@
+@use "sass:list";
+@use "sass:map";
+@use "sass:string";
+@use "./size";
+
+// Size
+$sizes: (
+    xs:size.$xs,
+    sm:size.$sm,
+    md:size.$md,
+    lg:size.$lg,
+    xl:size.$xl,
+    xxl:size.$xxl,
+    xxxl:size.$xxxl
+);
+
+@each $size, $val in $sizes {
+    .text-#{$size} {
+        font-size: $val;
+    }
+}
+
+
+// Decoration
+.underline {
+    text-decoration: underline;
+}
+
+@mixin text-stroke($color) {
+    text-shadow: -1px -1px 0 $color, -1px 1px 0 $color, 1px 1px 0 $color, 1px -1px $color,;
+}
+
+// Position
+$positions: left, right, center;
+
+@each $p in $positions {
+    .text-#{$p} {
+        text-align: $p;
+    }
+}
+
+// Fonts
+
+@font-face {
+    font-family: RGHPPsans;
+    src: url("/assets/font/RGHPPSans.otf");
+}
+
+@mixin comic-sans {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+@mixin rghpp {
+    font-family: RGHPPsans;
+}
+
+.font-revenge {
+    @include rghpp;
+}
+
+.font-comic-sans {
+    @include comic-sans;
+}
+
+@mixin roboto($weight) {
+    font-family: 'Roboto #{$weight}',
+    sans-serif;
+}
+
+@each $w in "Thin", "Light", "Medium", "Black" {
+    $lower: string.to-lower-case($w);
+    .font-roboto-#{$lower} {
+        font-family: 'Roboto #{$w}',
+        sans-serif;
+    }
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}

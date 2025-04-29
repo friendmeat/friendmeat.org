@@ -1,8 +1,9 @@
-import { deleteSync } from "del";
+import path from "node:path";
+// import { deleteSync } from "del";
 import feedPlugin from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-import pluginRev from "eleventy-plugin-rev";
-import eleventySass from "eleventy-sass";
+// import pluginRev from "eleventy-plugin-rev";
+// import eleventySass from "eleventy-sass";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateFilter from "nunjucks-date-filter";
 import pluginIcons from "eleventy-plugin-icons";
@@ -11,14 +12,13 @@ import markdownIt from "markdown-it";
 import markdownItCallouts from "markdown-it-callouts";
 import markdownItAnchor from "markdown-it-anchor";
 import htmlmin from "html-minifier-terser";
-
-import { getStem } from "./filters.js";
+import * as sass from "sass";
 
 console.log(process.env.ELEVENTY_RUN_MODE)
 
 export default function (eleventyConfig) {
     /* Clean Dist Directory*/
-    deleteSync("dist");
+    // deleteSync("dist");
 
     /* Plugins */
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
@@ -35,10 +35,9 @@ export default function (eleventyConfig) {
         }
     });
     eleventyConfig.addPlugin(feedPlugin);
-    eleventyConfig.addPlugin(pluginRev);
-    eleventyConfig.addPlugin(eleventySass, {
-        rev: true,
-    });
+    // eleventyConfig.addPlugin(pluginRev);
+    // eleventyConfig.addPlugin(eleventySass, {
+    // });
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(pluginIcons, {
         sources: [
@@ -67,6 +66,26 @@ export default function (eleventyConfig) {
     eleventyConfig.amendLibrary("njk", (njk) => {
         return njk.addFilter('date', dateFilter);
     });
+    eleventyConfig.addExtension("scss", {
+        outputFileExtension: "css",
+        useLayouts: true,
+        compile: async function (inputContent, inputPath) {
+            let parsed = path.parse(inputPath);
+            if (parsed.name.startsWith("_")) return;
+
+            let result = sass.compileString(inputContent, {
+                loadPaths: [parsed.dir || ".", this.config.dir.includes,]
+            })
+
+            this.addDependencies(inputPath, result.loadedUrls);
+
+            return async (data) => {
+                return result.css
+            }
+        }
+    })
+
+    eleventyConfig.addTemplateFormats("scss");
 
     /* Tempate Transforms */
     // https://www.11ty.dev/docs/transforms/#minify-html-output
@@ -89,9 +108,6 @@ export default function (eleventyConfig) {
     eleventyConfig.addFilter("siteTitle", function (title) {
         return `${title ? `${title} | ` : ``} ${this.ctx.meta.title}`;
     });
-    eleventyConfig.addFilter("slugifyFile", (file) => {
-        return getStem(file);
-    });
 
     eleventyConfig.addFilter("getGlobalData", function (key) {
         return this.ctx[key]
@@ -100,6 +116,16 @@ export default function (eleventyConfig) {
     eleventyConfig.addFilter("markdownify", function (content) {
         return markdownIt().render(content)
     })
+
+    eleventyConfig.addFilter("takeThree", 
+        /**
+         * 
+         * @param {any[]} array 
+         * @returns first 3 items from array
+         */
+        function (array) { 
+            return array.slice(0, 3);
+    });
 
     /* Custom Shortcodes */
     eleventyConfig.addShortcode("firstImage", function (collection) {
@@ -129,6 +155,7 @@ export default function (eleventyConfig) {
     // eleventyConfig.addPassthroughCopy("src/assets/icons");
     eleventyConfig.addPassthroughCopy("src/assets/img");
     eleventyConfig.addPassthroughCopy("src/assets/js");
+    eleventyConfig.addPassthroughCopy("src/assets/font");
 
     /* Watch Targets */
     eleventyConfig.addWatchTarget("./src/assets/")

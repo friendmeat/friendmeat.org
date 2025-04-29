@@ -1,0 +1,22 @@
+@use "../theme";
+@use "../animation";
+@use "../typography";
+
+.home__title {
+    text-shadow: -1px -1px 0 black;
+    @include typography.text-stroke(black);
+    @include theme.theme(color, primary);
+    @for $i from 0 through 10 {
+        & :nth-child(#{$i}){
+            animation-delay: calc(100ms * $i);
+        }
+    }
+}
+
+.home__the-meat-container {
+    position: relative;
+}
+
+.home__the-meat-base {
+    position: absolute;
+}

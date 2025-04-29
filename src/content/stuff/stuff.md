@@ -6,5 +6,4 @@ permalink: "stuff/index.html"
 
 Browse my wares
 
-- [Art](/stuff/art)
-- [Commissions](/stuff/commissions)
+{% include "stuff_links.njk" %}

@@ -1,0 +1,28 @@
+@use "theme";
+
+@mixin keyframes($name){
+    @keyframes #{$name} {
+        @content
+    }
+};
+
+@mixin animate($name, $duration, $method, $time){
+    animation: $name $duration $method $time;
+};
+
+@mixin hueshift {
+    @include animate(hueshift, infinite, alternate, 1000ms);
+    @include keyframes(hueshift){
+        0% {
+            filter: hue-rotate(0)
+        }
+    
+        100% {
+            filter: hue-rotate(90deg)
+        }
+    };
+}
+
+.hueshift {
+    @include hueshift();
+}

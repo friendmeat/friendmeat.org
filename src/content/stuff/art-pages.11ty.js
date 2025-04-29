@@ -1,4 +1,4 @@
-import slugify from "@sindresorhus/slugify"
+import slugify from "slugify"
 
 
 class ArtPages {
@@ -11,7 +11,7 @@ class ArtPages {
                 alias: "image"
             },
             permalink({ image }) {
-                return `/stuff/art/${slugify(image.title)}/index.html`
+                return `/stuff/art/${slugify(image.title, { lower: true, trim: true, remove: new RegExp(/[()\*]/)  })}/index.html`
             },
             eleventyComputed: {
                 title({ image }) {
