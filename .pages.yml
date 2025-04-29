@@ -57,12 +57,8 @@ content:
           label: "{name}"
       - name: license
         label: License
-        type: reference
-        options: 
-          collection: license
-          search: "title"
-          value: "{title}"
-          label: "{title}"
+        type: select
+        options: ["CCO", "artist"]
   - name: metadata
     label: Metadata
     path: src/_data/meta.json
@@ -95,10 +91,3 @@ content:
       - name: site
         label: Site
         type: string
-  - name: license
-    label: License
-    path: src/_data/license.json
-    type: file
-    fields: 
-      - name: title
-        label: Title
