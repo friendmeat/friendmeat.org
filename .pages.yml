@@ -41,6 +41,7 @@ content:
       - name: img
         label: Img
         type: string
+        pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
       - name: alt
         label: Alt-text
         type: string
@@ -92,3 +93,4 @@ content:
       - name: site
         label: Site
         type: string
+        pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
