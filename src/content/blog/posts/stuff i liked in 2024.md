@@ -1,7 +1,7 @@
 ---
 title: stuff i liked in 2024
 description: another one of these
-img: /likes2024.png
+img: https://i.postimg.cc/t4D101hy/likes2024.png
 date: 2024-12-05
 tags:
   - posts
