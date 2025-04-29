@@ -1,0 +1,53 @@
+content:
+  - name: posts
+    label: Posts
+    path: src/content/blog/posts
+    type: collection
+    fields: 
+      - name: published
+        label: Published
+        type: boolean
+        default: true
+        description: Displays post if published
+      - name: title
+        label: Title
+        type: string
+        description: Title of the post
+      - name: date
+        label: Date
+        type: date
+        description: Post publication date
+      - name: topics
+        label: Topics
+        type: select
+        description: Topics (tags) for the post
+        options:
+          multiple: true
+          creatable: true
+          values: [ '', links, likes ]
+      - name: content
+        label: Content
+        type: rich-text
+        description: Post body
+  - name: images
+    label: Images
+    path: scr/_data/images.json
+    type: file
+    fields:
+      - name: images
+        list: true
+        type: object
+        format: json
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: src
+            label: Src
+            type: string
+          - name: alt
+            label: Alt-text
+            type: string
+          - name: description
+            label: Description
+            type: text
