@@ -1,8 +1,8 @@
-import { deleteSync } from "del";
+// import { deleteSync } from "del";
 import feedPlugin from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-import pluginRev from "eleventy-plugin-rev";
-import eleventySass from "eleventy-sass";
+// import pluginRev from "eleventy-plugin-rev";
+// import eleventySass from "eleventy-sass";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateFilter from "nunjucks-date-filter";
 import pluginIcons from "eleventy-plugin-icons";
@@ -18,7 +18,7 @@ console.log(process.env.ELEVENTY_RUN_MODE)
 
 export default function (eleventyConfig) {
     /* Clean Dist Directory*/
-    deleteSync("dist");
+    // deleteSync("dist");
 
     /* Plugins */
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
@@ -35,10 +35,9 @@ export default function (eleventyConfig) {
         }
     });
     eleventyConfig.addPlugin(feedPlugin);
-    eleventyConfig.addPlugin(pluginRev);
-    eleventyConfig.addPlugin(eleventySass, {
-        rev: true,
-    });
+    // eleventyConfig.addPlugin(pluginRev);
+    // eleventyConfig.addPlugin(eleventySass, {
+    // });
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(pluginIcons, {
         sources: [
