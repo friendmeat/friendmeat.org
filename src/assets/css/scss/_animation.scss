@@ -7,7 +7,9 @@
 };
 
 @mixin animate($name, $duration, $method, $time){
-    animation: $name $duration $method $time;
+    & {
+        animation: $name $duration $method $time;
+    }
 };
 
 @mixin hueshift {

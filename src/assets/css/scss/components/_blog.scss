@@ -80,10 +80,10 @@
 }
 
 .blog__post-preview-banner-title {
-    @include theme.transition;
     position: absolute;
     bottom: 0;
     z-index: 1;
+    @include theme.transition;
 }
 
 .blog__post-preview-banner {
