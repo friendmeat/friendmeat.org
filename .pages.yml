@@ -28,7 +28,7 @@ content:
           values: [links, likes]
       - name: body
         label: Body
-        type: rich-text
+        type: text
         description: Post body
   - name: images
     label: Images
