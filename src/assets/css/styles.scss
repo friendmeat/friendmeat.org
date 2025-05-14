@@ -125,19 +125,18 @@ body {
   //
 
   blockquote {
-    margin: 0 size.$lg;
-    padding: size.$sm;
+    margin: size.$sm size.$lg;
+    padding: size.$sm 0;
     @include theme.theme("background-color", "gray-100");
 
     & p {
-      margin: unset;
+      margin: size.$sm size.$lg;
+      text-align: justify;
     }
   }
 
   >blockquote {
     position: relative;
-    @include theme.theme("border-top", "gray-200", true, "1px solid");
-    @include theme.theme("border-bottom", "gray-200", true, "1px solid");
 
     // border-radius: size.$xs;
     &::before {
