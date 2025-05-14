@@ -154,6 +154,8 @@ content:
   - name: artists
     label: Artists
     path: src/_data/artists
+    format: json
+    fileame: {name}
     type: collection
     fields:
       - name: name
