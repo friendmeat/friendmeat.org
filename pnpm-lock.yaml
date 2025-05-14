@@ -11,6 +11,9 @@ importers:
 
   .:
     dependencies:
+      markdown-it-attrs:
+        specifier: ^4.3.1
+        version: 4.3.1(markdown-it@14.1.0)
       scss-reset:
         specifier: ^1.4.6
         version: 1.4.6
@@ -1607,6 +1610,12 @@ packages:
     peerDependencies:
       '@types/markdown-it': '*'
       markdown-it: '*'
+
+  markdown-it-attrs@4.3.1:
+    resolution: {integrity: sha512-/ko6cba+H6gdZ0DOw7BbNMZtfuJTRp9g/IrGIuz8lYc/EfnmWRpaR3CFPnNbVz0LDvF8Gf1hFGPqrQqq7De0rg==}
+    engines: {node: '>=6'}
+    peerDependencies:
+      markdown-it: '>= 9.0.0'
 
   markdown-it-callouts@1.0.3:
     resolution: {integrity: sha512-DkWzoK3mDZpdkkBSS6dTiTXRdauUeCqEVoH/wPIaB+62pSgcRq2bWB7FHTrzH5kHUSrQ2IjjoelBsWenQBXdig==}
@@ -3888,6 +3897,10 @@ snapshots:
   markdown-it-anchor@9.2.0(@types/markdown-it@14.1.2)(markdown-it@14.1.0):
     dependencies:
       '@types/markdown-it': 14.1.2
+      markdown-it: 14.1.0
+
+  markdown-it-attrs@4.3.1(markdown-it@14.1.0):
+    dependencies:
       markdown-it: 14.1.0
 
   markdown-it-callouts@1.0.3: {}

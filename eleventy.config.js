@@ -11,6 +11,7 @@ import githubRepos from "eleventy-plugin-github-repos";
 import markdownIt from "markdown-it";
 import markdownItCallouts from "markdown-it-callouts";
 import markdownItAnchor from "markdown-it-anchor";
+import markdownItAttrs from "markdown-it-attrs";
 import htmlmin from "html-minifier-terser";
 import * as sass from "sass";
 
@@ -62,6 +63,7 @@ export default function (eleventyConfig) {
             .enable("code")
             .use(markdownItCallouts)
             .use(markdownItAnchor)
+            .use(markdownItAttrs)
     });
     eleventyConfig.amendLibrary("njk", (njk) => {
         return njk.addFilter('date', dateFilter);
