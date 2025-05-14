@@ -71,6 +71,9 @@
     display: block flex;
     justify-content: center;
     align-items: flex-end;
+    >a {
+        text-decoration: dashed underline;
+    }
     @include theme.linearGradient(0deg, "bg", "transparent");
 }
 
