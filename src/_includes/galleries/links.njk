@@ -1,0 +1,5 @@
+<div class="stuff__link-container">
+    {% for filename, gallery in galleries %}
+    <a href="/stuff/{{ gallery.title | slugify }}" class="stuff__button">{{ gallery.title }}</a>
+    {% endfor %}
+</div>

@@ -14,6 +14,7 @@ import markdownItAnchor from "markdown-it-anchor";
 import markdownItAttrs from "markdown-it-attrs";
 import htmlmin from "html-minifier-terser";
 import * as sass from "sass";
+import slugify from "slugify";
 
 console.log(process.env.ELEVENTY_RUN_MODE)
 
@@ -119,28 +120,28 @@ export default function (eleventyConfig) {
         return markdownIt().render(content)
     })
 
-    eleventyConfig.addFilter("takeThree", 
+    eleventyConfig.addFilter("takeThree",
         /**
          * 
          * @param {any[]} array 
          * @returns first 3 items from array
          */
-        function (array) { 
+        function (array) {
             return array.slice(0, 3);
-    });
+        });
 
     /* Custom Shortcodes */
-    eleventyConfig.addShortcode("firstImage", function (collection) {
-        const image = this.ctx.environments[collection].at(0)
-        return `![${image.alt}](${image.img})`
-    })
+    // eleventyConfig.addShortcode("firstImage", function (collection) {
+    //     const image = this.ctx.environments[collection].at(0)
+    //     return `![${image.alt}](${image.img})`
+    // })
 
     /* Global Data */
     eleventyConfig.addGlobalData("buildDate", () => new Date().toISOString());
 
     /* Custom Collections */
-    eleventyConfig.addCollection("topics", collection => {
-        const collections = collection.getAll();
+    eleventyConfig.addCollection("topics", collectionsApi => {
+        const collections = collectionsApi.getAll();
         const topics = Array.from(new Set(collections.flatMap(c => c.data.topics).filter(topic => !!topic)));
         const posts = Object.fromEntries(topics.map(topic => [
             topic,
@@ -152,6 +153,30 @@ export default function (eleventyConfig) {
         );
         return posts
     });
+
+    eleventyConfig.addCollection("images_by_gallery", (collectionsApi) => {
+
+        const slugifyOptions = { lower: true, trim: true, remove: new RegExp(/[()\*]/) };
+        const galleries = collectionsApi.items[0].data.galleries;
+
+        return Object
+            .keys(galleries)
+            .flatMap(key => {
+                return galleries[key].images.map((image, i, allImages) => {
+                    return ({
+                        ...image,
+                        gallery: key,
+                        permalink: `/stuff/${key}/${slugify(image.title, slugifyOptions)}/index.html`,
+                        pagination: {
+                            href: {
+                                previous: i > 0 ? "/stuff/" + key + "/" + slugify(allImages[i - 1].title, slugifyOptions) : null,
+                                next: i < allImages.length - 1 ? "/stuff/" + key + "/" + slugify(allImages[i + 1].title, slugifyOptions) : null,
+                            }
+                        }
+                    })
+                })
+            });
+    })
 
     /* Passthrough Directories */
     // eleventyConfig.addPassthroughCopy("src/assets/icons");
@@ -167,6 +192,8 @@ export default function (eleventyConfig) {
 
     /* Custom Directories */
     return {
+        // htmlTemplateEngine: "njk",
+        // markdownTemplateEngine: "njk",
         dir: {
             input: "src",
             output: "dist",
