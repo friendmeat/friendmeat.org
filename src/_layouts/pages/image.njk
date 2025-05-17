@@ -5,8 +5,8 @@
 {% block body %}
     {% set pagination = image.pagination %}
     <main class="main main__article" id="main">
-        <small>
-            <a href="/stuff/{{ image.gallery }}">&#8701; Back to {{ image.gallery }}</a>
+        <small class="image__back-to-gallery">
+            <a href="/stuff/{{ image.gallery.key }}">Back to {{ image.gallery.title }}</a>
         </small>
         <h2 class="text-lg font-roboto-black">{{ image.title }}</h2>
         <figure class="image__figure">

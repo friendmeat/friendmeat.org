@@ -92,6 +92,15 @@ $img-height: 500px;
     @include media.mobile {}
 }
 
+.image__back-to-gallery {
+    position: relative;
+    ::before {
+        content: "\21fd";
+        position: absolute;
+        left: calc(size.$md * -1);
+    }
+}
+
 .image__artist {
     text-decoration: dashed underline;
 }
