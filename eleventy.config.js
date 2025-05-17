@@ -30,7 +30,8 @@ export default function (eleventyConfig) {
         },
         sharpOptions: {
             animated: true
-        }
+        },
+        failOnError: false,
     });
     eleventyConfig.addPlugin(feedPlugin);
     eleventyConfig.addPlugin(pluginIcons, {
