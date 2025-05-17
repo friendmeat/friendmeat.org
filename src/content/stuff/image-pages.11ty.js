@@ -1,5 +1,5 @@
 class ImagePages {
-    data(){
+    data() {
         return {
             layout: "pages/image.njk",
             pagination: {
@@ -7,14 +7,7 @@ class ImagePages {
                 size: 1,
                 alias: "image",
             },
-            permalink(context){
-                return context.image.permalink
-            },
-            eleventyComputed: {
-                title(context){
-                    return context.image.title
-                }
-            }
+            permalink: (context) => context.image.permalink,
         }
     }
 }

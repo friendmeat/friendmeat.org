@@ -1,9 +1,7 @@
 import slugify from "slugify"
 
-
 class GalleryPages {
     data() {
-        console.log(`context of GalleryPages`, this);
         return {
             layout: "pages/gallery.njk",
             pagination: {
@@ -11,11 +9,9 @@ class GalleryPages {
                 size: 1,
                 alias: "gallery"
             },
-            permalink(pagination) {
-                return `/stuff/${slugify(pagination.gallery)}/index.html`
-            }
+            permalink: context => `/stuff/${slugify(context.gallery, { trim: true, lower: true, strict: true })}/index.html`,
         }
     }
 }
 
-export default GalleryPages
+export default GalleryPages;

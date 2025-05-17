@@ -154,22 +154,22 @@ export default function (eleventyConfig) {
     });
 
     eleventyConfig.addCollection("images_by_gallery", (collectionsApi) => {
-
-        const slugifyOptions = { lower: true, trim: true, remove: new RegExp(/[()\*]/) };
         const galleries = collectionsApi.items[0].data.galleries;
 
         return Object
             .keys(galleries)
             .flatMap(key => {
-                return galleries[key].images.map((image, i, allImages) => {
+                const gallery = galleries[key];
+                gallery.key = key;
+                return gallery.images.map((image, i, allImages) => {
                     return ({
                         ...image,
-                        gallery: key,
-                        permalink: `/stuff/${key}/${slugify(image.title, slugifyOptions)}/index.html`,
+                        gallery,
+                        permalink: `/stuff/${key}/${slugify(image.title)}/index.html`,
                         pagination: {
                             href: {
-                                previous: i > 0 ? "/stuff/" + key + "/" + slugify(allImages[i - 1].title, slugifyOptions) : null,
-                                next: i < allImages.length - 1 ? "/stuff/" + key + "/" + slugify(allImages[i + 1].title, slugifyOptions) : null,
+                                previous: i > 0 ? "/stuff/" + key + "/" + slugify(allImages[i - 1].title) : null,
+                                next: i < allImages.length - 1 ? "/stuff/" + key + "/" + slugify(allImages[i + 1].title) : null,
                             }
                         }
                     })
