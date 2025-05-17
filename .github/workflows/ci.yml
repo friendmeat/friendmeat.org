@@ -30,8 +30,10 @@ jobs:
         pnpm exec eleventy --config=eleventy.config.js
     # When the dist_dir is ready, deploy it to neocities
     - name: Deploy to neocities
-      uses: bcomnes/deploy-to-neocities@v1
+      uses: bcomnes/deploy-to-neocities@v3
       with:
         api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: true
+        neocities_supporter: true
+        preview_before_deploy: true
         dist_dir: dist
