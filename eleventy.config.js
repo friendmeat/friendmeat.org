@@ -2,12 +2,9 @@ import path from "node:path";
 import feedPlugin from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
-import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateFilter from "nunjucks-date-filter";
 import pluginIcons from "eleventy-plugin-icons";
-import githubRepos from "eleventy-plugin-github-repos";
 import markdownIt from "markdown-it";
-import markdownItCallouts from "markdown-it-callouts";
 import markdownItAnchor from "markdown-it-anchor";
 import markdownItAttrs from "markdown-it-attrs";
 import htmlmin from "html-minifier-terser";
@@ -36,10 +33,6 @@ export default function (eleventyConfig) {
         }
     });
     eleventyConfig.addPlugin(feedPlugin);
-    // eleventyConfig.addPlugin(pluginRev);
-    // eleventyConfig.addPlugin(eleventySass, {
-    // });
-    eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(pluginIcons, {
         sources: [
             { name: 'heroicons', path: 'node_modules/heroicons/16/solid', default: true },
@@ -47,21 +40,10 @@ export default function (eleventyConfig) {
         ]
     });
 
-    // Run github plugin only when building
-    if (process.env.ELEVENTY_RUN_MODE === 'build') {
-        eleventyConfig.addPlugin(githubRepos, {
-            userAccount: "friendmeat",
-            apiKey: process.env.GITHUB_API_TOKEN,
-            debugMode: false,
-            quitOnError: false,
-        });
-    }
-
     /* Template Engine Plugins */
     eleventyConfig.amendLibrary("md", (md) => {
         return md
             .enable("code")
-            .use(markdownItCallouts)
             .use(markdownItAnchor)
             .use(markdownItAttrs)
     });

@@ -1,4 +1,4 @@
-import slugify from "slugify"
+import slugify from "../../../node_modules/@11ty/eleventy/src/Filters/Slugify.js";
 
 class GalleryPages {
     data() {
