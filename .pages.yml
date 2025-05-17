@@ -30,6 +30,77 @@ content:
         label: Body
         type: text
         description: Post body
+  - name: galleries
+    label: Galleries
+    type: collection
+    format: json
+    filename: {title}
+    path: src/_data/galleries
+    fields: 
+      - name: title
+        label: Title
+        description: Title of the gallery
+        type: string
+      - name: description
+        label: Description
+        description: Description of the gallery contents
+        type: text
+      - name: published
+        label: Published
+        description: Whether or not to include the gallery on the site
+        type: boolean
+      - name: images
+        label: Images
+        description: Images in the gallery
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: img
+            label: Image Link
+            type: string
+            description: Hyperlink to the image file
+            pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
+          - name: alt
+            label: Alt-Text
+            description: An accessible description of the image
+            type: string
+            required: true
+          - name: caption
+            label: Caption
+            description: Text to display below the image
+            type: text
+          - name: artist
+            label: Artist
+            description: Credit the creator of this image
+            type: reference
+            required: false
+            options:
+              collection: artists
+              search: "name"
+              value: "{name}"
+              label: "{name}"
+          - name: license
+            label: License
+            type: select
+            options: 
+              values: ["CCO", "artist"]
+          - name: sensitive
+            label: Sensitive
+            description: If selected, censor the image preview
+            type: boolean
+            default: false
+          - name: topics
+            label: Topics
+            description: Topics (tags) for this image
+            type: select
+            creatable: true
+            multiple: true
+            options:
+              values: ["oc", "fursona", "furry", "jamie", "amani", "train", "illustration", "digital", "traditional"]
+
   - name: images
     label: Images
     path: src/_data/images.json
@@ -83,6 +154,8 @@ content:
   - name: artists
     label: Artists
     path: src/_data/artists
+    format: json
+    fileame: {name}
     type: collection
     fields:
       - name: name

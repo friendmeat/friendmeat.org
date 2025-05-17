@@ -8,6 +8,7 @@
 @use "./scss/components/header";
 @use "./scss/components/footer";
 @use "./scss/components/home";
+@use "./scss/components/breadcrumb";
 @use "./scss/components/callout";
 @use "./scss/components/repos";
 @use "./scss/components/stuff";
@@ -28,11 +29,11 @@ body {
   display: grid;
   @include media.mobile {
     grid-template-columns: 1fr;
-    grid-template-rows: size.$xl 1fr size.$xl;
+    grid-template-rows: size.$xl size.$lg 1fr size.$xl;
   }
   @include media.desktop {
     grid-template-columns: 7em 1fr;
-    grid-template-rows: 2fr;
+    grid-template-rows: size.$lg 2fr;
   }
   @include theme.theme("color", "text");
   @include theme.theme("background-color", "bg");
@@ -125,19 +126,18 @@ body {
   //
 
   blockquote {
-    margin: 0 size.$lg;
-    padding: size.$sm;
+    margin: size.$sm size.$lg;
+    padding: size.$sm 0;
     @include theme.theme("background-color", "gray-100");
 
     & p {
-      margin: unset;
+      margin: size.$sm size.$lg;
+      text-align: justify;
     }
   }
 
   >blockquote {
     position: relative;
-    @include theme.theme("border-top", "gray-200", true, "1px solid");
-    @include theme.theme("border-bottom", "gray-200", true, "1px solid");
 
     // border-radius: size.$xs;
     &::before {

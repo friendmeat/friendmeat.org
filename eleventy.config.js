@@ -1,9 +1,7 @@
 import path from "node:path";
-// import { deleteSync } from "del";
 import feedPlugin from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-// import pluginRev from "eleventy-plugin-rev";
-// import eleventySass from "eleventy-sass";
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateFilter from "nunjucks-date-filter";
 import pluginIcons from "eleventy-plugin-icons";
@@ -11,16 +9,19 @@ import githubRepos from "eleventy-plugin-github-repos";
 import markdownIt from "markdown-it";
 import markdownItCallouts from "markdown-it-callouts";
 import markdownItAnchor from "markdown-it-anchor";
+import markdownItAttrs from "markdown-it-attrs";
 import htmlmin from "html-minifier-terser";
 import * as sass from "sass";
 
 console.log(process.env.ELEVENTY_RUN_MODE)
 
 export default function (eleventyConfig) {
-    /* Clean Dist Directory*/
-    // deleteSync("dist");
+    /* Built-in filters */
+    const slugify = eleventyConfig.getFilter("slugify");
 
     /* Plugins */
+    eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
         urlPath: "/assets/img/",
         widths: ["auto"],
@@ -62,6 +63,7 @@ export default function (eleventyConfig) {
             .enable("code")
             .use(markdownItCallouts)
             .use(markdownItAnchor)
+            .use(markdownItAttrs)
     });
     eleventyConfig.amendLibrary("njk", (njk) => {
         return njk.addFilter('date', dateFilter);
@@ -117,28 +119,28 @@ export default function (eleventyConfig) {
         return markdownIt().render(content)
     })
 
-    eleventyConfig.addFilter("takeThree", 
+    eleventyConfig.addFilter("takeThree",
         /**
          * 
          * @param {any[]} array 
          * @returns first 3 items from array
          */
-        function (array) { 
+        function (array) {
             return array.slice(0, 3);
-    });
+        });
 
     /* Custom Shortcodes */
-    eleventyConfig.addShortcode("firstImage", function (collection) {
-        const image = this.ctx.environments[collection].at(0)
-        return `![${image.alt}](${image.img})`
-    })
+    // eleventyConfig.addShortcode("firstImage", function (collection) {
+    //     const image = this.ctx.environments[collection].at(0)
+    //     return `![${image.alt}](${image.img})`
+    // })
 
     /* Global Data */
     eleventyConfig.addGlobalData("buildDate", () => new Date().toISOString());
 
     /* Custom Collections */
-    eleventyConfig.addCollection("topics", collection => {
-        const collections = collection.getAll();
+    eleventyConfig.addCollection("topics", collectionsApi => {
+        const collections = collectionsApi.getAll();
         const topics = Array.from(new Set(collections.flatMap(c => c.data.topics).filter(topic => !!topic)));
         const posts = Object.fromEntries(topics.map(topic => [
             topic,
@@ -150,6 +152,30 @@ export default function (eleventyConfig) {
         );
         return posts
     });
+
+    eleventyConfig.addCollection("images_by_gallery", (collectionsApi) => {
+        const galleries = collectionsApi.items[0].data.galleries;
+
+        return Object
+            .keys(galleries)
+            .flatMap(key => {
+                const gallery = galleries[key];
+                gallery.key = key;
+                return gallery.images.map((image, i, allImages) => {
+                    return ({
+                        ...image,
+                        gallery,
+                        permalink: `/stuff/${key}/${slugify(image.title)}/index.html`,
+                        pagination: {
+                            href: {
+                                previous: i > 0 ? "/stuff/" + key + "/" + slugify(allImages[i - 1].title) : null,
+                                next: i < allImages.length - 1 ? "/stuff/" + key + "/" + slugify(allImages[i + 1].title) : null,
+                            }
+                        }
+                    })
+                })
+            });
+    })
 
     /* Passthrough Directories */
     // eleventyConfig.addPassthroughCopy("src/assets/icons");
@@ -165,6 +191,8 @@ export default function (eleventyConfig) {
 
     /* Custom Directories */
     return {
+        // htmlTemplateEngine: "njk",
+        // markdownTemplateEngine: "njk",
         dir: {
             input: "src",
             output: "dist",

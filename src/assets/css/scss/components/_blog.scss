@@ -71,6 +71,9 @@
     display: block flex;
     justify-content: center;
     align-items: flex-end;
+    >a {
+        text-decoration: dashed underline;
+    }
     @include theme.linearGradient(0deg, "bg", "transparent");
 }
 
@@ -80,10 +83,10 @@
 }
 
 .blog__post-preview-banner-title {
-    @include theme.transition;
     position: absolute;
     bottom: 0;
     z-index: 1;
+    @include theme.transition;
 }
 
 .blog__post-preview-banner {
@@ -103,6 +106,7 @@
 .blog__post-preview-tags {
     margin: 0;
     list-style: none;
+    text-decoration: dashed underline;
     @include media.mobile {
         display: flex;
         gap: size.$md;

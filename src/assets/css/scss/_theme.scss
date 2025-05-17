@@ -109,7 +109,9 @@ $themes: map.merge(map.merge($base, "dark", $constants), "light", $constants);
 }
 
 @mixin transition($property:all){
-  transition: $property 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  & {
+    transition: $property 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
 }
 
 @mixin light {
