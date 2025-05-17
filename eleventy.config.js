@@ -1,9 +1,7 @@
 import path from "node:path";
-// import { deleteSync } from "del";
 import feedPlugin from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-// import pluginRev from "eleventy-plugin-rev";
-// import eleventySass from "eleventy-sass";
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateFilter from "nunjucks-date-filter";
 import pluginIcons from "eleventy-plugin-icons";
@@ -14,15 +12,16 @@ import markdownItAnchor from "markdown-it-anchor";
 import markdownItAttrs from "markdown-it-attrs";
 import htmlmin from "html-minifier-terser";
 import * as sass from "sass";
-import slugify from "slugify";
 
 console.log(process.env.ELEVENTY_RUN_MODE)
 
 export default function (eleventyConfig) {
-    /* Clean Dist Directory*/
-    // deleteSync("dist");
+    /* Built-in filters */
+    const slugify = eleventyConfig.getFilter("slugify");
 
     /* Plugins */
+    eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
         urlPath: "/assets/img/",
         widths: ["auto"],
