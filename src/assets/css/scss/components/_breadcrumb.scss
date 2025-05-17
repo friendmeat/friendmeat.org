@@ -1,0 +1,14 @@
+@use "../size";
+
+.breadcrumb__container {
+    display: flex;
+    gap: size.$sm;
+    padding: size.$sm;
+}
+
+.breadcrumb__entry {
+    text-decoration: dashed underline;
+    &[class$="active"]{
+        text-decoration: none;
+    }
+}
