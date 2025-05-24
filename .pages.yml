@@ -34,7 +34,7 @@ content:
     label: Galleries
     type: collection
     format: json
-    filename: {title}
+    filename: '{primary}.json'
     path: src/_data/galleries
     fields: 
       - name: title
@@ -96,8 +96,6 @@ content:
             label: Topics
             description: Topics (tags) for this image
             type: select
-            creatable: true
-            multiple: true
             options:
               values: ["oc", "fursona", "furry", "jamie", "amani", "train", "illustration", "digital", "traditional"]
 
@@ -155,7 +153,8 @@ content:
     label: Artists
     path: src/_data/artists
     format: json
-    fileame: {name}
+    filename: '{primary}.json'
+    primary: name
     type: collection
     fields:
       - name: name
