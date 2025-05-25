@@ -87,7 +87,7 @@
 }
 
 .blog__post-preview-details {
-    width: calc(size.$xxxl + size.$sm);
+    $width: calc(size.$xxxl + size.$sm);
     $offset: calc(-1 * ($width + size.$md));
     width: $width;
     font-size: small;
