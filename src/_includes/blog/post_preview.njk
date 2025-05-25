@@ -19,17 +19,16 @@
                 {% endif %}
                 </a>
             </div>
-            <div class="blog__post-preview-body-container">
-
+            {# <div class="blog__post-preview-body-container">
                 {% if post.data.excerpt.hasMore %}
-                <div class="blog__post-preview-excerpt">{{ post.data.excerpt.content | markdownify | safe }}</div>
+                <div class="blog__post-preview-excerpt">{{ post.data.excerpt.content | safe }}</div>
                 <div class="blog__post-preview-read-more">
                     <a href="{{ post.url | url }}">read more</a>
                 </div>
             {% else %}
             <p class="blog__post-preview-fulltext">{{ post.content | safe }}</p>
             {% endif %}
-            </div>
+            </div> #}
         </div>
     </div>
 </section>

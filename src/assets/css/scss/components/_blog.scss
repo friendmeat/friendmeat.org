@@ -1,6 +1,7 @@
 @use "../theme";
 @use "../media";
 @use "../size";
+@use "../animation";
 
 .blog__container {
     flex: 1 0 auto;
@@ -15,7 +16,7 @@
     display: flex;
     flex-direction: column;
     gap: size.$xxl;
-}   
+}
 
 .blog__post-list-divider {
     width: 100%;
@@ -45,15 +46,10 @@
 
 .blog__post-preview-content {
     position: relative;
-    @include theme.transition;
 }
 
 .blog__post-preview-body-container {
-    position: relative;    
-}
-
-.blog__blog__post-preview-fulltext {
-    
+    position: relative;
 }
 
 
@@ -71,9 +67,11 @@
     display: block flex;
     justify-content: center;
     align-items: flex-end;
+
     >a {
         text-decoration: dashed underline;
     }
+
     @include theme.linearGradient(0deg, "bg", "transparent");
 }
 
@@ -86,16 +84,10 @@
     position: absolute;
     bottom: 0;
     z-index: 1;
-    @include theme.transition;
-}
-
-.blog__post-preview-banner {
-    // opacity: 50%;
-    @include theme.transition;
 }
 
 .blog__post-preview-details {
-$    width: calc(size.$xxxl + size.$sm);
+    width: calc(size.$xxxl + size.$sm);
     $offset: calc(-1 * ($width + size.$md));
     width: $width;
     font-size: small;
@@ -110,14 +102,60 @@ $    width: calc(size.$xxxl + size.$sm);
     margin: 0;
     list-style: none;
     text-decoration: dashed underline;
+
     @include media.mobile {
         display: flex;
         gap: size.$md;
     }
+
+    &:hover,
+    &:focus-within {
+        @include theme.theme("color", "primary");
+        @include animation.hueshift;
+    }
 }
+
 .blog__post-preview-tag {
     text-decoration: dashed;
 }
 
 
-.blog__post-preview-title {}
+.blog__post-preview-title-container {
+    &:hover,
+    &:focus-within {
+        .blog__post-preview-banner {
+            animation: 5s cycle-invert infinite linear;
+        }
+        @include theme.theme("color", "primary");
+        @include animation.hueshift();
+    }
+}
+
+@mixin cycle-filter($hue, $invert, $hue2){
+    filter: 
+        sepia(100%) 
+        saturate(500%) 
+        hue-rotate($hue)
+        contrast(500%)
+        grayscale(100%)
+        sepia(100%) 
+        saturate(500%) 
+        hue-rotate(130deg)
+        contrast(500%)
+        hue-rotate($hue2)
+    ;
+}
+
+@keyframes cycle-invert {
+    0% {
+        @include cycle-filter(1deg, 0%, 0deg);
+    }
+
+    50%{
+        @include cycle-filter(180deg, 100%, 90deg);
+    }
+
+    100% {
+        @include cycle-filter(359deg, 1%, 1deg);
+    }
+}
