@@ -1,6 +1,6 @@
 <section class="blog__post-preview">
     <div class="blog__post-preview-details">
-        <small class="blog__post-preview-date">{{ post.date.toLocaleDateString() }}</small>
+        <small class="blog__post-preview-date">{{ post.date | date("YYYY-MM-DD") }}</small>
         <div class="blog__post-preview-tags">
             {% for topic in post.data.topics %}
                 <a href="{{ '/blog/tag/' + topic + '/' | url }}" class="blog__post-preview-tag">#{{ topic }}</a>

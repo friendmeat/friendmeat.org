@@ -95,11 +95,14 @@
 }
 
 .blog__post-preview-details {
-    width: size.$xxxl;
+$    width: calc(size.$xxxl + size.$sm);
+    $offset: calc(-1 * ($width + size.$md));
+    width: $width;
     font-size: small;
+
     @include media.desktop {
         position: absolute;
-        left: calc((size.$xxxl + size.$md) * -1);
+        left: $offset;
     }
 }
 
