@@ -11,7 +11,7 @@ topics:
 ![](https://www.youtube.com/watch?v=i1zZFd7eGK0)
 ### Lonelyspeck - "Wishing"
 
-Maybe the worst thing about streaming and algorithmic recommendations is that sometimes they _work_ and give you something you _really really like_. ["All My Skin On Th Air"]() came up on my Sp\*tify because I forgot to turn off the autoplay feature, and Lonelyspeck has ruled my life ever since.  
+Maybe the worst thing about streaming and algorithmic recommendations is that sometimes they _work_ and give you something you _really really like_. ["All My Skin On Th Air"](https://www.youtube.com/watch?v=ItLEF1H2vqU) came up on my Sp\*tify because I forgot to turn off the autoplay feature, and Lonelyspeck has ruled my life ever since.  
 
 I'm soooooo excited for this new album
 
