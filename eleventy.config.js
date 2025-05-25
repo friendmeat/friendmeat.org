@@ -9,8 +9,7 @@ import markdownItAnchor from "markdown-it-anchor";
 import markdownItAttrs from "markdown-it-attrs";
 import htmlmin from "html-minifier-terser";
 import * as sass from "sass";
-
-console.log(process.env.ELEVENTY_RUN_MODE)
+import videoPreprocessor from "./videoPreprocessor.js";
 
 export default function (eleventyConfig) {
     /* Built-in filters */
@@ -71,6 +70,9 @@ export default function (eleventyConfig) {
     })
 
     eleventyConfig.addTemplateFormats("scss");
+
+    /* Template Preprocessors */
+    eleventyConfig.addPreprocessor("video-preprocess", "md", videoPreprocessor);
 
     /* Tempate Transforms */
     // https://www.11ty.dev/docs/transforms/#minify-html-output
