@@ -1,5 +1,5 @@
 {% extends "src/_layouts/default.njk" %}
-{% set posts = pagination.items | reverse %}
+{% set posts = pagination.items %}
 {% block content %}
     {{ super() }}
     <div class="blog__container">

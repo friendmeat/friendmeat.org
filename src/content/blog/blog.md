@@ -8,5 +8,5 @@ permalink: "/blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumbe
 pagination:
     data: collections.posts
     size: 5
-    resolve: values
+    reverse: true
 ---
