@@ -6,12 +6,15 @@
     <meta property="og:url" content="{{ meta.base }}{{ page.url }}"/>
 {% endblock %}
 {% block body %}
+    <small class="gallery__back-to-stuff">
+        <a href="/stuff/{{ image.gallery.key }}">Back to Stuff</a>
+    </small>
     <article class="gallery__container">
-        {% for image in galleries[gallery].images %}
-            <a href="/stuff/{{ gallery }}/{{ image.title | slugify }}/" data-title="{{ image.title }}" class="gallery__figure-container">
+        {% for image in gallery.images %}
+            <a href="/stuff/{{ gallery.title | slugify }}/{{ image.title | slugify }}/" data-title="{{ image.title }}" class="gallery__figure-container">
                 <figure class="gallery__figure">
                     <img alt="{{ image.alt }}" src="{{ image.img }}" loading="lazy" class="gallery__figure-image"/>
-                    <figcaption class="gallery__figure-caption">{{ image.title }}</figcaption>
+                    <figcaption class="gallery__figure-caption font-roboto-black">{{ image.title }}</figcaption>
                 </figure>
             </a>
         {% endfor %}

@@ -7,9 +7,10 @@ class GalleryPages {
             pagination: {
                 data: "galleries",
                 size: 1,
-                alias: "gallery"
+                alias: "gallery",
+                resolve: "values"
             },
-            permalink: context => `/stuff/${slugify(context.gallery)}/index.html`,
+            permalink: context => `/stuff/${slugify(context.gallery.title)}/index.html`,
         }
     }
 }

@@ -5,6 +5,27 @@
 
 $img-height: 500px;
 
+@mixin deepfry($blur, $contrast) {
+    filter: blur($blur) grayscale(100%) sepia(100%) contrast($contrast) saturate(500%) hue-rotate(260deg);
+}
+
+@mixin back-arrow {
+    ::before {
+        content: "\21fd";
+        position: absolute;
+        left: calc(size.$md * -1);
+    }
+}
+
+.gallery__back-to-stuff {
+    margin: 1rem;
+        ::before {
+            content: "\21fd";
+            left: calc(size.$md * -1);
+        }
+    // @include back-arrow();
+}
+
 .gallery__container {
     margin: size.$md;
 
@@ -16,7 +37,6 @@ $img-height: 500px;
     @include media.desktop {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        // grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
     }
 }
 
@@ -25,72 +45,62 @@ $img-height: 500px;
     aspect-ratio: 1;
     position: relative;
 
+    
     @include media.desktop {
-
+        & .gallery__figure-caption {
+            display: none;
+            font-size: 300%;
+        }
         & .gallery__figure-image {
-            filter: blur(3px) grayscale(100%);
+            @include deepfry(3px, 500%);
             @include theme.transition;
         }
 
         &:hover,
-        &:focus {
-
-            &::before {
-                content: attr(data-title);
-                color: white;
-                z-index: 1;
-                font-size: size.$lg;
-                height: size.$lg;
-                width: 100%;
-                top: 50%;
-                transform: translateY(-50%);
-                position: absolute;
-                text-align: center;
-                backdrop-filter: blur(2px) brightness(50%);
-                @include typography.roboto(Black);
+        &:focus,
+        &:focus-within {
+            .gallery__figure-image {
+                @include deepfry(0px, 200%)
             }
 
-            .gallery__figure-image {
-                filter: blur(0);
+            .gallery__figure-caption {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                mix-blend-mode: exclusion;
             }
         }
     }
+}
 
+
+.gallery__figure-caption {
+    @include media.mobile {}
 }
 
 .gallery__figure {
     position: relative;
     height: 100%;
+
 }
 
 .gallery__figure-image {
-    position: absolute;
     height: $img-height;
     width: 100%;
     object-fit: cover;
+
     @include media.desktop {
         top: -50%;
     }
 }
 
-.gallery__figure-caption {
-    display: none;
-    @include theme.linearGradient(-45deg, "bg", "transparent");
-
-    @include media.desktop {
-        top: 0;
-        text-align: right;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        justify-content: flex-end;
-        align-items: flex-end;
-        padding: size.$sm;
-        @include theme.transition;
-    }
-
-    @include media.mobile {}
-}
 
 .image__back-to-gallery {
     position: relative;
