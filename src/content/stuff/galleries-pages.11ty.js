@@ -9,7 +9,7 @@ class GalleryPages {
                 size: 1,
                 alias: "gallery"
             },
-            permalink: context => `/stuff/${slugify(context.gallery, { trim: true, lower: true, strict: true })}/index.html`,
+            permalink: context => `/stuff/${slugify(context.gallery)}/index.html`,
         }
     }
 }
