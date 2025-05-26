@@ -7,7 +7,7 @@
 {% endblock %}
 {% block content %}
     <div class="blog__post-details">
-        <small class="blog__post-details-date">{{ page.date.toLocaleDateString() }}</small>
+        <small class="blog__post-details-date">{{ page.date | date("YYYY-MM-DD") }}</small>
     </div>
     {% if img %}
         <img src="{{ img }}" alt="{{ alt }}" />

@@ -1,6 +1,6 @@
 <section class="blog__post-preview">
     <div class="blog__post-preview-details">
-        <small class="blog__post-preview-date">{{ post.date.toLocaleDateString() }}</small>
+        <small class="blog__post-preview-date">{{ post.date | date("YYYY-MM-DD") }}</small>
         <div class="blog__post-preview-tags">
             {% for topic in post.data.topics %}
                 <a href="{{ '/blog/tag/' + topic + '/' | url }}" class="blog__post-preview-tag">#{{ topic }}</a>
@@ -19,17 +19,16 @@
                 {% endif %}
                 </a>
             </div>
-            <div class="blog__post-preview-body-container">
-
+            {# <div class="blog__post-preview-body-container">
                 {% if post.data.excerpt.hasMore %}
-                <div class="blog__post-preview-excerpt">{{ post.data.excerpt.content | markdownify | safe }}</div>
+                <div class="blog__post-preview-excerpt">{{ post.data.excerpt.content | safe }}</div>
                 <div class="blog__post-preview-read-more">
                     <a href="{{ post.url | url }}">read more</a>
                 </div>
             {% else %}
             <p class="blog__post-preview-fulltext">{{ post.content | safe }}</p>
             {% endif %}
-            </div>
+            </div> #}
         </div>
     </div>
 </section>
