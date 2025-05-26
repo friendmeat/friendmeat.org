@@ -6,7 +6,7 @@ eleventyNavigation:
     parent: Home
 ---
 
-![friendmeat](https://i.postimg.cc/g27c2pjL/friendmeat.jpg)
+![friendmeat](https://i.postimg.cc/g27c2pjL/friendmeat.jpg){class=about__photo}
 
 ## about me
 
