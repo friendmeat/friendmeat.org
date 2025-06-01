@@ -11,7 +11,9 @@
 </head>
 <body class="font-roboto">
     {% include "header.njk" %}
+    {% block breadcrumb %}
     {% include "layout/breadcrumb.njk" %}
+    {% endblock breadcrumb %}
     <main class="main" id="main">
         {% block body %}
         {% endblock %}

@@ -1,5 +1,12 @@
 {% extends "src/_layouts/default.njk" %}
 
+{# Omit breadcrumb and title on Homepage #}
+{% block breadcrumb %}
+{% endblock %}
+
+{% block title %}
+{% endblock %}
+
 {% block content %}
 <section class="home__container">
     <div class="home__the-meat-container">
