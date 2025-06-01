@@ -39,7 +39,7 @@ content:
         options:
           multiple: true
           creatable: true
-          values: [links, likes]
+          values: [links, likes, weeklies]
       - name: description
         label: Description
         description: Excerpt to be displayed in the post preview
