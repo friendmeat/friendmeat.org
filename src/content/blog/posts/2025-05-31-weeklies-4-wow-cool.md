@@ -3,6 +3,7 @@ title: "weeklies #4 - wow cool"
 date: 2025-05-31
 topics:
   - weeklies
+description: "my therapist has encouraged me to keep writing these gay little blog posts. in this issue: craving wieners, saving American cinema, and whining about corporate hypocrisy"
 ---
 ## __what i'm reading__:
 ![Raw Dog: The Naked Truth About Hot Dogs](https://t1.bookpage.com/wp-content/uploads/2022/12/20135220/rawdog.jpg)

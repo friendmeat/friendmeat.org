@@ -52,29 +52,6 @@
     position: relative;
 }
 
-
-.blog__post-preview-excerpt {
-    height: 250px;
-    overflow: hidden;
-}
-
-.blog__post-preview-read-more {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: block flex;
-    justify-content: center;
-    align-items: flex-end;
-
-    >a {
-        text-decoration: dashed underline;
-    }
-
-    @include theme.linearGradient(0deg, "bg", "transparent");
-}
-
 .blog__post-preview-banner-container {
     overflow: hidden;
     position: relative;
