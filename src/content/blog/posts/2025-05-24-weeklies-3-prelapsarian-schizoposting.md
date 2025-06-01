@@ -3,6 +3,7 @@ title: "weeklies #3 - prelapsarian schizoposting"
 date: 2025-05-24
 topics:
   - weeklies
+description: "featuring a lot of strong-willed people"
 ---
 ## __what i'm reading__:
  [The wikipedia article for the number 12](https://en.wikipedia.org/wiki/12_(number))
