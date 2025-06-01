@@ -20,4 +20,4 @@ jobs:
     - name: Install deps and build
       run: |
         pnpm install
-        pnpm exec eleventy --config=eleventy.config.js
+        IMAGES_STATS_ONLY=true pnpm exec eleventy --config=eleventy.config.js

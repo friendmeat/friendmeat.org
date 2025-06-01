@@ -31,6 +31,7 @@ export default function (eleventyConfig) {
             animated: true
         },
         failOnError: false,
+        statsOnly: process.env.IMAGES_STATS_ONLY ? true : false,
     });
     eleventyConfig.addPlugin(feedPlugin);
     eleventyConfig.addPlugin(pluginIcons, {
