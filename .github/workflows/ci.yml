@@ -25,13 +25,11 @@ jobs:
       with:
         node-version: latest
         cache: 'pnpm'
-    # Hash a list of all image hrefs in the project and save it to env
-    - run: echo "IMAGES_HASH=$(grep -REoh --color=never --exclude-dir={node_modules,.cache,dist} 'https?[^% ){}]*\.(jpg|png|svg|webp)' | sha256sum | awk '{print $1}')" >> $GITHUB_ENV
     - name: Persist Eleventy .cache
       uses: actions/cache@v4
       with:
         path: ./.cache
-        key: ${{ env.IMAGES_HASH }}
+        key: ${{ runner.os }}-eleventy-fetch-cache
     - name: Install deps and build
       run: |
         pnpm install
