@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     # Set up any tools and build steps here
     - name: Setup pnpm
       uses: pnpm/action-setup@v4.1.0
@@ -25,24 +25,17 @@ jobs:
       with:
         node-version: latest
         cache: 'pnpm'
-    - name: Get Image Hrefs Hash
-      # Hash a list of all image hrefs in the project and save it to env
-      run: |
-        echo "IMAGES_HASH=$(grep -REoh --color=never --exclude-dir={node_modules,.cache,dist} 'https?[^% ){}]*\.(jpg|png|svg|webp)' | sha256sum | awk '{print $1}')" >> $GITHUB_ENV
-    - name: Restore Image Cache
-      uses: actions/cache/restore@v4
+    # Hash a list of all image hrefs in the project and save it to env
+    - run: echo "IMAGES_HASH=$(grep -REoh --color=never --exclude-dir={node_modules,.cache,dist} 'https?[^% ){}]*\.(jpg|png|svg|webp)' | sha256sum | awk '{print $1}')" >> $GITHUB_ENV
+    - name: Persist Eleventy .cache
+      uses: actions/cache@v4
       with:
+        path: ./.cache
         key: ${{ env.IMAGES_HASH }}
-        path: .cache
     - name: Install deps and build
       run: |
         pnpm install
         pnpm exec eleventy --config=eleventy.config.js
-    - name: Save Image Cache
-      uses: actions/cache/save@v4
-      with:
-        path: .cache
-        key: ${{ env.IMAGES_HASH }}
     # When the dist_dir is ready, deploy it to neocities
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v3
