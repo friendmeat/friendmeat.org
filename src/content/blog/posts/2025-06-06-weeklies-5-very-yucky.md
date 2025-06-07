@@ -15,6 +15,7 @@ description: Freud on shit and money; trip-hop bangers; LSD and the unabomber vs
 > ...\[W]herever archaic modes of thought have predominated or persist— in the ancient civilizations, in myths, fairy tales and superstitions, in unconscious thinking, in dreams, and in neuroses— money is brought into the most intimate relationship with dirt...
 > ...even according to ancient Babylonian doctrine gold is 'the faeces of Hell' (Mammon = _ilu manman_).
 > ...It is possible that the contrast between the most precious substance known to men and the most worthless, which they reject as waste matter, ('refuse') has led to this specific identification of gold with faeces 
+
 <cite>—"Character and Anal Eroticism", The Freud Reader p. 296-297, edited by Peter Gay</cite>
 
 Yeah
@@ -27,7 +28,9 @@ Very excited after all this time to finally have the james K album announced. ["
 ## __what i'm watching__:
 ![THE NET: The Unabomber, LSD and The Internet](https://lopcuk.files.wordpress.com/2022/04/the-net-unabomber-lsd-internet_small.jpg)
 <iframe width="100%" height="420px" src="https://archive.org/embed/the-net"></iframe>
+
 ### _The Net: The UnaBomber, LSD, and The Internet_ (2003)
+
 this is what my brain looks like kinda. This was mentioned on [Weird Studies](https://www.weirdstudies.com/) in an episode where they're talking about the influence of 60s psychedelics on culture. I kind of already knew the counterculture-MKUltra-internet through-line. They didn't even touch the Manhattan Project and Vannevar Bush. but I really liked the oppressive, conspiratorial atmosphere; the discordant, noisy soundtrack; and the letters from Ted Kaczynski. Very yucky, very Adam Curtis.
 
 ![28 Days Later](https://www.themoviedb.org/t/p/original/sQckQRt17VaWbo39GIu0TMOiszq.jpg)
