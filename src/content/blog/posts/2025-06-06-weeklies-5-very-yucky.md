@@ -53,6 +53,7 @@ School fucking sucks. I was a weird nerdy kid who _liked_ learning about shit bu
 This is the corollary to my "what i liked" topic. I did good at school with the minimum of effort and so I never had to think about taking good notes or studying. Now I have things I'm interested in— philosophy, computer science, math, critical theory— and I _want_ to take notes and do research and write essays. That didn't come from my public school education.
 
 I'm going to drop this apocryphal Slavoj Zizek quote that I can't find a source for:
+
 > ...that AI will be the death of learning & so on; to this, I say NO! My student brings me their essay, which has been written by AI, & I plug it into my grading AI, & we are free! While the 'learning' happens, our superego satisfied, we are free now to learn whatever we want
 
 ## __a picture__:
