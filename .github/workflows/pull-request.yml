@@ -24,7 +24,7 @@ jobs:
         path: ./.cache
         key: ${{ env.IMAGES_HASH }}
     - name: List PWD
-      run: ls .
+      run: ls . -la
     - name: Install deps and build
       run: |
         pnpm install
