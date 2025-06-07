@@ -53,9 +53,6 @@ body {
     grid-column: 2;
     width: 100%;
   }
-  // flex-grow: 1;
-  // flex-basis: 100%;
-  // margin: 0 size.$md;
 }
 
 .main__article {
@@ -102,11 +99,15 @@ iframe {
 }
 
 
-//
-// Lists
-//
-.main__article-body {
+// 
+// Article Body
+// 
 
+.main__article-body {
+  
+  //
+  // Lists
+  //
   ul,
   ol {
     display: block;
@@ -174,13 +175,13 @@ iframe {
   h2 {
     font-size: size.$lg;
     font-weight: 700;
-@include theme.theme("color", "primary");
+        @include theme.theme("color", "primary");
   }
 
   h3 {
     font-size: calc(size.$md + 0.5rem);
     font-weight: 200;
-@include theme.theme("color", "secondary");
+    @include theme.theme("color", "secondary");
   }
 
   h4 {

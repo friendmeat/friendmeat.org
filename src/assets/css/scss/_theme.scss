@@ -7,12 +7,12 @@ $constants: (
 );
 
 $base: (
-  "dark": (    "bg": #000,
-        "text": #fff,
-        "primary": #62e9d5,
+  "dark": ("bg": #000,
+    "text": #fff,
+    "primary": #62e9d5,
     "secondary": #93abc2,
   ),
-  "light": (    "bg": #000,
+  "light": ("bg": #000,
     "text": #fff,
     "primary": #62e9d5,
     "secondary": #93abc2,
@@ -22,51 +22,43 @@ $base: (
 $themes: map.merge(map.merge($base, "dark", $constants), "light", $constants);
 
 // https://www.fabrizioduroni.it/blog/post/2020/05/20/dark-mode-css-sass-scss
-@mixin themeProperty(
-  $theme,
+@mixin themeProperty($theme,
   $property,
   $color,
   $additionalPropertiesPositionIsFront,
-  $additionalProperties
-) {
+  $additionalProperties) {
   @if $additionalPropertiesPositionIsFront {
-    #{$property}: string.unquote(
-      $additionalProperties + " " + map.get($theme, $color)
-    );
-  } @else {
-    #{$property}: string.unquote(
-      map.get($theme, $color) + " " + $additionalProperties
-    );
+    #{$property}: string.unquote($additionalProperties + " " + map.get($theme, $color));
+  }
+
+  @else {
+    #{$property}: string.unquote(map.get($theme, $color) + " " + $additionalProperties );
   }
 }
 
-@mixin theme(
-  $property,
+@mixin theme($property,
   $color,
   $additionalPropertiesPositionIsFront: false,
   $additionalProperties: ""
+
 ) {
   $light: map.get($themes, "light");
   $dark: map.get($themes, "dark");
 
   & {
-    @include themeProperty(
-      $light,
+    @include themeProperty($light,
       $property,
       $color,
       $additionalPropertiesPositionIsFront,
-      $additionalProperties
-    );
+      $additionalProperties );
   }
 
   @media (prefers-color-scheme: dark) {
-    @include themeProperty(
-      $dark,
+    @include themeProperty($dark,
       $property,
       $color,
       $additionalPropertiesPositionIsFront,
-      $additionalProperties
-    );
+      $additionalProperties );
   }
 }
 
@@ -74,38 +66,42 @@ $themes: map.merge(map.merge($base, "dark", $constants), "light", $constants);
   $light: map.get($themes, "light");
   $dark: map.get($themes, "dark");
 
-  $stops-light: ();
-  $stops-dark: ();
-  @each $color in $colors {
-    $stops-light: list.append($stops-light, map.get($light, $color), comma);
-    $stops-dark: list.append($stops-dark, map.get($dark, $color), comma);
-  }
+  $stops-light: (
+  );
+$stops-dark: (
+);
 
-  // @debug $stops-light;
-  // @debug $stops-dark;
-
-  & {
-    background-image: linear-gradient($angle, $stops-light);
-  }
-  @media (prefers-color-scheme: dark) {
-    background-image: linear-gradient($angle, $stops-dark);
-  }
+@each $color in $colors {
+  $stops-light: list.append($stops-light, map.get($light, $color), comma);
+  $stops-dark: list.append($stops-dark, map.get($dark, $color), comma);
 }
 
-@mixin transition($property:all){
+// @debug $stops-light;
+// @debug $stops-dark;
+
+& {
+  background-image: linear-gradient($angle, $stops-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  background-image: linear-gradient($angle, $stops-dark);
+}
+}
+
+@mixin transition($property: all) {
   & {
     transition: $property 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 }
 
 @mixin light {
-  @media (prefers-color-scheme: light){
+  @media (prefers-color-scheme: light) {
     @content;
   }
 }
 
 @mixin dark {
-  @media (prefers-color-scheme: dark){
+  @media (prefers-color-scheme: dark) {
     @content;
   }
 }
