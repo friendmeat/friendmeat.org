@@ -1,7 +1,23 @@
 @use "sass:list";
 @use "sass:map";
+@use "sass:meta";
 @use "sass:string";
 @use "./size";
+
+@function slugify($text) {
+    $split: string.split($text, "");
+    $result: null;
+    $length: calc(list.length($split) + 1);
+
+    @for $i from 1 to $length {
+        $char-lower: string.to-lower-case(list.nth($split, $i));
+        $result: if($char-lower ==" ", "#{$result}-", "#{$result}#{$char-lower}");
+    }
+
+    @return $result;
+}
+
+;
 
 // Size
 $sizes: (
@@ -27,7 +43,7 @@ $sizes: (
 }
 
 @mixin text-stroke($color) {
-    text-shadow: -1px -1px 0 $color, -1px 1px 0 $color, 1px 1px 0 $color, 1px -1px $color,;
+    text-shadow: -1px -1px 0 $color, -1px 1px 0 $color, 1px 1px 0 $color, 1px -1px $color, ;
 }
 
 // Position
@@ -46,35 +62,44 @@ $positions: left, right, center;
     src: url("/assets/font/RGHPPSans.otf");
 }
 
-@mixin comic-sans {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-}
+@mixin font-family($name, $weights: null, $args...) {
+    $class-name: slugify($name);
 
-@mixin rghpp {
-    font-family: RGHPPsans;
-}
+    @if($weights) {
+        @each $weight in $weights {
+            $weight-lower: string.to-lower-case($weight);
 
-.font-revenge {
-    @include rghpp;
-}
+            .font-#{$class-name}-#{$weight-lower} {
+                font-family: '#{$name} #{$weight}';
+            }
+        }
+    }
 
-.font-comic-sans {
-    @include comic-sans;
-}
-
-@mixin roboto($weight) {
-    font-family: 'Roboto #{$weight}',
-    sans-serif;
-}
-
-@each $w in "Thin", "Light", "Medium", "Black" {
-    $lower: string.to-lower-case($w);
-    .font-roboto-#{$lower} {
-        font-family: 'Roboto #{$w}',
-        sans-serif;
+    .font-#{$class-name} {
+        font-family: $args;
     }
 }
 
-.font-roboto {
-    font-family: 'Roboto', sans-serif;
+
+$fonts: (
+    "Comic Sans": ("Comic Sans MS", "Comic Sans", cursive),
+    "Revenge":(RGHPPsans),
+    "Roboto":(Roboto),
+    "Georgia":(Georgia, serif),
+);
+
+$weights: (
+    "Roboto":("Thin",
+        "Light",
+        "Medium",
+        "Black")
+);
+
+@each $font, $args in $fonts {
+    $font-weights: map.get($weights, $font);
+    @include font-family($font, $font-weights, $args);
+}
+
+@mixin font($font){
+    font-family: map.get($fonts, $font);
 }
