@@ -7,7 +7,9 @@
 {% endblock %}
 {% block body %}
 <article class="main__article">
+    {% block title %}
     <h1 class="main__article-title font-revenge">{{ title }}</h1>
+    {% endblock title %}
     <div class="main__article-body">
         {% block content %}
         {{ content | safe }}

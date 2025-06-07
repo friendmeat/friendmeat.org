@@ -1,9 +1,7 @@
 ---
 layout: default
 title: About
-eleventyNavigation:
-    key: About
-    parent: Home
+parent: Home
 ---
 
 ![friendmeat](https://i.postimg.cc/g27c2pjL/friendmeat.jpg){class=about__photo}
