@@ -174,11 +174,13 @@ iframe {
   h2 {
     font-size: size.$lg;
     font-weight: 700;
+@include theme.theme("color", "primary");
   }
 
   h3 {
-    font-size: size.$md;
-    font-weight: 700;
+    font-size: calc(size.$md + 0.5rem);
+    font-weight: 200;
+@include theme.theme("color", "secondary");
   }
 
   h4 {
