@@ -7,31 +7,15 @@ $constants: (
 );
 
 $base: (
-  "dark": (
-    "bg": #000,
-    "bg50": rgba(0, 0, 0, 50%),
-    "text": #fff,
-    "text50": rgba(255, 255, 255, 50%),
-    "gray-100": #202020,
-    "gray-200": #858585,
-    "primary": rgb(127, 255, 255),
-    "secondary": #75705d,
-    "trinary": #755d75,
-    "darkred": #57031f,
-    "red": #460000,
+  "dark": (    "bg": #000,
+        "text": #fff,
+        "primary": #62e9d5,
+    "secondary": #93abc2,
   ),
-  "light": (
-    "bg": #e4e4e4,
-    "bg50": rgba(255, 255, 255, 50%),
-    "text": #000,
-    "text50": rgba(0, 0, 0, 50%),
-    "gray-100": #d4d4d4,
-    "gray-200": #adadad,
-    "primary": #47f5db,
-    "secondary": #f5cf47,
-    "trinary": #f538f4,
-    "darkred": #aa3343,
-    "red": #e06969,
+  "light": (    "bg": #000,
+    "text": #fff,
+    "primary": #62e9d5,
+    "secondary": #93abc2,
   ),
 );
 
