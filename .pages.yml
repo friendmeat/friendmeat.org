@@ -154,3 +154,52 @@ content:
         label: Site
         type: string
         pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
+
+  - name: badges
+    label: badges
+    path: src/_data/badges.json
+    format: json
+    type: file
+    fields:
+      - name: badges
+        label: Badges
+        type: object
+        list: true
+        fields: 
+          - name: src
+            label: Badge Source
+            description: Link to badge image
+            type: string
+          - name: alt
+            label: Badge Alt-text
+            description: Text description of the badge
+            type: string
+          - name: href
+            label: Badge Link
+            required: false
+            description: (Optional) Site the badge links too
+            type: string  
+          - name: title
+            label: Title
+            required: false
+            description: (Optional) Text to display on hover
+            type: string
+          - name: author
+            label: Author
+            required: false
+            description: (Optional) Creator of this badge
+            type: object
+            fields: 
+              - name: name
+                label: Author Name
+                type: string
+                description: Name of the creator of this badge
+              - name: site
+                label: Author Site
+                type: string
+                description: Link to the creator's site
+          - name: footer
+            label: Display in footer
+            type: boolean
+            default: false
+            description: If checked, displays this badge in the site footer

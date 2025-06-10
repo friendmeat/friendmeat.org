@@ -1,0 +1,15 @@
+{
+    "badges": [
+        {
+            "src": "https://chrisburnell.com/images/animated/built-with-eleventy.gif",
+            "alt": "Built with Eleventy",
+            "href": "https://11ty.dev",
+            "title": "Badge by chrisburnell.com",
+            "author": {
+                "name": "Chris Burnell",
+                "site": "https://chrisburnell.com"
+            },
+            "footer": true
+        }
+    ]
+}
