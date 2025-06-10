@@ -17,6 +17,15 @@ jobs:
       with:
         node-version: latest
         cache: 'pnpm'
+    - run: echo "IMAGES_HASH=$(grep -REoh --color=never --exclude-dir={node_modules,.cache,dist} 'https?[^% ){}]*\.(jpg|png|svg|webp)' | sha256sum | awk '{print $1}')" >> $GITHUB_ENV
+    - name: Restore Cache
+      uses: actions/cache/restore@v4
+      with:
+        path: ./.cache
+        key: ${{ env.IMAGES_HASH }}
+    - name: List PWD
+      run: ls . -la
+    - run: ls .cache -la
     - name: Install deps and build
       run: |
         pnpm install
