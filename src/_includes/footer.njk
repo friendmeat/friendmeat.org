@@ -1,5 +1,13 @@
 <footer class="footer">
     <ul class="footer__list">
+        <li class="footer__badges">
+            {% set FOOTER_BADGES = true %}
+            {% for badge in badges.badges %}
+            {% if badge.footer %}
+            {% include "src/_includes/layout/badge.njk" %}
+            {% endif %}
+            {% endfor %}
+        </li>
         <li class="footer__site-attribute">{{ buildDate | date("YYYY") }} {{ meta.title }}</li>
     </ul>
 </footer>
