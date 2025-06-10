@@ -1,0 +1,25 @@
+{% extends "src/_layouts/base.njk" %}
+{% block head %}
+<style>
+@font-face {
+  font-family: RGHPPsans;
+  src: url("/assets/font/RGHPPSans.otf");
+}
+.font-revenge {
+    font-family: RGHPPsans;
+}
+</style>
+{% endblock head %}
+{% block body %}
+<main>
+    <h1>Accessibility Warning</h1>
+    <p>I try to keep this site in line with online accessibility standards by including alt-text, semantic HTML, high-contrast colors and readable fonts (<span class="font-revenge">for the most part</span>).</p>
+    <p>These pages are intended as visual art or technical experiments and are not ensured to be accessible.</p> 
+    <h2>Warning: flashing lights, eye strain, inaccessible web design</h2>
+    <a href="/"><button>Go Back</button></a>
+    <h2>Links</h2>
+    <ul>
+        <li><a href="/moodboard/jamie/">Jamie</a></li>
+    </ul>
+</main>
+{% endblock body %}
