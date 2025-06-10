@@ -30,7 +30,9 @@ jobs:
     - name: Persist Eleventy .cache
       uses: actions/cache@v4
       with:
-        path: ./.cache
+        path: |
+          ./.cache
+          ./dist/assets/img
         key: ${{ env.IMAGES_HASH }}
     - name: Install deps and build
       run: |
