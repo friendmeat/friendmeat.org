@@ -2,7 +2,7 @@
 {% block head %}
     {{ super() }} <meta property="og:image" content="{{ image.img }}"/>
 {% endblock %}
-{% block body %}
+{% block main %}
     {% set pagination = image.pagination %}
     <main class="main main__article" id="main">
         <small class="image__back-to-gallery">
@@ -26,4 +26,4 @@
         </figure>
         {% include "pagination.njk" %}
     </main>
-{% endblock %}
+{% endblock main %}

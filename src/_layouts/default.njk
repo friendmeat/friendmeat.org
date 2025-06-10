@@ -5,7 +5,7 @@
 <meta property="og:title" content="{{ title | siteTitle }}" />
 <meta property="og:url" content="{{ meta.base }}{{ page.url }}" />
 {% endblock %}
-{% block body %}
+{% block main %}
 <article class="main__article">
     {% block title %}
     <h1 class="main__article-title font-revenge">{{ title }}</h1>
@@ -16,4 +16,4 @@
         {% endblock content %}
     </div>
 <article>
-{% endblock %}
+{% endblock main %}
