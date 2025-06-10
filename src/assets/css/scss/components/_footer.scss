@@ -15,8 +15,12 @@
 
 .footer__list {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between
 }
+
+.footer__badges {
+}
+
 .footer__site-attribute {
     position: relative;
     &::before {

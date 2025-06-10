@@ -1,0 +1,7 @@
+<a href="{{ badge.href }}" target="_blank" class="badges__badge-container">
+    <figure title="{{ badge.title }}" class="badges__badge-figure">
+    <img src="{{ badge.src }}" alt="{{ badge.alt }}" class="badges__badge-img"/>
+    <!-- Don't display attribution in the footer -->
+    {% if (not FOOTER_BADGES) and (badge.author) %}<figcaption class="badges__badge-figcaption"><small class="font-roboto-thin">by <a href="{{ badge.author.site }}">{{ badge.author.name }}</a></small></figcaption>{% endif %}
+    </figure>
+</a>
