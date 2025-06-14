@@ -3,14 +3,14 @@
 {% block head %}
 {{ super() }}
 <meta property="og:description" content="{{ description }}" />
-<meta property="og:image" content="{{ meta.site }}{{ headerImage.img }}" />
+<meta property="og:image" content="{{ meta.site }}{{ headerImage.src }}" />
 {% endblock %}
 {% block content %}
     <div class="blog__post-details">
         <small class="blog__post-details-date">{{ page.date | date("YYYY-MM-DD") }}</small>
     </div>
     {% if headerImage %}
-        <img src="{{ headerImage.img }}" alt="{{ headerImage.alt }}" />
+        <img src="{{ headerImage.src }}" alt="{{ headerImage.alt }}" />
     {% endif %}
     {{ super() }}
 {% endblock content %}
