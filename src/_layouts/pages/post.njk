@@ -2,15 +2,15 @@
 {% extends "src/_layouts/default.njk" %}
 {% block head %}
 {{ super() }}
-<meta property="og:description" content="{{ post.excerpt }}" />
-<meta property="og:image" content="{{ meta.site }}{{ img }}" />
+<meta property="og:description" content="{{ description }}" />
+<meta property="og:image" content="{{ meta.site }}{{ headerImage.img }}" />
 {% endblock %}
 {% block content %}
     <div class="blog__post-details">
         <small class="blog__post-details-date">{{ page.date | date("YYYY-MM-DD") }}</small>
     </div>
-    {% if img %}
-        <img src="{{ img }}" alt="{{ alt }}" />
+    {% if headerImage %}
+        <img src="{{ headerImage.img }}" alt="{{ headerImage.alt }}" />
     {% endif %}
     {{ super() }}
 {% endblock content %}
