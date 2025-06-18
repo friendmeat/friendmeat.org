@@ -39,12 +39,9 @@
     display: flex;
     position: relative;
     flex-flow: column;
+    height: 100%;
 }
 
 .home__the-meat {
     align-self: center;
-}
-
-.home__the-meat-base {
-    // position: absolute;
 }
