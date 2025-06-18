@@ -59,7 +59,8 @@ $positions: left, right, center;
 
 @font-face {
     font-family: RGHPPsans;
-    src: url("/assets/font/RGHPPSans.otf");
+    src: url("/assets/font/RGHPP Sans.woff2") format("woff2");
+    unicode-range: U+0020-00AD;
 }
 
 @mixin font-family($name, $weights: null, $args...) {
