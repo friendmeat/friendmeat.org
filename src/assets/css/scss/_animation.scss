@@ -23,18 +23,18 @@
         0% {
             filter: hue-rotate(0)
         }
-    
+
         100% {
             filter: hue-rotate(90deg)
         }
     }
 
-;
+    ;
 }
 
 @mixin deepfry-filters($hue, $invert, $hue2) {
     filter:
-        sepia(100%)         saturate(500%)         hue-rotate($hue)         contrast(500%)         grayscale(100%)         sepia(100%)         saturate(500%)         hue-rotate(130deg)         contrast(500%)         hue-rotate($hue2);
+        sepia(100%) saturate(500%) hue-rotate($hue) contrast(500%) grayscale(100%) sepia(100%) saturate(500%) hue-rotate(130deg) contrast(500%) hue-rotate($hue2);
 }
 
 @mixin deepfry {
@@ -44,11 +44,11 @@
         0% {
             @include deepfry-filters(1deg, 0%, 0deg);
         }
-        
+
         50% {
             @include deepfry-filters(180deg, 100%, 90deg);
         }
-        
+
         100% {
             @include deepfry-filters(359deg, 1%, 1deg);
         }
