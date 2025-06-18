@@ -21,7 +21,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
         urlPath: "/assets/img/",
         widths: ["auto"],
-        formats: ["avif", "webp", "jpeg", "gif"],
+        formats: ["webp"],
         htmlOptions: {
             imgAttributes: {
                 // loading: "lazy",
@@ -75,7 +75,7 @@ export default function (eleventyConfig) {
     /* Template Preprocessors */
     eleventyConfig.addPreprocessor("video-preprocess", "md", videoPreprocessor);
 
-    /* Tempate Transforms */
+    /* Template Transforms */
     // https://www.11ty.dev/docs/transforms/#minify-html-output
     eleventyConfig.addTransform("htmlmin", function (content) {
         if ((this.page.outputPath || "").endsWith(".html")) {

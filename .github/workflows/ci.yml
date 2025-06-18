@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     # Set up any tools and build steps here
     - name: Setup pnpm
       uses: pnpm/action-setup@v4.1.0
@@ -25,6 +25,13 @@ jobs:
       with:
         node-version: latest
         cache: 'pnpm'
+    - name: Persist Eleventy .cache
+      uses: actions/cache@v4
+      with:
+        key: ${{ runner.os }}-eleventy-fetch-cache
+        path: |
+          ./.cache
+          ./dist/assets/img
     - name: Install deps and build
       run: |
         pnpm install
