@@ -4,8 +4,10 @@
 {% block title %}{% endblock %}
 {% block content %}
     <section class="home__container">
-        <div class="home__the-meat-container">
-            <img eleventy:ignore class="home__the-meat hueshift" src="/assets/img/lambchop.svg" alt="Clip art of a lamb chop"/>
+        <div
+            class="home__the-meat-container">
+            {# <img eleventy:ignore class="home__the-meat hueshift" src="/assets/img/lambchop.svg" alt="Clip art of a lamb chop"/> #}
+            <span class="home__the-meat hueshift">{% include "src/_includes/parts/meat.njk" %}</span>
             <h1 class="home__title font-revenge text-center">
                 {% for c in "FRIENDMEAT" -%}
                     <span class="hueshift">{{ c }}</span>
