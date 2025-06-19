@@ -101,6 +101,6 @@ $weights: (
     @include font-family($font, $font-weights, $args);
 }
 
-@mixin font($font){
+@mixin font($font) {
     font-family: map.get($fonts, $font);
 }
