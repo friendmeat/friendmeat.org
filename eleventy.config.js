@@ -21,7 +21,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
         urlPath: "/assets/img/",
         widths: ["auto"],
-        formats: ["avif", "webp", "jpeg", "gif"],
+        formats: ["webp"],
         htmlOptions: {
             imgAttributes: {
                 // loading: "lazy",

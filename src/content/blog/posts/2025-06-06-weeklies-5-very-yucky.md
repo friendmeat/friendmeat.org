@@ -15,6 +15,7 @@ description: Freud on shit and money; trip-hop bangers; LSD and the unabomber vs
 > ...\[W]herever archaic modes of thought have predominated or persist— in the ancient civilizations, in myths, fairy tales and superstitions, in unconscious thinking, in dreams, and in neuroses— money is brought into the most intimate relationship with dirt...
 > ...even according to ancient Babylonian doctrine gold is 'the faeces of Hell' (Mammon = _ilu manman_).
 > ...It is possible that the contrast between the most precious substance known to men and the most worthless, which they reject as waste matter, ('refuse') has led to this specific identification of gold with faeces 
+
 <cite>—"Character and Anal Eroticism", The Freud Reader p. 296-297, edited by Peter Gay</cite>
 
 Yeah
@@ -27,7 +28,9 @@ Very excited after all this time to finally have the james K album announced. ["
 ## __what i'm watching__:
 ![THE NET: The Unabomber, LSD and The Internet](https://lopcuk.files.wordpress.com/2022/04/the-net-unabomber-lsd-internet_small.jpg)
 <iframe width="100%" height="420px" src="https://archive.org/embed/the-net"></iframe>
+
 ### _The Net: The UnaBomber, LSD, and The Internet_ (2003)
+
 this is what my brain looks like kinda. This was mentioned on [Weird Studies](https://www.weirdstudies.com/) in an episode where they're talking about the influence of 60s psychedelics on culture. I kind of already knew the counterculture-MKUltra-internet through-line. They didn't even touch the Manhattan Project and Vannevar Bush. but I really liked the oppressive, conspiratorial atmosphere; the discordant, noisy soundtrack; and the letters from Ted Kaczynski. Very yucky, very Adam Curtis.
 
 ![28 Days Later](https://www.themoviedb.org/t/p/original/sQckQRt17VaWbo39GIu0TMOiszq.jpg)
@@ -50,6 +53,7 @@ School fucking sucks. I was a weird nerdy kid who _liked_ learning about shit bu
 This is the corollary to my "what i liked" topic. I did good at school with the minimum of effort and so I never had to think about taking good notes or studying. Now I have things I'm interested in— philosophy, computer science, math, critical theory— and I _want_ to take notes and do research and write essays. That didn't come from my public school education.
 
 I'm going to drop this apocryphal Slavoj Zizek quote that I can't find a source for:
+
 > ...that AI will be the death of learning & so on; to this, I say NO! My student brings me their essay, which has been written by AI, & I plug it into my grading AI, & we are free! While the 'learning' happens, our superego satisfied, we are free now to learn whatever we want
 
 ## __a picture__:

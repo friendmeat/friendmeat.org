@@ -1,28 +1,23 @@
 {% extends "src/_layouts/default.njk" %}
-
 {# Omit breadcrumb and title on Homepage #}
-{% block breadcrumb %}
-{% endblock %}
-
-{% block title %}
-{% endblock %}
-
+{% block breadcrumb %}{% endblock %}
+{% block title %}{% endblock %}
 {% block content %}
-<section class="home__container">
-    <div class="home__the-meat-container">
-    <img eleventy:ignore class="home__the-meat-base hueshift" src="/assets/img/lambchop_black.svg" />
-    <img eleventy:ignore class="home__the-meat-key" src="/assets/img/lambchop_key.svg" alt="Clip art of a lamb chop" />
-    <div>
-    <h1 class="home__title font-revenge text-center">
-    {% for c in "FRIENDMEAT" -%}
-        <span class="hueshift">{{c}}</span>
-    {%- endfor %}
-    </h1>
-    <p>You found me</p>
-    <p>What now? Well, you can try looking at some up my <a href="/stuff">stuff</a>. Or, read my <a href="/blog">blog</a>.</p>
-    <p></p>
-    <h2>Latest Posts</h2>
-    {% include "src/_includes/parts/latest_posts.njk" %}
-</section>
-
+    <section class="home__container">
+        <div
+            class="home__the-meat-container">
+            {# <img eleventy:ignore class="home__the-meat hueshift" src="/assets/img/lambchop.svg" alt="Clip art of a lamb chop"/> #}
+            <span class="home__the-meat hueshift">{% include "src/_includes/parts/meat.njk" %}</span>
+            <h1 class="home__title font-revenge text-center">
+                {% for c in "FRIENDMEAT" -%}
+                    <span class="hueshift">{{ c }}</span>
+                {%- endfor %}
+            </h1>
+        </div>
+        {{ content | safe }}
+        <h2>Latest Posts</h2>
+        {% include "src/_includes/parts/latest_posts.njk" %}
+        <h2>Badges</h2>
+        {% include "src/_includes/layout/badges.njk" %}
+    </section>
 {% endblock content %}
