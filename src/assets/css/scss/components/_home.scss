@@ -1,22 +1,47 @@
 @use "../theme";
+@use "../size";
 @use "../animation";
 @use "../typography";
+@use "../media";
 
 .home__title {
     text-shadow: -1px -1px 0 black;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+
+    // text-
+    >span {
+
+        @include media.mobile {
+            font-size: 15lvw;
+        }
+
+        @include media.desktop {
+            font-size: 175%;
+        }
+    }
+
     @include typography.text-stroke(black);
     @include theme.theme(color, primary);
+
     @for $i from 0 through 10 {
-        & :nth-child(#{$i}){
+        & :nth-child(#{$i}) {
             animation-delay: calc(100ms * $i);
         }
     }
 }
 
+
 .home__the-meat-container {
+    display: flex;
     position: relative;
+    flex-flow: column;
+    height: 100%;
 }
 
-.home__the-meat-base {
-    position: absolute;
+.home__the-meat {
+    align-self: center;
 }
