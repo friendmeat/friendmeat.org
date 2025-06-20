@@ -8,4 +8,4 @@ templateEngineOverride: njk
 
 Browse my wares
 
-{% include "galleries/links.njk" %}
+{% include "stuff/links.njk" %}

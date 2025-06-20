@@ -5,7 +5,7 @@
     <meta property="og:title" content="{{ title }}"/>
     <meta property="og:url" content="{{ meta.base }}{{ page.url }}"/>
 {% endblock %}
-{% block body %}
+{% block main %}
     <small class="gallery__back-to-stuff">
         <a href="/stuff/{{ image.gallery.key }}">Back to Stuff</a>
     </small>
@@ -19,4 +19,4 @@
             </a>
         {% endfor %}
     </article>
-{% endblock %}
+{% endblock main %}
