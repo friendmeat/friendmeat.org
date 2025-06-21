@@ -16,7 +16,7 @@ Benedict Anderson's _Imagined Communities_ lays out how nationalism-- and, indee
 my first time in a properly land-locked state (Ohio doesn't count) in some ways answers my question. Kansas is not as cartoonishly flat as you'd think-- it's a lot like rural Pennsylvania if you photoshopped the hills out-- and when you get to certain areas of the boonies there's a lot of rich assholes with vanity cattle farms next to their mcmansions built next to golf courses, which is also exactly like here except we do it with horses and alpaca. they even have Amish making fucked-up frosted bacon pastries, just like at home (I kind of think they're pulling a long-con to kill secular heretics via heart disease).
 
 ## freddy's
-**betrayal by the american experiment**
+### betrayal by the american experiment
 ![a really shitty chili dog](https://i.postimg.cc/vTj1PnvN/20250612-141554.jpg)
 america is pretty much just vibes. In London, England they have a chain restaurant for "american" food with an aesthetic practically air-lifted from any roadside diner in the united states: marylin monroe, elvis, burgers, milkshakes and french fries. what does it mean for us(americans) that the trappings of "americaness" are so easily mimed? is it an indictment of our vapid obsession with surface-level appearance? is it the soft-power arm of U.S. global military hegemony's effectiveness at littering the world with our pop culture like so much semiotic ejecta? something in between???
 
@@ -25,7 +25,7 @@ the freddy's near the Wichita airport is one such outpost of usamerica's self-in
 despite my N-95 I must have caught COVID on the plane, because when I tell you that shit was flavorless. the dog had no snap, the chili had no spice, the much-hyped fries may as well have been. I didn't taste anything but it was something.
 
 ## salt mine
-**hubris and envy brine in the dark**
+### hubris and envy brine in the dark
 ![The rusty chain of an 'undercutter', essentially a truck-sized chainsaw used in salt mining](https://i.postimg.cc/mRTkJrG3/IMGP2729.jpg)
 
 who's fucking who in the salt mine museum? my bet is our charismatic enby tour guide is slowly force-femming the dark ride attendant with the rainbow pride and Fallout Vault Boy enamel pins on his hi-vis. meanwhile, the zoomer gift shop cashier-- cut off from from the surface world's 5g teat-- is so bored, i saw her wiping down the underside of the POS system. I bought a mug
@@ -33,19 +33,19 @@ who's fucking who in the salt mine museum? my bet is our charismatic enby tour g
 at one point in the tour we were invited to step off the ride and pick a lump of salt from a pile. Unthinking, I took the first one I saw near me, shot through with intrusions, and secured it in the provided draw-string bag emblazoned with the museum's logo. I wont reduce myself to picking over this pile like a slack-jawed _tourist_, I thought. what an asshole. Bestie found a tiny, near-perfect cube of white salt, and I'm overcome with salt envy. 
 
 This is your sign to pick over the salt pile.
-
+![Wall of a salt mine with a wire arrow labeled "Crystal Pod"](https://i.postimg.cc/t4Fbf65V/IMGP2723.jpg)
 ![The wall of a salt mine with a white arrow ponting down labeled "Pipe"](https://i.postimg.cc/WzKjR6C0/IMGP2724.jpg)
 
-## everything else
+## other stuff
 Here's some more stuff I did in Kansas:
 - pet a stray cat
 - got tipsy at a lame gay bar
 - Had really good thai curry
 - Found the stele of hammurabi at an antique mall
 - Learned how to play poker
-- I got hot dogs #2 and #3 from a QuikTrip and they were wayyy better than Freddy's.
+- I got hot dogs #2 and #3 from a gas station and they were wayyy better than Freddy's.
 
-# back to your regularly scheduled content
+# weeklies #7
 ## __what i'm reading__:
 > I closed my eyes at the back of the bus. Tried to imagine where each of my polygons would start and end. Tried to forget the dire reality that I was made of quadrillions of fickle particles, held together by absurd forces and unknowable math. No, I'm different. I'm made of faces, edges, and vertices. Textures and armatures and keyframes. I visualized it all. The mental exercise worked just well enough to get me through, and no more.
 
