@@ -170,15 +170,13 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/font");
 
     /* Watch Targets */
-    eleventyConfig.addWatchTarget("./src/assets/")
+    eleventyConfig.addWatchTarget("./src/assets/");
 
     /* Enable Template Language Extensions */
     // eleventyConfig.addExtension("11ty.js");
 
     /* Custom Directories */
     return {
-        // htmlTemplateEngine: "njk",
-        // markdownTemplateEngine: "njk",
         dir: {
             input: "src",
             output: "dist",

@@ -12,6 +12,9 @@
     display: flex;
     justify-content: space-between;
 
+    @include typography.text-stroke(black);
+    @include theme.theme(color, primary);
+
     // text-
     >span {
 
@@ -23,9 +26,6 @@
             font-size: 175%;
         }
     }
-
-    @include typography.text-stroke(black);
-    @include theme.theme(color, primary);
 
     @for $i from 0 through 10 {
         & :nth-child(#{$i}) {
