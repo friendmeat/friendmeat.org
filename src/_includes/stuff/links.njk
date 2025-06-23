@@ -1,6 +1,6 @@
 <div class="stuff__link-container">
     {% for filename, gallery in galleries %}
-    <a href="/stuff/{{ gallery.title | slugify }}" class="stuff__button">{{ gallery.title }}</a>
+        <a href="/stuff/{{ gallery.title | slugify }}" class="stuff__button">{{ gallery.title }}</a>
     {% endfor %}
-    <a href="/nonstandard" class="stuff__button">Web Art</a>
+    {# <a href="/nonstandard" class="stuff__button">Web Art</a>j #}
 </div>
