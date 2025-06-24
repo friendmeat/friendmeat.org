@@ -218,3 +218,11 @@ iframe {
   gap: size.$md;
   margin: size.$md 0;
 }
+
+.rss_button {
+  height: size.$md;
+  border-radius: 5px;
+  padding: 5px;
+  @include theme.theme("background-color", "primary");
+  @include theme.theme("color", "bg");
+}

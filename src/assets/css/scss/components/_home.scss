@@ -45,3 +45,9 @@
 .home__the-meat {
     align-self: center;
 }
+
+.home__latest-posts {
+    display: flex;
+    align-items: center;
+    gap: size.$sm;
+}
