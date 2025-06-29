@@ -159,7 +159,28 @@ export default function (eleventyConfig) {
     });
 
     eleventyConfig.addCollection("imagesByCollection", (collectionsApi) => {
-
+        const galleries = collectionsApi.items[0].data.galleries;
+        return Object.keys(galleries).flatMap((galleryKey) => {
+            const gallery = galleries[galleryKey];
+            return gallery.collections.flatMap((collection) => {
+                // console.log(Object.keys(collection));
+                return collection.images.flatMap((image, i, images) => {
+                    const urlRoot = `/stuff/${slugify(galleryKey)}/${slugify(collection.title)}`
+                    image.gallery = galleryKey;
+                    image.collection = collection.title;
+                    return {
+                        ...image,
+                        permalink: urlRoot + `/${slugify(image.title)}/index.html`,
+                        pagination: {
+                            href: {
+                                previous: i > 0 ? urlRoot + `/${slugify(images[i - 1].title)}/` : ``,
+                                next: i < images.length - 1 ? urlRoot + `/${slugify(images[i + 1].title)}/` : ``
+                            }
+                        }
+                    }
+                })
+            })
+        })
     });
 
     /* Passthrough Directories */

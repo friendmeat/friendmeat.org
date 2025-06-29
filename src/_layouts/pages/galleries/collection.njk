@@ -7,9 +7,11 @@
 {% endblock main %}
 {% block content %}
     {% for image in collection.images %}
-        <figure>
-            <img alt="{{ image.alt }}" src="{{ image.img }}"/>
-            <figcaption>{{ image.description }}</figcaption>
-        </figure>
+        <a href="/stuff/{{ image.gallery | slugify }}/{{ image.collection | slugify }}/{{ image.title | slugify }}/">
+            <figure>
+                <img alt="{{ image.alt }}" src="{{ image.img }}"/>
+                <figcaption>{{ image.description }}</figcaption>
+            </figure>
+        </a>
     {% endfor %}
 {% endblock content %}
