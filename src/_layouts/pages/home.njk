@@ -15,7 +15,10 @@
             </h1>
         </div>
         {{ content | safe }}
+        <div class="home__latest-posts">
         <h2>Latest Posts</h2>
+            {% include "parts/rss_button.njk" %}
+        </div>
         {% include "src/_includes/parts/latest_posts.njk" %}
         <h2>Badges</h2>
         {% include "src/_includes/layout/badges.njk" %}
