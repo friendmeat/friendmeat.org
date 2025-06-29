@@ -115,6 +115,8 @@ export default function (eleventyConfig) {
             return array.slice(0, 3);
         });
 
+    eleventyConfig.addFilter("keys", function (object) { return Object.keys(object) });
+
     /* Custom Shortcodes */
     // eleventyConfig.addShortcode("firstImage", function (collection) {
     //     const image = this.ctx.environments[collection].at(0)
@@ -139,29 +141,26 @@ export default function (eleventyConfig) {
         return posts
     });
 
-    eleventyConfig.addCollection("images_by_gallery", (collectionsApi) => {
+    eleventyConfig.addCollection("collectionsByGallery", (collectionsApi) => {
         const galleries = collectionsApi.items[0].data.galleries;
 
-        return Object
-            .keys(galleries)
-            .flatMap(key => {
-                const gallery = galleries[key];
-                gallery.key = key;
-                return gallery.images.map((image, i, allImages) => {
-                    return ({
-                        ...image,
-                        gallery,
-                        permalink: `/stuff/${key}/${slugify(image.title)}/index.html`,
-                        pagination: {
-                            href: {
-                                previous: i > 0 ? "/stuff/" + key + "/" + slugify(allImages[i - 1].title) : null,
-                                next: i < allImages.length - 1 ? "/stuff/" + key + "/" + slugify(allImages[i + 1].title) : null,
-                            }
-                        }
-                    })
-                })
-            });
-    })
+        return Object.keys(galleries).flatMap(key => {
+            const gallery = galleries[key];
+            gallery.key = key;
+            return gallery.collections.map((collection, i, collections) => {
+                collection.gallery = key;
+                return {
+                    ...collection,
+                    gallery: key,
+                    permalink: `/stuff/${key}/${collection.title}/index.html`
+                }
+            })
+        })
+    });
+
+    eleventyConfig.addCollection("imagesByCollection", (collectionsApi) => {
+
+    });
 
     /* Passthrough Directories */
     // eleventyConfig.addPassthroughCopy("src/assets/icons");

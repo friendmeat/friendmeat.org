@@ -1,0 +1,14 @@
+{% extends "src/_layouts/default.njk" %}
+{% block content %}
+    {% for key in galleries | keys %}
+        {% set gallery = galleries[key] %}
+        {% set previewCollection = gallery.collections | first %}
+        {% set previewImage = previewCollection.images | selectattr("cover") | first %}
+        <a href="/stuff/{{ gallery.title | slugify }}" class="gallery__figure-container stuff__preview-image">
+            <figure class="gallery__figure">
+                <img alt="{{ previewImage.alt }}" src="{{ previewImage.img }}" class="gallery__figure-image"/>
+                <figcaption class="gallery__figure-caption">{{ gallery.title }}</figcaption>
+            </figure>
+        </a>
+    {% endfor %}
+{% endblock %}

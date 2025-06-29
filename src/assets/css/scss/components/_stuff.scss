@@ -15,12 +15,20 @@
     border-radius: size.$sm;
     text-align: center;
     @include theme.theme("border", "text", true, "1px dashed");
-    @include theme.theme("background-color","bg");
+    @include theme.theme("background-color", "bg");
     @include theme.transition;
-    &:hover{
-        @include theme.theme("color","bg");
+
+    &:hover {
+        @include theme.theme("color", "bg");
         @include theme.theme("background-color", "primary");
         @include theme.theme("border-color", "bg");
         @include animation.hueshift;
     }
+}
+
+.stuff__preview-image {
+    display: block;
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
 }

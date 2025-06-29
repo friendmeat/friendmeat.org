@@ -19,10 +19,12 @@ $img-height: 500px;
 
 .gallery__back-to-stuff {
     margin: 1rem;
-        ::before {
-            content: "\21fd";
-            left: calc(size.$md * -1);
-        }
+
+    ::before {
+        content: "\21fd";
+        left: calc(size.$md * -1);
+    }
+
     // @include back-arrow();
 }
 
@@ -45,39 +47,42 @@ $img-height: 500px;
     aspect-ratio: 1;
     position: relative;
 
-    
-    @include media.desktop {
-        & .gallery__figure-caption {
-            display: none;
-            font-size: 300%;
-        }
-        & .gallery__figure-image {
-            @include deepfry(3px, 500%);
-            @include theme.transition;
-        }
 
-        &:hover,
-        &:focus,
-        &:focus-within {
-            .gallery__figure-image {
-                @include deepfry(0px, 200%)
-            }
-
-            .gallery__figure-caption {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                top: 0;
-                right: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                text-align: center;
-                mix-blend-mode: exclusion;
-            }
-        }
+    & .gallery__figure-caption {
+        display: none;
+        font-size: 300%;
     }
+
+    & .gallery__figure-image {
+        @include deepfry(3px, 500%);
+        @include theme.transition;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+        .gallery__figure-image {
+            @include deepfry(0px, 200%)
+        }
+
+
+    }
+
+    .gallery__figure-caption {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        mix-blend-mode: exclusion;
+    }
+
+    @include media.desktop {}
 }
 
 
@@ -104,6 +109,7 @@ $img-height: 500px;
 
 .image__back-to-gallery {
     position: relative;
+
     ::before {
         content: "\21fd";
         position: absolute;
