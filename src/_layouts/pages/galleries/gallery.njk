@@ -10,11 +10,12 @@
         <a href="/stuff/{{ image.gallery.key }}">Back to Stuff</a>
     </small>
     <article class="gallery__container">
-        {% for image in gallery.images %}
-            <a href="/stuff/{{ gallery.title | slugify }}/{{ image.title | slugify }}/" data-title="{{ image.title }}" class="gallery__figure-container">
+        {% for collection in gallery.collections %}
+            {% set coverImage = collection.images | selectattr("cover") | first %}
+            <a href="/stuff/{{ gallery.title | slugify }}/{{ collection.title | slugify }}" data-title="{{ image.title }}" class="gallery__figure-container">
                 <figure class="gallery__figure">
-                    <img alt="{{ image.alt }}" src="{{ image.img }}" loading="lazy" class="gallery__figure-image"/>
-                    <figcaption class="gallery__figure-caption font-roboto-black">{{ image.title }}</figcaption>
+                    <img alt="{{ coverImage.alt }}" src="{{ coverImage.img }}" loading="lazy" class="gallery__figure-image"/>
+                    <figcaption class="gallery__figure-caption font-roboto-black">{{ collection.title }}</figcaption>
                 </figure>
             </a>
         {% endfor %}
