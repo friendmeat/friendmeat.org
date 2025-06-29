@@ -1,0 +1,129 @@
+{
+    "title": "Photos",
+    "description": "My Photography",
+    "published": true,
+    "collections": [
+        {
+            "title": "kansas",
+            "description": "photos from kansas, june 2025",
+            "images": [
+                {
+                    "title": "chicken shack",
+                    "img": "https://i.postimg.cc/bN7f9pZf/0479735-001.jpg",
+                    "alt": "a chicken statue in front of an industrial landscape",
+                    "cc0": true
+                },
+                {
+                    "title": "birds",
+                    "img": "https://i.postimg.cc/yYgzRkYT/0479735-005.jpg",
+                    "alt": "industrial landscape with birds",
+                    "cc0": true,
+                    "cover": true
+                },
+                {
+                    "title": "",
+                    "img": "https://i.postimg.cc/zXjTcv0Y/0479735-004.jpg",
+                    "alt": "more industrial landscape",
+                    "cc0": true
+                },
+                {
+                    "title": "barbed wired",
+                    "img": "https://i.postimg.cc/LsRdGDky/0479735-009.jpg",
+                    "alt": "barbed wire fence",
+                    "cc0": true
+                },
+                {
+                    "title": "skate park",
+                    "img": "https://i.postimg.cc/P51s69Dp/0479735-011.jpg",
+                    "alt": "skate park underneath a highway; light coming down from between the gap between two highway overpasses illuminates a bicycle.",
+                    "cc0": true
+                },
+                {
+                    "title": "skate park 2",
+                    "img": "https://i.postimg.cc/zGGTZNcb/0479735-018.jpg",
+                    "alt": "the bowl of a skate park",
+                    "cc0": true
+                },
+                {
+                    "title": "skart park rules",
+                    "img": "https://i.postimg.cc/52KLfrhP/0479735-013.jpg",
+                    "alt": "wichita skate park rules",
+                    "cc0": true
+                },
+                {
+                    "title": "cat",
+                    "img": "https://i.postimg.cc/q7LfrKjp/0479735-030.jpg",
+                    "alt": "an orange tabby stray cat",
+                    "cc0": true
+                }
+            ]
+        },
+        {
+            "title": "portland",
+            "description": "photos from portland, may 2024",
+            "images": [
+                {
+                    "title": "coast",
+                    "img": "https://i.postimg.cc/43fnc3sB/0292004-023.jpg",
+                    "alt": "rocky extrusions on the coast of Oregon",
+                    "cc0": true
+                },
+                {
+                    "title": "latourell falls",
+                    "img": "https://i.postimg.cc/CxJT5G7r/0292005-019.jpg",
+                    "alt": "latourell falls: a waterfall near portland, oregon",
+                    "cc0": true
+                },
+                {
+                    "title": "columnar basalt",
+                    "img": "https://i.postimg.cc/13y1yCGN/0292005-017.jpg",
+                    "alt": "columnar basalt at latourell falls",
+                    "cover": true,
+                    "cc0": true
+                },
+                {
+                    "title": "nick and waterfall",
+                    "img": "https://i.postimg.cc/nc4tbbDJ/0292005-016.jpg",
+                    "alt": "nick looking at a waterfall",
+                    "cc0": true
+                },
+                {
+                    "title": "nick",
+                    "img": "https://i.postimg.cc/RV5zDVqd/0292005-013.jpg",
+                    "alt": "nick covering his face",
+                    "cc0": true
+                },
+                {
+                    "title": "nick and erik",
+                    "img": "https://i.postimg.cc/T3cGmMd9/0292005-020.jpg",
+                    "alt": "nick hugging erik from behind in the woods",
+                    "cc0": true
+                },
+                {
+                    "title": "pidge",
+                    "img": "https://i.postimg.cc/xdx2xvbN/0292005-031.jpg",
+                    "alt": "pidge, possibly a ragdoll with black and white fur",
+                    "cc0": true
+                },
+                {
+                    "title": "oskar",
+                    "img": "https://i.postimg.cc/7LY4nsby/0292005-030.jpg",
+                    "alt": "an orange tabby named oskar, backlit so his head and body are in shadow but his ears are orange",
+                    "cc0": true
+                },
+                {
+                    "title": "rain",
+                    "img": "https://i.postimg.cc/Dwhn8yT0/0292005-001.jpg",
+                    "alt": "rain falling on a banister",
+                    "cc0": true
+                },
+                {
+                    "title": "koi",
+                    "img": "https://i.postimg.cc/RCnBdnCq/0292005-011.jpg",
+                    "alt": "Koi in a pond",
+                    "cc0": true
+                }
+            ]
+        }
+    ]
+}
