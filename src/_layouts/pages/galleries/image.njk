@@ -3,27 +3,30 @@
     {{ super() }} <meta property="og:image" content="{{ image.img }}"/>
 {% endblock %}
 {% block main %}
-    {% set pagination = image.pagination %}
-    <main class="main main__article" id="main">
-        <small class="image__back-to-gallery">
-            <a href="/stuff/{{ image.gallery.key }}">Back to {{ image.gallery.title }}</a>
-        </small>
-        <h2 class="text-lg font-roboto-black">{{ image.title }}</h2>
-        <figure class="image__figure">
-            <img alt="{{ image.alt }}" src="{{ image.img }}" loading="lazy" class="image__image"/>
-            <figcaption class="image__caption">
-                {{ image.description }}
-                {% if image.artist %}
-                    - by
-                    <a href="{{ image.artist.site }}" class="image__artist">{{ image.artist.name }}</a>
-                {% endif %}
-                {% if image.cc0 %}
-                    <div class="image__cc0">
-                        {% include "src/_includes/parts/cc0.njk" %}
-                    </div>
-                {% endif %}
-            </figcaption>
-        </figure>
-        {% include "pagination.njk" %}
-    </main>
+    {# <main class="main main__article" id="main"> #}
+    <small class="gallery__back-to-stuff">
+        <a href="/stuff/{{ image.gallery | slugify }}/{{ image.collection | slugify }}">Back to {{ image.collection }}</a>
+    </small>
+    {# </main> #}
+    {{ super() }}
 {% endblock main %}
+{% block content %}
+    {% set pagination = image.pagination %}
+    <h2 class="text-lg font-roboto-black">{{ image.title }}</h2>
+    <figure class="image__figure">
+        <img alt="{{ image.alt }}" src="{{ image.img }}" loading="lazy" class="image__image"/>
+        <figcaption class="image__caption">
+            {{ image.description }}
+            {% if image.artist %}
+                - by
+                <a href="{{ image.artist.site }}" class="image__artist">{{ image.artist.name }}</a>
+            {% endif %}
+            {% if image.cc0 %}
+                <div class="image__cc0">
+                    {% include "src/_includes/parts/cc0.njk" %}
+                </div>
+            {% endif %}
+        </figcaption>
+    </figure>
+    {% include "pagination.njk" %}
+{% endblock %}
