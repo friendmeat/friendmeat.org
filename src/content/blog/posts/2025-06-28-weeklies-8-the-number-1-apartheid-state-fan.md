@@ -1,5 +1,5 @@
 ---
-title: weeklies 8 - the number 1 apartheid state fan
+title: "weeklies #8 - the number 1 apartheid state fan"
 date: 2025-06-28
 headerImage:
   src: https://i.postimg.cc/bN7f9pZf/0479735-001.jpg
@@ -16,7 +16,6 @@ description: deleuze on genocide; terrible sci-fi novel covers; gelli haha; mini
 
 *–Gilles Deleuze, qtd. ["Zionism Breaks" by Alberto Toscano](https://proteanmag.com/2025/06/22/zionism-breaks/)*
 
-Went to my local gun show (it was something to do) and saw a car in the parking lot with Confederate flag and Isreal bumper stickers. Apartheid states have a #1 fan.
 
 ## stars in my pocket like grains of sand by Samuel R. Delany
 
@@ -54,8 +53,10 @@ what even is there to say
 ![Frosted Shredded Bit-Size Wheat](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.aldireviewer.com%2Fwp-content%2Fuploads%2F2021%2F05%2FIMG_20210519_1836234207E2_resize_37.jpg&f=1&nofb=1&ipt=983496bd682eac223d09039432e521917f02f5b644c89700f9db6f858fd3f998)
 
 mmmm i love to shit solid waste
+
 ## __something i hated__:
-does heat neutralize SSRIs? because it's so hot and I'm so sad. 
+
+Went to my local gun show (it was something to do) and saw a car in the parking lot with Confederate flag and Isreal bumper stickers. Apartheid states have a #1 fan.
 
 ## __a picture__:
 
