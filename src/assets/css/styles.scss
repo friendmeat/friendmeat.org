@@ -17,7 +17,7 @@
 @use "./scss/components/blog";
 @use "./scss/components/pagination";
 @use "./scss/components/gallery";
-@use "./scss/components/stuff/stuff_links"; 
+@use "./scss/components/stuff/stuff_links";
 @use "./scss/components/about";
 
 html {
@@ -29,14 +29,17 @@ body {
   min-height: 100lvh;
   height: 100%;
   display: grid;
+
   @include media.mobile {
     grid-template-columns: 1fr;
     grid-template-rows: size.$xl size.$lg 1fr size.$xl;
   }
+
   @include media.desktop {
     grid-template-columns: 7em 1fr;
     grid-template-rows: size.$lg 2fr;
   }
+
   @include theme.theme("color", "text");
   @include theme.theme("background-color", "bg");
 }
@@ -49,7 +52,9 @@ body {
 
 .main {
   height: 100%;
+
   @include media.mobile {}
+
   @include media.desktop {
     grid-column: 2;
     width: 100%;
@@ -83,6 +88,7 @@ body {
   top: 0;
   @include theme.transition;
   @include theme.theme("border", "gray-200", true, "1px solid");
+
   &:hover,
   &:focus {
     top: 1px;
@@ -105,7 +111,7 @@ iframe {
 // 
 
 .main__article-body {
-  
+
   //
   // Lists
   //
@@ -132,20 +138,16 @@ iframe {
   //
 
   blockquote {
-    margin: size.$sm size.$lg;
-    padding: size.$sm 0;
+    position: relative;
+    margin: size.$lg;
     @include theme.theme("background-color", "gray-100");
 
     & p {
-      margin: size.$sm size.$lg;
       text-align: justify;
     }
   }
 
   >blockquote {
-    position: relative;
-
-    // border-radius: size.$xs;
     &::before {
       content: "\201C";
       z-index: -1;
@@ -176,7 +178,7 @@ iframe {
   h2 {
     font-size: size.$lg;
     font-weight: 700;
-        @include theme.theme("color", "primary");
+    @include theme.theme("color", "primary");
   }
 
   h3 {
