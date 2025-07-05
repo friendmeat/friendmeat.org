@@ -6,6 +6,8 @@ headerImage:
   alt: Japanese actor Toshiro Mifune photographed against a white background with
     a heartthrob smile and holding what could be a glass of beer, but it's hard
     to tell because the photo is black and white
+topics:
+  - weeklies
 description: it's because you're always on that damn phone; korean folk horror
   goes sideways; revivifying my mp3 collection; and introducing a new segment
 ---
