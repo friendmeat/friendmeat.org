@@ -49,7 +49,7 @@ baba is you is hard. i just said that thing about sleep-like oblivion but baba i
 
 > The gods are all liars. Worse, they're just people. Fallible and filthy just like the rest of us
 
-[Edition on itch.io](https://donattico.itch.io/ediction)
+[Ediction on itch.io](https://donattico.itch.io/ediction)
 
 i've never been into genre fiction. i don't particularly care about spectacle and aesthetics of castles and dragons or space ships and aliens. i've always been more interested in things at the level of words and sentences and the situations the characters are put in. that being said, genre is a neutral framework. prose and scenarios can be helped or hindered by being framed within a given genre.
 
