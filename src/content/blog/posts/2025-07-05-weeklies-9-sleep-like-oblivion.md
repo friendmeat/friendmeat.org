@@ -57,7 +57,7 @@ i've never been into genre fiction. i don't particularly care about spectacle an
 
 i can appreciate the dilemma ediction puts before us; brought back to life, should the protagonist choose to die for a(n arguably) righteous cause, or live a life that is simultaneously full of both suffering and possibility? but i've always been a pro-extinction kinda guy. if you're gonna put a scenario before me along the lines of _SOMA_ (2015) where you have to make a choice between living a struggling half-life in a fraught world or dying forever, i'm going to choose dying forever. 
 
-i really appreciate the [dev blogs](https://donattico.itch.io/ediction/devlog/927941/writing-the-edicts-setting-the-scene) the creators wrote digging into to some of the shaders and VFX they wrote for Ediction. the level of thoughtfulness and attention to detail they've put into Ediction makes me even more intrigued for their  [WHODUNNIT?](https://bsky.app/profile/whodunnitvn.bsky.social), which speaks for itself.
+i really appreciate the [dev blogs](https://donattico.itch.io/ediction/devlog/927941/writing-the-edicts-setting-the-scene) the creators wrote digging into to some of the shaders and VFX they wrote for Ediction. the level of thoughtfulness and attention to detail they've put into Ediction makes me even more intrigued for their long-form VN [WHODUNNIT?](https://bsky.app/profile/whodunnitvn.bsky.social), the devlog of which speaks for itself.
 
 ## __something i liked__:
 ### piracy
