@@ -24,8 +24,11 @@ anyway. it's a fun read, he's just such a boomer.
 
 ## __what i'm listening to__:
 
-- TECHDOG by Patricia Taxxon
-- xanopitcon
+### Vísur Vatnsenda-Rósu
+
+![# Björk - Vísur Vatnsenda-Rósu](https://www.youtube.com/watch?v=ECOloBqXK9c)
+
+I've had Bjork's full discography on my harddrive since, like, 8th grade, and for some reason this track was labeled as a One Day remix. And I got like, 2/3rds of the way through before getting suspicious that it wasn't a One Day remix. 
 
 ## __what i'm watching__:
 
