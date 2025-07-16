@@ -110,6 +110,8 @@ content:
                 required: false
                 options:
                   collection: artists
+                options:
+                  collection: artists
                   search: "name"
                   value: "{name}"
                   label: "{name}"
