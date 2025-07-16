@@ -116,8 +116,9 @@ content:
               - name: license
                 label: License
                 type: select
+                multiple: false
                 options: 
-                  values: ["CCO", "artist"]
+                  values: ["CC0", "artist"]
               - name: sensitive
                 label: Sensitive
                 description: If selected, censor the image preview
