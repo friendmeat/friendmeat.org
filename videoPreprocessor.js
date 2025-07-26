@@ -1,5 +1,5 @@
 const EMBED_PATTERN = new RegExp(/^!\[(.*)\]\((.*)\)$/gm);
-const YT_URL_PATTERN = new RegExp(/(?:https?:)?(?:\/\/)?(?:[0-9A-Z-]+\.)?(?:youtu\.be\/|youtube(?:-nocookie)?\.com\S*?[^\w\s-])([\w-]{11})(?=[^\w-]|$)(?![?=&+%\w.-]*(?:['"][^<>]*>|<\/a>))[?=&+%\w.-]*/gim);
+// const YT_URL_PATTERN = new RegExp(/(?:https?:)?(?:\/\/)?(?:[0-9A-Z-]+\.)?(?:youtu\.be\/|youtube(?:-nocookie)?\.com\S*?[^\w\s-])([\w-]{11})(?=[^\w-]|$)(?![?=&+%\w.-]*(?:['"][^<>]*>|<\/a>))[?=&+%\w.-]*/gim);
 
 
 class YouTubeLink {
@@ -32,7 +32,7 @@ class YouTubeLink {
      * @returns {boolean} whether or not the string is a youtube link 
      */
     isYouTubeLink(href) {
-        return YT_URL_PATTERN.test(href);
+        return new RegExp(/(?:https?:)?(?:\/\/)?(?:[0-9A-Z-]+\.)?(?:youtu\.be\/|youtube(?:-nocookie)?\.com\S*?[^\w\s-])([\w-]{11})(?=[^\w-]|$)(?![?=&+%\w.-]*(?:['"][^<>]*>|<\/a>))[?=&+%\w.-]*/gim).test(href);
     }
 }
 
