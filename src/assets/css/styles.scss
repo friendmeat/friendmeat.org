@@ -80,7 +80,7 @@ body {
   margin: size.$md 0;
 }
 
-.main__article-body p a {
+.main__article-body p>a {
   padding: 0 size.$xs;
   border-radius: size.$xs;
   box-shadow: 0 1px 0px;
@@ -147,7 +147,7 @@ iframe {
     }
   }
 
-  >blockquote {
+  blockquote {
     &::before {
       content: "\201C";
       z-index: -1;
@@ -200,12 +200,40 @@ iframe {
     @include typography.font("Georgia");
   }
 
+  details {
+    border-radius: 5px;
+    padding: 1rem;
+    @include theme.theme("border", "text", true, "1px solid");
+
+    >summary {
+      cursor: pointer;
+      display: block;
+    }
+
+    >summary::before {
+      padding-right:0.5rem;
+      content: "▶";
+    }
+
+    &:open summary {
+      margin-bottom: 0.5rem;
+      &::before{
+        content: "▼";
+      }
+    }
+  }
+
   //
   // Typography
   //
 
   em {
     font-style: italic;
+  }
+
+  sup {
+    @include theme.theme("color", "primary");
+    vertical-align: super;
   }
 }
 

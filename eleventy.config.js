@@ -7,6 +7,7 @@ import pluginIcons from "eleventy-plugin-icons";
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
 import markdownItAttrs from "markdown-it-attrs";
+import markdownItFootnote from "markdown-it-footnote";
 import htmlmin from "html-minifier-terser";
 import * as sass from "sass";
 import videoPreprocessor from "./videoPreprocessor.js";
@@ -47,6 +48,7 @@ export default function (eleventyConfig) {
             .enable("code")
             .use(markdownItAnchor)
             .use(markdownItAttrs)
+            .use(markdownItFootnote)
     });
     eleventyConfig.amendLibrary("njk", (njk) => {
         return njk.addFilter('date', dateFilter);
