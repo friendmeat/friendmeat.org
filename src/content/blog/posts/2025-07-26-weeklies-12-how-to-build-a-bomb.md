@@ -18,7 +18,7 @@ description: "in which i learn how to build a bomb (real) (not a parody);
 ### naked lunch
 > Rock and Roll adolescent hoodlums storm the streets of all nations. They rush into the Louvre and throw acid in the Mona Lisa’s face. They open zoos, insane asylums, prisons, burst water mains with air hammers, chop the floor out of passenger plane lavatories, shoot out lighthouses, file elevator cables to one thin wire, turn sewers into the water supply, throw sharks and sting rays\[...] play chicken with passenger planes and busses, rush into hospitals in white coats carrying saws and axes and scalpels three feet long; throw paralytics out of iron lungs (mimic their suffocations flopping about on the floor and rolling their eyes up), administer injections with bicycle pumps, disconnect artificial kidneys, saw a woman in half with a two-man surgical saw, they drive herds of squealing pigs into the Curb, they shit on the floor of the United Nations and wipe their ass with treaties, pacts, alliances.
 
--- _Naked Lunch_ by William S. Borroughs
+-- _Naked Lunch_ by William S. Burroughs
 
 this is my idea of a good time
 
