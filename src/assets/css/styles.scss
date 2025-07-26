@@ -207,6 +207,11 @@ iframe {
   em {
     font-style: italic;
   }
+
+  sup {
+    @include theme.theme("color", "primary");
+    vertical-align: super;
+  }
 }
 
 ///
