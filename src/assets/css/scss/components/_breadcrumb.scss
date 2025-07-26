@@ -2,9 +2,17 @@
 
 .breadcrumb__container {
     display: flex;
+    align-items: center;
     gap: size.$sm;
-    padding: size.$sm;
+    padding: 0 size.$sm;
+    overflow: hidden;
+    li:has(span.active) {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }
+
 
 .breadcrumb__entry {
     text-decoration: dashed underline;
