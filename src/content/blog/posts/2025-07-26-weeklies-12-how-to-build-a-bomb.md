@@ -35,7 +35,7 @@ i've read [some criticism](https://www.velcro-city.co.uk/vibeshifty-on-adam-curt
 
 ### being gay sucks
 
-![being gay sucks](https://www.youtube.com/watch?v=aQVdhLG23Pk)
+![being gay sucks](https://youtu.be/aQVdhLG23Pk?si=3i5p6csLDRMmJGHN)
 
 it's true and someone should say it. 
 
