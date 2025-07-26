@@ -2,12 +2,12 @@
 title: "weeklies #12 - how to build a bomb"
 date: 2025-07-26
 headerImage:
-  src: A grey-man style alien speaking into the mind of a brainwashed human, who
+  src: https://i.postimg.cc/9M5VdTZC/signal-2025-07-25-08-15-33-933.jpg
+  alt: A grey-man style alien speaking into the mind of a brainwashed human, who
     then repeats what they're told, but the text has been overwritten read
     "THETAN FUCKERS TELEPATHICALLY INFLUENCE HUMANS; THE POWER OF XENU MIND IS
     THE POWER IN THE TOM CRUISE". Text in the mind of the brainwashed human (tom
     cruise) reads "I MUST DIE DOING AN AMAZING STUNT IN A MID MOVIE"
-  alt: https://i.postimg.cc/9M5VdTZC/signal-2025-07-25-08-15-33-933.jpg
 topics:
   - weeklies
 description: "in which i learn how to build a bomb (real) (not a parody);
