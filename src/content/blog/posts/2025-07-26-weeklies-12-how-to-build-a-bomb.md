@@ -52,7 +52,7 @@ It's only up to chapter two and the story hasn't grabbed me so far. But I'm just
 ### how to build a bomb 💣
 Imagine a world where the internet is a minefield for bots that are too illiterate to read robots.txt. With this one simple trick, we could make that a reality.
 
-A neat little blog post was deposited into my rss feed that teaches you how to build a valid HTML gzip bomb to fuck over the web scrapers that are DDoS'ing the internet: https://ache.one/notes/html_zip_bomb
+A neat little blog post was deposited into my rss feed that teaches you how to build a valid HTML gzip bomb to fuck over the web scrapers that are DDoS'ing the internet: [A valid HTML zip bomb](https://ache.one/notes/html_zip_bomb)
 
 The author describes a method of creating an HTML file that's reasonably-sized on the server but explodes to ___1000x its size___ once the client decompresses it. Since the web scrapers used to train LLMs run on cheap, memory-light hardware, this would probably crash the system. 
 
