@@ -20,7 +20,7 @@ _negative space_ is like a grown-up _Welcome to Dead House_. b.r. yeager has rem
 ## __what i'm listening to__:
 ### _I AM MUSIC_ - playboi carti
 
-!["MOJO JOJO" - playboi carti](https://m.youtube.com/watch?v=w5U7hemoc28)
+![MOJO JOJO - playboi carti](https://m.youtube.com/watch?v=w5U7hemoc28)
 
 the 2010s sucked for me so i generally turned away from pop culture. now i'm Old, my tastes are more developed, and i can approach pop music with less baggage. the working question for me now with music is, "does this fuck?" and i think playboi carti fucks. 
 
