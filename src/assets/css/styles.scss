@@ -232,8 +232,8 @@ iframe {
   }
 
   sup {
-    @include theme.theme("color", "primary");
     vertical-align: super;
+    @include theme.theme("color", "primary");
   }
 }
 
