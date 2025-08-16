@@ -23,6 +23,7 @@ jobs:
         key: ${{ runner.os }}-eleventy-fetch-cache
         path: |
           ./.cache
+          ./dist/assets/img
     - name: Install deps and build
       run: |
         pnpm install
