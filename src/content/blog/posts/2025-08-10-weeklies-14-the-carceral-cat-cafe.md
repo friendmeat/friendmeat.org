@@ -2,8 +2,10 @@
 title: "weeklies #14 - the carceral cat cafe "
 date: 2025-08-10
 headerImage:
-  src: a tabby cat sitting in an enclosure with its paws sticking out of the cage
-  alt: https://i.postimg.cc/2SvLvh7n/PXL-20250809-144000823-1.jpg
+  src: https://i.postimg.cc/2SvLvh7n/PXL-20250809-144000823-1.jpg
+  alt: a tabby cat sitting in an enclosure with its paws sticking out of the cage
+topics:
+  - weeklies
 description: Goosebumps for adults; towards a critical furry metalanguage; and
   everyone is a crisis actor
 ---
