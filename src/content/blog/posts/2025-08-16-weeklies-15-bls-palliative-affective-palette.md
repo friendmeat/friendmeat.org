@@ -2,7 +2,7 @@
 title: "weeklies #15 - BL's palliative affective palette"
 date: 2025-08-16
 headerImage:
-  src: https://i.postimg.cc/1z83ZM27/20250815-113618.jpg
+  src: https://i.postimg.cc/1tvT6h5B/20250815-113618-1.jpg
   alt: 'a t-shirt with _invaders_-style screenshot but the aliens are skulls. the
     text reads: "SYMBOLIC EXCHANGE AND DEATH; BY JEAN BAUDRILLARD"'
 topics:
