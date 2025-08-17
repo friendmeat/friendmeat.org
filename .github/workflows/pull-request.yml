@@ -24,7 +24,5 @@ jobs:
         path: |
           ./.cache
           ./dist/assets/img
-    - name: Install deps and build
-      run: |
-        pnpm install --dangerously-allow-all-builds
-        IMAGES_STATS_ONLY=true pnpm exec eleventy --config=eleventy.config.js
+    - run: pnpm install --dangerously-allow-all-builds
+    - run: IMAGES_STATS_ONLY=true pnpm exec eleventy --config=eleventy.config.js
