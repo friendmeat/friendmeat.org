@@ -5,6 +5,13 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      debug_enabled:
+        type: boolean
+        description: "Run with tmate enabled"
+        required: false
+        default: false
 
 concurrency: # prevent concurrent deploys doing strange things
   group: deploy-to-neocities
@@ -32,6 +39,9 @@ jobs:
         path: |
           ./.cache
           ./dist/assets/img
+    - name: Setupt tmate session
+      uses: mxschmitt/action-tmate@v3
+      if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
     - name: Install deps and build
       run: |
         pnpm install
