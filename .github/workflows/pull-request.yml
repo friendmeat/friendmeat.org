@@ -26,5 +26,5 @@ jobs:
           ./dist/assets/img
     - name: Install deps and build
       run: |
-        pnpm install
+        pnpm install --dangerously-allow-all-builds
         IMAGES_STATS_ONLY=true pnpm exec eleventy --config=eleventy.config.js

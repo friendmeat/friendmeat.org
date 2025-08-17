@@ -39,7 +39,7 @@ jobs:
         path: |
           ./.cache
           ./dist/assets/img
-    - name: Setupt tmate session
+    - name: Setup tmate session
       uses: mxschmitt/action-tmate@v3
       if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
     - name: Install deps and build
