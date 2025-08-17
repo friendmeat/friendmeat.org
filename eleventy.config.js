@@ -12,6 +12,8 @@ import htmlmin from "html-minifier-terser";
 import * as sass from "sass";
 import videoPreprocessor from "./videoPreprocessor.js";
 
+const OUTPUT_DIR = "dist";
+
 export default function (eleventyConfig) {
     /* Built-in filters */
     const slugify = eleventyConfig.getFilter("slugify");
@@ -21,6 +23,7 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
         urlPath: "/assets/img/",
+		outputDir: `./${OUTPUT_DIR}/assets/img`,
         widths: ["auto"],
         formats: ["webp"],
         htmlOptions: {
@@ -201,7 +204,7 @@ export default function (eleventyConfig) {
     return {
         dir: {
             input: "src",
-            output: "dist",
+            output: OUTPUT_DIR,
             layouts: "_layouts"
         },
         templateFormats: ['njk', 'md', '11ty.js',]
