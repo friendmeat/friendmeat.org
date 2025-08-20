@@ -53,7 +53,6 @@ Total = $5
 
 The NUC runs Ubuntu, then I have a [Jellyfin](https://jellyfin.org/) docker container.  which i mount as a volume to the Jellyfin container. I use ubuntu on my laptop to add the media folder of my HTPC over ssh to my file explorer, then use the apt version of [MusicBrainz Picard](https://picard.musicbrainz.org/) (the flatpak version throws a fit with the permissions of remote files) to update and save all the tags on the mp3s I get from various places. I've forwarded the Jellyfin port on my router[^†] so I can access it anywhere with Symfonium.
 
-![diagram of my streaming stack](/assets/img/diagram.svg)
 
 #### a note on symfonium
 when I need to know something, I look it up on the internet and invest total faith in the top reply to the first reddit thread I read, which is how I found out about [symfonium](https://www.symfonium.app/). I really like it. it's highly customizable, it's free for a month and then there's a $5 one-time charge, which I was happy to pay because I was constantly using it. That's a fucking steal. 
