@@ -2,7 +2,7 @@
 title: things i hate about spotify that have nothing to do with the business model
 date: 2025-08-19
 headerImage:
-  src: https://i.postimg.cc/wvW25dk7/sinpura-banner.jpg
+  src: https://i.postimg.cc/6qD9Lh73/sinpura3.jpg
   alt: a data-moshed image that mostly looks like black and green noise
 topics:
   - rants
