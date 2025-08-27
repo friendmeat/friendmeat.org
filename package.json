@@ -20,13 +20,14 @@
     "nunjucks-date-filter": "^0.1.1",
     "sass": "^1.87.0"
   },
-  "packageManager": "pnpm@10.14.0+sha256.297534e65d5842450539c1e8022c8831ab5e1fe2eb74664787a815519542d620",
+  "packageManager": "pnpm@10.15.0+sha256.84c19e788d7d7ee248e4a6b7152f8ebba0f4fe7380a5f443ca17d76c030052d2",
   "pnpm": {
     "overrides": {
       "esbuild@<=0.24.2": ">=0.25.0"
     }
   },
   "dependencies": {
+    "@mdit/plugin-mathjax": "^0.23.1",
     "heroicons": "^2.2.0",
     "markdown-it-attrs": "^4.3.1",
     "markdown-it-footnote": "^4.0.0",
