@@ -23,7 +23,7 @@ lovecraft fanfiction by pre-fascist nick land. another addition to my Red Flag l
 
 ## __what i'm listening to__:
 ### the radio version of "Closer" by Nine Inch Nails
-!["Closer (clean) by Nine Inch Nails"](https://youtu.be/EKSJxHslGPg?si=GtOMpS4RflC8rAj7)
+![](https://youtu.be/EKSJxHslGPg?si=GtOMpS4RflC8rAj7)
 
 At what point do we decide to just not play the song? This is the second worst censor job behind the "clean" version of [We Cry Together](https://www.youtube.com/watch?v=zzGeLBMtFkA).
 
