@@ -23,7 +23,7 @@ lovecraft fanfiction by pre-fascist nick land. another addition to my Red Flag l
 
 ## __what i'm listening to__:
 ### the radio version of "Closer" by Nine Inch Nails
-!["Closer clean version"](https://youtu.be/EKSJxHslGPg?si=GtOMpS4RflC8rAj7)
+!["Closer (clean) by Nine Inch Nails"](https://youtu.be/EKSJxHslGPg?si=GtOMpS4RflC8rAj7)
 
 At what point do we decide to just not play the song? This is the second worst censor job behind the "clean" version of [We Cry Together](https://www.youtube.com/watch?v=zzGeLBMtFkA).
 
@@ -54,7 +54,7 @@ $3^3=27$. And, for the series $\sum_{n=0}^{\infty}n^n$, 3 is the last $n$ that y
 
 ### scared comments about my safety under the Trump administration from well-meaning family members
 
-![[Screen Shot 2025-08-26 at 16.35.40.png]]
+![screenshot of a quote tweet on bluesky. the NYT posted an article about gays in the Trump admin, and @mgayultra quote tweeted with the Onion headline: "Man Hopes Nicely Dug Grave Will Get Him Back In Captors' Good Graces](https://i.postimg.cc/5tBvKK2f/Screen-Shot-2025-08-26-at-16-35-40.png)
 
 a couple family members have expressed concern about my safety under the current administration. however, I am a straight-passing[^1] white gay cis man with a social security number and a full-time job. I am the least at-risk a person can be right now. 
 
