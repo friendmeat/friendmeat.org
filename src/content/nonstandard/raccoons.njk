@@ -1,0 +1,9 @@
+---
+permalink: "/game/raccoons/index.html"
+layout: ""
+---
+<script src="https://cdn.jsdelivr.net/gh/golang/go@master/lib/wasm/wasm_exec.js"></script>
+ <script>
+const go = new Go();
+WebAssembly.instantiateStreaming(fetch("/assets/wasm/raccoons.wasm"), go.importObject).then(result=>{go.run(result.instance);});
+</script>
