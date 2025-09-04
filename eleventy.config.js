@@ -192,9 +192,10 @@ export default function(eleventyConfig) {
 
 	/* Passthrough Directories */
 	// eleventyConfig.addPassthroughCopy("src/assets/icons");
-	eleventyConfig.addPassthroughCopy("src/assets/img");
-	eleventyConfig.addPassthroughCopy("src/assets/js");
-	eleventyConfig.addPassthroughCopy("src/assets/font");
+	// eleventyConfig.addPassthroughCopy("src/assets/img");
+	// eleventyConfig.addPassthroughCopy("src/assets/js");
+	// eleventyConfig.addPassthroughCopy("src/assets/font");
+	eleventyConfig.addPassthroughCopy("src/assets/");
 
 	/* Watch Targets */
 	eleventyConfig.addWatchTarget("./src/assets/");
