@@ -33,8 +33,7 @@ I spent my childhood and adolescence on the computer and have always felt like t
 A really beautiful, rambling movie. Sometime it's laugh-out-loud, sometimes it's blink-and-you'll-miss-it. Today's filmmakers simply do not have the guts to bankrupt themselves to make a movie this pointless. Jacques Tati is a real artist.
 
 ## __what i'm playing__:
-
-#### Friendship and Absolute Contingency in _Since November_
+### Friendship and Absolute Contingency in _Since November_
 
 What we saw with the wave of divorces during the COVID lock-downs was that relationship are structurally contingent. Like bodies, they require energy from outside to keep going; you have to _do_ things in order to have stuff to talk about at the dinner table.
 
