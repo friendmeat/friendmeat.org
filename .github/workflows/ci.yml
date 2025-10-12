@@ -5,6 +5,13 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      debug_enabled:
+        type: boolean
+        description: "Run with tmate enabled"
+        required: false
+        default: false
 
 concurrency: # prevent concurrent deploys doing strange things
   group: deploy-to-neocities
@@ -25,13 +32,16 @@ jobs:
       with:
         node-version: latest
         cache: 'pnpm'
-    - name: Persist Eleventy .cache
-      uses: actions/cache@v4
-      with:
-        key: ${{ runner.os }}-eleventy-fetch-cache
-        path: |
-          ./.cache
-          ./dist/assets/img
+    # - name: Persist Eleventy .cache
+    #   uses: actions/cache@v4
+    #   with:
+    #     key: ${{ runner.os }}-eleventy-fetch-cache
+    #     path: |
+    #       ./.cache
+    #       ./dist/assets/img
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
+      if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
     - name: Install deps and build
       run: |
         pnpm install

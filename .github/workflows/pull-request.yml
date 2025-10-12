@@ -23,7 +23,6 @@ jobs:
         key: ${{ runner.os }}-eleventy-fetch-cache
         path: |
           ./.cache
-    - name: Install deps and build
-      run: |
-        pnpm install
-        IMAGES_STATS_ONLY=true pnpm exec eleventy --config=eleventy.config.js
+          ./dist/assets/img
+    - run: pnpm install --dangerously-allow-all-builds
+    - run: IMAGES_STATS_ONLY=true pnpm exec eleventy --config=eleventy.config.js
