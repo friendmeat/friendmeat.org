@@ -1,4 +1,5 @@
-@use "../../../node_modules/scss-reset/total";
+// @use "../../../node_modules/scss-reset/total";
+@use "./scss/reset";
 @use "./scss/theme";
 @use "./scss/media";
 @use "./scss/size";
@@ -80,7 +81,12 @@ body {
   margin: size.$md 0;
 }
 
-.main__article-body p>a {
+.main__article-body figure>img {
+  width: 100%;
+  height: fit-content;
+}
+
+.main__article-body p > a:not([class^="revert-anchor"], :has(img)) {
   padding: 0 size.$xs;
   border-radius: size.$xs;
   box-shadow: 0 1px 0px;
@@ -113,34 +119,19 @@ iframe {
 .main__article-body {
 
   //
-  // Lists
-  //
-  ul,
-  ol {
-    display: block;
-    margin: 0 size.$lg;
-  }
-
-  ul {
-    list-style: disc !important;
-  }
-
-  ol {
-    list-style-type: decimal;
-  }
-
-  li {
-    display: list-item;
-  }
-
-  //
   // Blocks
   //
 
   blockquote {
+    margin: 0;
     position: relative;
-    margin: size.$lg;
-    @include theme.theme("background-color", "gray-100");
+    padding: size.$md;
+    padding-top: size.$lg;
+    border-bottom: 1px solid;
+    border-radius: size.$sm;
+    @include theme.theme("border-bottom", "primary", true, "1px solid");
+    @include theme.theme("border-top", "primary", true, "1px solid");
+    // @include theme.theme("background-color", "gray-200");
 
     & p {
       text-align: justify;
@@ -150,12 +141,11 @@ iframe {
   blockquote {
     &::before {
       content: "\201C";
-      z-index: -1;
-      font-size: size.$xxxl;
-      opacity: 30%;
       position: absolute;
-      left: calc(size.$sm * -1);
-      top: -25px;
+      font-size: size.$xxxl;
+      top: calc(size.$xs * -1);
+      font-family: serif;
+      @include theme.theme("color", "primary");
     }
   }
 
@@ -171,24 +161,18 @@ iframe {
   //
 
   h1 {
-    font-size: size.$xl;
-    font-weight: 700;
   }
 
   h2 {
-    font-size: size.$lg;
-    font-weight: 700;
     @include theme.theme("color", "primary");
   }
 
   h3 {
-    font-size: calc(size.$md + 0.5rem);
-    font-weight: 200;
-    @include theme.theme("color", "secondary");
+    @include theme.theme("color", "primary");
   }
 
   h4 {
-    font-size: size.$sm;
+    // font-size: size.$sm;
     font-weight: 700;
   }
 
@@ -198,6 +182,11 @@ iframe {
 
   p {
     @include typography.font("Georgia");
+  }
+
+  p img {
+    width: 100%;
+    height: fit-content;
   }
 
   details {
@@ -249,8 +238,12 @@ iframe {
   margin: size.$md 0;
 }
 
+a:has(.rss_button) {
+  height:fit-content;
+}
+
 .rss_button {
-  height: size.$md;
+  height: 10px;
   border-radius: 5px;
   padding: 5px;
   @include theme.theme("background-color", "primary");

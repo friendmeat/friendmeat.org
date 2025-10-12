@@ -15,7 +15,6 @@
     @include typography.text-stroke(black);
     @include theme.theme(color, primary);
 
-    // text-
     >span {
 
         @include media.mobile {
@@ -47,7 +46,17 @@
 }
 
 .home__latest-posts {
-    display: flex;
-    align-items: center;
-    gap: size.$sm;
+    border-radius: size.$sm;
+    overflow:hidden;
+    @include theme.theme("border", "gray-200", true, "1px solid");
+    
+    >h2 { 
+      margin: 0;
+      padding: 0 size.$xs;
+      color: white !important;
+      @include theme.theme("background-color", "gray-200");
+      >a {
+        height: 22px;
+      }
+    }
 }

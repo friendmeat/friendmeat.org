@@ -10,7 +10,9 @@
         <small class="blog__post-details-date">{{ page.date | date("YYYY-MM-DD") }}</small>
     </div>
     {% if headerImage %}
+	<figure class="blog__post-details-banner">
         <img src="{{ headerImage.src }}" alt="{{ headerImage.alt }}" />
+		</figure>
     {% endif %}
     {{ super() }}
 {% endblock content %}
