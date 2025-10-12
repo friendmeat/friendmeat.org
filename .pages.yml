@@ -146,6 +146,9 @@ content:
       - name: author
         label: Author
         type: string
+      - name: birthday
+        label: Birthday
+        type: date
       - name: base
         label: Base
         type: string

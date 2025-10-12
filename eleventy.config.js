@@ -94,10 +94,12 @@ export default function (eleventyConfig) {
     });
 
 
-    /* Filters */
+    /* Custom Filters */
     eleventyConfig.addFilter("siteTitle", function (title) {
         return `${title ? `${title} | ` : ``} ${this.ctx.meta.title}`;
     });
+
+    eleventyConfig.addFilter("yearsSince", function(date){ return new Date().getYear()-new Date(date).getYear()});
 
     eleventyConfig.addFilter("getGlobalData", function (key) {
         return this.ctx[key]
@@ -124,6 +126,7 @@ export default function (eleventyConfig) {
     //     const image = this.ctx.environments[collection].at(0)
     //     return `![${image.alt}](${image.img})`
     // })
+
 
     /* Global Data */
     eleventyConfig.addGlobalData("buildDate", () => new Date().toISOString());

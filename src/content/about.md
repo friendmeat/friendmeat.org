@@ -12,7 +12,7 @@ meat/matt
 
 he/him/his
 
-26 
+{{ meta.birthday | yearsSince }}
 
 IT worker / hobbyist / artist / diletante / nihilist / naysayer / snob / hater 
 
