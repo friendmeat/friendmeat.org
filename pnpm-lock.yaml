@@ -20,9 +20,6 @@ importers:
       markdown-it-footnote:
         specifier: ^4.0.0
         version: 4.0.0
-      scss-reset:
-        specifier: ^1.4.6
-        version: 1.4.6
     devDependencies:
       '@11ty/eleventy':
         specifier: ^3.1.0
@@ -943,9 +940,6 @@ packages:
     resolution: {integrity: sha512-d0NoFH4v6SjEK7BoX810Jsrhj7IQSYHAHLi/iSpgqKc7LaIDshFRlSg5LOymf9FqQhxEHs2W5ZQXlvy0KD45Uw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
-
-  scss-reset@1.4.6:
-    resolution: {integrity: sha512-ioPmXUxVH0NFuNBPs88SolUkUuKYIIQ0CUGssx2yq8m4fuMxGLigjnpXa6JAC2j5w1p66JA33UDd+cKkFJp7yw==}
 
   section-matter@1.0.0:
     resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
@@ -1924,8 +1918,6 @@ snapshots:
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.1
-
-  scss-reset@1.4.6: {}
 
   section-matter@1.0.0:
     dependencies:

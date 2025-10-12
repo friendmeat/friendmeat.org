@@ -19,12 +19,13 @@
 <figure class="image__figure">
     <img alt="{{ image.alt }}" src="{{ image.img }}" loading="lazy" class="image__image" />
     <figcaption class="image__caption">
-        {{ image.description }}
+		<p><a href="{{ image.img }}" class="revert-anchor underline">View full res</a></p>
+        <p>{{ image.description }}
         {% if image.artist %}
         - by
         <a href="{{ image.artist.site }}" class="image__artist">{{ image.artist.name }}</a>
-        {% endif %}
-        {% if image.license[0] == "CC0" %}
+        {% endif %}</p>
+        {% if image.cc0 %}
         <div class="image__cc0">
             {% include "src/_includes/parts/cc0.njk" %}
         </div>

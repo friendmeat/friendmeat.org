@@ -13,9 +13,7 @@
           "alt": "a chicken statue in front of an industrial landscape",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "birds",
@@ -23,9 +21,7 @@
           "alt": "industrial landscape with birds",
           "sensitive": false,
           "cover": true,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "industrial 2",
@@ -33,9 +29,7 @@
           "alt": "more industrial landscape",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "barbed wired",
@@ -43,9 +37,7 @@
           "alt": "barbed wire fence",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "skate park",
@@ -53,9 +45,7 @@
           "alt": "skate park underneath a highway; light coming down from between the gap between two highway overpasses illuminates a bicycle.",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "skate park 2",
@@ -63,9 +53,7 @@
           "alt": "the bowl of a skate park",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "skart park rules",
@@ -73,9 +61,7 @@
           "alt": "wichita skate park rules",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "cat",
@@ -83,9 +69,7 @@
           "alt": "an orange tabby stray cat",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         }
       ]
     },
@@ -99,9 +83,7 @@
           "alt": "rocky extrusions on the coast of Oregon",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "latourell falls",
@@ -109,9 +91,7 @@
           "alt": "latourell falls: a waterfall near portland, oregon",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "columnar basalt",
@@ -119,9 +99,7 @@
           "alt": "columnar basalt at latourell falls",
           "sensitive": false,
           "cover": true,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "nick and waterfall",
@@ -129,9 +107,7 @@
           "alt": "nick looking at a waterfall",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "nick",
@@ -139,9 +115,7 @@
           "alt": "nick covering his face",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "nick and erik",
@@ -149,9 +123,7 @@
           "alt": "nick hugging erik from behind in the woods",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "pidge",
@@ -159,9 +131,7 @@
           "alt": "pidge, possibly a ragdoll with black and white fur",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "oskar",
@@ -169,9 +139,7 @@
           "alt": "an orange tabby named oskar, backlit so his head and body are in shadow but his ears are orange",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "rain",
@@ -179,9 +147,7 @@
           "alt": "rain falling on a banister",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "koi",
@@ -189,9 +155,7 @@
           "alt": "Koi in a pond",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         }
       ]
     },
@@ -205,9 +169,7 @@
           "alt": "fireworks over water, blurry from shaking",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "warehouse 2",
@@ -215,9 +177,7 @@
           "alt": "light coming through the windows of a warehouse",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "warehouse 1",
@@ -225,9 +185,7 @@
           "alt": "a warehouse with fire escapes and electric poles",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 01",
@@ -235,9 +193,7 @@
           "alt": "steel mill looming over the viewer",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 02",
@@ -245,9 +201,7 @@
           "alt": "train tracks running into the distance",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 03",
@@ -255,9 +209,7 @@
           "alt": "black-and-white photo of a steel mill extending into the distance",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 04",
@@ -265,9 +217,7 @@
           "alt": "a wooden door hangning slightly ajar",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 05",
@@ -275,9 +225,7 @@
           "alt": "a watch tower framed by leaves on one side and a rusty metal tower on the other",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 06",
@@ -285,9 +233,7 @@
           "alt": "rusty metal tower partially obscured by pipes in foreground",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 07",
@@ -295,9 +241,7 @@
           "alt": "blurry industrial walkway",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 08",
@@ -305,9 +249,7 @@
           "alt": "metal tower jutting into sky, mostly obscured by underside of a pipe",
           "sensitive": false,
           "cover": true,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 09",
@@ -315,9 +257,7 @@
           "alt": "industrial walkway",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 10",
@@ -325,9 +265,7 @@
           "alt": "mill tower",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 11",
@@ -335,9 +273,7 @@
           "alt": "exterior of the steel mill",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 12",
@@ -345,9 +281,7 @@
           "alt": "dead branch extending from a platform on the steel mill",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 13",
@@ -355,9 +289,7 @@
           "alt": "steel mill tower framed by leaves",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 14",
@@ -365,9 +297,7 @@
           "alt": "steel mill tower",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 15",
@@ -375,9 +305,7 @@
           "alt": "struts and pipes",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 16",
@@ -385,9 +313,7 @@
           "alt": "steel mill tower",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 17",
@@ -395,9 +321,7 @@
           "alt": "steel mill towers",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         },
         {
           "title": "steel mill 18",
@@ -405,9 +329,7 @@
           "alt": "steel mill towers",
           "sensitive": false,
           "cover": false,
-          "license": [
-            "CC0"
-          ]
+          "cc0": "true"
         }
       ]
     }

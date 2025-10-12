@@ -2,6 +2,7 @@
 @use "../media";
 @use "../size";
 @use "../animation";
+@use "../filters";
 
 .blog__container {
     flex: 1 0 auto;
@@ -56,6 +57,7 @@
 .blog__post-preview-banner-container {
     overflow: hidden;
     position: relative;
+    object-fit: contains;
 }
 
 .blog__post-preview-banner-title {
@@ -64,41 +66,43 @@
     z-index: 1;
 }
 
-.blog__post-preview-details {
-    $width: calc(size.$xxxl + size.$sm);
-    $offset: calc(-1 * ($width + size.$md));
-    width: $width;
-    font-size: small;
+// .blog__post-preview-details {
+    // $width: calc(size.$xxxl + size.$sm);
+    // $offset: calc(-1 * ($width + size.$md));
+    // width: $width;
+    // font-size: small;
 
-    @include media.desktop {
-        position: absolute;
-        left: $offset;
-    }
-}
+    // @include media.desktop {
+        // position: absolute;
+        // left: $offset;
+    // }
+// }
 
 .blog__post-preview-tags {
     margin: 0;
     list-style: none;
     text-decoration: dashed underline;
+    @include theme.theme("color", "gray-100");
 
     @include media.mobile {
         display: flex;
         gap: size.$md;
     }
 
-    &:hover,
-    &:focus-within {
-        @include theme.theme("color", "primary");
-        @include animation.hueshift;
-    }
 }
 
 .blog__post-preview-tag {
     text-decoration: dashed;
+    &:hover,
+    &:focus-within {
+        @include theme.theme("color", "primary");
+        @include animation.hueshift;
+    }   
 }
 
 
 .blog__post-preview-title-container {
+    width: 100%;
     &:hover,
     &:focus-within {
         .blog__post-preview-banner {
@@ -108,3 +112,18 @@
         @include animation.hueshift();
     }
 }
+
+.blog__post-preview-banner {
+    width: 100%;
+    height: fit-content;
+}
+
+.blog__post-details-banner {
+  margin: 0;
+  > img {
+    width: 100%;
+    height: fit-content;
+  }
+  @include filters.deepfry(100%, 100%);
+}
+

@@ -29,7 +29,6 @@
   "dependencies": {
     "heroicons": "^2.2.0",
     "markdown-it-attrs": "^4.3.1",
-    "markdown-it-footnote": "^4.0.0",
-    "scss-reset": "^1.4.6"
+    "markdown-it-footnote": "^4.0.0"
   }
 }

@@ -1,12 +1,5 @@
 <section class="blog__post-preview">
-    <div class="blog__post-preview-details">
-        <small class="blog__post-preview-date">{{ post.date | date("YYYY-MM-DD") }}</small>
-        <div class="blog__post-preview-tags">
-            {% for topic in post.data.topics %}
-                <a href="{{ '/blog/tag/' + topic + '/' | url }}" class="blog__post-preview-tag">#{{ topic }}</a>
-            {% endfor %}
-        </div>
-    </div>
+    
     <div class="blog__post-preview-link">
         <div class="blog__post-preview-content">
             <div class="blog__post-preview-title-container">
@@ -19,11 +12,19 @@
                 {% endif %}
                 </a>
             </div>
-            <div class="blog__post-preview-body-container font-roboto-thin">
+            <div class="blog__post-preview-body-container font-roboto">
                 {% if post.data.description %}
                 <div class="blog__post-preview-excerpt">{{ post.data.description | safe }}</div>
             {% endif %}
             </div>
+<div class="blog__post-preview-details">
+        <small class="blog__post-preview-date font-roboto-thin">{{ post.date | date("YYYY-MM-DD") }}</small>
+        <div class="blog__post-preview-tags">
+            {% for topic in post.data.topics %}
+                <a href="{{ '/blog/tag/' + topic + '/' | url }}" class="blog__post-preview-tag">#{{ topic }}</a>
+            {% endfor %}
+        </div>
+    </div>
         </div>
     </div>
 </section>

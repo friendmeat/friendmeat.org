@@ -1,12 +1,12 @@
 <div class="pagination">
     {% if pagination.href.previous %}
         <div class="pagination__previous-container">
-            <a href="{{ pagination.href.previous | url }}" class="pagination__previous">&#8701; Previous</a>
+            <a href="{{ pagination.href.previous | url }}" class="pagination__previous">&#8701; <span class="underline">Previous</span></a>
         </div>
     {% endif %}
     {% if pagination.href.next %}
         <div class="pagination__next-container">
-            <a href="{{ pagination.href.next | url }}" class="blog__pagination-next">Next &#8702;</a>
+            <a href="{{ pagination.href.next | url }}" class="blog__pagination-next"><span class="underline">Next</span> &#8702;</a>
         </div>
     {% endif %}
 </div>
