@@ -23,6 +23,7 @@ export default function(eleventyConfig) {
         urlPath: "/assets/img/",
         widths: ["auto"],
         formats: ["webp"],
+        // transformOnRequest: process.env.ELEVENTY_RUN_MODE === "serve",
         htmlOptions: {
             imgAttributes: {
                 loading: "lazy",
@@ -34,9 +35,9 @@ export default function(eleventyConfig) {
         cacheOptions: {
             duration: "2w",
             directory: ".cache",
-            signal: AbortSignal.timeout(5000) // Abort the fetch after 5 seconds
+            signal: AbortSignal.timeout(1000) // Abort the fetch after 1 second
         },
-        // failOnError: false,
+        failOnError: false,
         statsOnly: process.env.IMAGES_STATS_ONLY ? true : false,
     });
     eleventyConfig.addPlugin(feedPlugin);
