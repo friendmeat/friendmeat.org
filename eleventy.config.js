@@ -12,7 +12,7 @@ import htmlmin from "html-minifier-terser";
 import * as sass from "sass";
 import videoPreprocessor from "./videoPreprocessor.js";
 
-export default function (eleventyConfig) {
+export default function(eleventyConfig) {
     /* Built-in filters */
     const slugify = eleventyConfig.getFilter("slugify");
 
@@ -25,13 +25,18 @@ export default function (eleventyConfig) {
         formats: ["webp"],
         htmlOptions: {
             imgAttributes: {
-                // loading: "lazy",
+                loading: "lazy",
             }
         },
         sharpOptions: {
             animated: true
         },
-        failOnError: false,
+        cacheOptions: {
+            duration: "2w",
+            directory: ".cache",
+            signal: AbortSignal.timeout(5000) // Abort the fetch after 5 seconds
+        },
+        // failOnError: false,
         statsOnly: process.env.IMAGES_STATS_ONLY ? true : false,
     });
     eleventyConfig.addPlugin(feedPlugin);
@@ -56,7 +61,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addExtension("scss", {
         outputFileExtension: "css",
         useLayouts: true,
-        compile: async function (inputContent, inputPath) {
+        compile: async function(inputContent, inputPath) {
             let parsed = path.parse(inputPath);
             if (parsed.name.startsWith("_")) return;
 
@@ -79,7 +84,7 @@ export default function (eleventyConfig) {
 
     /* Template Transforms */
     // https://www.11ty.dev/docs/transforms/#minify-html-output
-    eleventyConfig.addTransform("htmlmin", function (content) {
+    eleventyConfig.addTransform("htmlmin", function(content) {
         if ((this.page.outputPath || "").endsWith(".html")) {
             let minified = htmlmin.minify(content, {
                 useShortDoctype: true,
@@ -95,17 +100,17 @@ export default function (eleventyConfig) {
 
 
     /* Custom Filters */
-    eleventyConfig.addFilter("siteTitle", function (title) {
+    eleventyConfig.addFilter("siteTitle", function(title) {
         return `${title ? `${title} | ` : ``} ${this.ctx.meta.title}`;
     });
 
-    eleventyConfig.addFilter("yearsSince", function(date){ return new Date().getYear()-new Date(date).getYear()});
+    eleventyConfig.addFilter("yearsSince", function(date) { return new Date().getYear() - new Date(date).getYear() });
 
-    eleventyConfig.addFilter("getGlobalData", function (key) {
+    eleventyConfig.addFilter("getGlobalData", function(key) {
         return this.ctx[key]
     })
 
-    eleventyConfig.addFilter("markdownify", function (content) {
+    eleventyConfig.addFilter("markdownify", function(content) {
         return markdownIt().render(content)
     })
 
@@ -115,11 +120,11 @@ export default function (eleventyConfig) {
          * @param {any[]} array 
          * @returns first 3 items from array
          */
-        function (array) {
+        function(array) {
             return array.slice(0, 3);
         });
 
-    eleventyConfig.addFilter("keys", function (object) { return Object.keys(object) });
+    eleventyConfig.addFilter("keys", function(object) { return Object.keys(object) });
 
     /* Custom Shortcodes */
     // eleventyConfig.addShortcode("firstImage", function (collection) {

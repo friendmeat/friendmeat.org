@@ -1,6 +1,5 @@
 name: Deploy to neocities
 
-# only run on changes to master
 on:
   push:
     branches:
@@ -13,40 +12,36 @@ on:
         required: false
         default: false
 
-concurrency: # prevent concurrent deploys doing strange things
+concurrency:
   group: deploy-to-neocities
   cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
-    # Set up any tools and build steps here
     - name: Setup pnpm
       uses: pnpm/action-setup@v4.1.0
-    # This example uses a Node.js toolchain to build a site
     - name: Use Node.js
       uses: actions/setup-node@v4
       with:
         node-version: latest
         cache: 'pnpm'
-    # - name: Persist Eleventy .cache
-    #   uses: actions/cache@v4
-    #   with:
-    #     key: ${{ runner.os }}-eleventy-fetch-cache
-    #     path: |
-    #       ./.cache
-    #       ./dist/assets/img
+    - name: Persist Eleventy .cache
+      uses: actions/cache@v4
+      with:
+        key: ${{ runner.os }}-eleventy-fetch-cache
+        path: |
+          ./.cache
+          ./dist/assets/img
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@v3
       if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
     - name: Install deps and build
       run: |
         pnpm install
-        pnpm exec eleventy --config=eleventy.config.js
-    # When the dist_dir is ready, deploy it to neocities
+        pnpm DEBUG=Eleventy:Fetch exec eleventy --config=eleventy.config.js
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v3
       with:
