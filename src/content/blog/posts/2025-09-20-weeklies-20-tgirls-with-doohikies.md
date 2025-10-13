@@ -2,7 +2,7 @@
 title: "weeklies #20 - tgirls with doohikies"
 date: 2025-09-20
 headerImage:
-  src: https://www.thepinksmoke.com/images/deathsanjuro.png
+  src: https://cdn.friendmeat.org/deathsanjuro.png
   alt: the blood explosion from Sanjuro
 topics:
   - weeklies
