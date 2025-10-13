@@ -58,6 +58,6 @@ we could go back to the stone ages and self-host everything, use IRC and never, 
 this was supposed to be me complaining about Bluesky people not knowing their options, but it just turned into a 'touch grass' thing. uhhhh. whoops.
 
 ## __a picture__:
-![the scene from Sanjuro where blood explodes out of a guy](https://www.thepinksmoke.com/images/deathsanjuro.png)
+![the scene from Sanjuro where blood explodes out of a guy](https://cdn.friendmeat.org/deathsanjuro.png)
 
 Post 1 image to describe your hysterectomy
