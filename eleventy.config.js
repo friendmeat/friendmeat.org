@@ -33,7 +33,8 @@ export default function(eleventyConfig) {
         },
         cacheOptions: {
             duration: "2w",
-            directory: ".cache"
+            directory: ".cache",
+            signal: AbortSignal.timeout(5000) // Abort the fetch after 5 seconds
         },
         // failOnError: false,
         statsOnly: process.env.IMAGES_STATS_ONLY ? true : false,
