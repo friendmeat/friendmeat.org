@@ -1,0 +1,35 @@
+.oc__gallery { 
+  width: clamp(500px, 50%, 750px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
+}
+
+.oc__details {
+  width: 100%;
+  tr>td:nth-child(2){
+    text-align: right;
+  }
+}
+
+.oc__image-container {
+  position:relative;
+  overflow:hidden;
+  aspect-ratio: 1;
+  display:flex;
+  justify-content:center;
+}
+
+.oc__image {
+  position: absolute;
+  height:100%;
+  width: auto;
+  object-position: center;
+}
+
+.oc__bio {
+}
+
+.oc__playlist {
+  margin: 0 auto;
+}
