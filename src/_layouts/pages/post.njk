@@ -4,6 +4,7 @@
 {{ super() }}
 <meta property="og:description" content="{{ description }}" />
 <meta property="og:image" content="{{ meta.site }}{{ headerImage.src }}" />
+<meta property="og:image:alt" content="{{ headerImg.alt }}" />
 {% endblock %}
 {% block content %}
     <div class="blog__post-details">
