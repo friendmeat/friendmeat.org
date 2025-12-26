@@ -44,6 +44,17 @@
                     "cover": false
                 }
             ]
+        },
+        {
+            "title":"sniper by john",
+            "description":"a christmas gift from my pal john",
+            "images":[
+                {"title":"Raccoon Sniper (lined)","img":"https://cdn.friendmeat.org/raccoonsniper/tf2hifashighiahisg-bklines-nosg-solid.png", "alt":"A painting of the sniper from TF2 as a cute and grumpy raccoon", "artist":{"name":"my pal john","handle":"@ppocketss_","site":"https://www.instagram.com/ppocketss_/"}},
+{"title":"Raccoon Sniper (lined w/ glasses)","img":"https://cdn.friendmeat.org/raccoonsniper/tf2hifashighiahisg-bklines-solid.png", "alt":"A painting of the sniper from TF2 as a cute and grumpy raccoon", "artist":{"name":"my pal john","handle":"@ppocketss_","site":"https://www.instagram.com/ppocketss_/"}},
+{"title":"Raccoon Sniper","img":"https://cdn.friendmeat.org/raccoonsniper/tf2hifashighiahisg-nolines-sg-solid.png", "alt":"A painting of the sniper from TF2 as a cute and grumpy raccoon", "artist":{"name":"my pal john","handle":"@ppocketss_","site":"https://www.instagram.com/ppocketss_/"}},
+{"title":"Raccoon Sniper (gradient lined w/ glasses)","img":"https://cdn.friendmeat.org/raccoonsniper/tf2hifashighiahisg-gradlines-solid.png", "alt":"A painting of the sniper from TF2 as a cute and grumpy raccoon", "artist":{"name":"my pal john","handle":"@ppocketss_","site":"https://www.instagram.com/ppocketss_/"}, "cover":true}
+
+            ]
         }
     ]
 }
