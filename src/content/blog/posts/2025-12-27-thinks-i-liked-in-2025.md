@@ -1,5 +1,5 @@
 ---
-title: thinks i liked in 2025
+title: things i liked in 2025
 date: 2025-12-27
 headerImage:
   src: https://cdn.friendmeat.org/2025_collage.jpg
