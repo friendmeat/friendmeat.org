@@ -26,7 +26,9 @@ description: "simulacral glitz, e-ink-tronica, anglo-denpa, and my eunuch era:
 ![](https://f4.bcbits.com/img/a3264335540_10.jpg)
 
 > modern day _Marie Antoinette_. 
+>
 > i love that movie. 
+>
 > i love my girlfriends
 
 ### Simulacral Glitz
@@ -48,7 +50,7 @@ In the bridge, the mix is overwhelmed by a square-wave bass as Estratosfera sing
 ![](https://f4.bcbits.com/img/a4120596030_10.jpg)
 
 ### *e-ink-tronica*
-The music video for ["Play"](https://www.youtube.com/watch?v=2chmQiR8R10&pp=ygUMamFtZXMgayBwbGF5) starts with a a CD placed by hands clad in fuzzy sleeves and sparkly nail polish into a bulky, translucent portable player. Cue shots with CRT TVs, handicams and Playstation controllers. Like the "B.S.A.S" video, we see a gathering of women in the guise of girlhood, but where EQ mythologize the Girl's bittersweet yearning for the night-life, james K finds comfort in a low-key clique kiki, hanging out in a bedroom with a half-dozen of her best-dressed friends.
+The music video for ["Play"](https://www.youtube.com/watch?v=2chmQiR8R10&pp=ygUMamFtZXMgayBwbGF5) starts with a CD placed by hands clad in fuzzy sleeves and sparkly nail polish into a bulky, translucent portable player. Cue shots with CRT TVs, handicams and Playstation controllers. Like the "B.S.A.S" video, we see a gathering of women in the guise of girlhood, but where EQ mythologize the Girl's bittersweet yearning for the night-life, james K finds comfort in a low-key clique kiki, hanging out in a bedroom with a half-dozen of her best-dressed friends.
 
 The promise of consumer technology was to reduce the clutter and friction of life by unifying its disparate aspects (work, accounting, communication, entertainment) via spatial compression, evolving through personal computers, laptops, pagers, palm-pilots, dumb-phones, until reaching its apotheosis in the iPhone. Now there's nowhere left to go, nothing left to optimize. Everything solid has melted into air. 
 
@@ -79,6 +81,7 @@ The fact that I can be out of the loop on the whole ARG and internal fiction of 
 
 ### "Music"
 > Last night
+>
 > I had a wet dream 'bout the perfect song
 
 You have to be one corny bitch to write extended analogies between music terminology and falling in love, but instead of freshman-year poetry, underscores turned it into pop anthem material. 
@@ -94,8 +97,11 @@ umru's beat, while a propulsive booty-shaker on its own, is very much of the hyp
 
 ### "Do It"
 > If I left for three months
+>
 > And I turned my phone off  
+>
 > Would you wait here for me?
+>
 > Sign on the dotted line
 
 This is epochal levels of pop production. For better or worse (better, i.m.o.) a song about being emotionally unavailable and viewing people in terms of their utility to your music career will never blow up in the current market no matter how fucking mind-blowing it is, but all the better for us blue-haired and pronoun'ed libs to get to gatekeep. 
