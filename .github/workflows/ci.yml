@@ -28,10 +28,13 @@ jobs:
       with:
         node-version: 25.x
         cache: 'pnpm'
+    - run: |
+        echo "IMG_HASH=$(find src/ -name *.md -exec sed -nE "s/(\!\[.*\]\(|\Wsrc: )(.*)\)\)/\2/p" {} \; | md5sum | awk '{ print $1 }')" >> $GITHUB_ENV
     - name: Persist Eleventy .cache
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
-        key: ${{ runner.os }}-eleventy-fetch-cache
+        # key: ${{ runner.os }}-eleventy-fetch-cache
+        key: "${IMG_HASH}"
         path: |
           ./.cache
           ./dist/assets/img
