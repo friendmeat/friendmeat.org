@@ -18,7 +18,7 @@ I think Mary Oliver could be an anarcho-primitivist and/or a therian.
 
 ## __what i'm listening to__:
 ### *The Slip* - Nine Inch Nails
-!["Demon Seed" by Nine Inch Nails](https://www.youtube.com/watch?v=eICUTG7Oyik)
+![](https://www.youtube.com/watch?v=eICUTG7Oyik)
 
 > *I am reaching the point...*
 >
