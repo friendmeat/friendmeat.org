@@ -3,16 +3,18 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "eleventy --serve --incremental",
+    "dev": "DEBUG=Eleventy:Fetch eleventy --serve --incremental",
     "build": "DEBUG=Eleventy:Fetch eleventy --incremental"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-rss": "^2.0.3",
-    "@mdit/plugin-mathjax": "^0.23.1",
-    "eleventy-plugin-icons": "^4.5.3",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@11ty/nunjucks": "4.0.0-alpha.1",
+    "@mdit/plugin-mathjax": "^0.23.2",
+    "eleventy-plugin-icons": "^4.5.7",
+    "eleventy:4.0.0-alpha.6": "link:@11ty/eleventy:4.0.0-alpha.6",
     "heroicons": "^2.2.0",
     "html-minifier-terser": "^7.2.0",
     "markdown-it": "^14.1.0",
@@ -20,7 +22,7 @@
     "markdown-it-attrs": "^4.3.1",
     "markdown-it-footnote": "^4.0.0",
     "nunjucks-date-filter": "^0.1.1",
-    "sass": "^1.87.0"
+    "sass": "^1.97.2"
   },
   "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a",
   "pnpm": {
