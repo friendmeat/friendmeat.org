@@ -1,0 +1,27 @@
+{% set title = name %}
+{% extends "src/_layouts/default.njk" %}
+{% block head %}
+{{ super() }}
+<meta property="og:image" content="{{ meta.site }}{{ cover.img }}" />
+<meta property="og:image:alt" content="{{ cover.alt}}" />
+{% endblock %}
+{% block breadcrumb %}
+<small class="gallery__back-to-stuff"><a href="/stuff/ocs/">Back to OCs</a></small>
+{% endblock %}
+{% block main %}
+    <div class="oc__gallery">
+        {% for image in images %}
+        <{% if image.page %}a href="{{ image.page }}"{% else %}div{% endif %} class="oc__image-container">
+            <img src="{{ image.img }}" alt="{{ image.alt }}" class="oc__image"/>
+        </{% if image.page %}a{% else %}div{% endif %}>
+        {% endfor %}
+    </div>
+    <article class="main__article">
+<table class="oc__details">
+<tr><td>Species</td><td>{{ species }}</td></tr>
+<tr><td>Age</td><td>{{ age }}</td></tr>
+<tr><td>Occupation</td><td>{{ occupation }}</td></tr>
+</table>
+{{ super() }}
+</article>
+{% endblock %}

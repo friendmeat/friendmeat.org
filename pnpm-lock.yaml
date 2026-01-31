@@ -4,13 +4,12 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  esbuild@<=0.24.2: '>=0.25.0'
+
 importers:
 
   .:
-    dependencies:
-      '@11ty/eleventy-plugin-bundle':
-        specifier: ^3.0.7
-        version: 3.0.7(posthtml@0.16.7)
     devDependencies:
       '@11ty/eleventy':
         specifier: 4.0.0-alpha.6
@@ -21,6 +20,9 @@ importers:
       '@11ty/eleventy-navigation':
         specifier: ^1.0.5
         version: 1.0.5
+      '@11ty/eleventy-plugin-bundle':
+        specifier: ^3.0.7
+        version: 3.0.7(posthtml@0.16.7)
       '@11ty/eleventy-plugin-rss':
         specifier: ^2.0.4
         version: 2.0.4

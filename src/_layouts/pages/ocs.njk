@@ -1,0 +1,18 @@
+{% extends "src/_layouts/default.njk" %}
+{% block breadcrumb %}
+<small class="gallery__back-to-stuff"><a href="/stuff">Back to stuff</a></small>
+{% endblock %}
+{% block content %}
+<section class="gallery__container">
+{% for oc in collections.ocs %}
+    <a href="{{ oc.page.url | url }}" class="gallery__figure-container">
+    <figure class="gallery__figure">
+        <img src="{{ oc.data.cover.img }}" alt="{{ oc.data.cover.alt }}" loading=lazy class="gallery__figure-image" />
+        <figcaption class="gallery__figure-caption font-revenge">{{ oc.data.name }}</figcaption>
+    </figure>
+    <!-- {{ oc.data.name }} -->
+    </a>
+{% endfor %}
+</section>
+{% endblock %}
+
