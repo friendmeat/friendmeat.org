@@ -5,6 +5,7 @@ headerImage:
   src: https://i.postimg.cc/zGW2jMR2/ccru.jpg
   alt: a sudoku puzzle superimposed over a collage of a bad neo - the matrix
     costume, abe sapien from hellboy, and the painting "Face-Off" by Xue Jiye
+  format: true
 topics:
   - weeklies
 ---

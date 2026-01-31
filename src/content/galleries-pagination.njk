@@ -1,0 +1,25 @@
+---
+layout: default
+permalink: "/stuff/{{ gallery.title | slugify }}/"
+pagination:
+    data: collections.galleries
+    size: 1
+    alias: gallery
+eleventyComputed:
+    eleventyNavigation:
+        key: "{{ gallery.key }}"
+        parent: "Stuff"
+---
+
+<div>
+    {% for collection in gallery.collections %}
+        <div>
+            <a href="/stuff/{{ gallery.title | slugify }}/{{ collection.title | slugify }}/">
+                <figure>
+                    <img src="{{ collection.cover.src | threshold(500, 300)}}" alt="{{ collection.cover.alt }}" />
+                    <figcaption>{{ collection.key }}</figcaption>
+                </figure>
+            </a>
+        </div>
+    {% endfor %}
+</div>

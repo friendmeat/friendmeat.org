@@ -1,0 +1,32 @@
+{% extends "default.njk" %}
+{% block style %}
+{{ super() }}
+.other-img-link {
+    text-decoration: none;
+}
+{% endblock style %}
+{% block nav %}
+{{ super() }}
+{% endblock nav %}
+{% block breadcrumb %}
+{% set gallery = page.inputPath | split('/') | slice(-2) | first %}
+<a href="/stuff">Stuff</a>&nbsp;&#x2B9E;<a href="/stuff/{{ gallery | slugify }}/{{ collection | slugify }}">{{ collection }}</a>&nbsp;&#x2B9E;<span aria-current="page">{{ title }}</span>
+{% endblock breadcrumb %}
+{% block content %}
+{{ super() }}
+<figure><img src="{{ src }}" alt="{{ alt }}"><figcaption><em>{{ description }}</em><p>{{ title }}{% if artist %}by {{artist.name}} (<a href="{{ artist.site }}" target="_blank">{{ artist.handle }}</a>){% endif %}</p></figcaption></figure>
+{% if cc0 %}
+<a href="{{ page.url }}">{{ title }}</a> by <a href="{{ meta.site }}">{{ artist }}</a> is marked <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a><img src="/assets/img/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="/assets/img/zero.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+{% endif %}
+{% endblock content %}
+
+{%- block sidebarLeft %}
+<h4>Other images in <em>{{ collection }}</em></h4>
+{% for file in collections.all %}
+    {% if file.data.collection == collection and file.data.title !== title %}
+    <a href="{{ file.url }}" class="other-img-link">
+        <img src="{{ file.data.src | thumbnail(50) }}" alt="{{ file.data.alt }}" width=50 height=50 loading=lazy decoding=async>
+    </a>
+    {% endif %}
+{% endfor %}
+{% endblock sidebarLeft -%}

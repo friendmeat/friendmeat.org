@@ -1,0 +1,8 @@
+{
+    "layout":"image",
+    "permalink":"/stuff/{{ page.filePathStem | split('/') | slice(-2) | first | slugify }}/{{ collection | slugify }}/{{ title | slugify }}/",
+    "eleventyNavigation": {
+        "key":"{{ title }}",
+        "parent":"{{ page.filePathStem | split('/') | slice(-2) | first }}"
+    }
+}

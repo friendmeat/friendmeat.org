@@ -1,9 +1,10 @@
-{% macro ogBlog(post) %}
-<meta property="og:title" content="{{ post.title | siteTitle }}" />
-<meta property="og:url" content="{{ post.url }}" />
+{% macro cc0(title, hyperlink, artist) %}
+<a href="{{ page.url }}">{{ title }}</a> by <a href="{{ meta.site }}">{{ artist }}</a> is marked <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a><img src="/assets/img/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="/assets/img/zero.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 {% endmacro %}
 
-{% macro ogImage(image) %}
-<meta property="og:title" content="{{ image.title | siteTitle }}" />
-<meta property="og:url" content="{{ page.url }}" />
+{% macro blogPostInfo(post) %}
+<small class="post-info">
+    <div><b class="visually-hidden">Published</b> {{ post.date | date("YYYY-MM-DD") }}</div>
+    <div><b class="visually-hidden">Tags</b><ul class="post-tags">{% for tag in post.tags %}<li class="post-tag"><a href="/blog/tags/{{ tag }}">#{{ tag }}</a></li>{% endfor %}</div>
+</small>
 {% endmacro %}

@@ -1,35 +1,34 @@
 {
-  "name": "2friend2meat",
+  "name": "friendmeat.org",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
-  "license": "MIT",
   "scripts": {
-    "dev": "eleventy --serve --incremental"
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "dev:incremental":"eleventy --serve --incremental"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.0",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.0",
-    "@11ty/eleventy-img": "^6.0.2",
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-rss": "^2.0.3",
-    "eleventy-plugin-icons": "^4.5.3",
-    "html-minifier-terser": "^7.2.0",
-    "markdown-it": "^14.1.0",
-    "markdown-it-anchor": "^9.2.0",
-    "nunjucks-date-filter": "^0.1.1",
-    "sass": "^1.87.0"
-  },
-  "packageManager": "pnpm@10.15.0+sha256.84c19e788d7d7ee248e4a6b7152f8ebba0f4fe7380a5f443ca17d76c030052d2",
-  "pnpm": {
-    "overrides": {
-      "esbuild@<=0.24.2": ">=0.25.0"
-    }
+    "@11ty/eleventy": "4.0.0-alpha.6",
+    "@11ty/eleventy-img": "7.0.0-alpha.2",
+    "@11ty/eleventy-navigation": "^1.0.5",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@11ty/nunjucks": "4.0.0-alpha.1",
+    "@sindresorhus/slugify": "^3.0.0",
+    "cheerio": "^1.1.2",
+    "dayjs": "^1.11.19",
+    "entities": "^7.0.0",
+    "markdown-it-attrs": "^4.3.1",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-mathjax3": "^5.2.0",
+    "nunjucks-date-filter": "^0.1.1"
   },
   "dependencies": {
-    "@mdit/plugin-mathjax": "^0.23.1",
-    "heroicons": "^2.2.0",
-    "markdown-it-attrs": "^4.3.1",
-    "markdown-it-footnote": "^4.0.0"
+    "@11ty/eleventy-plugin-bundle": "^3.0.7"
   }
 }

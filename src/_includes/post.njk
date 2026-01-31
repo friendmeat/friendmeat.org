@@ -1,0 +1,111 @@
+{% extends "default.njk" %}
+{% block style %}
+{{ super() }}
+article {
+    font-family: var(--type-serif);
+
+    img {
+        display: block;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    iframe {
+        width: 100%;
+        aspect-ratio: calc(16 / 9);
+    }
+
+    blockquote {
+        margin: 0;
+        padding: 1em 2em;
+        border-left: 2px solid var(--blue);
+        background-clip: padding-box;
+        position: relative;
+        &::before {
+            content:'\201C';
+            z-index: -100;
+            position: absolute;
+            transform: translateX(-25%) translateY(-25%);
+            font-size:100pt;
+            filter:opacity(0.2);
+        }
+    }
+
+    .header-anchor-link {
+        transition: all ease-in 200ms;
+        color: var(--blue);
+        opacity: 0;
+    }
+
+
+    h2:has(.header-anchor-link), h3:has(.header-anchor-link), h4:has(.header-anchor-link) {
+        @media (hover: hover){
+            &:hover {
+                .header-anchor-link {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.post-banner img {
+    width: 100%;
+    aspect-ratio: calc(800 / 192);
+    height: auto;
+}
+
+.post-description {
+    display: block;
+    margin: 1em auto;
+}
+
+.pagination-option {
+    grid-row: 1;
+}
+
+.next-post {
+    grid-column: 1;
+    text-align: right;
+}
+.prev-post {
+    grid-column: 3;
+}
+.pagination-arrow {
+    color: var(--blue);
+    font-size: 15pt;
+}
+{% endblock style %}
+
+{% block head %}
+{% if headerImage.src %}
+<meta property="og:image:src" content="{{ meta.base }}{{ headerImage.src | threshold(800, 192) or meta.banner }}">
+<meta property="og:image:alt" content="{{ headerImage.alt }}">
+<meta property="og:image:width" content=800>
+<meta property="og:image:height" content=192>
+{% endif %}
+{{ super() }}
+{% endblock head %}
+
+{% block content %}
+<h1 class="post-title">{{ title }}</h1>
+<small class="post-description">{{ description }}</small>
+{% if headerImage %}
+<picture class="post-banner">
+<img src="{{ headerImage.src | threshold(500, 192) }}" alt="{{ headerImage.alt }}" loading="lazy" decoding="async" />
+</picture>
+{% endif %}
+{{ macros.blogPostInfo({date: date, tags: topics}) }}
+<hr />
+<article>
+{{ super() }}
+</article>
+{% endblock content %}
+
+{% block footer %}
+{% set prevPost = collections.posts | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.posts | getNextCollectionItem(page) %}
+{% if prevPost %}<div aria-label="Previous post" class="pagination-option prev-post"><a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a><span class="pagination-arrow">&#x1f882;</span></div>{% endif %}
+{% if nextPost %}<div aria-label="Next Post" class="pagination-option next-post"><span class="pagination-arrow">&#x1f880;</span><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></div>{% endif %}
+{{ super() }}
+{% endblock footer %}

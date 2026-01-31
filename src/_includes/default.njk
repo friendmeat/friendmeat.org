@@ -1,0 +1,356 @@
+{% extends "src/_includes/base.njk" %}
+{% block head %}
+{{ super() }}
+<style>
+{% css %}
+:root {
+    --frontmatterHeight: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: var(--type-sans);  }
+
+a, a:visited {
+    color: var(--blue);
+}
+
+img {
+    max-width: 100%;
+}
+
+.visually-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+body {
+    color: var(--text);
+    background-color: var(--bg);
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 600px){
+        display: grid;
+        grid-template-rows: 5em 1fr 5em;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+header {
+    grid-row: 1;
+    grid-column: 1 / span 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: var(--frontmatterHeight);
+}
+
+.brand { 
+    font-family: "RGHPPsans";
+    grid-column: span 2;
+    margin: auto;
+    >a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .brand-char {
+        transition: translate 3s steps(5, jump-start);
+        display: inline-block;
+        position: relative;
+    }
+    @media (hover: hover){
+        &:hover .brand-char {
+            translate: 0 calc(100.0% * var(--seed));
+        }
+    }
+    @media screen and (min-width: 600px) {
+        grid-column: 1;
+    }
+}
+
+@keyframes wave {
+    from {
+        translate: 0 0;
+    }
+    to {
+        translate: 0 calc(100% * var(--seed));
+    }
+}
+
+.toggles {
+    display: none;
+    grid-column: 3;
+    grid-row: 3;
+    margin: auto;
+    @media screen and (min-width: 600px) {
+        display: block;
+        grid-row: 1;
+    }
+}
+
+.toggle-theme {
+    font-size: 20pt;
+}
+
+html[data-dark] .toggle-theme::before {
+   content: url("/assets/img/sun.png");
+   cursor: pointer;
+   filter: invert();
+}
+
+.toggle-theme::before {
+    content: url("/assets/img/moon.png");
+    cursor: pointer;
+}
+
+.nav-list {
+    display:none;
+    @media screen and (min-width: 600px) {
+       display: block;
+        grid-column: 2;
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        >*{
+           margin: 0 auto;
+        }
+    }
+}
+
+.navigation-popover-button {
+    display: inline;
+    grid-column: 3;
+    margin: auto;
+    padding: 0;
+    width: 2em;
+    height: 2em;
+    border: 1px solid var(--text);
+    border-radius: 2px;
+    background-color: inherit;
+    @media screen and (min-width: 600px) {
+        display: none;
+    }
+    >svg {
+        cursor: pointer;
+        margin: auto;
+    }
+}
+
+.popover-items {
+    min-height: 50%;
+    list-style: none;
+    margin: 1em auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation-popover:popover-open {
+    transform: translateX(0);
+}
+
+.navigation-popover {
+    transition: transform ease-in 200ms;
+    transform: translateX(100%);
+    border: 0;
+    border-left: 1px solid var(--text);
+    background-color: var(--bg);
+    &:popover-open {
+        width: 50vw;
+        height: 100vh;
+        position: fixed;
+        left: 50vw;
+        right: 0;
+        top: 0;
+    }
+
+    @starting-style {
+        &:popover-open {
+            transform: translateX(100%);
+        }
+    }
+}
+
+::backdrop {
+    backdrop-filter: brightness(0.5);
+    pointer-events: none;
+}
+
+
+
+main {
+    margin: 0 1em;
+    font-family: var(--type-sans);
+    max-width: clamp(200px, 600px, 100%);
+    flex-grow: 1;
+    grid-row: 2;
+    grid-column: span 3;
+    @media screen and (min-width: 600px) {
+        margin: 0 auto;
+        grid-column: 2;
+    }
+}
+
+footer {
+    grid-row: 3;
+    grid-column: 1 / span 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 1em;
+    min-height: var(--frontmatterHeight);
+}
+
+.sidebar { 
+    display: none; 
+}
+
+.sidebar:not(:empty) { 
+    display: block;
+    grid-column: 2; /* To be overriden by the desktop media query for sidebar-left and sidebar-right */
+    grid-row: 2;
+    height: min-content;
+    padding: 1em; 
+
+    @media screen and (min-width: 600px) {
+        position: sticky;
+        top: 0;
+        transform: translateY(50%);
+        margin: 0 auto;
+        border: 1px solid var(--text);
+        box-shadow: -15px 15px var(--blue);
+        &.sidebar-left { grid-column: 1; }
+        &.sidebar-right { grid-column: 3; }
+    }
+}
+
+.footer-elements {
+    grid-row: 2;
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skip-link {
+}
+
+.post-info {
+    display: flex;
+    gap: 1ch;
+}
+
+.post-tags {
+    list-style: none;
+    display: flex;
+    gap: 1ch;
+    margin: 0;
+    padding: 0;
+}
+
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+{% endcss %}
+</style>
+{% endblock head %}
+{% block body %}
+<a class="skip-link visually-hidden" href="#main">Skip to main content</a>
+ 
+      <div popover="auto" id="navigation-items" class="navigation-popover">
+          <ul class="popover-items">
+                {% for location in collections.all | eleventyNavigation %}
+                      <li class="nav-item">
+                          <a href="{{ location.url }}">{{ location.key }}</a>
+                      </li>
+                {% endfor %}
+                <li> 
+                    <label class="toggle-css" for="toggleCss" checked>
+                        <span class="visually-hidden">Toggle CSS</span>
+                        <input type="checkbox" name="toggleCss" id="toggleCss" class="visually-hidden" checked onchange="let s=document.styleSheets;for(let i=0;i<s.length;i++){s[i].disabled=!s[i].disabled;}"/>
+                    </label>
+                </li>
+                <li>
+                    <label class="toggle-theme" for="toggleDark" checked>
+                        <span class="visually-hidden">Toggle Dark</span>
+                        <input type="checkbox" name="toggleDark" id="toggleDark" class="visually-hidden" checked />
+                    </label>
+                </li>
+          </ul>
+      </div>
+<header>
+      {% block header %}
+      <h1 class="brand"><a href="/home">{% for c in meta.title %}<span class="brand-char" style="--seed:{{ range(0,10) | random }}">{{ c }}</span>{% endfor %}</a></h1>
+        <button popovertarget="navigation-items" class="navigation-popover-button">
+          <svg class="ui" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/></svg>
+      </button>
+      <ul role="navigation" class="nav-list">
+          {% block nav %}
+              {% for location in collections.all | eleventyNavigation  %}
+                  <li class="nav-item">
+                      <a href="{{ location.url }}">{{ location.key }}</a>
+                  </li>
+              {% endfor %}
+          {% endblock nav %}
+      </ul>
+     
+    <div class="toggles">
+            <label class="toggle-css" for="toggleCss" checked>
+                <span class="visually-hidden">Toggle CSS</span>
+            <input type="checkbox" name="toggleCss" id="toggleCss" class="visually-hidden" checked onchange="let s=document.styleSheets;for(let i=0;i<s.length;i++){s[i].disabled=!s[i].disabled;}"/>
+            </label>
+        <label class="toggle-theme" for="toggleDark" checked>
+            <span class="visually-hidden">Toggle Dark</span>
+            <input type="checkbox" name="toggleDark" id="toggleDark" class="visually-hidden" checked />
+        </label>
+    </div>
+      {% endblock header %}
+  </header>
+  <hr class="visually-hidden" />
+  <main id="main">
+      {% block breadcrumb %}
+      {% if eleventyNavigation.key %}
+        {% set breadcrumb = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, {includeSelf:true,allowMissing:true}) %}
+        {% if breadcrumb | length > 1 %}
+        {% for crumb in breadcrumb %}
+        {% if loop.last %}
+        <span aria-current="page">{{ crumb.title }}</span>
+        {% else %}
+        <a href="{{ crumb.url }}">{{ crumb.title }}</a>&nbsp;&#x2B9E;
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+      {% endif %}
+      {% endblock breadcrumb %}
+    {% block content %}
+    {{ content | safe }}
+    {% endblock %}
+  </main>
+  <!-- Strip white space from between these `aside`s so the :empty pseudoelement works correctly -->
+  <aside class="sidebar sidebar-left">{%- block sidebarLeft -%}{%- endblock sidebarLeft -%}</aside>
+  <aside class="sidebar sidebar-right">{%- block sidebarRight -%}{%- endblock sidebarRight -%}</aside>
+  <hr class="visually-hidden" />
+  <footer>
+      {% block footer %}
+      <div class="footer-elements">
+      <a href="https://chrisburnell.com/note/eleventy-animated-88x31/">
+          <img class="badge" src="/assets/img/built-with-eleventy.gif" height=31 width=88 /></a>
+          <div>friendmeat {{ buildDate | date("YYYY") }}</div>
+      </div>
+      {% endblock footer %}
+  </footer>
+  {% endblock body %}

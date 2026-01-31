@@ -1,7 +1,10 @@
 ---
+permalink: /about/
 layout: default
 title: About
-parent: Home
+eleventyNavigation:
+    key: About
+    order: 4
 ---
 
 ![friendmeat](https://i.postimg.cc/g27c2pjL/friendmeat.jpg){class=about__photo}
@@ -14,9 +17,8 @@ he/him/his
 
 {{ meta.birthday | yearsSince }}
 
-IT worker / hobbyist / artist / diletante / nihilist / naysayer / snob / hater 
+IT worker / hobbyist / artist / weirdo 
 
-{% include "parts/asterism.njk" %}
 
 ## about the site
 
