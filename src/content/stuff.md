@@ -13,7 +13,6 @@ eleventyNavigation:
 </figure>
 </a>
 {% endfor %}
-
-<a href="/stuff/ocs">
-<figure><img src=""><figcaption>OCs</figcaption></figure>
-</a>
+<!-- <a href="/stuff/ocs"> -->
+<!-- <figure><img src=""><figcaption>OCs</figcaption></figure> -->
+<!-- </a> -->
