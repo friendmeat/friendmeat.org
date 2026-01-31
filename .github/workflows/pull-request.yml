@@ -23,4 +23,4 @@ jobs:
           ./.cache
           ./dist/assets/img
     - run: pnpm install --dangerously-allow-all-builds
-    - run: DEBUG=Eleventy:Fetch IMAGES_STATS_ONLY=true pnpm exec eleventy --config=eleventy.config.js
+    - run: DEBUG=Eleventy:Fetch IMAGES_STATS_ONLY=true pnpm exec eleventy

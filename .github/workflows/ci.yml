@@ -44,7 +44,6 @@ jobs:
     - name: Install deps and build
       run: |
         pnpm install
-        # DEBUG=Eleventy:Fetch pnpm exec eleventy --config=eleventy.config.js
         pnpm run build
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v3
