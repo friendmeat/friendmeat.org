@@ -79,7 +79,7 @@ article {
 
 {% block head %}
 {% if headerImage.src %}
-<meta property="og:image:src" content="{{ meta.base }}{{ headerImage.src | threshold(800, 192) or meta.banner }}">
+<meta property="og:image:url" content="{{ meta.base }}{{ headerImage.src | threshold(800, 192) or meta.banner }}">
 <meta property="og:image:alt" content="{{ headerImage.alt }}">
 <meta property="og:image:width" content=800>
 <meta property="og:image:height" content=192>
