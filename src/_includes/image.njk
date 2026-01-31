@@ -16,7 +16,7 @@
 {{ super() }}
 <figure><img src="{{ src }}" alt="{{ alt }}"><figcaption><em>{{ description }}</em><p>{{ title }}{% if artist %}by {{artist.name}} (<a href="{{ artist.site }}" target="_blank">{{ artist.handle }}</a>){% endif %}</p></figcaption></figure>
 {% if cc0 %}
-<a href="{{ page.url }}">{{ title }}</a> by <a href="{{ meta.site }}">{{ artist }}</a> is marked <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a><img src="/assets/img/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="/assets/img/zero.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<a href="{{ page.url }}">{{ title }}</a> by <a href="{{ meta.site }}">{{ meta.title }}</a> is marked <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a><img src="/assets/img/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="/assets/img/zero.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 {% endif %}
 {% endblock content %}
 
