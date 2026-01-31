@@ -5,12 +5,12 @@ pagination:
     data: collections.galleries
     size: 1
     alias: gallery
-eleventyComputed:
-    eleventyNavigation:
-        key: "{{ gallery.key }}"
-        parent: "Stuff"
 ---
+{% block breadcrumb %}
+<a href="/stuff">Stuff</a>&nbsp;&#x2B9E;<span aria-current="page">{{ gallery.key }}</span> 
+{% endblock breadcrumb %}
 
+{% block content %}
 <div>
     {% for collection in gallery.collections %}
         <div>
@@ -23,3 +23,4 @@ eleventyComputed:
         </div>
     {% endfor %}
 </div>
+{% endblock content %}
