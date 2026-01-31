@@ -126,6 +126,8 @@ export default function(eleventyConfig) {
             .then(({ jpeg }) => jpeg[0].url)
     });
 
+    eleventyConfig.addFilter("properCase", properCase);
+
     /* Custom Shortcodes */
 
     /* Template Libraries */
@@ -178,7 +180,7 @@ export default function(eleventyConfig) {
                 images,
                 "key": properCase(collection),
                 "title": collection,
-                "gallery": images[0].page.inputPath.split("/").slice(-2, -1),
+                "gallery": properCase(images[0].page.inputPath.split("/").slice(-2, -1)[0])
             }
         });
         return result
@@ -192,7 +194,7 @@ export default function(eleventyConfig) {
         const topics = [];
         const pages = [];
         for (const topic of allTopics) {
-            const posts = allPosts.filter(({ data }) => data.topics.includes(topic)).sort((a, b) => a.date > b.date).reverse();
+            const posts = allPosts.filter(({ data }) => data.topics?.includes(topic)).sort((a, b) => a.date > b.date).reverse();
             topics.push([topic, posts.length]);
             const totalPages = Math.ceil(posts.length / pageSize)
             for (let i = 0; i < totalPages; i++) {

@@ -7,7 +7,7 @@
 {{ super() }}
 {% endblock head %}
 {% block breadcrumb %}
-<a href="/stuff">Stuff</a>&nbsp;&#x2B9E;<span aria-current="page">{{ collection.title }}</span>
+<a href="/stuff">Stuff</a>&nbsp;&#x2B9E;<a href="/stuff/{{ collection.gallery | slugify }}/">{{ collection.gallery }}</a>&nbsp;&#x2B9E;<span aria-current="page">{{ collection.title }}</span>
 {% endblock breadcrumb %}
 {% block content %}
 {{ super() }}

@@ -9,8 +9,7 @@
 {{ super() }}
 {% endblock nav %}
 {% block breadcrumb %}
-{% set gallery = page.inputPath | split('/') | slice(-2) | first %}
-<a href="/stuff">Stuff</a>&nbsp;&#x2B9E;<a href="/stuff/{{ gallery | slugify }}/{{ collection | slugify }}">{{ collection }}</a>&nbsp;&#x2B9E;<span aria-current="page">{{ title }}</span>
+<a href="/stuff">Stuff</a>&nbsp;&#x2B9E;<a href="/stuff/{{ gallery | slugify }}/">{{ gallery }}</a>&nbsp;&#x2B9E;<a href="/stuff/{{ gallery | slugify }}/{{ collection | slugify }}">{{ collection }}</a>&nbsp;&#x2B9E;<span aria-current="page">{{ title }}</span>
 {% endblock breadcrumb %}
 {% block content %}
 {{ super() }}
