@@ -1,0 +1,91 @@
+{% extends "default.njk" %}
+{% block style %}
+{{ super() }}
+.blog-post {
+    margin: 4rem 0 0 0;
+    contain: content;
+}
+
+.blog-post-title {
+    color: var(--text) !important;
+    text-decoration: underline 3px var(--blue);
+}
+
+.blog-post img {
+    width: 100%;
+    aspect-ratio: calc(800 / 192);
+    height: auto;
+}
+
+.post-info {
+    display: flex;
+}
+.tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
+.all-tags {
+}
+
+.pagination {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pagination-prev {
+    grid-column: 1;
+}
+
+.pagination-next {
+    text-align: right;
+    grid-column: 2;
+}
+{% endblock style %}
+{% macro paginationBlock() %}
+<div class="pagination">
+    {% if pagination.href.previous %}
+    <div class="pagination-prev"><span class="pagination-arrow">&#x1f880;</span><a href="{{ pagination.href.previous }}">Previous</a></div>
+    {% endif %}
+
+    {% if pagination.href.next %}
+    <div class="pagination-next"><a href="{{ pagination.href.next }}">Next</a><span class="pagination-arrow">&#x1f882;</span></div>
+    {% endif %}
+</div>
+{% endmacro %}
+{% block content %}
+{{ super() }}
+{{ paginationBlock() }}
+{% for post in pagination.items %}
+    <section class="blog-post">
+        <a href="{{ post.url }}"><h2 class="blog-post-title">{{ post.data.title }}</h2>
+            <picture>
+            {% if post.data.headerImage %}
+            {% set source = post.data.headerImage.src | threshold(800, 192) %}
+            <img src="{{ source }}" alt="{{ post.data.headerImage.alt }}" width=800 height=192 />
+            </picture>
+            {% endif %}
+        </a>
+        <div>
+            {{ macros.blogPostInfo({date:post.date, tags:post.data.topics}) }}
+            <p class="post-description">{{ post.data.description }}</p>
+        </div>
+    </section>
+    {% if not loop.last %}
+    <hr />
+    {% endif %}
+{% endfor %}
+{{ paginationBlock() }}
+{% endblock content %}
+
+{%- block sidebarLeft %}
+<h4>All Tags</h4>
+<ul class="all-tags">
+    {% set allTags = collections.topics.topics | sort(true, false, "1") %}
+    {% for tag in allTags %}
+    <li><a href="/blog/tags/{{ tag[0] | slugify }}"><span>#{{ tag[0] }}</span>&nbsp;<span>({{ tag[1] }})</span></a></li>
+    {% endfor %}
+</ul>
+{% endblock sidebarLeft -%}

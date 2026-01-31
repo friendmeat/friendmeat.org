@@ -1,0 +1,85 @@
+{% import "macros.njk" as macros with context %}
+{% set pageTitle = title | siteTitle %}
+<!DOCTYPE html>
+<html lang="en" data-dark>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="{{ eleventy.generator }}" />
+  {% block head %}
+  <meta property="og:title" content="{{ pageTitle }}" />
+  <meta property="og:url" content="{{ meta.base }}{{ page.url }}" />
+  <title>{{ pageTitle }}</title>
+  {% endblock %}
+<style>
+{% block style %}
+{% css %}
+@font-face {
+    font-family: RGHPPsans;
+    src: url("/assets/font/RGHPP Sans.woff2") format("woff2");
+    unicode-range: U+0020-00AD;
+}
+
+:root {
+    --type-sans: "Gill Sans", sans-serif;
+    --type-serif: "Garamond", serif;
+    --bg: #fff;
+    --text: #000;
+    --pink: #C032FA;
+    --blue: #3267FA;
+    font-family: var(--type-sans);
+}
+html[data-dark] {
+    --bg: #000;
+    --text: #fff;
+
+    svg.ui {
+        filter: invert();
+    }
+}
+body { 
+    padding: 0;
+    margin: 0;
+}
+
+{% endcss %}
+{% endblock %}
+</style>
+<style>{% getBundle "css" %}</style>
+</head>
+
+<body>
+  {% block body %}
+  {{ content | safe }}
+  {% endblock body %}
+  <script>
+function loadTheme(){
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      const theme = savedTheme || (prefersDark ? 'dark' : 'light' );
+      toggleTheme(theme);
+  }
+
+const toggle = document.querySelector("#toggleDark");
+function toggleTheme(theme='dark') {
+  document.querySelector(":root").toggleAttribute("data-dark", theme == 'dark');
+  localStorage.setItem('theme', theme);
+  toggle.toggleAttribute('checked', theme == 'dark');
+}
+
+toggle.addEventListener("change", (e)=>{
+  if (e.target.checked) {
+      toggleTheme('dark');
+  } else {
+      toggleTheme('light');
+  }
+});
+
+loadTheme();
+  {% getBundle "js" %}
+
+  </script>
+</body>
+
+</html>

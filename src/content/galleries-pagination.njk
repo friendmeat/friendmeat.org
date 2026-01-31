@@ -1,0 +1,26 @@
+---
+layout: default
+permalink: "/stuff/{{ gallery.title | slugify }}/"
+pagination:
+    data: collections.galleries
+    size: 1
+    alias: gallery
+---
+{% block breadcrumb %}
+<a href="/stuff">Stuff</a>&nbsp;&#x2B9E;<span aria-current="page">{{ gallery.key }}</span> 
+{% endblock breadcrumb %}
+
+{% block content %}
+<div>
+    {% for collection in gallery.collections %}
+        <div>
+            <a href="/stuff/{{ gallery.title | slugify }}/{{ collection.title | slugify }}/">
+                <figure>
+                    <img src="{{ collection.cover.src | threshold(500, 300)}}" alt="{{ collection.cover.alt }}" />
+                    <figcaption>{{ collection.key }}</figcaption>
+                </figure>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %}

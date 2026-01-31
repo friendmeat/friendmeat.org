@@ -1,0 +1,52 @@
+---
+layout: default
+pagination:
+    data: collections.topics.pages
+    size: 1 
+    alias: topic
+permalink: "/blog/tags/{{ topic.topic | slugify }}/{% if topic.page > 0 %}page-{{ topic.page }}/{% endif %}"
+eleventyComputed:
+    eleventyNavigation:
+        parent: "Blog"
+        key: "{{ topic.tag }}"
+---
+{% import "macros.njk" as macros with context %}
+{% macro paginationBlock() %}
+<div class="pagination">
+
+    {% if topic.totalPages > 1 %}
+        {% if topic.page > 0 %}
+        <div class="pagination-prev"><span class="pagination-arrow">&#x1f880;</span><a href="/blog/tags/{{ topic.topic | slugify }}/{% if topic.page > 0 and topic.page - 1 > 0 %}page-{{ topic.page - 1 }}{% endif %}">Previous</a></div>
+        {% endif %}
+
+        {% if topic.page < topic.totalPages %}
+        <div class="pagination-next"><a href="/blog/tags/{{ topic.topic | slugify }}/{% if topic.page < topic.totalPages %}page-{{ topic.page + 1 }}{% endif %}">Next</a><span class="pagination-arrow">&#x1f882;</span></div>
+        {% endif %}
+    {% endif %}
+</div>
+{% endmacro %}
+{% block content %}
+<h1><span>#</span>{{ topic.topic }}</h1>
+{{ paginationBlock() }}
+{{ pagination.first.href | dump }}
+{% for post in topic.posts %}
+    <section class="blog-post">
+        <a href="{{ post.url }}"><h2 class="blog-post-title">{{ post.data.title }}</h2>
+            <picture>
+            {% if post.data.headerImage %}
+            {% set source = post.data.headerImage.src | threshold(800, 192) %}
+            <img src="{{ source }}" alt="{{ post.data.headerImage.alt }}" width=800 height=192 />
+            </picture>
+            {% endif %}
+        </a>
+        <div>
+            {{ macros.blogPostInfo({date:post.date, tags:post.data.topics}) }}
+            <p class="post-description">{{ post.data.description }}</p>
+        </div>
+    </section>
+    {% if not loop.last %}
+    <hr />
+    {% endif %}
+{% endfor %}
+{{ paginationBlock() }}
+{% endblock %}

@@ -3,5 +3,6 @@
   "base": "https://friendmeat.org",
   "title": "friendmeat",
   "description": "it's friendmeat",
-  "birthday":"1998-08-07"
+  "birthday":"1998-08-07",
+  "banner":""
 }

@@ -1,6 +1,11 @@
 export default {
     tags: ["posts"],
-    layout: "pages/post",
-    permalink: "/blog/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug | slugify | url_encode }}/index.html",
-    parent: "Blog"
+    layout: "post",
+    permalink: "/blog/{{ page.date | date('YYYY/MM/DD') }}/{{ page.fileSlug | slugify | urlencode }}/index.html",
+    eleventyComputed: {
+        eleventyNavigation: {
+            parent: "Blog",
+            key: ({ title }) => title
+        }
+    }
 }
