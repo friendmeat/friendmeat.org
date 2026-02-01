@@ -126,6 +126,36 @@ export default function(eleventyConfig) {
             .then(({ jpeg }) => jpeg[0].url)
     });
 
+    eleventyConfig.addFilter("censor", async function(src) {
+        // https://github.com/lovell/sharp/issues/1532#issuecomment-451749670
+        // Make an image very small, then resize it with the nearest-neighbor kernel to maintain pixelization
+
+        const stage1 = await Image(src, {
+            widths: ["auto"],
+            format: ["jpeg"],
+            outputDir: `${OUTPUT_DIR}/assets/img`,
+            urlPath: "/assets/img",
+            transform: async sharp => {
+                sharp
+                    .resize(32, null, { fit: "cover", strategy: "entropy", kernel: "nearest" })
+                    .toBuffer();
+            }
+        })
+
+        // console.log(stage1)
+
+        const stage2 = await Image(stage1["webp"][0].outputPath, {
+            widths: ["auto"], formats: ["jpeg"], outputDir: `${OUTPUT_DIR}/assets/img`, urlPath: "/assets/img",
+            transform: async sharp => {
+                sharp.resize(500, null, { fit: "cover", strategy: "entropy", kernel: "nearest" })
+            }
+        });
+
+        // console.log(stage2);
+
+        return stage2["jpeg"][0].url
+    });
+
     eleventyConfig.addFilter("properCase", properCase);
 
     /* Custom Shortcodes */
@@ -183,6 +213,7 @@ export default function(eleventyConfig) {
                 "gallery": properCase(images[0].page.inputPath.split("/").slice(-2, -1)[0])
             }
         });
+        // console.log(result);
         return result
 
     });
