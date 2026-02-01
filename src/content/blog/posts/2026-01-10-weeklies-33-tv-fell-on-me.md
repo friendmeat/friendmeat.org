@@ -4,6 +4,7 @@ date: 2026-01-10
 headerImage:
   src: https://cdn.friendmeat.org/hole.jpg
   alt: hole
+  format: true
 topics:
   - weeklies
 description: tv fell on me

@@ -4,6 +4,7 @@ date: 2026-01-04
 headerImage:
   src: https://cdn.friendmeat.org/20260102_200621(1).jpg
   alt: a horrible solder job
+  format: true
 topics:
   - weeklies
 description: "what i did with my break, and: my new years resolution"

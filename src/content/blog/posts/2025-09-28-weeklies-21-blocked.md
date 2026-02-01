@@ -4,6 +4,7 @@ date: 2025-09-28
 headerImage:
   src: https://i.postimg.cc/w38ZsNQH/20250923-170922-1.jpg
   alt: a grasshopper
+  format: true
 topics:
   - weeklies
 description: "on friendship and absolute contingency: my review of Since

@@ -4,6 +4,7 @@ date: 2025-08-19
 headerImage:
   src: https://i.postimg.cc/6qD9Lh73/sinpura3.jpg
   alt: a data-moshed image that mostly looks like black and green noise
+  format: false
 topics:
   - rants
   - fuck-spotify

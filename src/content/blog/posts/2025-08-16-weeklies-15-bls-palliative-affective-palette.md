@@ -5,6 +5,7 @@ headerImage:
   src: https://i.postimg.cc/1tvT6h5B/20250815-113618-1.jpg
   alt: 'a t-shirt with _invaders_-style screenshot but the aliens are skulls. the
     text reads: "SYMBOLIC EXCHANGE AND DEATH; BY JEAN BAUDRILLARD"'
+  format: true
 topics:
   - weeklies
 description: on the syzygy of BL, catboys, and prelapsarian schitzoposting in

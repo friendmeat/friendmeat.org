@@ -4,6 +4,7 @@ date: 2026-01-31
 headerImage:
   src: https://cdn.friendmeat.org/big-night-for-hockey.jpg
   alt: The "live slug reaction" meme but the text says "big night for hockey"
+  format: true
 topics:
   - weeklies
 description: a doomer VN for robotfuckers; dolphins, LSD and cellphones; the hockey show

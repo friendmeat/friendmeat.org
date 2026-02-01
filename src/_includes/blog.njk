@@ -63,8 +63,8 @@
         <a href="{{ post.url }}"><h2 class="blog-post-title">{{ post.data.title }}</h2>
             <picture>
             {% if post.data.headerImage %}
-            {% set source = post.data.headerImage.src | threshold(800, 192) %}
-            <img src="{{ source }}" alt="{{ post.data.headerImage.alt }}" width=800 height=192 />
+            {# {% set source = post.data.headerImage.src | threshold(800, 192) %} #}
+            <img src="{{ post.data.headerImage.src | threshold(800, 192) if post.data.headerImage.format else post.data.headerImage.src }}" alt="{{ post.data.headerImage.alt }}" loading=lazy decoding=async />
             </picture>
             {% endif %}
         </a>

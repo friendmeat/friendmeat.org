@@ -4,6 +4,7 @@ date: 2025-10-04
 headerImage:
   src: https://i.postimg.cc/TPGTnq6W/french-animal-masks-cropped.jpg
   alt: A page from a French papercrafts book showing various animal masks
+  format: true
 topics:
   - weeklies
 description: the best operating system is Butter Side Down; praise for the video

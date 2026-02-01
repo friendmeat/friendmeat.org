@@ -4,6 +4,9 @@ date: 2025-12-06
 headerImage:
   src: https://i.postimg.cc/SJ8m9xCk/downloadfile.webp
   alt: The raccoon that raided a liquor store and passed out in the bathroom
+  format: true
+topics:
+  - weeklies
 ---
 ## __what i'm reading__:
 ### _Black Sun_ by Rebecca Roanhorse

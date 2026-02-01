@@ -4,6 +4,7 @@ date: 2025-08-20
 headerImage:
   src: https://i.postimg.cc/0yGtBnyh/cds-stack.jpg
   alt: a datamoshed image of CD binders
+  format: false
 topics:
   - fuck-spotify
   - tech

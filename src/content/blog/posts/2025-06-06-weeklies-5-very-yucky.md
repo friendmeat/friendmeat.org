@@ -5,6 +5,7 @@ headerImage:
   src: https://i.postimg.cc/xCXfPykZ/signal-2025-06-05-131235.jpg
   alt: Stock photo of a person in business-casual clothes curled up in the fetal
     position on the floor of a white void gripping their head
+  format: true
 topics:
   - weeklies
 description: Freud on shit and money; trip-hop bangers; LSD and the unabomber vs
