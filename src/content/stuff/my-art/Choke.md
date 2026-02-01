@@ -9,5 +9,7 @@ cover: false
 collectionCover: false
 cc0: true
 tags:
+  - stuff
+  - my art
   - jamie
 ---
