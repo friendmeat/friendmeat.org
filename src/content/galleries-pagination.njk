@@ -15,8 +15,15 @@ pagination:
     {% for collection in gallery.collections %}
         <div>
             <a href="/stuff/{{ gallery.title | slugify }}/{{ collection.title | slugify }}/">
-                <figure>
-                    <img src="{{ collection.cover.src | threshold(500, 300)}}" alt="{{ collection.cover.alt }}" />
+                <figure class="preview collection-preview">
+                    <img src="{%- set collectionCover = collection.cover.src | threshold(500, 300) -%}
+                    {%- if collection.title == "NSFW" %}
+                        {{ ["dist", collectionCover] | join | censor }}
+                    {% else %}
+                        {{ collectionCover }}
+                    {% endif -%}
+                    "
+                    alt="{{ collection.cover.alt }}" />
                     <figcaption>{{ collection.key }}</figcaption>
                 </figure>
             </a>

@@ -4,6 +4,7 @@ date: 2025-10-26
 headerImage:
   src: https://cdn.friendmeat.org/20251021_233429.jpg
   alt: the underside of a bar toilet seat with a sticker of a blushing bunny furry
+  format: true
 topics:
   - weeklies
 description: "my bender in st. louis. "

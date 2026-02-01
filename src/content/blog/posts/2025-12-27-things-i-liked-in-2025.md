@@ -6,6 +6,7 @@ headerImage:
   alt: "A collage of creators of things I liked this year, from right to left:
     underscores, Estratosfera from EQ, the anime girl from james K's \"Friend\"
     album, Qiri from EQ, and Joel Petroykus. "
+  format: false
 topics:
   - likes
 description: "simulacral glitz, e-ink-tronica, anglo-denpa, and my eunuch era:

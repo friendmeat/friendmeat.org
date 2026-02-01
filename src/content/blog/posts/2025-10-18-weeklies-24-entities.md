@@ -5,6 +5,7 @@ headerImage:
   src: https://cdn.friendmeat.org/Screenshot_20251018_082145_Crossword.jpg
   alt: "a screenshot of a crossword with the hint: \"One from a stable home?\".
     The answer is 'HORSE'"
+  format: true
 topics:
   - weeklies
 description: dystopian genderfuckery in Amiyatzin Buentello's "ELECTRONIC EYE",

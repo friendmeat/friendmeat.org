@@ -7,6 +7,7 @@ headerImage:
     look like various political leaders and symbols. "Marxist" has pubic hair
     that looks like Karl Marx; "Leninist" has Lenin's goatee on the ballsack,
     "Maoist" has Mao's hair, "Fascist" has a Hitler stache and so on.
+  format: true
 topics:
   - weeklies
 description: Stan Brakhage for the digital era, TF2 in the year 2025 AD, and a

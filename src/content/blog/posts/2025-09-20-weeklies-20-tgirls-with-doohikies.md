@@ -4,6 +4,7 @@ date: 2025-09-20
 headerImage:
   src: https://cdn.friendmeat.org/deathsanjuro.png
   alt: the blood explosion from Sanjuro
+  format: true
 topics:
   - weeklies
 description: books is exactly like DJing, grooving to a japanese-colombian

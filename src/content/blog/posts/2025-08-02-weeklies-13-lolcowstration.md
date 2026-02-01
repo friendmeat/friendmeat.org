@@ -4,6 +4,7 @@ date: 2025-08-02
 headerImage:
   src: https://i.postimg.cc/7LyDDTzj/bug.jpg
   alt: a bug dying on the sidewalk
+  format: true
 topics:
   - weeklies
 description: apologizing for my lolcow era, examining yiff and its discontents,

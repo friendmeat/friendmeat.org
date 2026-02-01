@@ -1,13 +1,12 @@
 {% extends "default.njk" %}
 {% block head %}
-<meta property="og:image" content="">
 <meta property="og:title" content="{{ collection.title | siteTitle }}">
 <meta property="og:description" content="{{ collection.description }}">
 <title>{{ collection.title | siteTitle }}</title>
 {{ super() }}
 {% endblock head %}
 {% block breadcrumb %}
-<a href="/stuff">Stuff</a>&nbsp;&#x2B9E;<a href="/stuff/{{ collection.gallery | slugify }}/">{{ collection.gallery }}</a>&nbsp;&#x2B9E;<span aria-current="page">{{ collection.title }}</span>
+<a href="/stuff">Stuff</a>&nbsp;&#x2B9E;<a href="/stuff/{{ collection.gallery | slugify }}/">{{ collection.gallery }}</a>&nbsp;&#x2B9E;<span aria-current="page">{{ collection.title | properCase }}</span>
 {% endblock breadcrumb %}
 {% block content %}
 {{ super() }}

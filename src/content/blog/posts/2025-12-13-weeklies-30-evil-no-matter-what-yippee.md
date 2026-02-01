@@ -4,6 +4,7 @@ date: 2025-12-13
 headerImage:
   src: https://i.postimg.cc/sxXfYfBb/20251211_161430(1).jpg
   alt: a 3-d graph of random points joined by one or more lines
+  format: true
 description: the jerk-off machine operator doesn't even get dental
 ---
 ## __what i'm reading__:

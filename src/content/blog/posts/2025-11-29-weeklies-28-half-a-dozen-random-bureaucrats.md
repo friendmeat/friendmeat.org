@@ -4,6 +4,7 @@ date: 2025-11-29
 headerImage:
   src: https://i.postimg.cc/ZqHVyn8z/20251127-085556(1)(1).jpg
   alt: a grain black-and-white photo of some slop
+  format: true
 topics:
   - weeklies
 description: vegan gravy; nuclear war; kenken grids

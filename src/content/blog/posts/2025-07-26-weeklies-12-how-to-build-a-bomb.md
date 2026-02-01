@@ -8,6 +8,7 @@ headerImage:
     "THETAN FUCKERS TELEPATHICALLY INFLUENCE HUMANS; THE POWER OF XENU MIND IS
     THE POWER IN THE TOM CRUISE". Text in the mind of the brainwashed human (tom
     cruise) reads "I MUST DIE DOING AN AMAZING STUNT IN A MID MOVIE"
+  format: true
 topics:
   - weeklies
 description: "in which i learn how to build a bomb (real) (not a parody);

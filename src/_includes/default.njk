@@ -166,7 +166,7 @@ html[data-dark] .toggle-theme::before {
     background-color: var(--bg);
     &:popover-open {
         width: 50vw;
-        height: 100vh;
+        height: 100svh;
         position: fixed;
         left: 50vw;
         right: 0;
@@ -223,9 +223,10 @@ footer {
 
     @media screen and (min-width: 600px) {
         position: sticky;
-        top: 0;
-        transform: translateY(50%);
-        margin: 0 auto;
+        top: 2rem;
+ /*       transform: translateY(50%);*/
+        margin: 0 auto; 
+        max-width: 10em;
         border: 1px solid var(--text);
         box-shadow: -15px 15px var(--blue);
         &.sidebar-left { grid-column: 1; }
@@ -256,6 +257,23 @@ footer {
     padding: 0;
 }
 
+.collection-preview { 
+    position: relative;
+    & figcaption {
+        font-family: RGHPPsans;
+        font-size: 35pt;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: calc(50% - (1lh / 2));
+        text-shadow: 
+            1px 1px 0 var(--text),
+            1px -1px 0 var(--text),
+            -1px -1px 0 var(--text),
+            -1px 1px 0 var(--text);
+        /* mix-blend-mode: difference;*/
+    }
+}
 
 @keyframes slide-out {
     from {

@@ -5,6 +5,7 @@ headerImage:
   src: https://i.postimg.cc/jjFxxSdn/josman.webp
   alt: The first panel of "My Wild and Raunchy Son" by josman, an erotic incest
     webcomic, next to the "people with blue eyes be like" meme
+  format: true
 topics:
   - weeklies
 description: 'i go cinemasins on a "cozy" whodunnit, kinshame improv actors, and
