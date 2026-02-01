@@ -7,7 +7,7 @@ eleventyNavigation:
 ---
 {% for k in collections.galleries %}
 <a href="/stuff/{{ k.title }}/">
-<figure height=300 width=500>
+<figure class="collection-preview" height=300 width=500>
     <img src="{{ k.cover.src | threshold(500, 300) }}" alt="{{ k.cover.alt }}"  srcset="" />
     <figcaption>{{ k.key }}</figcaption>
 </figure>
