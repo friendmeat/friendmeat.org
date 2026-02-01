@@ -18,6 +18,7 @@ const properCase = text => text.replace(/[^a-zA-Z1-9]/g, ' ').split(' ').map(w =
 export default function(eleventyConfig) {
 
     /* Passthrough Assets */
+    eleventyConfig.addPassthroughCopy("src/favicon.ico");
     eleventyConfig.addPassthroughCopy({ "src/assets": "/assets" });
 
     /* Watch Targets */
