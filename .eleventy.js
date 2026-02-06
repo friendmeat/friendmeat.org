@@ -1,10 +1,12 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import bundlePlugin from "@11ty/eleventy-plugin-bundle";
+import syntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
 import Image, { eleventyImageOnRequestDuringServePlugin } from "@11ty/eleventy-img";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import markdownItFootnote from "markdown-it-footnote";
 import markdownItAttrs from "markdown-it-attrs";
 import mathjax3 from "markdown-it-mathjax3";
+import markdownItCallouts from "markdown-it-callouts";
 import { escapeAttribute } from "entities";
 import * as cheerio from 'cheerio';
 import dayjs from "dayjs";
@@ -29,6 +31,7 @@ export default function(eleventyConfig) {
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(bundlePlugin);
     eleventyConfig.addPlugin(eleventyImageOnRequestDuringServePlugin);
+    eleventyConfig.addPlugin(syntaxHighlightPlugin);
 
     /* Bundle Plugin */
     eleventyConfig.addBundle("css");
@@ -172,7 +175,10 @@ export default function(eleventyConfig) {
             .use(mathjax3)
 
             // markdown footnotes plugin
-            .use(markdownItFootnote);
+            .use(markdownItFootnote)
+
+            // marakdown callouts plugin
+            .use(markdownItCallouts)
 
         return md
     });

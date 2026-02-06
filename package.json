@@ -5,21 +5,20 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "eleventy",
+    "build": "DEBUG=Eleventy:Fetch eleventy --incremental",
     "dev": "eleventy --serve",
-    "dev:incremental":"eleventy --serve --incremental",
-    "build": "DEBUG=Eleventy:Fetch eleventy --incremental"
+    "dev:incremental": "eleventy --serve --incremental"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.28.0",
+  "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a",
   "devDependencies": {
     "@11ty/eleventy": "4.0.0-alpha.6",
     "@11ty/eleventy-img": "7.0.0-alpha.2",
     "@11ty/eleventy-navigation": "^1.0.5",
-    "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@11ty/eleventy-plugin-bundle": "^3.0.7",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@11ty/nunjucks": "4.0.0-alpha.1",
     "@sindresorhus/slugify": "^3.0.0",
     "cheerio": "^1.1.2",
@@ -28,11 +27,12 @@
     "markdown-it-attrs": "^4.3.1",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^5.2.0",
-    "nunjucks-date-filter": "^0.1.1",
-    "markdown-it-footnote": "^4.0.0"
+    "nunjucks-date-filter": "^0.1.1"
   },
-  "dependencies": {},
-  "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a",
+  "dependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "markdown-it-callouts": "^1.1.0"
+  },
   "pnpm": {
     "overrides": {
       "esbuild@<=0.24.2": ">=0.25.0"
