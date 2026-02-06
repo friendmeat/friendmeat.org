@@ -43,18 +43,21 @@
     text-align: right;
     grid-column: 2;
 }
-{% endblock style %}
-{% macro paginationBlock() %}
+{%- endblock style -%}
+{%- macro paginationBlock() -%}
 <div class="pagination">
-    {% if pagination.href.previous %}
-    <div class="pagination-prev"><span class="pagination-arrow">&#x1f880;</span><a href="{{ pagination.href.previous }}">Previous</a></div>
-    {% endif %}
 
-    {% if pagination.href.next %}
-    <div class="pagination-next"><a href="{{ pagination.href.next }}">Next</a><span class="pagination-arrow">&#x1f882;</span></div>
-    {% endif %}
+{%- if pagination.href.previous -%}
+<div class="pagination-prev"><span class="pagination-arrow">&#x1f880;</span><a href="{{ pagination.href.previous }}">Previous</a></div>
+{%- endif -%}
+
+{%- if pagination.href.next -%}
+<div class="pagination-next"><a href="{{ pagination.href.next }}">Next</a><span class="pagination-arrow">&#x1f882;</span></div>
+
+{%- endif -%}
 </div>
 {% endmacro %}
+
 {% block content %}
 {{ super() }}
 {{ paginationBlock() }}
