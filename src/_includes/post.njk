@@ -1,6 +1,5 @@
 {% extends "default.njk" %}
-{% block style %}
-{{ super() }}
+{%- css -%}
 article {
     font-family: var(--type-serif);
 
@@ -75,9 +74,9 @@ article {
     color: var(--blue);
     font-size: 15pt;
 }
-{% endblock style %}
+{%- endcss -%}
 
-{% block head %}
+{%- block head -%}
 {% if headerImage.src %}
 <meta property="og:image" content="{{ meta.base }}{{ headerImage.src | threshold(800, 192) or meta.banner }}">
 <meta property="og:image:url" content="{{ meta.base }}{{ headerImage.src | threshold(800, 192) or meta.banner }}">

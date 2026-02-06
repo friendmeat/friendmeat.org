@@ -1,6 +1,5 @@
 {% extends "default.njk" %}
-{% block style %}
-{{ super() }}
+{% css %}
 .blog-post {
     margin: 4rem 0 0 0;
     contain: content;
@@ -43,7 +42,7 @@
     text-align: right;
     grid-column: 2;
 }
-{%- endblock style -%}
+{%- endcss -%}
 {%- macro paginationBlock() -%}
 <div class="pagination">
 
