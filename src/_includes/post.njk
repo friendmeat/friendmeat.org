@@ -107,7 +107,7 @@ article {
 {% block footer %}
 {% set prevPost = collections.posts | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
-{% if prevPost %}<div aria-label="Previous post" class="pagination-option prev-post"><a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a><span class="pagination-arrow">&#x1f882;</span></div>{% endif %}
-{% if nextPost %}<div aria-label="Next Post" class="pagination-option next-post"><span class="pagination-arrow">&#x1f880;</span><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></div>{% endif %}
+{% if prevPost %}<div aria-label="Previous post" class="pagination-option prev-post"><a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a><span class="pagination-arrow">==&gt;</span></div>{% endif %}
+{% if nextPost %}<div aria-label="Next Post" class="pagination-option next-post"><span class="pagination-arrow">&lt;==</span><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></div>{% endif %}
 {{ super() }}
 {% endblock footer %}
