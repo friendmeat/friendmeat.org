@@ -4,17 +4,11 @@ species: White-tailed Deer
 occupation: Nursing Student/Line Cook
 age: late-20s/early-30s
 moodboard: "https://holographicentrypoint.tumblr.com/tagged/amani"
+tags:
+    - ocs
 cover:
-    img: https://i.postimg.cc/59S7X9jk/F1-SHPtd-Xg-AA5-Gmr.png
+    src: https://i.postimg.cc/59S7X9jk/F1-SHPtd-Xg-AA5-Gmr.png
     alt: An anthro deer man doing a hip thrust
-images:
-    - img: https://i.postimg.cc/59S7X9jk/F1-SHPtd-Xg-AA5-Gmr.png
-      alt: An anthro deer man doing a hip thrust
-      page: /stuff/my-art/drawings/hip-thrust/
-    - img: https://i.postimg.cc/MTRrtwYf/2f36d660ba333b87.png
-      alt: The bust of an anthro deer man with a thought bubble emanativing from his cranium. The though bubble contains a curly symbol that looks like a penis.
-    - img: https://i.postimg.cc/7Zf9mDxj/163155aeb398c3f1.png
-      alt: An anthro deer man and an anthro raccoon man standing side-by-side. The deer has his arms crossed and a tired expression. The raccoon has a shirt that says 'Philadelphia- Where the weak are killed and eaten'
 ---
 
 ## Bio

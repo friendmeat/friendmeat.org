@@ -4,17 +4,11 @@ species: Dog/German Shepherd
 age: mid-late 20s
 occupation: ??
 moodboard: "https://holographicentrypoint.tumblr.com/tagged/train"
+tags:
+    - ocs
 cover:
-    img: https://i.postimg.cc/Jnmh4rtW/train-coverimg.jpg
+    src: https://i.postimg.cc/Jnmh4rtW/train-coverimg.jpg
     alt: An anthro dog wearing a torso harness
-images:
-    - img: https://i.postimg.cc/VkVHz75f/bafkreicpwf3nutih2rraccn33oocaoeknaee2nmkshdzww64qrusrnsntq.jpg
-      alt: An anthro dog wearing a torso harness
-      page: /stuff/my-art/drawings/train/
-    - img: https://i.postimg.cc/v8kYQkpw/bafkreiffktq42pg6snpcayxbgepjdpidiyok6763vraszd7b7rrjpuerim.jpg"
-      alt: a sketch of Train, a lithe dog man, nude, seen in profile
-      page: /stuff/my-art/drawings/train-2/
- 
 ---
 
 ## Bio

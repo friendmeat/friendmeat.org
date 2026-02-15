@@ -4,34 +4,27 @@ species: North American Raccoon
 age: mid/late-20s
 occupation: Customer Service/Experimental Musician
 moodboard: "https://holographicentrypoint.tumblr.com/tagged/jamie"
+tags:
+    - ocs
 cover:
-    img: https://i.postimg.cc/d32P7wyt/jamie-coverimg.jpg 
-    alt: 
-images:
-    - img: https://i.postimg.cc/j5Vg7LzB/bafkreieedjpuhpt6ei53d2ewh7lf6j5jzpzsyh34xiejnboiuq52adfkd4.jpg
-      alt: An anthro raccoon man kneeling over a midi keyboard and laptop
-      page: /stuff/my-art/drawings/knob-twiddler/
-    - img: https://i.postimg.cc/2yG2MGPf/Faue-LRw-X0-AEf-GMJ.jpg"
-      alt: An anthro racoon man dancing with static in the background"
-      page: /stuff/my-art/drawings/dance-1/
-    - img: https://i.postimg.cc/zGBcZmz2/bafkreib3xa5ausik7oxktleexulmrbkekqibi6typwt2q7e6uxbcfmdfwu.jpg"
-      alt: An anthro raccoon man smiling"
-      page: /stuff/my-art/drawings/sneer/
-    - img: https://i.postimg.cc/3JR5stJ6/joldfish-jamie-lined-monochrome.png"
-      alt: An anthro raccoon man crossing his arms and looking grumpy"
-      page: /stuff/commissions/jamie-by-joldfish/jamie-lined-monochrome/
-    - img: https://i.postimg.cc/7Zf9mDxj/163155aeb398c3f1.png
-      alt: An anthro deer man and an anthro raccoon man standing side-by-side. The deer has his arms crossed and a tired expression. The raccoon has a shirt that says 'Philadelphia- Where the weak are killed and eaten'
-    - img: https://i.postimg.cc/gJRB4pK6/e8a1bd86be7a379b.jpg
-      alt: A photograph of a piece of gardboard with an anthro raccoon man illustrated on it
-
+    src: https://i.postimg.cc/d32P7wyt/jamie-coverimg.jpg 
+    alt: Jamie
 playlist:
-    - title: ...We Are All Made Of Merde
-      artist: The Berg Sans Nipple
-      id: ""
+    - title: Brick Dust
+      artist: Prison Religion
+      id: Ug3FQK3kxAE
+    - title: Constant
+      artist: Xanopticon
+      id: pZrKnHQtqsg
+    - title: River Like Spine
+      artist: Jefre Cantu-Ledesma
+      id: 5P2lOjP_ozw
     - title: Little Panda McElroy
       artist: Xiu Xiu
-      id: ""
+      id: X8wOehNgaMM
+    - title: Flim
+      artist: Aphex Twin
+      id: -yNHlKAzyVA
 ---
 
 ## Bio
@@ -51,7 +44,7 @@ Jamie has a difficult relationship with his father. Jamie has a half-sister.
 ## Trivia 
 
 - Jamie is named after Jamie Stewart of Xiu Xiu
-- I decided on a raccoon because of two different encounters where raccoons surprised me
+- I decided on a raccoon because of two different encounters where raccoons scared me
 - Jamie was originally conceived as a fursona for a human OC
 
 

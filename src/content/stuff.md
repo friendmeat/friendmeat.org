@@ -13,6 +13,11 @@ eleventyNavigation:
 </figure>
 </a>
 {% endfor %}
-<!-- <a href="/stuff/ocs"> -->
-<!-- <figure><img src=""><figcaption>OCs</figcaption></figure> -->
-<!-- </a> -->
+
+{% set ocsCoverImg = collections.ocs | first %}
+<a href="/stuff/ocs">
+<figure class="collection-preview">
+    <img src="{{ ocsCoverImg.data.cover.src | threshold (500, 300) }}" alt="{{ ocsCoverImg.data.cover.alt }}">
+    <figcaption>Characters</figcaption>
+</figure>
+</a>

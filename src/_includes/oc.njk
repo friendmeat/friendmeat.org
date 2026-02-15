@@ -1,0 +1,48 @@
+{% extends "default.njk" %}
+
+{% css %}
+.oc-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.oc-playlist {
+    max-width: 400px;
+
+    &::part(yt-playlist-video-list) {
+        border: 1px dashed gray;
+        max-height: 250px;
+    }
+
+    &::part(yt-playlist-item-active){
+        border: 1px dashed var(--text);
+        background-color: var(--blue);
+    }
+}
+{% endcss %}
+
+{% block head %}
+{{ super() }}
+<script src="https://cdn.jsdelivr.net/npm/@friendmeat/yt-playlist-element@v0.0.3/dist/main.js" type="module"></script>
+{% endblock head %}
+
+{% block breadcrumb %}
+<a href="/stuff">Stuff</a>&nbsp;&#x2B9E;<a href="/stuff/ocs/">OCs</a>&nbsp;&#x2B9E;<span aria-current="page">{{ name }}</span>
+{% endblock breadcrumb %}
+
+{% block content %}
+<h2>{{ name }}</h2>
+<div class="oc-images">
+    {% for img in collections.ocImages[name] %}
+    <a href="{{ img.url }}">
+        <img src="{{ img.data.src }}" alt="{{ img.data.alt }}" />
+    </a>
+    {% endfor %}
+</div>
+{{ content | safe }}
+{% if playlist -%}
+<h3>Playlist</h3>
+<yt-playlist class="oc-playlist" data-yt-playlist='{{ playlist | dump | safe }}' />
+{%- endif %}
+{% endblock content %}
+
