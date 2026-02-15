@@ -32,6 +32,10 @@ content:
           label: Alt-text
           description: Image alt text
           type: string
+        - name: format
+          label: Threshold
+          description: Apply the Threshold filter to this imaage
+          default: true
       - name: topics
         label: Topics
         type: select
