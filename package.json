@@ -32,6 +32,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "markdown-it-callouts": "^1.1.0"
   },
+  "dependencies": {},
   "pnpm": {
     "overrides": {
       "esbuild@<=0.24.2": ">=0.25.0"
