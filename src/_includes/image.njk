@@ -5,8 +5,7 @@
 <meta property="og:image" content="{{ src }}">
 <meta property="og:image:alt" content="{{ alt }}">
 {% endblock head %}
-{% block style %}
-{{ super() }}
+{% css %}
 .other-imgs {
     display: block;
     list-style: none;
@@ -21,14 +20,14 @@
 .other-img-link {
     text-decoration: none;
 }
-{% endblock style %}
+{% endcss %}
 
 {% block nav %}
 {{ super() }}
 {% endblock nav %}
 
 {% block breadcrumb %}
-<a href="/stuff">Stuff</a>&nbsp;&#x2B9E;<a href="/stuff/{{ gallery | slugify }}/">{{ gallery }}</a>&nbsp;&#x2B9E;<a href="/stuff/{{ gallery | slugify }}/{{ collection | slugify }}">{{ collection | properCase }}</a>&nbsp;&#x2B9E;<span aria-current="page">{{ title }}</span>
+<a href="/stuff">Stuff</a>&nbsp;~><a href="/stuff/{{ gallery | slugify }}/">{{ gallery }}</a>&nbsp;~><a href="/stuff/{{ gallery | slugify }}/{{ collection | slugify }}">{{ collection | properCase }}</a>&nbsp;~><span aria-current="page">{{ title }}</span>
 {% endblock breadcrumb %}
 
 {% block content %}
