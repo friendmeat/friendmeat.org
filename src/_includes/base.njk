@@ -7,14 +7,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="{{ eleventy.generator }}" />
-  {% block head %}
+  {%- block head -%}
   <meta property="og:title" content="{{ pageTitle }}" />
   <meta property="og:url" content="{{ meta.base }}{{ page.url }}" />
   <title>{{ pageTitle }}</title>
-  {% endblock %}
-<style>
-{% block style %}
-{% css %}
+  {%- endblock -%}
+{%- css -%}
 @font-face {
     font-family: RGHPPsans;
     src: url("/assets/font/RGHPP Sans.woff2") format("woff2");
@@ -43,17 +41,17 @@ body {
     margin: 0;
 }
 
-{% endcss %}
-{% endblock %}
-</style>
+{%- endcss -%}
+{%- block style -%}
 <style>{% getBundle "css" %}</style>
+{%- endblock style -%}
 </head>
 
 <body>
-  {% block body %}
-  {{ content | safe }}
-  {% endblock body %}
-  <script>
+{%- block body -%}
+{{ content | safe }}
+{%- endblock body -%}
+<script>
 function loadTheme(){
       const savedTheme = localStorage.getItem("theme");
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -77,9 +75,8 @@ toggle.addEventListener("change", (e)=>{
 });
 
 loadTheme();
-  {% getBundle "js" %}
-
-  </script>
+{%- getBundle "js" -%}
+</script>
 </body>
 
 </html>
