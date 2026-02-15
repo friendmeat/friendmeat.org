@@ -244,6 +244,15 @@ export default function(eleventyConfig) {
         }
     });
 
+    eleventyConfig.addCollection("ocImages", collectionsApi => {
+        const allOcs = [...new Set(collectionsApi.getFilteredByTag("ocs").map(({ data }) => data.name))];
+        const allStuff = collectionsApi.getFilteredByTag("stuff")
+        return Object.fromEntries(allOcs.map(oc => [
+            oc,
+            allStuff.filter(({ data }) => data.tags.includes(oc.toLowerCase()))
+        ]));
+    });
+
     /* Template Pre-processing */
     eleventyConfig.addPreprocessor("videoLinks", "md", videoPreprocessor);
 

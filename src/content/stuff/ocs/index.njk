@@ -1,5 +1,17 @@
 ---
 layout: default
 permalink: "/stuff/ocs/"
+eleventyNavigation:
+    key: OCs
+    parent: Stuff
 ---
-
+{% block content %}
+{% for oc in collections.ocs %}
+<a href="/stuff/ocs/{{ oc.data.name | slugify }}">
+<figure class="collection-preview">
+    <img src="{{ oc.data.cover.src | threshold(500, 300) }}" alt="{{ oc.data.cover.alt }}">
+    <figcaption>{{ oc.data.name }}</figcaption>
+</figure>
+</a>
+{% endfor %}
+{% endblock content %}
