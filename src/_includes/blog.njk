@@ -47,11 +47,11 @@
 <div class="pagination">
 
 {%- if pagination.href.previous -%}
-<div class="pagination-prev"><span class="pagination-arrow">&#x1f880;</span><a href="{{ pagination.href.previous }}">Previous</a></div>
+<div class="pagination-prev"><span class="pagination-arrow">&lt;==</span><a href="{{ pagination.href.previous }}">Previous</a></div>
 {%- endif -%}
 
 {%- if pagination.href.next -%}
-<div class="pagination-next"><a href="{{ pagination.href.next }}">Next</a><span class="pagination-arrow">&#x1f882;</span></div>
+<div class="pagination-next"><a href="{{ pagination.href.next }}">Next</a><span class="pagination-arrow">==&gt;</span></div>
 
 {%- endif -%}
 </div>
