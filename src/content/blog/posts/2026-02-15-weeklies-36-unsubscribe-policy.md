@@ -4,6 +4,7 @@ date: 2026-02-15
 headerImage:
   src: https://i.postimg.cc/Gpys2KjG/20260213_145702(1).jpg
   alt: photo of an e-ink phone displaying the homepage from friendmeat.org
+  format: true
 topics:
   - weeklies
 description: the understudied legacy of Source Film Maker; self-hosting a PDS; I

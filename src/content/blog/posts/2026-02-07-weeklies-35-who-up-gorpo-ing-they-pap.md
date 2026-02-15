@@ -4,6 +4,7 @@ date: 2026-02-07
 headerImage:
   src: https://cdn.friendmeat.org/20260202_182821(1).jpg
   alt: Part of the Knight of Wands tarot card
+  format: true
 topics:
   - weeklies
 description: fanfiction from a foreign fandom; electro old and young; and a reified smirk
