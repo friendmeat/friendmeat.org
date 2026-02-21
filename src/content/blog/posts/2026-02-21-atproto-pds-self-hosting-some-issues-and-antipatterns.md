@@ -1,8 +1,6 @@
 ---
 title: "atproto pds self-hosting: some issues and antipatterns"
 date: 2026-02-21
-headerImage:
-  format: "false"
 topics:
   - tech
   - self-hosting
