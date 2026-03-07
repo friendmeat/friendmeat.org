@@ -34,7 +34,8 @@ content:
           type: string
         - name: format
           label: Threshold
-          description: Apply the Threshold filter to this imaage
+          description: Apply the Threshold filter to this image
+          type: boolean
           default: true
       - name: topics
         label: Topics
