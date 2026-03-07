@@ -1,5 +1,5 @@
 ---
-title: 'weeklies #38 - "Build Awesome" vs. The Ex That Put Me On Zoloft'
+title: "weeklies #38 - Build Awesome vs. The Ex That Put Me On Zoloft"
 date: 2026-03-07
 headerImage:
   src: https://i.postimg.cc/N0v9k4W3/tmp-f3fae7db-6651-4b02-b384-b287d4d49d40.png
@@ -51,7 +51,7 @@ reasons i hate this:
 - Font Awesome issued the prolegomenon "We're just 25 people". Don't sell yourself short, Font Awesome!; the executive cabinet of the U.S. government is just 15 people, and they can still get up to some world-historic evil.
 - "11ty" sounds like a sleek hacker tool. "build awesome" sounds like the tagline for a Roblox ad campaign.
 
-They've already [taken down and re-published](https://blog.fontawesome.com/pausing-kickstarter/) their Kickstarter because Gmail blocked their email campaign. Eleventy didn't need campaigns and Kickstarters to get where it is. The whole thing just leaves a bad taste in my mouth. But I also have a really Freudian attachment to the 11ty developer because of his resemblance to the ex who put me on SSRIs, so my unconscious 
+They've already [taken down and re-published](https://blog.fontawesome.com/pausing-kickstarter/) their Kickstarter because Gmail blocked their email campaign. Eleventy didn't need campaigns and Kickstarters to get where it is. The whole thing just leaves a bad taste in my mouth. But I also have a really Freudian attachment to the 11ty developer because of his resemblance to the ex who put me on SSRIs, so my unconscious might not let me let go of it.
 
 ## __a picture__:
 ![A graph titled "Toroidal University/Anti-University transition: in a CPT-symmetric universe, time would run backwards from the Big Bang and antimatter would dominate"](https://i.postimg.cc/N0v9k4W3/tmp-f3fae7db-6651-4b02-b384-b287d4d49d40.png)
