@@ -2,7 +2,7 @@
 title: erudite baby
 date: 2026-04-05
 headerImage:
-  format: true
+  format: false
 description: The life of the erudite baby
 ---
 Erudite baby only falls asleep to lullabies in blank verse.
