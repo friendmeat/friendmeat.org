@@ -4,7 +4,7 @@ date: 2025-11-16
 headerImage:
   src: https://i.postimg.cc/ZnGNHXgm/ufo.jpg
   alt: A painting of a UFO sighting
-  format: true
+  format: false
 topics:
   - weeklies
 description: my favorite UFO; the best movie about a murderous she/they pizza

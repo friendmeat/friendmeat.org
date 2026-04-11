@@ -5,7 +5,7 @@ headerImage:
   src: https://i.postimg.cc/DzkXZWp2/raccoons.gif
   alt: animated gif of pixel-art raccoons bouncing against each other like pool
     balls in a frictionless void
-  format: true
+  format: false
 topics:
   - weeklies
 description: the unofficial uncs of web horror return; a competitive price tag

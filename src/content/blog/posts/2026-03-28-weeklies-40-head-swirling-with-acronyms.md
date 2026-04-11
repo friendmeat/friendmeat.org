@@ -4,7 +4,7 @@ date: 2026-03-28
 headerImage:
   src: https://i.postimg.cc/R03mfp1Q/cables.jpg
   alt: a rat's nest of cables
-  format: true
+  format: false
 topics:
   - weeklies
 description: the evergreen crisis of "Chappel Roan was mean"; thirstposting for

@@ -2,9 +2,9 @@
 title: "weeklies #35 - who up gorpo-ing they pap"
 date: 2026-02-07
 headerImage:
-  src: https://cdn.friendmeat.org/20260202_182821(1).jpg
+  src: https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20260202_182821(1).jpg
   alt: Part of the Knight of Wands tarot card
-  format: true
+  format: false
 topics:
   - weeklies
 description: fanfiction from a foreign fandom; electro old and young; and a reified smirk
@@ -60,7 +60,8 @@ my place of work is part of this blended work-shop-live downtown hub; an aberrat
 There's a food court where I eat every day. A lot of homeless people hang out there to stay warm. As of Monday, the management has put little cards on every single table saying "Reserved for food court patrons only". It's such a petty cruelty, a reified smirk, a gesture not even rising to the level of hostile design-- just a sign that says "you're not wanted".
 
 ## __a picture__
-![My mitten'd hand holding the Knight of Wands tarot card](https://cdn.friendmeat.org/20260202_182821.jpg)
+![My mitten'd hand holding the Knight of Wands tarot card](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20260202_182821.jpg)
+![My mitten'd hand holding the Knight of Wands tarot card](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20260202_182821.jpg)
 
 After years of being a naysayer and skeptic, I have been recently thinking about buying a tarot deck. Don't @ me. I'm still a historical materialist bro. It's just for fun bro. Bro. 
 

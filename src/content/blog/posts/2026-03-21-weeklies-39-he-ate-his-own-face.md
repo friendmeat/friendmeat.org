@@ -4,7 +4,7 @@ date: 2026-03-21
 headerImage:
   src: https://i.postimg.cc/3xYtDHTG/IMG-20260311-052405-232.jpg
   alt: Out-of-focus picture of some fire trucks in an alley, taken from my roof
-  format: true
+  format: false
 topics:
   - weeklies
 description: Nietzsche; Kilo Kish; and hard drives? In this economy?

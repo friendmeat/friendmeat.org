@@ -6,7 +6,7 @@ headerImage:
   alt: 'A graph titled "Toroidal University/Anti-University transition: in a
     CPT-symmetric universe, time would run backwards from the Big Bang and
     antimatter would dominate"'
-  format: true
+  format: false
 topics:
   - weeklies
 description: '"Technologies of participation", LustSickPuppy, the Venture Bros,

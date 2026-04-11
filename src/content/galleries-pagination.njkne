@@ -1,0 +1,33 @@
+---
+layout: default
+permalink: "/stuff/{{ gallery.title | slugify }}/"
+pagination:
+    data: collections.galleries
+    size: 1
+    alias: gallery
+---
+{% block breadcrumb %}
+<a href="/stuff">Stuff</a>&nbsp;~><span aria-current="page">{{ gallery.key }}</span> 
+{% endblock breadcrumb %}
+
+{% block content %}
+<div>
+    {% for collection in gallery.collections %}
+        <div>
+            <a href="/stuff/{{ gallery.title | slugify }}/{{ collection.title | slugify }}/">
+                <figure class="preview collection-preview">
+                    <img src="{%- set collectionCover = collection.cover.src | threshold(500, 300) -%}
+                    {%- if collection.title == "NSFW" %}
+                        {{ ["dist", collectionCover] | join | censor }}
+                    {% else %}
+                        {{ collectionCover }}
+                    {% endif -%}
+                    "
+                    alt="{{ collection.cover.alt }}" />
+                    <figcaption>{{ collection.key }}</figcaption>
+                </figure>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %}

@@ -2,10 +2,10 @@
 title: "weeklies #24 - ENTITIES"
 date: 2025-10-18
 headerImage:
-  src: https://cdn.friendmeat.org/Screenshot_20251018_082145_Crossword.jpg
+  src: https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/Screenshot_20251018_082145_Crossword.jpg
   alt: "a screenshot of a crossword with the hint: \"One from a stable home?\".
     The answer is 'HORSE'"
-  format: true
+  format: false
 topics:
   - weeklies
 description: dystopian genderfuckery in Amiyatzin Buentello's "ELECTRONIC EYE",
@@ -58,6 +58,7 @@ I regret ever posting this fucking sissy islamification fetish image as a meme
 Every once in a while in a while it gets a like from some kind of kink bot. They must be bots. A human being would understand that i posted this as a joke and I'm not into this. 
 
 ## __a picture__:
-![a screenshot of a crossword with the hint: "One from a stable home?". The answer is 'HORSE'](https://cdn.friendmeat.org/Screenshot_20251018_082145_Crossword.jpg)
+![a screenshot of a crossword with the hint: "One from a stable home?". The answer is 'HORSE'](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/Screenshot_20251018_082145_Crossword.jpg)
+![a screenshot of a crossword with the hint: "One from a stable home?". The answer is 'HORSE'](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/Screenshot_20251018_082145_Crossword.jpg)
 
 Authors of crossword puzzle hints: your days are fucking numbered.

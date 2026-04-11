@@ -2,9 +2,9 @@
 title: "weeklies #25 - st. louis"
 date: 2025-10-26
 headerImage:
-  src: https://cdn.friendmeat.org/20251021_233429.jpg
+  src: https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20251021_233429.jpg
   alt: the underside of a bar toilet seat with a sticker of a blushing bunny furry
-  format: true
+  format: false
 topics:
   - weeklies
 description: "my bender in st. louis. "
@@ -24,7 +24,8 @@ Eventually another person arrived. We exchanged names and pronouns and she joine
 
 Bestie threw up so we had to leave, but I gave new person a hug and thanked her for being the life of the party. 
 ### Louis the Raccoon
-![An adorable raccoon plushie](https://cdn.friendmeat.org/20251020_231940(1).jpg)
+![An adorable raccoon plushie](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20251020_231940(1).jpg)
+![An adorable raccoon plushie](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20251020_231940(1).jpg)
 I've been thinking about raccoons the past few years and have decided I think they're very cute, and truly awful creatures. They destroy everything they touch. They try to tear open everything they can get their hands on. They slaughter chickens through fences and don't even eat any of them. I don't want a living one anywhere near me. 
 
 So instead, I've been looking at raccoon plushies. The internet was very unhelpful. Etsy had no middle ground: it was either low-effort abstract patchwork animals or full taxidermy. I had given up hope
@@ -34,13 +35,15 @@ At the end of our day at the Zoo, I turned a corner in the plushie section and s
 I named them Louis because it's from St. Louis. His pronouns are he/they/it.
 
 ### Gay Bars 2-4
-![a cat sitting pretty on a concrete step](https://cdn.friendmeat.org/20251023_181026(1).jpg)
+![a cat sitting pretty on a concrete step](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20251023_181026(1).jpg)
+![a cat sitting pretty on a concrete step](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20251023_181026(1).jpg)
 I don't sleep well when I drink. We had done Gay Bar 1 the night before, and with 3-ish shots and a beer in me, I only slept for 4 hours. I had been up since 5 am. I was miserable. Sober, exhausted, and surrounded by annoying gays, I grieved the absence of a quiet corner and beautiful transgender philosopher to grant me refuge.
 
 It was not my most graceful evening. I don't take for granted the forgiveness besties showed me for my bitchiness, but I also don't ever want to have to go through that again.
 
 ### SLAM
-![_Standing Woman_ by Gaston Lachaise, a bronze sculpture of a voluptuous nude woman.](https://cdn.friendmeat.org/20251021_125702(1).jpg)
+![_Standing Woman_ by Gaston Lachaise, a bronze sculpture of a voluptuous nude woman.](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20251021_125702(1).jpg)
+![_Standing Woman_ by Gaston Lachaise, a bronze sculpture of a voluptuous nude woman.](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20251021_125702(1).jpg)
 Four enormous, two-story-tall paintings took up the entry hall of the St. Louis Art Museum. They were part of [_Becoming the Sea_](https://www.slam.org/exhibitions/anselm-kiefer-becoming-the-sea/), a show by Anselm Kiefer. No pictures can do those canvases justice. 
 
 The SLAM is underrated.
@@ -97,5 +100,6 @@ being drunk
 being sober around people who are drunk
 
 ## __a picture__:
-![the underside of a bar toilet seat with a sticker of a blushing bunny furry](https://cdn.friendmeat.org/20251021_233429.jpg)
+![the underside of a bar toilet seat with a sticker of a blushing bunny furry](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20251021_233429.jpg)
+![the underside of a bar toilet seat with a sticker of a blushing bunny furry](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20251021_233429.jpg)
 which one of you fuckers put this here

@@ -1,7 +1,7 @@
 ---
 collection: sniper by john
 title: Raccoon Sniper
-src: https://cdn.friendmeat.org/raccoonsniper/tf2hifashighiahisg-bklines-solid.png
+src: https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/raccoonsniper/tf2hifashighiahisg-bklines-solid.png
 alt: A painting of the sniper from TF2 as a cute and grumpy raccoon
 collectionCover: false
 artist:

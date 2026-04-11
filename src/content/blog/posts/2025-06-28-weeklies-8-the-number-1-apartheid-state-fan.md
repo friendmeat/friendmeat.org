@@ -4,7 +4,7 @@ date: 2025-06-28
 headerImage:
   src: https://i.postimg.cc/bN7f9pZf/0479735-001.jpg
   alt: a chicken statue in front of an industrial landscape
-  format: true
+  format: false
 topics:
   - weeklies
 description: deleuze on genocide; terrible sci-fi novel covers; gelli haha; mini wheats

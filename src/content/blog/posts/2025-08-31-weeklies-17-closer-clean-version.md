@@ -4,7 +4,7 @@ date: 2025-08-31
 headerImage:
   src: https://i.postimg.cc/gJ9sz8BT/bandicoot.jpg
   alt: infant bandicoots suckling at teats
-  format: true
+  format: false
 topics:
   - weeklies
 description: "why my well-meaning liberal family members are wrong to be worried

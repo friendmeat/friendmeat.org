@@ -2,9 +2,9 @@
 title: "weeklies #34 - i owe you something yummy to eat"
 date: 2026-01-31
 headerImage:
-  src: https://cdn.friendmeat.org/big-night-for-hockey.jpg
+  src: https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/big-night-for-hockey.jpg
   alt: The "live slug reaction" meme but the text says "big night for hockey"
-  format: true
+  format: false
 topics:
   - weeklies
 description: a doomer VN for robotfuckers; dolphins, LSD and cellphones; the hockey show
@@ -32,7 +32,8 @@ The answer was no. There's almost nothing redeeming about this show. They forgot
 
 The best moment for me was when the hockey fag makes a grand coming-out gesture by bringing his secret boyfriend out to kiss on the ice after Winning The Big Game, and the only thing the announcer can say is "...Big night for hockey!"
 
-![The "live slug reaction" meme but the text says "big night for hockey"](https://cdn.friendmeat.org/big-night-for-hockey.jpg)
+![The "live slug reaction" meme but the text says "big night for hockey"](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/big-night-for-hockey.jpg)
+![The "live slug reaction" meme but the text says "big night for hockey"](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/big-night-for-hockey.jpg)
 
 ## __what i'm playing__
 ### "Let Lie." by Carrioff
@@ -75,6 +76,7 @@ learning about css features like `attr()` and`counter()` got my gears turning wi
 
 I just feel kinda dumb. Other people have made full-fledged [puzzle boxes](https://suricrasia.online/puzzlebox/) and [clicker games](https://lyra.horse/css-clicker/) in just HTML/CSS. I struggle to make something wiggle if you hover on it. 
 ## __a picture__:
-![a landscape made indistinct by a blizzard. It's hard to tell if it's a field or a lake](https://cdn.friendmeat.org/20260125_122500.jpg)
+![a landscape made indistinct by a blizzard. It's hard to tell if it's a field or a lake](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20260125_122500.jpg)
+![a landscape made indistinct by a blizzard. It's hard to tell if it's a field or a lake](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20260125_122500.jpg)
 
 it's skee mask compro as fuck out

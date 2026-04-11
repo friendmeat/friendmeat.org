@@ -2,7 +2,7 @@
 title: things i liked in 2025
 date: 2025-12-27
 headerImage:
-  src: https://cdn.friendmeat.org/2025_collage.jpg
+  src: https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/2025_collage.jpg
   alt: "A collage of creators of things I liked this year, from right to left:
     underscores, Estratosfera from EQ, the anime girl from james K's \"Friend\"
     album, Qiri from EQ, and Joel Petroykus. "
@@ -71,7 +71,8 @@ Take the cultural memory of _Lain_: one of the most popular neocities sites, [fa
 While referencing _Lain_ or _Evangelion_ just for "the vibe" may not engage explicitly with their critiques, it does orient these works towards an earlier era with a feeling of greater *potential*, when there were still off-ramps from techno-dystopia. In the 90s, it was easier for *Lain* to critique the internet since the Web/Wired's boundaries were still relatively defined. Nowadays, your job, bank, TV shows, hobbies, and social life are all wired; the boundaries are murky, if they exist at all, and a critique now has to contend with a million facets of a net-saturated world. 
 
 ## Artist Of The Year: underscores
-![underscores a.k.a. April Harper Grey in the music video for her song "Music"](https://cdn.friendmeat.org/underscores.png)
+![underscores a.k.a. April Harper Grey in the music video for her song "Music"](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/underscores.png)
+![underscores a.k.a. April Harper Grey in the music video for her song "Music"](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/underscores.png)
 
 I'm late to the party, but I'm finally getting on the underscores train just it time for what's shaping up to be the 2026 AOTY. 
 

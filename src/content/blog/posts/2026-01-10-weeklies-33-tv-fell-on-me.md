@@ -2,9 +2,9 @@
 title: "weeklies #33 - tv fell on me"
 date: 2026-01-10
 headerImage:
-  src: https://cdn.friendmeat.org/hole.jpg
+  src: https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/hole.jpg
   alt: hole
-  format: true
+  format: false
 topics:
   - weeklies
 description: tv fell on me
@@ -48,4 +48,5 @@ Reading [*Christian Eschatology of Artificial Intelligence: Pastoral Technologie
 tv fell on me
 ## __a picture__:
 ### tv fell on me
-![A flatscreen TV on the ground next to a ladder](https://cdn.friendmeat.org/tv-fell-on-me_full.jpg)
+![A flatscreen TV on the ground next to a ladder](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/tv-fell-on-me_full.jpg)
+![A flatscreen TV on the ground next to a ladder](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/tv-fell-on-me_full.jpg)

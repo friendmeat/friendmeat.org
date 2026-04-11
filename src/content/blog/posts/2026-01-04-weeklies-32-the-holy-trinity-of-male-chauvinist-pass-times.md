@@ -2,9 +2,9 @@
 title: "weeklies #32 - the holy trinity of male chauvinist pass-times"
 date: 2026-01-04
 headerImage:
-  src: https://cdn.friendmeat.org/20260102_200621(1).jpg
+  src: https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20260102_200621(1).jpg
   alt: a horrible solder job
-  format: true
+  format: false
 topics:
   - weeklies
 description: "what i did with my break, and: my new years resolution"
@@ -19,7 +19,8 @@ I am now an **Arch User™**. I formatted and re-partitioned my laptop's 1TB SSD
 ### bought and used a soldering iron
 I bought a $80 soldering station to fix a reading lamp that was maybe $10 off A\*\*\*\*n.
 
-![a solder job which elicits laughter](https://cdn.friendmeat.org/20260102_200621(1).jpg)
+![a solder job which elicits laughter](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20260102_200621(1).jpg)
+![a solder job which elicits laughter](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/20260102_200621(1).jpg)
 
 I showed my friend this and he said "jesus". It's my first time!!! Leave me alone!!!
 

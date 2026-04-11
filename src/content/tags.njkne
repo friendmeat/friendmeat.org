@@ -1,0 +1,13 @@
+---
+layout: default 
+permalink: /blog/tags/
+eleventyNavigation:
+    key: Tags
+    parent: Blog
+---
+
+<p>All tags:</p>
+{% set allTags = collections.topics | groupby("topic") | dictsort %}
+{% for tag in allTags %}
+<li><a href="/blog/tags/{{ tag[0] }}">{{ tag[0] }} ({{ tag[1] | flatmap("posts") | length }})</a></li>
+{% endfor %}

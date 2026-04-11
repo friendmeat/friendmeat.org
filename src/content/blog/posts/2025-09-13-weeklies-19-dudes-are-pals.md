@@ -3,7 +3,7 @@ title: "weeklies #19 - dudes are pals"
 headerImage:
   src: https://i.postimg.cc/Xq6syDzn/fish-euthenasia.jpg
   alt: Fish Euthenasia
-  format: true
+  format: false
 topics:
   - weeklies
 description: on an avant-garde film-poem from a local artist; emotionally

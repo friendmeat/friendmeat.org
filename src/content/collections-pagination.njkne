@@ -1,0 +1,13 @@
+---
+layout: gallery
+pagination:
+    data: collections.imageCollections
+    size: 1 
+    alias: collection
+permalink: "/stuff/{{ collection.gallery | slugify }}/{{ collection.title | slugify }}/"
+eleventyComputed:
+    title: "{{ collection.key }}"
+    eleventyNavigation: 
+        key: "{{ collection.key }}"
+        parent: "{{ collection.gallery }}"
+---

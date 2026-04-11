@@ -2,9 +2,9 @@
 title: "weeklies #20 - tgirls with doohikies"
 date: 2025-09-20
 headerImage:
-  src: https://cdn.friendmeat.org/deathsanjuro.png
+  src: https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/deathsanjuro.png
   alt: the blood explosion from Sanjuro
-  format: true
+  format: false
 topics:
   - weeklies
 description: books is exactly like DJing, grooving to a japanese-colombian
@@ -59,6 +59,7 @@ we could go back to the stone ages and self-host everything, use IRC and never, 
 this was supposed to be me complaining about Bluesky people not knowing their options, but it just turned into a 'touch grass' thing. uhhhh. whoops.
 
 ## __a picture__:
-![the scene from Sanjuro where blood explodes out of a guy](https://cdn.friendmeat.org/deathsanjuro.png)
+![the scene from Sanjuro where blood explodes out of a guy](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/deathsanjuro.png)
+![the scene from Sanjuro where blood explodes out of a guy](https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/deathsanjuro.png)
 
 Post 1 image to describe your hysterectomy
