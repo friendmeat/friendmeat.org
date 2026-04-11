@@ -86,7 +86,10 @@ export default function(eleventyConfig) {
 
     // Crop and threshold opengraph images
     eleventyConfig.addFilter("threshold", async function(src, width = 500, height = 120, sizes = [500], threshold = 128) {
+        // return `${OUTPUT_DIR}/assets/src`
         //!TODO add "sizes" arg and return multiple urls to generate srcsets
+        try {
+    
         return await Image(src, {
             formats: ["webp"],
             cacheDuration: "1w",
@@ -100,7 +103,12 @@ export default function(eleventyConfig) {
         })
             .then(({ webp }) => webp[0])
             .then(data => data.url);
-    });
+
+        } catch (error) {
+            console.error(error);
+            return ""
+        }
+        });
 
     eleventyConfig.addFilter("thresholdPicture", async function(src, alt, widths = [300, 600], height = 120, threshold = 128) {
         return await Image(src, {
