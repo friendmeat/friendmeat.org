@@ -92,7 +92,7 @@ article {
 {% block content %}
 <h1 class="post-title">{{ title }}</h1>
 <small class="post-description">{{ description }}</small>
-{% if headerImage %}
+{% if headerImage.src %}
 <picture class="post-banner">
 <img src="{{ headerImage.src | threshold(500, 192) }}" alt="{{ headerImage.alt }}" loading="lazy" decoding="async" />
 </picture>
