@@ -18,7 +18,7 @@ description: I read the Constitution to respond to a tumblr post about fanfictio
 The sentence known as the "Intellectual Property Clause" of the U.S. Constitution (Article 1, Section 8 Clause 8) states:
 > The Congress shall have Power... To promote the Progress of Science and useful Arts, by securing for limited Times to Authors and Inventors the exclusive Right to their respective Writings and Discoveries
 
-As Walterscheid^[1] discusses, patents and copyright were absent in the Articles of Confederation, but existed in British common law for centuries (p. 10). The Continental Congress advised the nascent states to come up with their own copyright laws, justifying:
+As Walterscheid[^1] discusses, patents and copyright were absent in the Articles of Confederation, but existed in British common law for centuries (p. 10). The Continental Congress advised the nascent states to come up with their own copyright laws, justifying:
 > \[N]othing is more properly a man's own than the fruit of his study, and that the protection and security of literary property would greatly tend to encourage genius, to promote useful discoveries and to the general extension of arts and commerce. (qtd. Waltersheid p. 20.)
 
 "Promote... useful Arts" and "encourage genius" are some vague concepts. Waltersheid wonders why the Framer couldn't have granted Congress management of patents and copyright under other clauses in Article 1 regulating commerce (p. 26-27).
