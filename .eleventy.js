@@ -3,10 +3,12 @@ import bundlePlugin from "@11ty/eleventy-plugin-bundle";
 import syntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
 import Image, { eleventyImageOnRequestDuringServePlugin } from "@11ty/eleventy-img";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import pluginTOC from '@uncenter/eleventy-plugin-toc';
 import markdownItFootnote from "markdown-it-footnote";
 import markdownItAttrs from "markdown-it-attrs";
 import mathjax3 from "markdown-it-mathjax3";
 import markdownItCallouts from "markdown-it-callouts";
+import markdownItAnchor from "markdown-it-anchor";
 import { escapeAttribute } from "entities";
 import * as cheerio from 'cheerio';
 import dayjs from "dayjs";
@@ -32,6 +34,7 @@ export default function(eleventyConfig) {
     eleventyConfig.addPlugin(bundlePlugin);
     eleventyConfig.addPlugin(eleventyImageOnRequestDuringServePlugin);
     eleventyConfig.addPlugin(syntaxHighlightPlugin);
+    eleventyConfig.addPlugin(pluginTOC);
 
     /* Bundle Plugin */
     eleventyConfig.addBundle("css");
@@ -188,7 +191,10 @@ export default function(eleventyConfig) {
             // marakdown callouts plugin
             .use(markdownItCallouts)
 
-        return md
+            // add ids to headings
+            .use(markdownItAnchor)
+
+        // return md
     });
 
 
@@ -279,13 +285,7 @@ export default function(eleventyConfig) {
             const $ = cheerio.load(content);
             $("article")
                 .find("h1, h2, h3, h4, h5, h6")
-                .map(function() {
-                    const el = $(this);
-                    const text = slugify(el.text(), { customReplacements: [[':', ''], ["'", '']] });
-                    el
-                        .attr("id", text)
-                        .append(`<a class="header-anchor-link" href="#${text}">${sectionSymbol}</a>`);
-                });
+                .map(function(){$(this).append(`<a class="header-anchor-link" href="#${$(this).attr('id')}">${sectionSymbol}</a>`)});
             content = $.html();
         }
         return content

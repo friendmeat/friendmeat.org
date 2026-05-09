@@ -1,5 +1,29 @@
 {% extends "default.njk" %}
 {%- css -%}
+.flash {
+    position: relative;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: linear-gradient(90deg, var(--blue), var(--bg));
+        background-size: cover;
+        z-index: -100;
+        animation: flash ease-out 3000ms;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 article {
     font-family: var(--type-serif);
 
@@ -89,6 +113,11 @@ article {
 {{ super() }}
 {% endblock head %}
 
+{% block sidebarLeft %}
+<h4>Contents</h4>
+{{ content | toc(tags=['h2']) | safe }}
+{% endblock sidebarLeft %}
+
 {% block content %}
 <h1 class="post-title">{{ title }}</h1>
 <small class="post-description">{{ description }}</small>
@@ -99,6 +128,10 @@ article {
 {% endif %}
 {{ macros.blogPostInfo({date: date, tags: topics}) }}
 <hr />
+<details>
+<summary>Contents</summary>
+<div>{{ content | toc | safe }}</div>
+</details>
 <article>
 {{ super() }}
 </article>
@@ -111,3 +144,20 @@ article {
 {% if nextPost %}<div aria-label="Next Post" class="pagination-option next-post"><span class="pagination-arrow">&lt;==</span><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></div>{% endif %}
 {{ super() }}
 {% endblock footer %}
+
+{% js %}
+window.addEventListener("DOMContentLoaded", ()=>{
+    document.querySelectorAll("nav.toc a").forEach(el=>{
+        let timeoutHandle;
+        const header = document.getElementById(el.getAttribute("href").slice(1));
+        el.addEventListener("click", ()=>{
+           if (!timeoutHandle) {
+                header.classList.add("flash");
+                timeoutHandle = setTimeout(()=>{
+                    header.classList.remove("flash");
+                    timeoutHandle = 0;
+            }, 3000)
+       } 
+    })})
+});
+{% endjs %}
