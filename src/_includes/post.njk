@@ -132,10 +132,12 @@ article {
 {% endif %}
 {{ macros.blogPostInfo({date: date, tags: topics}) }}
 <hr />
-<details>
+{% if content | toc %}
+<details open>
 <summary>Contents</summary>
 <div>{{ content | toc | safe }}</div>
 </details>
+{% endif %}
 <article>
 {{ super() }}
 </article>
