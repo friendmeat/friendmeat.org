@@ -113,10 +113,14 @@ article {
 {{ super() }}
 {% endblock head %}
 
+{#
 {% block sidebarLeft %}
+{%- if content | toc -%}
 <h4>Contents</h4>
 {{ content | toc(tags=['h2']) | safe }}
+{%- endif -%}
 {% endblock sidebarLeft %}
+#}
 
 {% block content %}
 <h1 class="post-title">{{ title }}</h1>
@@ -128,10 +132,12 @@ article {
 {% endif %}
 {{ macros.blogPostInfo({date: date, tags: topics}) }}
 <hr />
-<details>
+{% if content | toc %}
+<details open>
 <summary>Contents</summary>
 <div>{{ content | toc | safe }}</div>
 </details>
+{% endif %}
 <article>
 {{ super() }}
 </article>
