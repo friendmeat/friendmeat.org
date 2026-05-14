@@ -4,8 +4,42 @@
 {{ super() }}
 <meta property="og:image" content="{{ src }}">
 <meta property="og:image:alt" content="{{ alt }}">
-{% endblock head %}
-{% css %}
+{# {% css %} #}
+<style>
+.lightbox-button {
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    background-color: transparent;
+    color: inherit;
+}
+
+#lightbox {
+    img {
+        max-height: 90lvh;
+    }
+
+    transition: opacity 200ms, transform 200ms, display 200ms allow-discrete;
+    opacity: 0;
+    transform: translateY(-5%);
+
+    &:popover-open {
+        opacity: 1;
+        transform: translateY(0);
+
+        @starting-style {
+            opacity: 0;
+            transform: translateY(5%);
+        }
+    }
+}
+
+img {
+    cursor: pointer;
+}
+
 .other-imgs {
     display: block;
     list-style: none;
@@ -20,7 +54,9 @@
 .other-img-link {
     text-decoration: none;
 }
-{% endcss %}
+</style>
+{# {% endcss %} #}
+{% endblock head %}
 
 {% block nav %}
 {{ super() }}
@@ -32,12 +68,19 @@
 
 {% block content %}
 {{ super() }}
+<dialog id="lightbox" closedby="any" popover>
+    <button class="lightbox-button" popovertarget="lightbox" popovertargetaction="hide">
+        <img class="lightbox-img" loading="lazy" decoding="async" src="{{ src }}" alt="{{ alt }}" />
+    </button>
+</dialog>
+<button class="lightbox-button" popovertarget="lightbox" popovertargetaction="show">
 <figure>
     <img src="{{ src }}" alt="{{ alt }}">
     <figcaption>
         <em>{{ description }}</em><p>{{ title }}{% if artist %} by {{artist.name}} (<a href="{{ artist.site }}" target="_blank">{{ artist.handle }}</a>){% endif %}</p>
     </figcaption>
 </figure>
+</button>
 {% if cc0 %}
 <a href="{{ page.url }}">{{ title }}</a> by <a href="{{ meta.site }}">{{ meta.title }}</a> is marked <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a><img src="/assets/img/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="/assets/img/zero.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 {% endif %}
