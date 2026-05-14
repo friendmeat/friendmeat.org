@@ -1,6 +1,42 @@
 {% extends "default.njk" %}
 
-{% css %}
+{% block head %}
+{{ super() }}
+<script src="https://cdn.jsdelivr.net/npm/@friendmeat/yt-playlist-element@v0.0.3/dist/main.js" type="module"></script>
+<style>
+.lightbox-button {
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+dialog[id^="lightbox"]{
+    img {
+        max-height: 90lvh;
+        margin: 0;
+    }
+
+    transition: opacity 200ms, transform 200ms, display 200ms allow-discrete;
+    opacity: 0;
+    transform: translateY(-5%);
+
+
+    &:popover-open {
+        opacity: 1;
+        transform: translateY(0);
+
+        @starting-style {
+            opacity: 0;
+            transform: translateY(5%);
+        }
+    }
+}
+
 .oc-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -19,11 +55,7 @@
         background-color: var(--blue);
     }
 }
-{% endcss %}
-
-{% block head %}
-{{ super() }}
-<script src="https://cdn.jsdelivr.net/npm/@friendmeat/yt-playlist-element@v0.0.3/dist/main.js" type="module"></script>
+</style>
 {% endblock head %}
 
 {% block breadcrumb %}
@@ -34,9 +66,15 @@
 <h2>{{ name }}</h2>
 <div class="oc-images">
     {% for img in collections.ocImages[name] %}
-    <a href="{{ img.url }}">
+    <dialog id="lightbox-{{ loop.index }}" closedby="any" popover>
+        <figure>
+        <img src="{{ img.data.src }}" alt="{{ img.data.alt }}" loading="lazy" decoding="async" />
+        <figcaption><a href="{{ img.url }}">{{ img.data.title }}</a></figcaption>
+        </figure>
+    </dialog>
+    <button class="lightbox-button" popovertarget="lightbox-{{ loop.index }}">
         <img src="{{ img.data.src }}" alt="{{ img.data.alt }}" />
-    </a>
+    </button>
     {% endfor %}
 </div>
 {{ content | safe }}
