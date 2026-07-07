@@ -1,0 +1,70 @@
+---
+layout: default
+permalink: /stuff/
+eleventyNavigation:
+    key: Stuff
+    order: 3
+tags: []
+---
+{% css %}
+.stuff-links {
+    list-style: none;
+    padding: 0;
+}
+
+{% endcss %}
+{% set covers = collections.galleryCovers %}
+{% block content %}
+<ul class="stuff-links">
+    <li class="stuff-link">
+        <a href="photos">
+            <figure class="collection-preview">
+                <img src="{{ covers['photos'].src | threshold }}" alt="{{ covers['photos'].alt }}" width="600" height="300" />
+                <figcaption class="stuff-label">
+                    Photos
+                </figcaption>
+            </figure>
+        </a>
+    </li>
+    <li>
+        <a href="my-art">
+            <figure class="collection-preview">
+                <img src="{{ covers['My Art'].src | threshold }}" alt="{{ covers['My Art'].alt }}" width="600" height="300"/>
+                <figcaption class="stuff-label">
+                    My Art
+                </figcaption>
+            </figure>
+        </a>
+    </li>
+    <li>
+        <a href="commissions">
+            <figure class="collection-preview">
+                <img src="{{ covers['Commissions'].src | threshold }}" alt="{{ covers['Commissions'].alt }}" width="600" height="300"/>
+                <figcaption class="stuff-label">
+                    Commissions
+                </figcaption>
+            </figure>
+        </a>
+    </li>
+    <li>
+        <a href="ocs">
+            <figure class="collection-preview">
+                <img src="{{ "https://i.postimg.cc/59S7X9jk/F1SHPtd-Xg-AA5Gmr.png" | threshold }}" alt="" width=600 height=300 />
+                <figcaption class="stuff-label">
+                    Characters
+                </figcaption>
+            </figure>
+        </a>
+    </li>
+    {# <li>
+        <a href="writing">
+            <figure class="stuff-figure">
+                <img src="" alt="" />
+                <figcaption>
+                Writing
+                </figcaption>
+            </figure>
+        </a>
+    </li> #}
+</ul>
+{% endblock %}

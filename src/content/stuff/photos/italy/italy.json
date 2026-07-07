@@ -1,0 +1,10 @@
+{
+	"date": "2026-06-30",
+	"year":"2026",
+	"tags":["italy"],
+	"collection":"Italy",
+	"eleventyNavigation": {
+		"parent":"Photos",
+		"key":"Italy"
+	}
+}

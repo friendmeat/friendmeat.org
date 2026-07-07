@@ -7,7 +7,7 @@ eleventyNavigation:
     order: 4
 ---
 
-![friendmeat](https://i.postimg.cc/g27c2pjL/friendmeat.jpg){class=about__photo}
+![friendmeat](https://i.postimg.cc/g27c2pjL/friendmeat.jpg){class=about__photo}{width=600}
 
 ## about me
 

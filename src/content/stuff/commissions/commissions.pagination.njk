@@ -1,0 +1,11 @@
+---
+layout: photo-gallery
+eleventyExcludeFromCollections: true
+pagination:
+  data: collections["galleries"]["commissions"]
+  size: 1
+  alias: collection
+permalink: "/stuff/commissions/{{ collection | slugify }}/"
+eleventyNavigation:
+  key: My Art
+---

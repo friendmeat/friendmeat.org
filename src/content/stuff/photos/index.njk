@@ -1,0 +1,57 @@
+---
+layout: default
+permalink: /stuff/photos/
+eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: Photos
+  parent: Stuff
+  order: 2
+---
+{% css %}
+.year-group,.year-collections {
+	list-style: none;
+	padding: 0;
+}
+
+.year-collections {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 1fr);
+	grid-template-rows: 1fr;
+}
+
+.year-label {
+	{# font-weight: bold;
+	font-size: 38pt; #}
+}
+
+.collection-name {
+	text-align: center;
+}
+
+{% endcss %}
+{% set groups = collections.photos | groupby("data.year") %}
+{% block breadcrumb %}
+<a href="/stuff/">Stuff</a>&nbsp;~><span aria-current="page">Photos</span>
+{% endblock breadcrumb %}
+<ul class="photos-years">
+{% for year, photos in groups | dictsort | sort(true, false, 0) %}
+{% if year !== "undefined" %}
+<li class="year-group">
+	<h2 class="year-label" href="{{ year }}">{{ year }}</h2>
+	<hr />
+	<ul class="year-collections">
+		{% for collection, _ in photos | groupby("data.collection") | dictsort %}
+		{% set cover = collections.covers[collection] %}
+		<li class="collection">
+			<a href="{{ collection | slugify }}">
+				<figure class="collection-preview">
+					<img src="{{ cover.src | threshold }}" alt="{{ cover.alt }}" height=300 width=600 />
+					<figcaption class="collection-name">{{ collection }}</figcaption>
+				</figure>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+{% endif %}
+{% endfor %}
+</ul>

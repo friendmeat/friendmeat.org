@@ -1,0 +1,29 @@
+---
+layout: default
+permalink: /stuff/commissions/
+eleventyExcludeFromCollections: true
+collection: commissions
+eleventyNavigation:
+  key: Commissions
+  parent: Stuff
+  order: 4
+---
+{% block breadcrumb %}
+<a href="/stuff/">Stuff</a>&nbsp;~><span aria-current="page">Commissions</span>
+{% endblock breadcrumb %}
+{% block content %}
+{% set groups = collections["commissions"] | groupby("data.collection") %}
+<ul class="collection-list">
+{% for collection, _ in groups | dictsort %}
+<li class="collection-item">
+    {% set cover = collections.allCovers[collection] %}
+  <a href="{{ collection | slugify }}">
+  <figure class="collection-preview">
+    <img src="{{ cover.src | threshold }}" alt="{{ cover.alt }}" width=600 height=300 />
+    <figcaption>{{ collection }}</figcaption>
+  </figure>
+  </a>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}

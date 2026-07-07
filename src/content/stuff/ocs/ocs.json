@@ -1,7 +1,9 @@
 {
+    "tags":["ocs"],
     "layout":"oc",
     "permalink":"/stuff/ocs/{{ name | slugify }}/",
     "eleventyNavigation": {
         "parent":"OCs"
-    }
+    },
+    "gallery":"ocs"
 }

@@ -1,0 +1,12 @@
+---
+title: Raccoon Sniper (gradient lined)
+src: https://pub-acd34ec94bde415ab2dd77d111f8c2f1.r2.dev/raccoonsniper/tf2hifashighiahisg-gradlines-solid.png
+alt: A painting of the sniper from TF2 as a cute and grumpy raccoon
+artist:
+    name: ppocketss_
+    handle: "@ppocketss_"
+    site: "https://www.instagram.com/ppocketss_/"
+tags:
+  - cover
+  - gallery-cover
+---

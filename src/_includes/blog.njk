@@ -12,6 +12,7 @@
 
 .blog-post img {
     width: 100%;
+    object-fit: cover;
     <!-- aspect-ratio: calc(800 / 192); -->
     height: auto;
 }
@@ -65,8 +66,7 @@
         <a href="{{ post.url }}"><h2 class="blog-post-title">{{ post.data.title }}</h2>
             <picture>
             {% if post.data.headerImage %}
-            {# {% set source = post.data.headerImage.src | threshold(800, 192) %} #}
-            <img src="{{ post.data.headerImage.src | threshold(800, 192) if post.data.headerImage.format else post.data.headerImage.src }}" alt="{{ post.data.headerImage.alt }}" loading=lazy decoding=async />
+            <img src="{{ post.data.headerImage.src | threshold if post.data.headerImage.format else post.data.headerImage.src }}" alt="{{ post.data.headerImage.alt }}" loading=lazy decoding=async width=800 height=192 />
             </picture>
             {% endif %}
         </a>

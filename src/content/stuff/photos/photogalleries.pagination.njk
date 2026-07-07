@@ -1,0 +1,13 @@
+---
+layout: photo-gallery
+pagination:
+  data: collections.galleries.photos
+  size: 1
+permalink: "/stuff/photos/{{ pagination.items[0] }}/"
+eleventyExcludeFromCollections: true
+eleventyNavigation:
+  parent: "Photos"
+eleventyComputed:
+  eleventyNavigation:
+    key: "{{ pagination.items[0] }}"
+---
