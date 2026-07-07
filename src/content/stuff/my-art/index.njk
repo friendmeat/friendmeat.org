@@ -1,0 +1,29 @@
+---
+layout: default
+collection: my-art
+eleventyExcludeFromCollections: true
+permalink: /stuff/my-art/
+eleventyNavigation:
+  key: "My Art"
+  parent: Stuff
+  order: 1
+---
+{% block breadcrumb %}
+<a href="/stuff/">Stuff</a>&nbsp;~><span aria-current="page">My Art</span>
+{% endblock breadcrumb %}
+{% block content %}
+{% set groups = collections["my-art"] | groupby("data.collection") %}
+<ul>
+{% for collection, _ in groups | dictsort %}
+<li style="list-style:none;">
+    {% set cover = collections.allCovers[collection] %}
+  <a href="{{ collection | slugify }}">
+  <figure class="collection-preview">
+    <img src="{{ cover.src | censor if cover.sensitive else cover.src  }}" alt="{{ cover.alt }}" width=600 height=300 />
+    <figcaption>{{ collection }}</figcaption>
+  </figure>
+  </a>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}

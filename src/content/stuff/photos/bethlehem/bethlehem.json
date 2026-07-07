@@ -1,0 +1,10 @@
+{
+	"date":"2025-07-03",
+	"year":"2025",
+	"tags":["bethlehem"],
+	"collection":"Bethlehem",
+	"eleventyNavigation":{
+		"parent":"Photos",
+		"key":"Bethlehem"
+	}
+}

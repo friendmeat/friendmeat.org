@@ -1,0 +1,13 @@
+
+{% extends "default.njk" %}
+{% set groups = collections.galleries[collection] | dictsort %}
+{% block content %}
+<ul>
+{% for collection, _ in groups %}
+<pre>
+{{ collections.covers[collection] | dump(2) }}
+</pre>
+<li><a href="{{ collection | slugify }}/">{{ collection }}</a></li>
+{% endfor %}
+</ul>
+{% endblock content %}

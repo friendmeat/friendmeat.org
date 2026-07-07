@@ -1,7 +1,5 @@
 {
-    "layout":"image",
-    "permalink":"/stuff/{{ page.filePathStem | split('/') | slice(-2) | first | slugify }}/{{ collection | slugify }}/{{ title | slugify }}/",
-    "eleventyComputed": {
-        "gallery":"{{ page.filePathStem | split('/') | slice(-2) | first | properCase }}"
-    }
+	"tags":["stuff"],
+	"permalink":"/stuff/{{ gallery | slugify }}/{{ collection | slugify }}/{{ page.fileSlug | slugify }}/",
+	"layout":"image"
 }

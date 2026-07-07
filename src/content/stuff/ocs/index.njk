@@ -1,15 +1,19 @@
 ---
 layout: default
 permalink: "/stuff/ocs/"
+eleventyExcludeFromCollections: true
 eleventyNavigation:
     key: OCs
     parent: Stuff
 ---
+{% block breadcrumb %}
+<a href="/stuff/">Stuff</a>&nbsp;~><span aria-current="page">OCs</span>
+{% endblock breadcrumb %}
 {% block content %}
 {% for oc in collections.ocs %}
 <a href="/stuff/ocs/{{ oc.data.name | slugify }}">
 <figure class="collection-preview">
-    <img src="{{ oc.data.cover.src | threshold(500, 300) }}" alt="{{ oc.data.cover.alt }}">
+    <img src="{{ oc.data.cover.src | threshold }}" alt="{{ oc.data.cover.alt }}" height=300 width=600 />
     <figcaption>{{ oc.data.name }}</figcaption>
 </figure>
 </a>

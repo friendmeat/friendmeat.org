@@ -1,3 +1,4 @@
+import fs from "node:fs/promises";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import bundlePlugin from "@11ty/eleventy-plugin-bundle";
 import syntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
@@ -18,6 +19,8 @@ const OUTPUT_DIR = "dist";
 const ASSETS_DIR = "";
 
 const properCase = text => text.replace(/[^a-zA-Z1-9]/g, ' ').split(' ').map(w => w.split('').map((c, i) => i == 0 ? c.toUpperCase() : c).join('')).join(' ');
+
+const camelCase = text => text.split(/[^a-z0-9]/gi).map((part, i) => i !== 0 ? properCase(part) : part).join("");
 
 export default function(eleventyConfig) {
 
@@ -70,12 +73,17 @@ export default function(eleventyConfig) {
 
     });
 
+    eleventyConfig.addFilter("typeof", x => typeof x);
+
+    eleventyConfig.addFilter("isArray", x => Array.isArray(x));
 
     // Return number of years since input date
     eleventyConfig.addFilter("yearsSince", date => Math.abs(new Date(new Date() - new Date(date)).getUTCFullYear() - 1970));
 
     // Capitalize first letter of every word in string
     eleventyConfig.addFilter("properCase", properCase);
+
+    eleventyConfig.addFilter("camelCase", function(text) { return camelCase(text) });
 
     // Add a pipe and the site title after the page title
     eleventyConfig.addFilter("siteTitle", function(title) {
@@ -91,84 +99,102 @@ export default function(eleventyConfig) {
     eleventyConfig.addFilter("threshold", async function(src, width = 500, height = 120, sizes = [500], threshold = 128) {
         // return `${OUTPUT_DIR}/assets/src`
         //!TODO add "sizes" arg and return multiple urls to generate srcsets
+        if (!src) return;
         try {
-    
-        return await Image(src, {
-            formats: ["webp"],
-            cacheDuration: "1w",
-            outputDir: `${OUTPUT_DIR}/assets/img`,
-            urlPath: "/assets/img",
-            transform: (sharp) => {
-                sharp
-                    .resize(width, height, { fit: "cover", strategy: "entropy" })
-                    .threshold(threshold, { greyscale: true });
-            }
-        })
-            .then(({ webp }) => webp[0])
-            .then(data => data.url);
+
+            return await Image(src, {
+                formats: ["webp"],
+                cacheDuration: "1w",
+                outputDir: `${OUTPUT_DIR}/assets/img`,
+                urlPath: "/assets/img",
+                transform: (sharp) => {
+                    sharp
+                        // .resize(width, height, { fit: "cover", strategy: "entropy" })
+                        .threshold(threshold, { greyscale: true });
+                }
+            })
+                .then(({ webp }) => webp[0])
+                .then(data => data.url);
 
         } catch (error) {
+            console.error(`error when applying threshold to img: ${src}`)
             console.error(error);
             return ""
         }
-        });
+    });
 
     eleventyConfig.addFilter("thresholdPicture", async function(src, alt, widths = [300, 600], height = 120, threshold = 128) {
-        return await Image(src, {
-            widths,
-            formats: ["jpeg"],
-            outputDir: `${OUTPUT_DIR}/assets/img`,
-            urlPath: "/assets/img",
-            transform: async sharp => {
-                sharp
-                    .resize({ height, width: height * 3.2, fit: "cover", strategy: "entropy" })
-                    .threshold(threshold)
-            }
-        })
-            .then(({ jpeg }) => jpeg)
+        if (!src) return;
+        try {
+            return await Image(src, {
+                widths,
+                formats: ["jpeg"],
+                outputDir: `${OUTPUT_DIR}/assets/img`,
+                urlPath: "/assets/img",
+                transform: async sharp => {
+                    sharp
+                        .resize({ height, width: height * 3.2, fit: "cover", strategy: "entropy" })
+                        .threshold(threshold)
+                }
+            })
+                .then(({ jpeg }) => jpeg)
+        } catch (err) {
+            console.error(`error when applying thresholdPicture to img: ${src}`)
+            console.error(err);
+            return "";
+        }
     })
 
     eleventyConfig.addFilter("thumbnail", async function(src, width, aspectRatio = 1) {
-        return await Image(src, {
-            widths: [width], formats: ["jpeg"],
-            outputDir: `${OUTPUT_DIR}/assets/img`,
-            urlPath: "/assets/img",
-            transform: async sharp => {
-                sharp
-                    .resize({ width, height: width * aspectRatio, fit: "cover", strategy: "entropy" })
-            }
-        })
-            .then(({ jpeg }) => jpeg[0].url)
+        if (!src) return;
+        try {
+            return await Image(src, {
+                widths: [width], formats: ["jpeg"],
+                outputDir: `${OUTPUT_DIR}/assets/img`,
+                urlPath: "/assets/img",
+                transform: async sharp => {
+                    sharp
+                        .resize({ width, height: width * aspectRatio, fit: "cover", strategy: "entropy" })
+                }
+            })
+                .then(({ jpeg }) => jpeg[0].url)
+        } catch (err) {
+            console.error(`error when applying thumbnail to img: ${src}`)
+            console.error(err);
+            return "";
+        }
     });
 
     eleventyConfig.addFilter("censor", async function(src) {
-        // https://github.com/lovell/sharp/issues/1532#issuecomment-451749670
-        // Make an image very small, then resize it with the nearest-neighbor kernel to maintain pixelization
+        try {
+            // https://github.com/lovell/sharp/issues/1532#issuecomment-451749670
+            // Make an image very small, then resize it with the nearest-neighbor kernel to maintain pixelization
 
-        const stage1 = await Image(src, {
-            widths: ["auto"],
-            format: ["jpeg"],
-            outputDir: `${OUTPUT_DIR}/assets/img`,
-            urlPath: "/assets/img",
-            transform: async sharp => {
-                sharp
-                    .resize(32, null, { fit: "cover", strategy: "entropy", kernel: "nearest" })
-                    .toBuffer();
-            }
-        })
+            const stage1 = await Image(src, {
+                widths: ["auto"],
+                format: ["jpeg"],
+                outputDir: `${OUTPUT_DIR}/assets/img`,
+                urlPath: "/assets/img",
+                transform: async sharp => {
+                    sharp
+                        .resize(32, null, { fit: "cover", strategy: "entropy", kernel: "nearest" })
+                        .toBuffer();
+                }
+            })
 
-        // console.log(stage1)
+            const stage2 = await Image(stage1["webp"][0].outputPath, {
+                widths: ["auto"], formats: ["jpeg"], outputDir: `${OUTPUT_DIR}/assets/img`, urlPath: "/assets/img",
+                transform: async sharp => {
+                    sharp.resize(500, null, { fit: "cover", strategy: "entropy", kernel: "nearest" })
+                }
+            });
 
-        const stage2 = await Image(stage1["webp"][0].outputPath, {
-            widths: ["auto"], formats: ["jpeg"], outputDir: `${OUTPUT_DIR}/assets/img`, urlPath: "/assets/img",
-            transform: async sharp => {
-                sharp.resize(500, null, { fit: "cover", strategy: "entropy", kernel: "nearest" })
-            }
-        });
-
-        // console.log(stage2);
-
-        return stage2["jpeg"][0].url
+            return stage2["jpeg"][0].url
+        } catch (err) {
+            console.error(`error when processing img: ${img}`)
+            console.error(err);
+            return "";
+        }
     });
 
     eleventyConfig.addFilter("properCase", properCase);
@@ -203,40 +229,58 @@ export default function(eleventyConfig) {
 
     /* Custom Collections */
     eleventyConfig.addCollection("galleries", function(collectionsApi) {
-        const images = collectionsApi.getFilteredByTag("stuff");
-        const galleries = Object.groupBy(images, ({ inputPath }) => inputPath.split("/").slice(-2, -1));
-        return Object
-            .entries(galleries)
-            .map(([k, v]) => ({
-                "title": k,
-                "key": properCase(k),
-                "cover": v.filter(({ data }) => data.cover).map(({ data }) => ({ "src": data.src, "alt": data.alt }))[0],
-                "collections": Object.entries(Object.groupBy(v, ({ data }) => data.collection))
-                    .map(([j, m]) => ({
-                        "title": j,
-                        "key": properCase(j),
-                        "images": m,
-                        "cover": m.filter(({ data }) => data.collectionCover).map(({ data }) => ({ src: data.src, alt: data.alt }))[0],
-                    })),
-            }));
+        const stuff = collectionsApi.getFilteredByTag("stuff");
+
+        let galleries = {}
+
+        const assign = (obj, path, val) => {
+            if (path.length > 1) {
+                const part = path.shift();
+                obj[part] ??= {};
+                assign(obj[part], path, val);
+            } else {
+                try {
+                    obj[path[0]] ??= [];
+                    obj[path[0]].push(val);
+                } catch { }
+            }
+            return obj;
+        }
+
+
+        for (let i = 0; i < stuff.length; i++) {
+            const photo = stuff[i];
+            // Discard '/content/stuff' part of path
+            const pathstring = photo.page.filePathStem.replace(/^\/content\/stuff/gi, "");
+            const path = pathstring.split(/\//g).filter(p => !!p);
+
+            // Discard file itself
+            path.pop();
+            assign(galleries, path, photo);
+        }
+
+        return galleries;
     });
 
-    eleventyConfig.addCollection("imageCollections", function(collectionsApi) {
-        // {"gallery":"photos", "collection":"kansas", "key":"Kansas", "images":[...] }
-        const images = collectionsApi.getFilteredByTag("stuff");
-        const collections = Object.groupBy(images, ({ data }) => data.collection);
+    eleventyConfig.addCollection("covers", function(collectionsApi) {
+        const covers = collectionsApi.getFilteredByTag("cover");
+        const tagged = Object.fromEntries(covers.map(({ data }) => [data.collection, { src: data.src, alt: data.alt }]));
+        return tagged;
+    });
 
-        const result = Object.entries(collections).map(([collection, images]) => {
-            return {
-                images,
-                "key": properCase(collection),
-                "title": collection,
-                "gallery": properCase(images[0].page.inputPath.split("/").slice(-2, -1)[0])
-            }
-        });
-        // console.log(result);
-        return result
+    eleventyConfig.addCollection("galleryCovers", function(collectionsApi) {
+        const covers = collectionsApi.getFilteredByTag("gallery-cover");
+        const tagged = Object.fromEntries(covers.map(({ data }) => [data.gallery, { src: data.src, alt: data.alt }]));
+        return tagged;
+    });
 
+    eleventyConfig.addCollection("allCovers", function(collectionsApi) {
+        let covers = {};
+        collectionsApi.getFilteredByTag("cover").filter(p => p.data.collection).forEach(cover => {
+            Object.assign(covers, Object.fromEntries([[cover.data.collection, { src: cover.data.src, alt: cover.data.alt, sensitive: cover.data.sensitive }]]));
+        })
+        // console.log(covers);
+        return covers;
     });
 
     eleventyConfig.addCollection("topics", function(collectionsApi) {
@@ -248,7 +292,7 @@ export default function(eleventyConfig) {
         for (const topic of allTopics) {
             const posts = allPosts.filter(({ data }) => data.topics?.includes(topic)).sort((a, b) => a.date > b.date).reverse();
             topics.push([topic, posts.length]);
-            const totalPages = Math.ceil(posts.length / pageSize)
+            const totalPages = Math.ceil(posts.length / pageSize);
             for (let i = 0; i < totalPages; i++) {
                 pages.push({
                     topic,
@@ -285,7 +329,7 @@ export default function(eleventyConfig) {
             const $ = cheerio.load(content);
             $("article")
                 .find("h1, h2, h3, h4, h5, h6")
-                .map(function(){$(this).append(`<a class="header-anchor-link" href="#${$(this).attr('id')}">${sectionSymbol}</a>`)});
+                .map(function() { $(this).append(`<a class="header-anchor-link" href="#${$(this).attr('id')}">${sectionSymbol}</a>`) });
             content = $.html();
         }
         return content

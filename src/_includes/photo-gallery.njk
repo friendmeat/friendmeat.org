@@ -1,0 +1,22 @@
+{% extends "default.njk" %}
+{% css %}
+{{ super }}
+.gallery-images {
+	list-style: none;
+	padding: 0;
+	grid-column: 1 / span 3;
+}
+{% endcss %}
+{% block content %}
+<a href="/stuff/">Stuff</a>&nbsp;~&gt;<a href="/stuff/{{ gallery | slugify }}/">{{ gallery | title }}</a>&nbsp;~&gt;<span aria-current="page">{{ pagination.items[0] | title }}</span>
+{% set images = collections[pagination.items[0]] %}
+<ul class="gallery-images">
+{% for image in images %}
+<li class="gallery-image">
+	<a href="{{ image.page.url }}" class="gallery-image-link">
+		<img src="{{ image.data.src }}" alt="{{ image.data.alt }}" width="600" class="gallery-image-img" />
+	</a>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}

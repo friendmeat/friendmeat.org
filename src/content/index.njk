@@ -2,7 +2,7 @@
 permalink: /
 layout: base
 ---
-{% block body %}
+{% block head %}
 <style>
 
 html {
@@ -13,7 +13,9 @@ html {
 .friendmeat-title {
     position: absolute;
     font-family: RGHPPsans;
-    text-shadow: -1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black, 1px -1px black;
+    text-shadow: -1px -1px 0 black, 
+        -1px 1px 0 black, 1px 1px 0 black, 
+        1px -1px black;
     font-size: 500%;
     color: white;
     transform: translateY(50%);
@@ -30,7 +32,50 @@ html {
     justify-content: center;
     padding: 1em;
 }
+
+@property --angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+.fly {
+
+    --orbit-radius: 40px;
+    --x: calc(cos(var(--angle)) * var(--orbit-radius));
+    --y: calc(sin(var(--angle)) * -1 * var(--orbit-radius));
+    z-index: -100;
+    translate: var(--x) var(--y);
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    background-image: url("/assets/img/flysprite.webp");
+    background-size: 16px 8px;
+    animation: fly-sprite 100ms steps(2, jump-none) infinite,
+        orbit 2s linear infinite;
+}
+
+@keyframes orbit {
+    from {
+        --angle: 0turn;
+    }
+    to {
+        --angle: 1turn;
+    }
+}
+
+@keyframes fly-sprite {
+    from { background-position: 0px 0px; }
+    to { background-position: -8px 0px; }
+}
+
 </style>
+{% endblock head %}
+{% block body %}
+<div id="flies">
+    <div class="fly"></div>
+    <div class="fly"></div>
+    <div class="fly"></div>
+</div>
 <div class="meat-container">
     <a href="/home" title="friendmeat" class="meat">
 <svg
@@ -5835,4 +5880,15 @@ html {
 <h1 class="friendmeat-title">friendmeat</h1>
 </a>
 </div>
+<script>
+	window.addEventListener("DOMContentLoaded", ()=>{
+		const flies = document.querySelectorAll(".fly")
+		document.addEventListener("mousemove", function(e){
+            flies.forEach(fly=>{
+                fly.setAttribute("style", `left:${e.clientX}px;top:${e.clientY}px;`);
+            })
+		});
+	});
+
+</script>
 {% endblock %}

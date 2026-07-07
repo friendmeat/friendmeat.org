@@ -1,0 +1,8 @@
+{
+	"layout":"image",
+	"tags":["photos"],
+	"gallery":"photos",
+	"eleventyNavigation":{
+		"parent":"Photos"
+	}
+}

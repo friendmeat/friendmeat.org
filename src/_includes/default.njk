@@ -256,8 +256,16 @@ footer {
     padding: 0;
 }
 
+.collection-list {
+    list-style: none;
+    padding-left: 0;
+}
+
 .collection-preview { 
     position: relative;
+    img {
+        object-fit: cover;
+    }
     & figcaption {
         font-family: RGHPPsans;
         font-size: 35pt;
@@ -338,9 +346,8 @@ footer {
   </header>
   <hr class="visually-hidden" />
   <main id="main">
-      {% block breadcrumb %}
-      {% if eleventyNavigation.key %}
-        {% set breadcrumb = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, {includeSelf:true,allowMissing:true}) %}
+      {%- block breadcrumb -%}
+        {% set breadcrumb = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, {includeSelf:true, allowMissing:true}) %}
         {% if breadcrumb | length > 1 %}
         {% for crumb in breadcrumb %}
         {% if loop.last %}
@@ -350,13 +357,12 @@ footer {
         {% endif %}
         {% endfor %}
         {% endif %}
-      {% endif %}
       {% endblock breadcrumb %}
     {% block content %}
     {{ content | safe }}
     {% endblock %}
   </main>
-  <!-- Strip white space from between these `aside`s so the :empty pseudoelement works correctly -->
+  {# Strip white space from between these `aside`s so the :empty pseudoelement works correctly #}
   <aside class="sidebar sidebar-left">{%- block sidebarLeft -%}{%- endblock sidebarLeft -%}</aside>
   <aside class="sidebar sidebar-right">{%- block sidebarRight -%}{%- endblock sidebarRight -%}</aside>
   <hr class="visually-hidden" />

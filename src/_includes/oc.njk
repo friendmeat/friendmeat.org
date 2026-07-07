@@ -13,6 +13,7 @@
     background-color: transparent;
     color: inherit;
     cursor: pointer;
+    display: inline-block;
 }
 
 dialog[id^="lightbox"]{
@@ -37,9 +38,14 @@ dialog[id^="lightbox"]{
     }
 }
 
+>
 .oc-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.oc-image {
+    object-fit: cover;
 }
 
 .oc-playlist {
@@ -73,7 +79,7 @@ dialog[id^="lightbox"]{
         </figure>
     </dialog>
     <button class="lightbox-button" popovertarget="lightbox-{{ loop.index }}">
-        <img src="{{ img.data.src }}" alt="{{ img.data.alt }}" />
+        <img src="{{ img.data.src }}" alt="{{ img.data.alt }}" width=250 height=250 class="oc-image" />
     </button>
     {% endfor %}
 </div>
