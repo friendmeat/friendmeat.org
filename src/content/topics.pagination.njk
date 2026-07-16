@@ -32,10 +32,9 @@ eleventyComputed:
 {% for post in topic.posts %}
     <section class="blog-post">
         <a href="{{ post.url }}"><h2 class="blog-post-title">{{ post.data.title }}</h2>
-            <picture>
             {% if post.data.headerImage %}
-            {% set source = post.data.headerImage.src | threshold(800, 192) %}
-            <img src="{{ source }}" alt="{{ post.data.headerImage.alt }}" width=800 height=192 />
+            <picture>
+            <img eleventy:ignore src="{{ post.data.headerImage.src | threshold(800, 192) }}" alt="{{ post.data.headerImage.alt }}" width=800 height=192 />
             </picture>
             {% endif %}
         </a>

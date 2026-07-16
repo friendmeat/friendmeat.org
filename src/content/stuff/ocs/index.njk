@@ -13,7 +13,7 @@ eleventyNavigation:
 {% for oc in collections.ocs %}
 <a href="/stuff/ocs/{{ oc.data.name | slugify }}">
 <figure class="collection-preview">
-    <img src="{{ oc.data.cover.src | threshold }}" alt="{{ oc.data.cover.alt }}" height=300 width=600 />
+    <img eleventy:ignore src="{{ oc.data.cover.src | threshold }}" alt="{{ oc.data.cover.alt }}" height=300 width=600 />
     <figcaption>{{ oc.data.name }}</figcaption>
 </figure>
 </a>
