@@ -46,7 +46,6 @@ most of the time what i'm playing is solitaire. Working full time gets in the wa
 baba is you is hard. i just said that thing about sleep-like oblivion but baba is not really affording me it. but it's something to do with my hands while i listen to music or podcasts. idk. 
 ### Ediction 
 
-![A screenshot from Ediction featuring the protagonist, Ramla, a white-haired deer man, newly resurrected on a stone slab.](https://img.itch.zone/aW1hZ2UvMzM1MTkwNC8yMDAxMjI1MC5wbmc=/original/NaOmOs.png)
 
 > The gods are all liars. Worse, they're just people. Fallible and filthy just like the rest of us
 

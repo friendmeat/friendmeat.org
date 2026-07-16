@@ -64,9 +64,9 @@
 {% for post in pagination.items %}
     <section class="blog-post">
         <a href="{{ post.url }}"><h2 class="blog-post-title">{{ post.data.title }}</h2>
+            {% if post.data.headerImage.src %}
             <picture>
-            {% if post.data.headerImage %}
-            <img src="{{ post.data.headerImage.src | threshold if post.data.headerImage.format else post.data.headerImage.src }}" alt="{{ post.data.headerImage.alt }}" loading=lazy decoding=async width=800 height=192 />
+            <img eleventy:ignore src="{{ post.data.headerImage.src | threshold if post.data.headerImage.format else post.data.headerImage.src }}" alt="{{ post.data.headerImage.alt }}" loading=lazy decoding=async width=800 height=192 />
             </picture>
             {% endif %}
         </a>

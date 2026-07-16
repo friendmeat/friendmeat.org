@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import bundlePlugin from "@11ty/eleventy-plugin-bundle";
 import syntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
-import Image, { eleventyImageOnRequestDuringServePlugin } from "@11ty/eleventy-img";
+import Image, { eleventyImageTransformPlugin, eleventyImageOnRequestDuringServePlugin } from "@11ty/eleventy-img";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import pluginTOC from '@uncenter/eleventy-plugin-toc';
 import markdownItFootnote from "markdown-it-footnote";
@@ -36,6 +36,14 @@ export default function(eleventyConfig) {
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(bundlePlugin);
     eleventyConfig.addPlugin(eleventyImageOnRequestDuringServePlugin);
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+        // failOnError: false,
+        formats: ["webp","gif"],
+        widths: ["auto"],
+        sharpOptions: {
+            animated: true
+        }
+    });
     eleventyConfig.addPlugin(syntaxHighlightPlugin);
     eleventyConfig.addPlugin(pluginTOC);
 

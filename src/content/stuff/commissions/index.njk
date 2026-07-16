@@ -19,7 +19,7 @@ eleventyNavigation:
     {% set cover = collections.allCovers[collection] %}
   <a href="{{ collection | slugify }}">
   <figure class="collection-preview">
-    <img src="{{ cover.src | threshold }}" alt="{{ cover.alt }}" width=600 height=300 />
+    <img eleventy:ignore src="{{ cover.src | threshold }}" alt="{{ cover.alt }}" width=600 height=300 />
     <figcaption>{{ collection }}</figcaption>
   </figure>
   </a>

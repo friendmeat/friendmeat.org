@@ -7,6 +7,7 @@
 {# {% css %} #}
 <style>
 .lightbox-button {
+    display: block;
     border: 0;
     border-radius: 0;
     margin: 0;
@@ -18,7 +19,7 @@
 
 #lightbox {
     img {
-        max-height: 90lvh;
+        /* max-height: 90lvh; */
     }
 
     transition: opacity 200ms, transform 200ms, display 200ms allow-discrete;
@@ -37,7 +38,15 @@
 }
 
 img {
-    cursor: pointer;
+    cursor: pointer; 
+}
+
+.gallery-img {
+    margin: auto;
+    & img {
+        max-width: 600px;
+        height: auto;
+    }
 }
 
 .other-imgs {
@@ -53,6 +62,9 @@ img {
 }
 .other-img-link {
     text-decoration: none;
+    & img {
+        object-fit: cover;
+    }
 }
 </style>
 {# {% endcss %} #}
@@ -73,10 +85,11 @@ img {
     </button>
 </dialog>
 <button class="lightbox-button" popovertarget="lightbox" popovertargetaction="show">
-<figure>
-    <img src="{{ src }}" alt="{{ alt }}" width=600 />
+<figure class="gallery-img">
+    <img src="{{ src }}" alt="{{ alt }}" />
     <figcaption>
-        <em>{{ description }}</em><p>{{ title }}{% if artist %} by {{artist.name}} (<a href="{{ artist.site }}" target="_blank">{{ artist.handle }}</a>){% endif %}</p>
+        <p><em>{{ description }}</em></p>
+        <p>{{ title }}{% if artist %} by {{artist.name}} (<a href="{{ artist.site }}" target="_blank">{{ artist.handle }}</a>){% endif %}</p>
     </figcaption>
 </figure>
 </button>
@@ -84,6 +97,7 @@ img {
 {% if cc0 %}
 <a href="{{ page.url }}">{{ title }}</a> by <a href="{{ meta.site }}">{{ meta.title }}</a> is marked <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a><img src="/assets/img/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="/assets/img/zero.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 {% endif %}
+<p>[ <a href="{{ src }}" target="_blank">View Full Resolution</a> ]</p>
 {% endblock content %}
 
 {%- block sidebarLeft %}
@@ -93,7 +107,7 @@ img {
     {% if file.data.collection == collection and file.data.title !== title %}
     <li class="other-img" title="{{ file.data.title }}" >
         <a href="{{ file.url }}" class="other-img-link">
-            <img src="{{ file.data.src | thumbnail(50) }}" alt="{{ file.data.alt }}" width=50 height=50 loading=lazy decoding=async>
+            <img eleventy:ignore src="{{ file.data.src | thumbnail(50) }}" alt="{{ file.data.alt }}" width=50 height=50 loading=lazy decoding=async>
         </a>
     </li>
     {% endif %}

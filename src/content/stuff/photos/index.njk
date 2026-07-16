@@ -45,7 +45,7 @@ eleventyNavigation:
 		<li class="collection">
 			<a href="{{ collection | slugify }}">
 				<figure class="collection-preview">
-					<img src="{{ cover.src | threshold }}" alt="{{ cover.alt }}" height=300 width=600 />
+					<img eleventy:ignore src="{{ cover.src | threshold }}" alt="{{ cover.alt }}" height=300 width=600 />
 					<figcaption class="collection-name">{{ collection }}</figcaption>
 				</figure>
 			</a>

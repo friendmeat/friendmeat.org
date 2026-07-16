@@ -71,10 +71,10 @@ And their newest masterpiece _Homemade Gatorate_:
 ### 60s modernist horrorscapes by Jacob Landau
 At a used book store in Wichita we saw a book called [_Bring Out Your Dead: The Great Plague of Yellow Fever in Philadelphia in 1793_](https://archive.org/details/bringoutyourdead0000unse) which has a really gorgeous, gruesome cover. I took a picture of the cover, but didn't think to try to find the artist in the book's front matter. Miraculously, a scan was on Archive.org and I was able to find out about Jacob Landau
 
-![Lithograph by Jacob Landau](https://woodmereartmuseum.org/images/stories/flexicontent/l_Landau_2006.12.10_WEB-1.jpg)
+![Lithograph by Jacob Landau](https://i.postimg.cc/pLbJt4fv/if.avif)
 [*If*, lithograph, 1975](https://woodmereartmuseum.org/explore-online/collection/artist/jacob-landau)
 
-![The 9th Circle by Jacob Landau](https://woodmereartmuseum.org/images/stories/flexicontent/l_Landau_2006.12.8_WEB-1.jpg)
+![The 9th Circle by Jacob Landau](https://i.postimg.cc/pV36p0fB/9thcircle.avif)
 [_The 9th Circle_, lithograph, 1975](https://woodmereartmuseum.org/explore-online/collection/the-ninth-circle)
 
 ![](https://www.fulltable.com/vts/aoi/l/landau/2.jpeg)

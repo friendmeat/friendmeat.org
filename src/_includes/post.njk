@@ -26,6 +26,7 @@
 
 article {
     font-family: var(--type-serif);
+    line-height: 1.5rem;
 
     img {
         display: block;
@@ -128,7 +129,7 @@ article {
 <small class="post-description">{{ description }}</small>
 {% if headerImage.src %}
 <picture class="post-banner">
-<img src="{{ headerImage.src | threshold(500, 192) }}" alt="{{ headerImage.alt }}" loading="lazy" decoding="async" />
+<img eleventy:ignore src="{{ headerImage.src | threshold(500, 192) }}" alt="{{ headerImage.alt }}" loading="lazy" decoding="async" />
 </picture>
 {% endif %}
 {{ macros.blogPostInfo({date: date, tags: topics}) }}

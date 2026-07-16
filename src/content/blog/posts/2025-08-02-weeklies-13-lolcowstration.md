@@ -19,7 +19,7 @@ i read it for the articles fr.
 
 ### _Brainwyrms_ by Alison Rumfitt
 
-![Brainwyrms by Alison Rumfitt](https://prodimage.images-bn.com/pimages/9781250866257_p0_v1_s600x595.jpg)
+![Brainwyrms by Alison Rumfitt](https://i.postimg.cc/90yt4B2S/brainwyrms.jpg)
 
 <details><summary>CW Scat</summary><p> Someone would egg him on, or he would look at some furry porn, and he’d relapse and eat his shit again. By the time I knew about him he must have been doing this long enough that he kept ending up in hospital with infections and shit from the scat-eating. The moment he got out, he would always be like, ‘Okay, that was the last time I am never eating doodie EVER again,’ a promise that everyone knew he’d break. And yeah. Then he broke it, went to hospital, came out, swore off the shit, ate it anyway, on and on and on. I … as I said, some people egged him on. They got him to take pictures and videos by the end of it. I don’t think any of us thought it would end. He seemed to enjoy it, so we were helping him out in a way. Removing his inhibitions. But then he was like, ‘Oh God, the doctors told me that if I don’t stop I’m going to die. They want to institutionalise me.’ We called him a coward and told him he had to keep going. And then he posted a video of him chowing down on his shit, one last video. That was the last we heard from him. Someone found an obituary a little while later, and someone from the hospital who knew about the case leaked some of his details.”</p>
 <p>“Shit.”</p>
