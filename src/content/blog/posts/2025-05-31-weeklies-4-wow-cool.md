@@ -18,7 +18,7 @@ I have hot dogs orbiting my head like a dazed cartoon. I've never been so hungry
 I'm in an arms race with sp\*tify. I use [ReVanced](https://revanced.app) to crack the app and they keep on patching it. Occasionally, they invalidate my password and I have to reset it. They did that this week and I didn't have time to the crack back up before I went to the gym, so when I got on the treadmill I went on [mixcloud](https://mixcloud.com) and pressed play on a random techno set. It was some British guy (who else?) with some really unbearable producer tag. But before I knew it, I had run over a mile. Fuck it, I thought, I'll keep going. My calves still fucking hurt. Thanks British techno DJ guy.
 
 ## __what i'm watching__:
-![Vulcanizadora (2025)](https://www.rogerebert.com/wp-content/uploads/2025/04/MV5BZTUzNmY4YjctY2VhNC00NWY4LTk2ZDUtMWZkNjgzYmRmYTIyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg)
+![Vulcanizadora (2025)](https://i.postimg.cc/DZdtq17S/vulkanizadora.jpg)
 ### _Vulcanizadora_ (2025)
 Awesome fucking movie about 40 year old duded lighting fireworks in the woods. I have hope for American cinema now. 
 

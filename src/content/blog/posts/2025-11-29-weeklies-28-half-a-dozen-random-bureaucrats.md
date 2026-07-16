@@ -23,7 +23,7 @@ Maybe I'm a fake fan for preferring the more active songs on _GoD_, _R+7_, _Age 
 ## __what i'm watching__:
 ### *Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb* (1964)
 
-![](https://cdn.thespaces.com/wp-content/uploads/2019/04/dr-strangelove-war-room.jpg)
+![Still from Dr. Strangelove depicting the war room](https://i.postimg.cc/kXf7rP3r/dr-strangelove-war-room.jpg)
 
 The only thing the U.S. government and I agree on is that _Dr. Strangelove_ is an awesome movie. But why is this just a documentary about 2025. Why is "protecting precious bodily fluids from Communist corruption" the platform of every politician. Why is Elon Musk Dr. Strangelove, literally complete with uncontrollable sieg-heiling.
 
