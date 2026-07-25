@@ -2,8 +2,8 @@
 title: "weeklies #50 - calm tech"
 date: 2026-07-25
 headerImage:
-  src: A cat napping in a window
-  alt: https://i.postimg.cc/GpWQZDDy/IMG-20260724-180506-193.jpg
+  src: https://i.postimg.cc/GpWQZDDy/IMG-20260724-180506-193.jpg
+  alt: A cat napping in a window
   format: true
 description: dykes & dybbuks; aggressively ineffectual caching; calm tech
 ---
