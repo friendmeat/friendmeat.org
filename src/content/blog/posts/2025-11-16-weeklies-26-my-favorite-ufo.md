@@ -53,7 +53,7 @@ i took a bath for the first time in years. lit a candle, played an ambient noise
 I just learned about [The National UFO Reporting Center](https://nuforc.org). It's entertaining to read some of the encounters, especially the older ones. They also have a gallery section for illustrations of encounters. Unfortunately, there's a bunch of shitty GenAI slop in there. It feels so contrary to what's intriguing about UFO culture. See below.
 ## __a picture__:
 ### NUFORC UFO Sighting 177646
-![An amateur-ish painting of the artist's UFO sighting. The artist depicts themself standing outside their workplace for a smoke break and seeing a bumpy orb in the sky.](https://nuforc.org/wp-content/uploads/2022/04/S177646_1-scaled.jpeg)
+![An amateur-ish painting of the artist's UFO sighting. The artist depicts themself standing outside their workplace for a smoke break and seeing a bumpy orb in the sky.](https://i.postimg.cc/SNQhVsK2/ufo.jpg)
 
 This is my [favorite entry](https://nuforc.org/sighting/?id=177646) in the NUFORC gallery. The sighting itself is brief and eerie-- "time loss" is one of my favorite UFO tropes, perhaps because of the _unheimlich_ loss of autonomy in altered states. I also think it's funny that it takes place during the author's pathetically short 10-minute break, making the whole thing an implicit critique of wage labor. Like, you go out for a smoke, have an ineffable experience, then it's suddenly time to go back to work. And you just have to pretend nothing is different for you.
 
