@@ -6,3 +6,13 @@ headerImage:
   alt: cutup
   format: true
 ---
+![cutup](https://i.postimg.cc/fRtbwmmr/rn-image-picker-lib-temp-dd0a7e48-a8fc-4ebc-8d22-dfb40ea3569f.jpg)
+
+```
+i hinking conversation
+care family-founded communication,
+daughter, the screaming Movement
+the Massachusetts silence,
+"Seriously?
+pocket. you've said
+```
