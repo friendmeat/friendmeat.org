@@ -5,9 +5,8 @@ date: 2026-09-12
 headerImage:
   src: https://i.postimg.cc/ZRWqmrxj/debian-ibm-delay-wahwah-indexed.jpg
   alt: IBM PC with the debian logo superimposed on its screen and datamoshed
-  format: true
+  format: false
 ---
-
 tl;dr: skip to [section 5](#5.-tl%3Bdr-how-to-do-it) for instructions
 
 # 0. Prologue: Why?
