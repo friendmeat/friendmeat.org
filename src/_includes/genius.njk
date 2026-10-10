@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ title | siteTitle }}</title>
+    <meta name="og:title" content="{{ title | siteTitle }}" />
+    <meta name="og:description" content="{{ synopsis }}" />
+    {% if coverImage %}
+    <meta name="og:image" content="{{ coverImage.src }}" />
+    <meta name="og:image:alt" content="{{ coverImage.alt }}" />
+    {% endif %}
+    <style>
+        :root {
+            @media screen and (min-width: 500px) {
+                --comment-expanded-width: 60%;
+                --comment-expanded-height: 100%;
+                --text-x: 100%;
+                --text-y: 33%;
+            }
+
+            @media screen and (max-width: 500px) {
+                --comment-expanded-width: 100%;
+                --comment-expanded-height: 33%;
+                --text-x: 100%;
+                --text-y: 100%;
+            }
+
+            --content-width: calc(100% - var(--comment-expanded-width));
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        main {
+            max-width: var(--content-width);
+            margin-left: calc((var(--comment-expanded-width) - var(--content-width)) / 2);
+        }
+
+        img {
+            height: min-content;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th {
+            display: none;
+        }
+
+        table td:first-of-type {
+            width: max-content;
+            display: inline-block;
+            font-family: serif;
+
+
+            &:has(~td:not(:empty)) {
+                background-color: lightgrey;
+                font-weight: bold;
+                cursor: pointer;
+
+                &:focus,
+                &.active {
+                    background-color: yellow;
+
+                    &~td:not(:empty) {
+                        @media screen and (min-width: 500px) {
+                            --text-x: 60%;
+                            width: calc(100% - var(--text-x) - 2rem);
+                        }
+
+                        @media screen and (max-width: 500px) {
+                            --text-x: 0%;
+                            width: 100lvw;
+                        }
+
+                    }
+                }
+            }
+
+            ~td:not(:empty) {
+                transition: width ease-out 200ms, left ease-out 200ms;
+                position: fixed;
+                height: calc(100% - var(--text-y));
+                top: var(--text-y);
+                margin: 0 1rem;
+                width: 0;
+                overflow: hidden;
+
+                &::after {
+                    content: " ";
+                    transition: width ease-out 200ms;
+                    z-index: -1;
+                    position: fixed;
+                    background-color: lightgrey;
+                    border-color: black;
+                    border-style: solid;
+                    border-width: 0 0 0 1px;
+                    width: 0;
+                }
+
+                &::before {
+                    content: attr(data-lyric);
+                    white-space: pre-wrap;
+                    position: fixed;
+                    font-family: serif;
+                    font-size: larger;
+                    font-style: italic;
+                    transform: translateY(-15ch);
+                    color: grey;
+                }
+
+                @media screen and (min-width: 500px) {
+                    left: var(--text-x);
+
+                    &::after {
+                        width: calc(100% - var(--text-x));
+                        height: 100lvh;
+                        top: 0;
+                        left: unset;
+                        right: 0;
+                        border-width: 0 0 0 1px;
+                    }
+
+                }
+
+                @media screen and (max-width: 500px) {
+                    left: 0;
+
+                    &::after {
+                        width: 100%;
+                        bottom: 0;
+                        left: 0;
+                        top: var(--text-y);
+                    }
+                }
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>{{ title }}</h1>
+        {% if coverImage %}
+        <img src="{{ coverImage.src }}" alt="{{ coverImage.alt }}" />
+        {% endif %}
+        {{ content | toc | safe }}
+        {{ content | safe }}
+    </main>
+    <footer>
+        <a href="/">Home</a>
+    </footer>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const rows = document.querySelectorAll("tr:has(td:nth-of-type(2):not(:empty))");
+
+            function unselectAll(rows) {
+                rows.forEach(el => el.querySelector("td:first-of-type").classList.toggle("active", false));
+            }
+
+            for (let i = 0; i < rows.length; i++) {
+                const row = rows[i];
+                const highlight = row.querySelector("td:first-of-type");
+                const comment = row.querySelector("td:first-of-type ~ td:not(:empty)");
+
+                comment.setAttribute("data-lyric", highlight.innerText);
+
+                highlight.setAttribute("tabindex", "1");
+
+                function selectHighlight(el) {
+                    unselectAll(rows);
+                    el.focus();
+                    el.classList.toggle("active", true);
+                }
+
+                highlight.addEventListener("click", () => selectHighlight(highlight));
+                highlight.addEventListener("focus", () => selectHighlight(highlight));
+
+
+            }
+
+            const main = document.querySelector("main");
+            main.addEventListener("click", ev => {
+                const cells = Array.from(document.querySelectorAll("td"));
+                if (!cells.includes(ev.target)) {
+                    unselectAll(rows)
+                }
+            })
+
+        });
+    </script>
+</body>
+
+</html>

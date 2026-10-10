@@ -1,0 +1,64 @@
+---
+eleventyExcludeFromCollections:
+    - writing
+    - serials
+pagination:
+    data: collections.serials
+    size: 1
+    alias: serial
+permalink: "/stuff/writing/{{ serial.work | slugify }}/complete/index.html"
+eleventyNavigation:
+    parent: "{{ serial.work }}"
+    key: "Entire Work"
+---
+{% css %}
+.end-mark::after {
+	content: url("/assets/img/end-mark.svg");
+}
+{% endcss %}
+{% import "macros.njk" as macros %}
+{% set chapters = serial.pages %}
+<details open><summary>Table of Contents</summary>
+<ol class="table-of-contents">
+{% for chapter in chapters %}
+{% set chnum = chapter.data.chapter %}
+<li><a href="#chapter-{{ chnum }}">Chapter {{ chnum }}{%- if chapter.data.title -%}: {{ chapter.data.title }}{% endif %}</a></li>
+{% endfor %}
+</ol>
+</details>
+{% for chapter in chapters %}
+{% set chnum = chapter.data.chapter %}
+<h2 href="chapter-{{ chnum }}">Chapter {{ chnum }}{%- if chapter.data.title %}: {{ chapter.data.title }}{% endif %}</h2>
+{% set chapterText = chapter.page.rawInput | renderContent("md") %}
+{{ chapterText | endmark | safe if loop.last else chapterText | safe }}
+{% endfor %}
+eleventyExcludeFromCollections:
+    - writing
+    - serials
+pagination:
+    data: collections.serials
+    size: 1
+    alias: serial
+permalink: "/stuff/writing/{{ serial.work | slugify }}/complete/index.html"
+eleventyNavigation:
+    parent: "{{ serial.work }}"
+    key: "Entire Work"
+---
+{% css %}
+{% endcss %}
+{% import "macros.njk" as macros %}
+{% set chapters = serial.pages %}
+<details open><summary>Table of Contents</summary>
+<ol class="table-of-contents">
+{% for chapter in chapters %}
+{% set chnum = chapter.data.chapter %}
+<li><a href="#chapter-{{ chnum }}">Chapter {{ chnum }}{%- if chapter.data.title -%}: {{ chapter.data.title }}{% endif %}</a></li>
+{% endfor %}
+</ol>
+</details>
+{% for chapter in chapters %}
+{% set chnum = chapter.data.chapter %}
+<h2 href="chapter-{{ chnum }}">Chapter {{ chnum }}{%- if chapter.data.title %}: {{ chapter.data.title }}{% endif %}</h2>
+{% set chapterText = chapter.page.rawInput | renderContent("md") %}
+{{ chapterText | endmark | safe if loop.last else chapterText | safe }}
+{% endfor %}

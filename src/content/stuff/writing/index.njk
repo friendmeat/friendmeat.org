@@ -1,4 +1,27 @@
 ---
-layout: default
 permalink: /stuff/writing/
+eleventyExcludeFromCollections:
+    - writing
+eleventyNavigation:
+    parent: Stuff
+    key: Writing
 ---
+<h2>Serials</h2>
+{% for date, serials in collections.serials | groupby("year") | dictsort | reverse %}
+<h3>{{ date }}</h3>
+<hr />
+<ul>
+	{% for serial in serials %}
+	<li><h4><a href="/stuff/writing/{{ serial.work | slugify }}/">{{ serial.work }}</a></h4></li>
+	{% endfor %}
+</ul>
+{% endfor %}
+
+{% if collections.standalone %}
+<h2>Stand-alone Works</h2>
+<ul>
+{% for work in collections.standalone | sort("date") | reverse %}
+		<li><a href="{{ work.page.fileSlug | slugify }}">{{ work.data.title }}</a></li>
+{% endfor %}
+</ul>
+{% endif %}
