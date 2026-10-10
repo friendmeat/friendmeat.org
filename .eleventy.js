@@ -1,4 +1,6 @@
 import fs from "node:fs/promises";
+import process from "node:process";
+import { RenderPlugin } from "@11ty/eleventy";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import bundlePlugin from "@11ty/eleventy-plugin-bundle";
 import syntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
@@ -32,6 +34,7 @@ export default function(eleventyConfig) {
     eleventyConfig.addWatchTarget("./src/assets/");
 
     /* Plugins */
+    eleventyConfig.addPlugin(RenderPlugin);
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(bundlePlugin);
@@ -40,6 +43,7 @@ export default function(eleventyConfig) {
         // failOnError: false,
         formats: ["webp","gif"],
         widths: ["auto"],
+        failOnError: process.env.NODE_ENV !== 'development',
         sharpOptions: {
             animated: true
         }
@@ -76,10 +80,18 @@ export default function(eleventyConfig) {
     // Add date formatting to nunjucks
     eleventyConfig.addNunjucksFilter("date", (date, format) => dayjs(date).format(format));
 
-    // Return an object as a [key, value] pair sorted by the value.
-    eleventyConfig.addNunjucksFilter("valuesort", (obj) => {
+    // Add the end-mark class to the last p element in a block
+    eleventyConfig.addNunjucksFilter("endmark", function(content, selector="p+p:last-of-type"){
+        const $ = cheerio.load(content);
+        // console.log($(selector).html())
+        $(selector).addClass("end-mark");
+        return $.html();
+    })
 
-    });
+    // Return an object as a [key, value] pair sorted by the value.
+    // eleventyConfig.addNunjucksFilter("valuesort", (obj) => {
+    //
+    // });
 
     eleventyConfig.addFilter("typeof", x => typeof x);
 
@@ -193,7 +205,7 @@ export default function(eleventyConfig) {
             const stage2 = await Image(stage1["webp"][0].outputPath, {
                 widths: ["auto"], formats: ["jpeg"], outputDir: `${OUTPUT_DIR}/assets/img`, urlPath: "/assets/img",
                 transform: async sharp => {
-                    sharp.resize(500, null, { fit: "cover", strategy: "entropy", kernel: "nearest" })
+                    sharp.resize(500, null, { fit: "cover", strategy: "entropy", ernel: "nearest" })
                 }
             });
 
@@ -210,7 +222,7 @@ export default function(eleventyConfig) {
     /* Custom Shortcodes */
 
     /* Template Libraries */
-    // MarkdownIt
+    // MardownIt
     eleventyConfig.amendLibrary("md", (md) => {
         md
             // markdown-it-attrs plugin
@@ -323,6 +335,20 @@ export default function(eleventyConfig) {
             oc,
             allStuff.filter(({ data }) => data.tags.includes(oc.toLowerCase()))
         ]));
+    });
+
+    eleventyConfig.addCollection("serials", collectionsApi=>{
+        const serials = collectionsApi.getFilteredByTags("writing", "serial");
+        const works = Object.groupBy(serials, ({ data })=>data.work);
+    
+        const result = Object.entries(works).map(([work, pages])=>{
+            const date = pages.map(({ data })=>data.date).sort()[0];
+            return { work, year: date.getUTCFullYear(), date, pages };
+        })
+
+        // console.log(result);
+
+        return result;
     });
 
     /* Template Pre-processing */
