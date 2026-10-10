@@ -1,0 +1,18 @@
+---
+eleventyExcludeFromCollections:
+    - writing
+    - serials
+pagination:
+    data: collections.serials
+    size: 1
+    alias: serial
+permalink: "/stuff/writing/{{ serial.work | slugify }}/index.html"
+---
+
+<ol>
+{% for chapter in serial.pages %}
+{% set chnum = chapter.data.chapter %}
+<li><a href="/stuff/writing/{{ serial.work | slugify }}/chapter-{{ chnum }}/">Chapter {{ chnum }}: {{ chapter.data.title }}</a>{%- if chapter.data.synopsis -%}<pre>{{ chapter.data.synopsis }}</pre>{%- endif -%}</li>
+{% endfor %}
+</ol>
+<a href="/stuff/writing/{{ serial.work | slugify }}/complete/">Read entire work</a>

@@ -1,0 +1,12 @@
+{
+	"tags": ["serial"],
+	"permalink":"/stuff/writing/{{ work | slugify }}/chapter-{{ chapter }}/index.html",
+	"eleventyNavigation":{
+		"parent":"Writing"
+	},
+	"eleventyComputed":{
+		"eleventyNavigation":{
+			"key":"{{ page.title }}"
+		}
+	}
+}

@@ -1,0 +1,4 @@
+{
+	"tags":["standalone"],
+	"permalink":"/stuff/writing/{{ page.fileSlug }}/"
+}
