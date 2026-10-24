@@ -1,9 +1,11 @@
 ---
 title: "weeklies #3 - prelapsarian schizoposting"
 date: 2025-05-24
+headerImage:
+  format: true
 topics:
   - weeklies
-description: "featuring a lot of strong-willed people"
+description: featuring a lot of strong-willed people
 ---
 ## __what i'm reading__:
  [The wikipedia article for the number 12](https://en.wikipedia.org/wiki/12_(number))
@@ -54,6 +56,6 @@ I tried self-hosting [Wallabag](https://wallabag.org/) but it never extracted te
 it's bad
 
 ## __a picture__:
-![Wuxing - Five Elements - Cycle Balance Imbalance](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Wuxing_-_Five_Elements_-_Cycle_Balance_Imbalance.svg/960px-Wuxing_-_Five_Elements_-_Cycle_Balance_Imbalance.svg.png)
+![Wuxing - Five Elements - Cycle Balance Imbalance](https://i.postimg.cc/MHqBxHXv/Wuxing-Five-Elements-Cycle-Balance-Imbalance-svg.png)
 
 > By Jim McKeeth - Original image by Manonastreet, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=163171588
