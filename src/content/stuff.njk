@@ -12,6 +12,11 @@ tags: []
     padding: 0;
 }
 
+.stuff-link figure {
+    padding: 0;
+    margin: 0;
+}
+
 {% endcss %}
 {% set covers = collections.galleryCovers %}
 {% block content %}
@@ -26,7 +31,7 @@ tags: []
             </figure>
         </a>
     </li>
-    <li>
+    <li class="stuff-link">
         <a href="my-art">
             <figure class="collection-preview">
                 <img eleventy:ignore src="{{ covers['My Art'].src | threshold }}" alt="{{ covers['My Art'].alt }}" width="600" height="300"/>
@@ -36,7 +41,7 @@ tags: []
             </figure>
         </a>
     </li>
-    <li>
+    <li class="stuff-link">
         <a href="commissions">
             <figure class="collection-preview">
                 <img eleventy:ignore src="{{ covers['Commissions'].src | threshold }}" alt="{{ covers['Commissions'].alt }}" width="600" height="300"/>
@@ -46,7 +51,7 @@ tags: []
             </figure>
         </a>
     </li>
-    <li>
+    <li class="stuff-link">
         <a href="ocs">
             <figure class="collection-preview">
                 <img eleventy:ignore src="{{ "https://i.postimg.cc/59S7X9jk/F1SHPtd-Xg-AA5Gmr.png" | threshold }}" alt="" width=600 height=300 />
@@ -56,7 +61,7 @@ tags: []
             </figure>
         </a>
     </li>
-    <li>
+    <li class="stuff-link">
         <a href="writing">
             <figure class="stuff-figure">
                 <img src="" alt="" />
