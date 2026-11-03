@@ -1,0 +1,19 @@
+{% extends "src/_includes/default.njk" %}
+{% block content %}
+<h2>{{ chapterTitle }}</h2>
+{{ super() }}
+<pre>
+{{ pagination.next }}
+</pre>
+{% endblock %}
+
+{% block footer %}
+{% set work = collections[title] %}
+{% set prevPost = work | getPreviousCollectionItem(page) %}
+{% set nextPost = work | getNextCollectionItem(page) %}
+{% if prevPost %}<div aria-label="Previous post" class="pagination-option prev-post"><a href="{{ prevPost.url }}">{{ prevPost.data.chapterTitle }}</a><span class="pagination-arrow">==&gt;</span></div>{% endif %}
+{% if nextPost %}<div aria-label="Next Post" class="pagination-option next-post"><span class="pagination-arrow">&lt;==</span><a href="{{ nextPost.url }}">{{ nextPost.data.chapterTitle }}</a></div>{% endif %}
+{{ super() }}
+{% endblock footer %}
+
+
