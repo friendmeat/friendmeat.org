@@ -1,0 +1,30 @@
+---
+pagination: 
+    data: collections.serials
+    size: 1 
+    alias: serial
+permalink: "/stuff/writing/serial/{{ serial.title | slugify }}/feed.xml"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ meta.language or page.lang }}">
+  <title>{{ serial.title | siteTitle }}</title>
+  <subtitle></subtitle>
+  <description></description>
+  <!-- <link href="{{ permalink | htmlBaseUrl(meta.base) }}" rel="self" /> -->
+  <link href="{{ meta.base | addPathPrefixToFullUrl }}" />
+  <updated>{{ serial.pages | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ meta.base | addPathPrefixToFullUrl }}</id>
+  <author>
+    <name>{{ meta.author.name }}</name>
+  </author>
+  {%- for post in serial.pages | reverse -%}
+  {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(meta.base) }}{% endset %}
+  <entry>
+    <title>{{ post.data.chapterTitle }}</title>
+    <link href="{{ absolutePostUrl }}" />
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    {% if post.data.excerpt %}<description>{{ post.data.excerpt }}</description>{% endif %}
+    <content type="html">{{ post.content | renderTransforms }}</content>
+  </entry>
+  {%- endfor %}
+</feed>
