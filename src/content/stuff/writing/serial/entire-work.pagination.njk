@@ -1,4 +1,5 @@
 ---
+layout: default
 eleventyExcludeFromCollections:
     - writing
     - serials
@@ -6,9 +7,9 @@ pagination:
     data: collections.serials
     size: 1
     alias: serial
-permalink: "/stuff/writing/{{ serial.work | slugify }}/complete/index.html"
+permalink: "/stuff/writing/{{ serial.title | slugify }}/complete/index.html"
 eleventyNavigation:
-    parent: "{{ serial.work }}"
+    parent: "{{ serial.title }}"
     key: "Entire Work"
 ---
 {% css %}
@@ -28,37 +29,8 @@ eleventyNavigation:
 </details>
 {% for chapter in chapters %}
 {% set chnum = chapter.data.chapter %}
-<h2 href="chapter-{{ chnum }}">Chapter {{ chnum }}{%- if chapter.data.title %}: {{ chapter.data.title }}{% endif %}</h2>
+<h2 href="chapter-{{ chnum }}">Chapter {{ chnum }}{%- if chapter.data.chapterTitle %}: {{ chapter.data.chapterTitle }}{% endif %}</h2>
 {% set chapterText = chapter.page.rawInput | renderContent("md") %}
-{{ chapterText | endmark | safe if loop.last else chapterText | safe }}
+{{ chapterText | safe }}
 {% endfor %}
-eleventyExcludeFromCollections:
-    - writing
-    - serials
-pagination:
-    data: collections.serials
-    size: 1
-    alias: serial
-permalink: "/stuff/writing/{{ serial.work | slugify }}/complete/index.html"
-eleventyNavigation:
-    parent: "{{ serial.work }}"
-    key: "Entire Work"
----
-{% css %}
-{% endcss %}
-{% import "macros.njk" as macros %}
-{% set chapters = serial.pages %}
-<details open><summary>Table of Contents</summary>
-<ol class="table-of-contents">
-{% for chapter in chapters %}
-{% set chnum = chapter.data.chapter %}
-<li><a href="#chapter-{{ chnum }}">Chapter {{ chnum }}{%- if chapter.data.title -%}: {{ chapter.data.title }}{% endif %}</a></li>
-{% endfor %}
-</ol>
-</details>
-{% for chapter in chapters %}
-{% set chnum = chapter.data.chapter %}
-<h2 href="chapter-{{ chnum }}">Chapter {{ chnum }}{%- if chapter.data.title %}: {{ chapter.data.title }}{% endif %}</h2>
-{% set chapterText = chapter.page.rawInput | renderContent("md") %}
-{{ chapterText | endmark | safe if loop.last else chapterText | safe }}
-{% endfor %}
+

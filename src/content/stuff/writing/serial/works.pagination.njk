@@ -1,4 +1,5 @@
 ---
+layout: default
 eleventyExcludeFromCollections:
     - writing
     - serials
@@ -6,13 +7,19 @@ pagination:
     data: collections.serials
     size: 1
     alias: serial
-permalink: "/stuff/writing/{{ serial.work | slugify }}/index.html"
+permalink: "/stuff/writing/{{ serial.title | slugify }}/index.html"
+eleventyComputed:
+    eleventyNavigation:
+        key: "{{ serial.title }}"
+        parent: "Writing"
 ---
+
+<h2>{{ serial.title }}</h2>
 
 <ol>
 {% for chapter in serial.pages %}
 {% set chnum = chapter.data.chapter %}
-<li><a href="/stuff/writing/{{ serial.work | slugify }}/chapter-{{ chnum }}/">Chapter {{ chnum }}: {{ chapter.data.title }}</a>{%- if chapter.data.synopsis -%}<pre>{{ chapter.data.synopsis }}</pre>{%- endif -%}</li>
+<li><a href="/stuff/writing/{{ serial.title | slugify }}/chapter-{{ chnum }}/">{{ chapter.data.chapterTitle }}</a>{%- if chapter.data.synopsis -%}<pre>{{ chapter.data.synopsis }}</pre>{%- endif -%}</li>
 {% endfor %}
 </ol>
-<a href="/stuff/writing/{{ serial.work | slugify }}/complete/">Read entire work</a>
+<a href="/stuff/writing/{{ serial.title | slugify }}/complete/">Read entire work</a>

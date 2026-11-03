@@ -1,6 +1,7 @@
 {
 	"tags": ["serial"],
-	"permalink":"/stuff/writing/{{ work | slugify }}/chapter-{{ chapter }}/index.html",
+	"layout":"chapter",
+	"permalink":"/stuff/writing/{{ title | slugify }}/chapter-{{ chapter }}/index.html",
 	"eleventyNavigation":{
 		"parent":"Writing"
 	},

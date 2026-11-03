@@ -339,14 +339,15 @@ export default function(eleventyConfig) {
 
     eleventyConfig.addCollection("serials", collectionsApi=>{
         const serials = collectionsApi.getFilteredByTags("writing", "serial");
-        const works = Object.groupBy(serials, ({ data })=>data.work);
+        const works = Object.groupBy(serials, ({ data })=>data.title);
     
-        const result = Object.entries(works).map(([work, pages])=>{
+        const result = Object.entries(works).map(([title, pages])=>{
             const date = pages.map(({ data })=>data.date).sort()[0];
-            return { work, year: date.getUTCFullYear(), date, pages };
+            return { title, year: date.getUTCFullYear(), date, pages };
         })
 
         // console.log(result);
+        // console.log(result.map(({ pages })=>pages.map(page=>page.data.page)));
 
         return result;
     });
