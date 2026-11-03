@@ -54,6 +54,12 @@ content:
         type: text
         description: Post body
 
+  - name: templates
+    label: Templates
+    type: collection
+    format: code
+    path: src/_includes
+
   - name: galleries
     label: Galleries
     type: collection
@@ -163,6 +169,72 @@ content:
       - name: description
         label: Description
         type: string
+
+  - name: standalone
+    label: Stand-alone Writing
+    path: src/content/writing/standalone
+    type: collection
+    exclude: [ standalone.json ]
+    fields:
+      - name: title
+        label: Title
+        type: string
+        description: Title of work
+      - name: date
+        label: Date
+        type: date
+        description: Date published
+      - name: layout
+        label: Layout
+        description: Template to use for rendering the page
+        type: reference
+        options:
+          collection: templates
+          value: "{name}"
+          label: "{name}"
+
+
+  - name: serial
+    label: Serial Works
+    path: src/content/writing/serial
+    type: file
+    primary: title
+    filename: '{primary}/{primary}.json'
+    list: true
+    fields:
+      - name: title
+        label: Title
+        description: title of the work
+        type: string
+
+      - name: completed
+        label: Completed
+        type: date
+        description: Date the work was completed
+        default: ""
+
+      - name: pages
+        label: Pages
+        list: true
+        type: object
+        field: 
+          - name: title
+            label: Title
+            type: string
+            description: Chapter Title
+
+          - name: chapter
+            label: Chapter
+            type: number
+            description: Order in which the page appears
+
+          - name: body
+            label: Body
+            description: Page Body
+            type: code
+            format: markdown
+
+    
 
   - name: artists
     label: Artists
