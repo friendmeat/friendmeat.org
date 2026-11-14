@@ -2,8 +2,8 @@
 title: "weeklies #59 - jerkin' it 1560s style"
 date: 2026-11-14
 headerImage:
-  src: my enchilada
-  alt: https://i.postimg.cc/BnMTRnMH/myenchilada.jpg
+  src: https://i.postimg.cc/BnMTRnMH/myenchilada.jpg
+  alt: my enchilada
   format: true
 description: a court summons; explosive cranial failure; and jerkin' it 1560s style
 ---
